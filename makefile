@@ -277,13 +277,14 @@ NAME = $(TARGET)$(TARGETOS)
 SRC = src
 OBJ = obj/$(NAME)
 
-OBJ_CPU     = $(OBJ)/cpu
-OBJ_AUDIO   = $(OBJ)/audio
-OBJ_SOUND   = $(OBJ)/sound
-OBJ_DRIVERS = $(OBJ)/drivers
-OBJ_MACHINE = $(OBJ)/machine
-#OBJ_VIDEO   = $(OBJ)/video
-OBJ_VIDEO   = $(OBJ)/vidhrdw
+OBJ_CPU       = $(OBJ)/cpu
+OBJ_AUDIO     = $(OBJ)/audio
+OBJ_SOUND     = $(OBJ)/sound
+OBJ_DRIVERS   = $(OBJ)/drivers
+OBJ_MACHINE   = $(OBJ)/machine
+#OBJ_VIDEO    = $(OBJ)/video
+OBJ_VIDEO     = $(OBJ)/vidhrdw
+OBJ_SNDHRDW   = $(OBJ)/sndhrdw
 
 # CPU core include paths
 #VPATH=src $(wildcard $(SRC)/cpu/*)
@@ -413,6 +414,7 @@ OBJDIRS += \
 	$(OBJ_DRIVERS) \
 	$(OBJ_MACHINE) \
 	$(OBJ_VIDEO) \
+	$(OBJ_SNDHRDW) \
 	$(OBJ)/etc \
 	$(OBJ)/zlib \
 	pbp \
