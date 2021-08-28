@@ -59,9 +59,9 @@ endif
 #------------------------------------------------------------------------------
 
 ## [専用 icon指定]の場合
-ifneq ($(filter ICON,$(PSP_EXTENSION_OPTS)),)
-	PSP_EBOOT_ICON = icon/$(TARGET).png
-endif
+#ifneq ($(filter ICON,$(PSP_EXTENSION_OPTS)),)
+#	PSP_EBOOT_ICON = icon/$(TARGET).png
+#endif
 
 ## タイトルが無い場合に設定
 ifeq ($(PSP_EBOOT_TITLE),)
@@ -69,13 +69,15 @@ PSP_EBOOT_TITLE = "MAME 0.97 $(TARGET)"
 endif
 
 ## アイコンが無い場合に標準を設定
-ifeq ($(PSP_EBOOT_ICON),)
-PSP_EBOOT_ICON = icon/ico0_mamePSpDeathrash_VOL_3.png
-endif
+#ifeq ($(PSP_EBOOT_ICON),)
+#PSP_EBOOT_ICON = icon/ico0_mamePSpDeathrash_VOL_3.png
+#endif
 
 
 ## 配布ソース(zip size)が大きくなりすぎるので、暫定的にアイコン共通
 #PSP_EBOOT_ICON = icon/icon0.png
+
+PSP_EBOOT_ICON = ICON0.PNG
 
 EXTRA_TARGETS = maked_directry EBOOT.PBP
 EXTRA_CLEAN = pspclean

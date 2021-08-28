@@ -11,7 +11,7 @@
 
 
 #define NOW_DATE   " "__DATE__" "
-#define DEVELOPPER "developed by repuken2                            from original src by 開轣闃J発幼稚園"
+#define DEVELOPPER "- original by TMK & PSP Kaihatsu Yochien"
 //∽∝∵∫∬開発幼稚園
 
 #ifdef namcoNA
@@ -153,7 +153,7 @@
 
 
 #ifndef MENU_STR1
-	#define MENU_STR1 "∽∝∵∫∬ MAME DEATHRASH!!!(0.97s)" //開
+	#define MENU_STR1 "pspMAME 0.97" //開
 #endif
 #ifndef MENU_STR2
 	#define MENU_STR2 ""//"もっと速くないと遊べん！"
@@ -380,7 +380,7 @@ static void psp_frame(const char *msg0, const char *msg1)
 
 void Draw_All(void)
 {                                                         //○：実行 Ｌ：設定メニュー △：エミュレータの終了
-	psp_frame(/*NULL*/drivers[dlist_curpos]->name/*mes*/, "Controls>> circle : run game ,LTrigger: config ,triangle: exit");
+	psp_frame(/*NULL*/drivers[dlist_curpos]->name/*mes*/, "O : run, L : settings, triangle : exit");
 
     long freeMem;
     long largestFreeBlock;
@@ -491,8 +491,8 @@ int Control(void)
 		else if (ps_A && is_A)
 		{
 			//psp_frame("ALO! また遊んでね" DEVELOPPER, "×：やっぱキャンセル  ○：終了" );
-			psp_frame(""," circle : confirm   cross : cancel" );
-			psp_print(40,120, setting.color[3], " WTF!!!??? QUITTING ALREADY??!!! press Circle to confirm");
+			psp_frame("","O : confirm   X : cancel" );
+			psp_print(40,120, setting.color[3], "X : cancel  O : quit");
 			v_sync();
 		//	pgScreenFlip();
 			psp_flip_screen(/*1*/);
@@ -528,9 +528,9 @@ int Control(void)
 
 void Draw_Confirm(void)
 {
-	psp_frame(drivers[dlist_curpos]->name, "CIRCLE : CONFIRM , CROSS : CANCEL  ** Argentina campion 2010!!!**");
+	psp_frame(drivers[dlist_curpos]->name, "O : confirm   X : cancel");
 	psp_print(MENU2C_X_OFFS, ( 9*10), setting.color[3], drivers[dlist_curpos]->description);
-	psp_print(MENU2B_X_OFFS, (12*10), setting.color[3], "Press circle to run game");//"を実行します。"
+	psp_print(MENU2B_X_OFFS, (12*10), setting.color[3], "Press O to run game");//"を実行します。"
 	v_sync();
 //	pgScreenFlip();
 	psp_flip_screen(/*1*/);
@@ -581,9 +581,9 @@ void save_config(void)
 #define PSP333MHz (3)
 
 
-/* set default to fskip07 */
+/* set default to fskip00 */
 #ifndef SET_DEFAULT_FSKIPS
-	#define SET_DEFAULT_FSKIPS SET_FSKIP_07
+	#define SET_DEFAULT_FSKIPS SET_FSKIP_01
 #endif // SET_DEFAULT_FSKIPS
 /* set default to off the video syncronization for draw. */
 #define SET_DEFAULT_VSYNC_ON_OFF SET_ON
