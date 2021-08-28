@@ -50,7 +50,7 @@ int run_mame(int argc, char **argv);
 
 
 //============================================================
-//	HOMEƒL[ŠÖ˜A
+//	HOMEã‚­ãƒ¼é–¢é€£
 //============================================================
 
 //============================================================
@@ -93,7 +93,7 @@ static SceKernelCallbackFunction/*int*/ PowerCallback(int unknown, int pwrflags,
 //	CreateCallbackThread
 //============================================================
 /*--------------------------------------------------------
-	ƒR[ƒ‹ƒoƒbƒNƒXƒŒƒbƒhì¬
+	ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯ã‚¹ãƒ¬ãƒƒãƒ‰ä½œæˆ
 --------------------------------------------------------*/
 
 static int CallbackThread(SceSize/*int*/ args, void *argp)
@@ -113,7 +113,7 @@ static int CallbackThread(SceSize/*int*/ args, void *argp)
 
 
 /*--------------------------------------------------------
-	ƒR[ƒ‹ƒoƒbƒNƒXƒŒƒbƒhİ’è
+	ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯ã‚¹ãƒ¬ãƒƒãƒ‰è¨­å®š
 --------------------------------------------------------*/
 
 /* Sets up the callback thread and returns its thread id */
@@ -146,7 +146,7 @@ return sceIoMkdir(dir,0777);
 }
 
 //============================================================
-//	ƒƒCƒ“
+//	ãƒ¡ã‚¤ãƒ³
 //============================================================
 
 #ifdef KERNEL_MODE
@@ -172,12 +172,9 @@ int main(int argc, char *argv[])
 	//psp_printf_init();
 	//pgcInit();
 #ifndef KERNEL_MODE
-	setCurDir(argv[0]);/* ƒ†[ƒU[ƒ‚[ƒh‚Ì‚İg—p */
+	setCurDir(argv[0]);/* ãƒ¦ãƒ¼ã‚¶ãƒ¼ãƒ¢ãƒ¼ãƒ‰æ™‚ã®ã¿ä½¿ç”¨ */
 #endif //KERNEL_MODE
 	_argv[_argc++] = getCurDir();
-
-    sprintf(fHell,"%s%s",getCurDir(),"pspLogDelOrto.txt");
-	openLog(fHell);
 
 
     sprintf(nvramDir,"%snvram",getCurDir());
@@ -235,7 +232,7 @@ int main(int argc, char *argv[])
 	save_config();
 	psp_video_exit();
 #ifndef KERNEL_MODE
-	sceKernelExitGame();/* ƒ†[ƒU[ƒ‚[ƒh‚Ì‚İg—p */
+	sceKernelExitGame();/* ãƒ¦ãƒ¼ã‚¶ãƒ¼ãƒ¢ãƒ¼ãƒ‰æ™‚ã®ã¿ä½¿ç”¨ */
 #endif
 	return 0;
 }
@@ -250,7 +247,7 @@ void main_thread_set_priority(int priority)
 
 int main(int argc, char *argv[])
 {
-	setCurDir(argv[0]);/* ƒJ[ƒlƒ‹ƒ‚[ƒh‚Ìê‡‚Í‚±‚±‚ÅB */
+	setCurDir(argv[0]);/* ã‚«ãƒ¼ãƒãƒ«ãƒ¢ãƒ¼ãƒ‰ã®å ´åˆã¯ã“ã“ã§ã€‚ */
     printf(argv[0]);
 	main_thread = sceKernelCreateThread(
 		"User Mode Thread",
@@ -263,7 +260,7 @@ int main(int argc, char *argv[])
 	sceKernelStartThread(main_thread, 0, 0);
 	sceKernelWaitThreadEnd(main_thread, NULL);
 
-	sceKernelExitGame();/* ƒJ[ƒlƒ‹ƒ‚[ƒh‚Ìê‡‚Í‚±‚±‚ÅB */
+	sceKernelExitGame();/* ã‚«ãƒ¼ãƒãƒ«ãƒ¢ãƒ¼ãƒ‰ã®å ´åˆã¯ã“ã“ã§ã€‚ */
 
 	return 0;
 }

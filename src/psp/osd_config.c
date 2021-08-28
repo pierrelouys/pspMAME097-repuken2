@@ -1071,10 +1071,6 @@ static void parse_cmdline( int argc, char **argv, int game_index )
 		/*config_ror =*/keyorientation =0;
 	}
 
-    char algo[256];
-    sprintf(algo,"osd_config: enchufando setting.screensize=='%d'",setting.screensize);
-    logWriteX(algo,"","",678);
-
     setBlitMode(setting.screensize);
 
 	wait_vsync      = setting.vsync_ON_OFF;
@@ -1111,7 +1107,6 @@ static void parse_cmdline( int argc, char **argv, int game_index )
 
         char dbg2[128];
         sprintf(dbg2,"options.samplerate=='%d',setting.sound_rate=='%d'",options.samplerate,setting.sound_rate);
-        logWriteX("OSD_CONFIG-SOUND- : ",dbg2,"",666);
 
 //TMK ADD END
 
@@ -1550,7 +1545,7 @@ int cli_frontend_init( int argc, char **argv )
 		/* since the cpuintrf structure is filled dynamically now, we have to init first */
 		cpuintrf_init();
 		#ifndef PSP_DIRECT_STREAM
-		/* ê—pƒTƒEƒ“ƒh‚É‚ÍŠÜ‚Ü‚È‚¢D */
+		/* å°‚ç”¨ã‚µã‚¦ãƒ³ãƒ‰æ™‚ã«ã¯å«ã¾ãªã„ï¼ */
 		sndintrf_init();
 		#endif // PSP_DIRECT_STREAM
 	}

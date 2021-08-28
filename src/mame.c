@@ -153,8 +153,8 @@
 
 ***************************************************************************/
 
-//#define FRAMES_PER_FPS_UPDATE 	12
-#defineFRAMES_PER_FPS_UPDATE60
+//#define FRAMES_PER_FPS_UPDATE 	60
+#define FRAMES_PER_FPS_UPDATE 	12
 
 
 /***************************************************************************

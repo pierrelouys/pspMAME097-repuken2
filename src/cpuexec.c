@@ -285,6 +285,7 @@ int cpu_init(void)
 		/* initialize this CPU */
 		if (cpuintrf_init_cpu(cpunum, cputype)){
 			return 1;
+		}
 	}
 
 	/* compute the perfect interleave factor */
