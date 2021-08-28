@@ -77,7 +77,7 @@ endif
 ## 配布ソース(zip size)が大きくなりすぎるので、暫定的にアイコン共通
 #PSP_EBOOT_ICON = icon/icon0.png
 
-EXTRA_TARGETS = maked_directry EBOOT.PBP copy_bak_pbp
+EXTRA_TARGETS = maked_directry EBOOT.PBP
 EXTRA_CLEAN = pspclean
 
 
