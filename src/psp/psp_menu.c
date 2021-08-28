@@ -602,8 +602,8 @@ void save_config(void)
 #endif // SET_DEFAULT_PSP_CLOCK
 
 
-//#define SET_DEFAULT_SCREEN SCR_X1
-#define SET_DEFAULT_SCREEN SCR_STRETCH
+#define SET_DEFAULT_SCREEN SCR_X1
+//#define SET_DEFAULT_SCREEN SCR_STRETCH
 
 void load_config(void)
 {
@@ -628,7 +628,7 @@ void load_config(void)
 		sceIoClose(fd);
 		/* check if ignore value, forced in range. */
 //		#if (0!=LINK_ROT)
-//		if(/*setting.screensize<0 ||*/ setting.screensize > (SCR_MAX-1)) setting.screensize = SET_DEFAULT_SCREEN;
+		if(/*setting.screensize<0 ||*/ setting.screensize > (SCR_MAX-1)) setting.screensize = SET_DEFAULT_SCREEN;
 //		#endif //(0!=LINK_ROT)
 		if(setting.frameskip > /*9*/60) 						setting.frameskip=/*0*/60;
 		//if(setting.sound_rate<0 || setting.sound_rate>2)		setting.sound_rate = /*0*/2;
@@ -641,9 +641,9 @@ void load_config(void)
 	}
 
 	strcpy(setting.vercnf, CONFIG_VER);
-/*	#if (0!=LINK_ROT)
+//	#if (0!=LINK_ROT)
 	setting.screensize		= SET_DEFAULT_SCREEN;
-	#endif //(0!=LINK_ROT)*/
+//	#endif //(0!=LINK_ROT)
 	setting.frameskip		= SET_DEFAULT_FSKIPS;
 	setting.vsync_ON_OFF	= SET_DEFAULT_VSYNC_ON_OFF;
 	setting.limit_ON_OFF	= SET_DEFAULT_LIMIT_ON_OFF;
