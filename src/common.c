@@ -1421,8 +1421,6 @@ static int process_rom_entries(struct rom_load_data *romdata, const struct RomMo
 {
 	UINT32 lastflags = 0;
 
-    logWriteX("Entrando en 'process_rom_entries'/src/common.c","","'",sceKernelGetThreadId());
-
 	/* loop until we hit the end of this region */
 	while (!ROMENTRY_ISREGIONEND(romp))
 	{
@@ -1462,14 +1460,9 @@ static int process_rom_entries(struct rom_load_data *romdata, const struct RomMo
 				const struct RomModule *baserom = romp;
 				int explength = 0;
 
-
-				logWriteX("'process_rom_entries' -open_rom_file- /src/common.c, abriendo='",ROM_GETNAME(romp),"'",sceKernelGetThreadId());
-
 				/* open the file */
 				debugload("Opening ROM file: %s\n", ROM_GETNAME(romp));
 				if (!open_rom_file(romdata, romp)){
-
-					logWriteX("'process_rom_entries' -FALLO open_rom_file- /src/common.c, abriendo='",ROM_GETNAME(romp),"', ->handle_missing_file",sceKernelGetThreadId());
 
 					handle_missing_file(romdata, romp);
 				}
@@ -1493,8 +1486,6 @@ static int process_rom_entries(struct rom_load_data *romdata, const struct RomMo
 						/* attempt to read using the modified entry */
 						readresult = read_rom_data(romdata, &modified_romp);
 						if (readresult == -1){
-
-							logWriteX("'process_rom_entries' -FALLO read_rom_data- /src/common.c, abriendo='",ROM_GETNAME(romp),"', --->goto fatalerror",sceKernelGetThreadId());
 
 							goto fatalerror;
 						}
@@ -1656,10 +1647,6 @@ int rom_load(const struct RomModule *romp)
 	static struct rom_load_data romdata;
 	int regnum;
 
-    logWriteX(">\r\n---------------CRITICAL>-------------------------@common.c\r\n","","",sceKernelGetThreadId());
-    logWriteX("entrando en rom_load(); @common.c","","",sceKernelGetThreadId());
-
-
 	/* reset the region list */
 	for (regnum = 0;regnum < REGION_MAX;regnum++)
 		regionlist[regnum] = NULL;
@@ -1680,7 +1667,6 @@ int rom_load(const struct RomModule *romp)
 		int regiontype = ROMREGION_GETTYPE(region);
 
 		debugload("Processing region %02X (length=%X)\n", regiontype, ROMREGION_GETLENGTH(region));
-        logWriteY("common.c , rom_load: val1=region,","","",sceKernelGetThreadId(),regiontype,0);
 
 		/* the first entry must be a region */
 		if (!ROMENTRY_ISREGION(region))

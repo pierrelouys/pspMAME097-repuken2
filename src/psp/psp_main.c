@@ -184,7 +184,6 @@ int main(int argc, char *argv[])
 
     if(!existDir(nvramDir)){
       mkDir(nvramDir);
-      logWriteX(nvramDir," : no existe el dir, creandolo...","",678);
     }
 
 	Get_DriverList();

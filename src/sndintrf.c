@@ -584,37 +584,25 @@ void sr_set(int snd_rate)
 int sound_start(void)
 {
 
-	logWriteX("sound_start: entrando","","",666);
-
 	/* handle -nosound */
 	nosound_mode = (Machine->sample_rate == 0);
 	if (nosound_mode)
 		Machine->sample_rate = 11025;
 
 
-    logWriteX("sound_start: stage 0","","",666);
-
 	/* initialize the interfaces */
 	VPRINTF(("sndintrf_init\n"));
 	sndintrf_init();
 
-    logWriteX("sound_start: stage 1","","",666);
-
 	/* count the speakers */
 	for (totalspeakers = 0; Machine->drv->speaker[totalspeakers].tag; totalspeakers++) ;
 	VPRINTF(("total speakers = %d\n", totalspeakers));
-
-
-    logWriteX("sound_start: stage 2","","",666);
 
 	/* initialize the OSD layer */
 	VPRINTF(("osd_start_audio_stream\n"));
 	samples_this_frame = osd_start_audio_stream(1);
 	if (!samples_this_frame)
 		return 1;
-
-
-    logWriteX("sound_start: stage 3","","",666);
 
 	/* allocate memory for mix buffers */
 //TMK	finalmix = auto_malloc(Machine->sample_rate * sizeof(*finalmix));
@@ -623,41 +611,25 @@ int sound_start(void)
 	finalmixLen =((finalmixLen +0x7ff) & ~0x7ff); // 2048‚Ì”{”‚É‚È‚é—l’²®
 	finalmix = auto_malloc(finalmixLen * sizeof(*finalmix));
 
-
-    logWriteX("sound_start: stage 4","","",666);
-
 	leftmix = auto_malloc(Machine->sample_rate * sizeof(*leftmix));
 	rightmix = auto_malloc(Machine->sample_rate * sizeof(*rightmix));
-
-    logWriteX("sound_start: stage 5","","",666);
 
 	/* allocate a global timer for sound timing */
 	sound_update_timer = mame_timer_alloc(NULL);
 
-
-    logWriteX("sound_start: stage 6","","",666);
-
 	/* initialize the streams engine */
 	VPRINTF(("streams_init\n"));
 	streams_init();
-
-
-    logWriteX("sound_start: stage 7","","",666);
 
 	/* now start up the sound chips and tag their streams */
 	VPRINTF(("start_sound_chips\n"));
 	if (start_sound_chips())
 		return 1;
 
-    logWriteX("sound_start: stage 8","","",666);
-
 	/* then create all the speakers */
 	VPRINTF(("start_speakers\n"));
 	if (start_speakers())
 		return 1;
-
-
-    logWriteX("sound_start: stage 9","","",666);
 
 	/* finally, do all the routing */
 	VPRINTF(("route_sound\n"));
@@ -666,8 +638,6 @@ int sound_start(void)
 
 	if (MAKE_WAVS)
 		wavfile = wav_open("finalmix.wav", Machine->sample_rate, 2);
-
-    logWriteX("sound_start: stage 10","","",666);
 
 	global_sound_enabled = 1;
 	return 0; //<-- was toqueteado

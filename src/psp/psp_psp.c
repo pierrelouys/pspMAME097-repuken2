@@ -88,9 +88,6 @@ static UINT32 check_free_memory(void)
 
 int osd_init(void)
 {
-
-	logWriteX("ejecutando osd_init...","","",0);
-
 	//psp_sound_init();//psp_init_sound(); //<-- MODEL2
 	if (psp_init_sound())//<-- MODEL1
 	{

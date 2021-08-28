@@ -588,11 +588,6 @@ static void update_visible_area(struct mame_display *display)
 void setBlitMode(int bmode)
 {
 blitMode = bmode;
-
-/*char algo[256];
-sprintf(algo,"osd_video-setBlitMode (adentro ): me llego blitMode=='%d'",blitMode);
-logWriteX(algo,"","",678);*/
-
 }
 
 int getBlitMode(void)
@@ -618,8 +613,6 @@ if(video_swapxy){
    gameH = Machine->visible_area.max_y - Machine->visible_area.min_y + 1;
   }
 
-/*sprintf(deathrash,"blitPreconfigure: gameW=='%d' , gameH=='%d'", gameW , gameH);
-logWriteX(deathrash,"","",678);*/
 
  switch(blitMode){
 

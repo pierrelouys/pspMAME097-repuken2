@@ -96,8 +96,6 @@ static short int *lptr =0x00;
 
 	int channel=*(int *)argp;
 
-    //logWriteX("ARRANCO LA THREAD DE AUDIO!","","",0);
-
 	while (pga_terminate==0) {
 		if (0x00 ==finalmix) {
 			sceDisplayWaitVblankStart();
@@ -176,7 +174,6 @@ char dbg3[128];
   for(h=0;h<PSP_AUDIO_CHANNEL_MAX;h++){
      if( sceAudioChReserve(h,PGA_SAMPLES,0) <0){
       sprintf(dbg3,"canal en uso: '%d'",h);
-      logWriteX("PSP_SOUND: ",dbg3,"",0);
       return h;
      }else {
        sceAudioChRelease(h);
@@ -197,12 +194,6 @@ int pgaInit(void)
 	pga_terminate=0;
 	pga_ready=0;
 
-    /*if (sceAudioSRCChReserve(PGA_SAMPLES, 22050, 2)){
-        logWriteX("FUCKING HELL!!!","","",0);
-        }*/
-
-    logWriteX("entro en pgaInit...","","",666);
-
 	for (i=0; i<PGA_CHANNELS; i++) {
 		pga_handle[i]=-1;
 		pga_threadhandle[i]=-1;
@@ -218,20 +209,8 @@ int pgaInit(void)
 
     char dbg4[128];
     sprintf(dbg4,"Machine->sample_rate=='%d'",Machine->sample_rate);
-    logWriteX("pgaInit: a punto de reservar audio: , ",dbg4,"",666);
-
-    /*if(errorReserving = */sceAudioSRCChReserve(PGA_SAMPLES,Machine->sample_rate,2); /*){
-      failed=1;
-      char errRes[128];
-
-      sprintf(errRes,"error Reservando audio: error code =='%d'",errorReserving);
-      logWriteX("pgaInit: peno sceAudioSRCChReserve , ",errRes,"",666);
-    }*/
+	
     pga_handle[0]= 0;
-	/*if( (pga_handle[0]= getChannelInUse() ) == -1){
-	  failed=1;
-	  logWriteX("pgaInit: peno getChannelInUse","","",666);
-	}*/
 
 	if (failed) {
 		for (i=0; i<PGA_CHANNELS; i++) {
@@ -239,12 +218,10 @@ int pgaInit(void)
 			pga_handle[i]=-1;
 		}
 
-		logWriteX("pgaInit: CAGO PA LA MIERDA WEON!","","",666);
 		return -1;
 	}
 	pga_ready=1;
 
-    logWriteX("pgaInit: stage 0","","",666);
 
 	strcpy(str,"pgasnd0");
 	for (i=0; i<PGA_CHANNELS; i++) {
@@ -256,7 +233,6 @@ int pgaInit(void)
 		//USER
 		//pga_threadhandle[i] =sceKernelCreateThread(str, (pg_threadfunc_t)&pga_channel_thread, 0x12, 0x10000, PSP_THREAD_ATTR_USER, 0);
 
-    logWriteX("pgaInit: stage 1 - createThread done...","","",666);
 
 		if (pga_threadhandle[i]<0) {
 			pga_threadhandle[i]=-1;
@@ -265,12 +241,8 @@ int pgaInit(void)
 		}
 		ret =sceKernelStartThread(pga_threadhandle[i], sizeof(i), &i);
 
-		logWriteX("pgaInit: stage 1 - startThread done...","","",666);
-
 		if (ret!=0) {
 			failed=1;
-
-			logWriteX("pgaInit: stage 1 - createThread failed!...","","",666);
 
 			break;
 		}
@@ -289,7 +261,6 @@ int pgaInit(void)
 	}
 
 
-	logWriteX("pgaInit: stage 2 - all OK!...","","",666);
 	return 0;
 }
 
@@ -539,8 +510,6 @@ int psp_init_sound(void)
 	int i;
     char dbg[256];
 
-	logWriteX("psp_init_sound: stage 0","","",666);
-
 	stream_playing = 0;
 	stream_cache_data = 0;
 	stream_cache_len = 0;
@@ -551,12 +520,9 @@ int psp_init_sound(void)
 	{
 
 		sprintf(dbg," soundcard=='%d',Machine->sample_rate =='%d'",soundcard,Machine->sample_rate);
-		logWriteX("psp_init_sound: stage 1 ... soundcard==0 || Machine->sample_rate == 0 ","","",666);
 
 		return 0;
 	}
-
-    logWriteX("psp_init_sound: stage 1","","",666);
 
 	pgaInit();
 	wavoutInit();
@@ -565,8 +531,6 @@ int psp_init_sound(void)
 	nominal_sample_rate = Machine->sample_rate;
 
 	osd_set_mastervolume(attenuation);	/* set the startup volume */
-
-    logWriteX("psp_init_sound: stage 2","","",666);
 
 	return 0;
 }

@@ -157,7 +157,6 @@ void bitblit_psp_direct_288( struct mame_bitmap *bitmap, int sx, int sy, int sw,
             p_src -= (sw / 2)*4;
             p_src -= n_lineoffset;
 		    sh++;
-            //logWriteX("entro","entro","entro",666);
           }
 
           flaggerV++;
@@ -270,7 +269,6 @@ void bitblit_psp_direct_256( struct mame_bitmap *bitmap, int sx, int sy, int sw,
             p_src -= (sw / 2)*4;
             p_src -= n_lineoffset;
 		    sh++;
-            //logWriteX("entro","entro","entro",666);
           }
 
           flaggerV++;
@@ -353,7 +351,6 @@ void bitblit_psp_direct_320( struct mame_bitmap *bitmap, int sx, int sy, int sw,
             p_src -= (sw / 2)*4;
             p_src -= n_lineoffset;
 		    sh++;
-            //logWriteX("entro","entro","entro",666);
           }
 
           flaggerV++;

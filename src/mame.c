@@ -153,8 +153,8 @@
 
 ***************************************************************************/
 
-#define FRAMES_PER_FPS_UPDATE		12
-
+//#define FRAMES_PER_FPS_UPDATE 	12
+#defineFRAMES_PER_FPS_UPDATE60
 
 
 /***************************************************************************
@@ -303,12 +303,9 @@ int run_game(int game)
 
 	/* validity checks -- the default is to perform these in all builds now
      * due to the number of incorrect submissions */
-	//THRASH TILL DEATH!!
 	if (!options.skip_validitychecks)
 		if (mame_validitychecks())
 			return 1;
-
-    logWriteX("paso los validitychecks","","",sceKernelGetThreadId() );
 
 	/* first give the machine a good cleaning */
 	memset(Machine, 0, sizeof(Machine));
@@ -391,16 +388,12 @@ static int init_machine(void)
 		goto cant_load_language_file;
 	}
 
-    logWriteX("init_machine: paso load_language","","",sceKernelGetThreadId());
-
 	/* initialize the input system */
 	if (code_init() != 0)
 	{
 		logerror("code_init failed\n");
 		goto cant_init_input;
 	}
-
-    logWriteX("init_machine: paso code_init","","",sceKernelGetThreadId());
 
 	/* if we have inputs, process them now */
 	if (gamedrv->construct_ipt)
@@ -424,39 +417,23 @@ static int init_machine(void)
 		}
 	}
 
-	logWriteX("init_machine: paso input_ports","","",sceKernelGetThreadId());
-
 	/* init the hard drive interface now, before attempting to load */
 	chd_set_interface(&mame_chd_interface);
-
-
-	logWriteX("init_machine: paso chd_interface","","",sceKernelGetThreadId());
 
 	/* load the ROMs if we have some */
 	if (gamedrv->rom && rom_load(gamedrv->rom) != 0)
 	{
-
-		logWriteX("init_machine: FALLO ROM_LOAD!!!","","",sceKernelGetThreadId());
 		logerror("readroms failed\n");
 		goto cant_load_roms;
 	}
 
-	logWriteX("init_machine: paso ROM_LOAD!","","",sceKernelGetThreadId());
-
 	/* first init the timers; some CPUs have built-in timers and will need */
 	/* to allocate them up front */
 	timer_init();
-
-	logWriteX("init_machine: paso timer_init!","","",sceKernelGetThreadId());
-
 	cpu_init_refresh_timer();
-
-    logWriteX("init_machine: itentando ejecutar cpu_init...","","",sceKernelGetThreadId());
 
 	/* now set up all the CPUs */
 	cpu_init();
-
-    logWriteX("init_machine: paso cpu_init!","","",sceKernelGetThreadId());
 
 #ifdef MESS
 	/* initialize the devices */
@@ -469,8 +446,6 @@ static int init_machine(void)
 
 	/* load input ports settings (keys, dip switches, and so on) */
 	settingsloaded = load_input_port_settings();
-
-    logWriteX("init_machine: paso load_input_port_settings!","","",sceKernelGetThreadId());
 
 	/* multi-session safety - set spriteram size to zero before memory map is set up */
 	spriteram_size = spriteram_2_size = 0;
@@ -485,14 +460,9 @@ static int init_machine(void)
 	/* clear out the memcard interface */
 	init_memcard();
 
-    logWriteX("init_machine: intentando iniciar el driver driver_init()...","","",sceKernelGetThreadId());
-
 	/* call the game driver's init function */
 	if (gamedrv->driver_init)
 		(*gamedrv->driver_init)();
-
-	logWriteX("init_machine: paso driver_init()!","","",sceKernelGetThreadId());
-
 
 #ifdef MESS
 	/* initialize the devices */
@@ -557,9 +527,6 @@ printfnw_("sound_start");	//TMK
 			/* start the audio system */
 			if (sound_start()){
 				bail_and_print("Unable to start audio emulation");  //<--- ORIGINAL from mame Core
-			/*	if (!mame_sound_start())
-                    bail_and_print("Unable to start audio emulation");*/
-            logWriteX("Unable to start audio emulation!!!!","","",888);
 			}
 			else
 			{
@@ -577,8 +544,6 @@ printfnw_("sound_start");	//TMK
 						free(Machine->memory_region[region].base);
 						Machine->memory_region[region].base = 0;
 					}
-
-logWriteX("run_machine: intentando correr run_machine_core()...","","",sceKernelGetThreadId());
 
 psp_clear_screen();
 printfnw_("run_machine_core");	//TMK
@@ -614,12 +579,8 @@ void run_machine_core(void)
 	input_port_settings_modify =0;
 
 
-	logWriteX("run_machine_core: reseteando pantalla... ","","",sceKernelGetThreadId());
-
 	/*pgFillvram(0); pgScreenFlipV(); //TMK ADD
 	pgFillvram(0); pgScreenFlipV();*/
-
-    logWriteX("run_machine_core: reseteo la pantalla!!! ","","",sceKernelGetThreadId());
 
 	/* disable artwork for the start */
 	//artwork_enable(0);
@@ -634,17 +595,10 @@ void run_machine_core(void)
 			/* show info about the game */
 			if (options.skip_gameinfo || showgameinfo(Machine->scrbitmap/*artwork_get_ui_bitmap()*/) == 0)
 			{
-
-				logWriteX("run_machine_core: iniciando interface de usuario...","","",sceKernelGetThreadId());
-
 				init_user_interface();
-
-                logWriteX("run_machine_core: paso init_user_interface !!! ","","",sceKernelGetThreadId());
 
 				/* enable artwork now */
 				//artwork_enable(1);
-
-                logWriteX("run_machine_core: paso artwor_enable !!! ","","",sceKernelGetThreadId());
 
 				/* disable cheat if no roms */
 				if (!gamedrv->rom)
@@ -657,61 +611,38 @@ void run_machine_core(void)
 				/* load the NVRAM now */
 				if (Machine->drv->nvram_handler)
 				{
-
-					logWriteX("run_machine_core: intenando iniciar nvram_handler...","","",sceKernelGetThreadId());
-
 					mame_file *nvram_file = mame_fopen(Machine->gamedrv->name, 0, FILETYPE_NVRAM, 0);
 					(*Machine->drv->nvram_handler)(nvram_file, 0);
 					if (nvram_file)
 						mame_fclose(nvram_file);
 				}
 
-                logWriteX("run_machine_core: iniciao el nvram_handler!!!","","",sceKernelGetThreadId());
-
-
-				logWriteX("run_machine_core: intenando correr la cpu , cpu_run()...","","",sceKernelGetThreadId());
-
 				psp_clear_screen();
 				/* run the emulation! */
 				cpu_run();
 
-                logWriteX("run_machine_core: paso cpu_run()!!!","","",sceKernelGetThreadId());
-
 				/* save the NVRAM */
 				if (Machine->drv->nvram_handler)
 				{
-
-					logWriteX("run_machine_core: intentando guardar la nvram...","","",sceKernelGetThreadId());
-
 					mame_file *nvram_file = mame_fopen(Machine->gamedrv->name, 0, FILETYPE_NVRAM, 1);
 					if (nvram_file != NULL)
 					{
 						(*Machine->drv->nvram_handler)(nvram_file, 1);
 						mame_fclose(nvram_file);
 					}
-
-				logWriteX("run_machine_core: guardo la nvram!!!","","",sceKernelGetThreadId());
 				}
 
 				/* stop the cheat engine */
 				/*if (options.cheat){
-					logWriteX("run_machine_core: intentando correr stopCheat","","",sceKernelGetThreadId());
 					StopCheat();
-                    logWriteX("run_machine_core: paso stopCheat!!!","","",sceKernelGetThreadId());
 				}*/
 
-				logWriteX("run_machine_core: intentando correr osd_sound_enable()0...","","",sceKernelGetThreadId());
-
 				osd_sound_enable( 0 ); //TMK
-
-                logWriteX("run_machine_core: paso osd_sound_enable!!!","","",sceKernelGetThreadId());
 
 				/* save input ports settings */
 				if (input_port_settings_modify){ // TMK
 					save_input_port_settings();
-					logWriteX("run_machine_core: paso save_input_port_settings!!!","","",sceKernelGetThreadId());
 				}
-			    logWriteX("run_machine_core: saliendo de la WEA!!!","","",sceKernelGetThreadId());
 			}
 		}
 	}
@@ -830,11 +761,7 @@ static int vh_open(void)
 	params.fps = Machine->drv->frames_per_second;
 	params.video_attributes = Machine->drv->video_attributes;
 
-#ifdef MESS
-	artcallbacks = &mess_artwork_callbacks;
-#else
 	//artcallbacks = &mame_artwork_callbacks;
-#endif
 
 	/* initialize the display through the artwork (and eventually the OSD) layer */
 	/*if (artwork_create_display(&params, direct_rgb_components, artcallbacks))
@@ -1030,9 +957,6 @@ static int init_game_options(void)
 
 	/* initialize the samplerate */
 	Machine->sample_rate = options.samplerate;
-
-    sprintf(dbg,"Machine->sample_rate=='%d'",Machine->sample_rate);
-    logWriteX("AUDIO-SAMPLERATE: ",dbg,"",999);
 
 	/* get orientation right */
 	Machine->ui_orientation = options.ui_orientation;
