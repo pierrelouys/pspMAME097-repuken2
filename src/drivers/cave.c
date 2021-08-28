@@ -3411,7 +3411,7 @@ ROM_END
 
                             Power Instinct 2
 
-ã‚¥1994 Atlus
+©1994 Atlus
 CPU: 68000, Z80
 Sound: YM2203, AR17961 (x2)
 Custom: NMK 112 (sound?), Atlus 8647-01  013, 038 (x4)

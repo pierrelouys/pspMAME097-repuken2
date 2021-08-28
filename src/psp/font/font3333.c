@@ -16,7 +16,7 @@
 (jj?0x0200:0x00)\
 )
 const unsigned short zenkaku_font10[]={
-//Á©∫ÁôΩ
+//ãÛîí
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
@@ -27,7 +27,7 @@ zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
-//„ÄÅ
+//ÅA
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
@@ -38,7 +38,7 @@ zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,M,v,v,v,v,v,v,v,v),
 zc(v,v,M,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
-//„ÄÇ
+//ÅB
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
@@ -49,7 +49,7 @@ zc(v,v,M,v,v,v,v,v,v,v),
 zc(v,M,v,M,v,v,v,v,v,v),
 zc(v,v,M,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
-//Ôºå
+//ÅC
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
@@ -60,7 +60,7 @@ zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,M,M,v,v,v,v,v,v,v),
 zc(v,v,M,v,v,v,v,v,v,v),
 zc(v,M,v,v,v,v,v,v,v,v),
-//Ôºé
+//ÅD
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
@@ -71,7 +71,7 @@ zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,M,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
-//„Éª
+//ÅE
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
@@ -82,7 +82,7 @@ zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
-//Ôºö
+//ÅF
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
@@ -93,7 +93,7 @@ zc(v,v,v,v,M,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
-//Ôºõ
+//ÅG
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
@@ -104,7 +104,7 @@ zc(v,v,v,v,M,M,v,v,v,v),
 zc(v,v,v,v,v,M,v,v,v,v),
 zc(v,v,v,v,M,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
-//Ôºü
+//ÅH
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,M,M,M,M,v,v,v),
 zc(v,v,v,v,v,v,v,M,v,v),
@@ -115,7 +115,7 @@ zc(v,v,v,v,v,M,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,M,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
-//ÔºÅ
+//ÅI
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,M,v,v,v,v),
 zc(v,v,v,v,v,M,M,v,v,v),
@@ -126,7 +126,7 @@ zc(v,v,v,v,M,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,M,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
-//„Çõ
+//ÅJ
 zc(v,v,M,v,v,v,v,v,v,v),
 zc(v,v,v,M,v,v,v,v,v,v),
 zc(v,M,v,v,v,v,v,v,v,v),
@@ -137,7 +137,7 @@ zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
-//„Çú
+//ÅK
 zc(v,v,M,v,v,v,v,v,v,v),
 zc(v,M,v,M,v,v,v,v,v,v),
 zc(v,v,M,v,v,v,v,v,v,v),
@@ -148,7 +148,7 @@ zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
-//‚Äò
+//Åe
 zc(v,v,v,v,v,M,v,v,v,v),
 zc(v,v,v,v,M,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
@@ -159,7 +159,7 @@ zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
-//‚Äô
+//Åf
 zc(v,v,v,v,M,v,v,v,v,v),
 zc(v,v,v,v,v,M,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
@@ -170,7 +170,7 @@ zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
-//‚Äù
+//Åh
 zc(v,v,M,M,v,v,M,M,v,v),
 zc(v,v,M,M,v,v,M,M,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
@@ -181,7 +181,7 @@ zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
-//Ôºæ
+//ÅO
 zc(v,v,v,v,M,M,v,v,v,v),
 zc(v,v,v,M,v,v,M,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
@@ -203,7 +203,7 @@ zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
-//Ôºø
+//ÅQ
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
@@ -699,8 +699,8 @@ zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,M,M,M,M,M,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 //
-//„Åì„Åì„ÅØÔºàÊú¨Êù•Á≠ñÂÆö„ÅÆÔºâ„ÄåÊéõ„Åë„Çã„Äç„Åß„ÅØ„Å™„Åè„Å¶„ÄÅ
-//Ôºà‰∏ÄËà¨ÁöÑ„Å´Â§âÂåñ„Åó„ÅüÔºâ„Äå„Éê„ÉÑ„Äç„Çâ„Åó„ÅÑ„ÄÇ
+//Ç±Ç±ÇÕÅiñ{óàçÙíËÇÃÅjÅuä|ÇØÇÈÅvÇ≈ÇÕÇ»Ç≠ÇƒÅA
+//ÅiàÍî ìIÇ…ïœâªÇµÇΩÅjÅuÉoÉcÅvÇÁÇµÇ¢ÅB
 zc(v,M,v,v,v,v,v,v,v,M),
 zc(v,v,M,v,v,v,v,v,M,v),
 zc(v,v,v,M,v,v,v,M,v,v),
@@ -1487,7 +1487,7 @@ zc(v,v,M,M,v,v,v,v,v,v),
 zc(v,v,v,M,v,v,v,v,v,v),
 zc(v,v,v,M,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
-//‚àΩ‚àù‚àµ‚à´‚à¨
+//Å‰ÅÂÅÊÅÁÅË
 zc(v,v,v,v,v,v,M,M,M,M),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
@@ -1542,7 +1542,7 @@ zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
-//Êõº
+//ô÷
 zc(v,v,M,M,M,M,M,M,M,v),//zc(v,v,v,v,v,M,v,v,v,v),
 zc(v,v,M,v,v,v,v,v,M,v),//zc(v,v,v,v,M,v,M,v,v,v),
 zc(v,v,M,M,M,M,M,M,M,v),//zc(v,v,v,v,v,M,v,v,v,v),
@@ -1553,7 +1553,7 @@ zc(v,v,v,M,v,v,v,M,v,v),//zc(v,v,v,v,M,M,M,v,v,v),
 zc(v,v,v,v,M,M,M,v,v,v),//zc(v,v,v,M,v,v,v,M,v,v),
 zc(v,v,M,M,v,v,v,M,M,v),//zc(v,v,v,M,v,v,v,M,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),//zc(v,v,v,v,v,v,v,v,v,v),
-//Á≠ê
+//‚û
 zc(v,v,M,v,v,v,v,M,v,v),//zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,M,M,M,M,v,M,M,M,M),//zc(v,v,M,v,v,v,M,v,v,v),
 zc(v,v,v,M,v,v,v,v,M,v),//zc(v,M,v,M,v,M,v,v,v,v),
@@ -6879,7 +6879,7 @@ zc(v,M,M,M,v,v,v,v,M,v),
 zc(v,M,v,M,v,v,v,v,M,v),
 zc(v,v,v,v,v,v,v,M,M,v),
 zc(v,v,v,v,v,v,v,v,v,v),
-//Âè≥
+//âE
 zc(v,v,v,v,M,v,v,v,v,v),
 zc(v,v,v,v,M,v,v,v,v,v),
 zc(v,M,M,M,M,M,M,M,M,M),
@@ -18176,7 +18176,7 @@ zc(v,v,v,v,v,M,v,v,v,v),
 zc(v,M,v,M,v,v,M,v,v,M),
 zc(v,M,v,M,M,M,M,M,v,M),
 zc(v,v,v,v,v,v,v,v,v,v),
-//ÊåÅ
+//éù
 zc(v,v,M,v,v,v,v,M,v,v),
 zc(v,v,M,v,v,M,M,M,M,v),
 zc(v,M,M,M,v,v,v,M,v,v),
@@ -18187,7 +18187,7 @@ zc(v,v,M,v,v,v,v,v,M,v),
 zc(v,v,M,v,v,M,v,v,M,v),
 zc(v,M,v,v,v,v,v,M,M,v),
 zc(v,v,v,v,v,v,v,v,v,v),
-//ÊôÇ
+//éû
 zc(v,v,v,v,v,v,v,M,v,v),
 zc(v,M,M,M,v,M,M,M,M,v),
 zc(v,M,v,M,v,v,v,M,v,v),
@@ -18198,7 +18198,7 @@ zc(v,M,M,M,v,v,v,v,M,v),
 zc(v,M,v,M,v,M,v,v,M,v),
 zc(v,v,v,v,v,v,v,M,M,v),
 zc(v,v,v,v,v,v,v,v,v,v),
-//Ê¨°
+//éü
 zc(v,v,v,v,v,M,v,v,v,v),
 zc(v,M,v,v,v,M,v,v,v,v),
 zc(v,v,M,v,v,M,M,M,M,M),
@@ -18209,7 +18209,7 @@ zc(v,v,M,v,v,M,v,M,v,v),
 zc(v,M,v,v,v,M,v,v,M,v),
 zc(v,M,v,v,M,v,v,v,v,M),
 zc(v,v,v,v,v,v,v,v,v,v),
-//Êªã
+//é†
 zc(v,M,v,v,M,v,v,v,M,v),
 zc(v,v,v,v,v,M,v,M,v,v),
 zc(v,v,v,M,M,M,M,M,M,M),
@@ -21751,7 +21751,7 @@ zc(v,v,M,M,M,M,M,M,M,v),
 zc(v,v,v,v,v,M,v,v,v,v),
 zc(v,v,v,v,v,M,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
-//ÈÄ≤
+//êi
 zc(v,M,v,v,v,M,v,v,M,v),
 zc(v,v,M,v,M,v,v,M,v,v),
 zc(v,v,v,M,M,M,M,M,M,M),
@@ -30914,7 +30914,7 @@ zc(v,v,M,v,v,v,v,M,v,v),
 zc(v,v,M,v,v,v,v,M,v,v),
 zc(v,v,M,v,v,v,v,M,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
-//Âà§
+//îª
 zc(v,M,v,M,v,M,v,v,v,M),
 zc(v,M,v,M,v,M,v,M,v,M),
 zc(v,v,v,M,v,v,v,M,v,M),
@@ -38409,7 +38409,7 @@ zc(v,M,v,M,v,v,M,M,v,v),
 zc(v,M,v,M,v,M,v,M,M,M),
 zc(v,v,v,v,v,v,v,v,v,v),
 //
-//Á¨¨‰∏ÄÊ∞¥Ê∫ñ„ÅÆ„Åø
+//ëÊàÍêÖèÄÇÃÇ›
 };
 #undef M
 #undef v
