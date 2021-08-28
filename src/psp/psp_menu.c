@@ -849,23 +849,23 @@ void psp_colorconfig(void)
 		sel_count &=15;
 
 		if (sel >= COLOR0_R && sel <= BG_BRIGHT)
-		{	psp_frame(NULL, "←→：値の変更"
+		{	psp_frame(NULL, "left/right : change values" //"←→：値の変更"
 			#if (1==USE_COLOR_MENU_X_BUTTON)
-				"  ×：メインメニューに戻る"
+				" X : back to main menu" // "  ×：メインメニューに戻る"
 			#endif //(1==USE_COLOR_MENU_X_BUTTON)
 			);
 		} else if (sel == INIT)
-		{	psp_frame(NULL, "○：設定を初期化する"
+		{	psp_frame(NULL, "O : Initialize the settings" //"○：設定を初期化する"
 			#if (1==USE_COLOR_MENU_X_BUTTON)
-				"  ×：メインメニューに戻る"
+				" X : back to main menu" // "  ×：メインメニューに戻る"
 			#endif //(1==USE_COLOR_MENU_X_BUTTON)
 			);
 		} else
-		{	psp_frame(NULL, "○"
+		{	psp_frame(NULL, "O" //"○"
 			#if (1==USE_COLOR_MENU_X_BUTTON)
-				"×"
+				"X"//"×"
 			#endif //(1==USE_COLOR_MENU_X_BUTTON)
-				"：メインメニューに戻る"
+				": back to main menu" //"：メインメニューに戻る"
 			);
 		}
 
@@ -1067,11 +1067,11 @@ void psp_menu(void)
 			strcpy(tmp, &setumei[sel][0] );
 #endif
 			if (sel < ITEM_COLOR_CONFIG)
-				psp_frame(NULL/*tmp*/, "←→：値の変更  ×Ｌ：ゲーム選択画面に戻る");
+				psp_frame(NULL/*tmp*/, "l/r : change value  X L : back to game selection"); //"←→：値の変更  ×Ｌ：ゲーム選択画面に戻る"
 			else if (sel == ITEM_COLOR_CONFIG)
-				psp_frame(NULL/*tmp*/, "○：カラー設定メニューに移動  ×Ｌ：ゲーム選択画面に戻る");
+				psp_frame(NULL/*tmp*/, "O : open color setting menu  X L :  back to game selection"); //"○：カラー設定メニューに移動  ×Ｌ：ゲーム選択画面に戻る"
 			else
-				psp_frame(NULL/*tmp*/, "○×Ｌ：ゲーム選択画面に戻る");
+				psp_frame(NULL/*tmp*/, "O X L : back to game selection"); //"○×Ｌ：ゲーム選択画面に戻る"
 		}
 #define MENU1_Y_SPACER 11
 	//	if(setting.sound_ON_OFF)

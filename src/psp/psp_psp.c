@@ -229,10 +229,14 @@ int run_mame(int argc, char **argv)
 	{
 		psp_print_color(PSP_COLOR_RED);
 		psp_printf_bbb(
-			"メモリーリークですぅ\n"
-			" 開始 : %d(0x%x) bytes.\n"
-			" 終了 : %d(0x%x) bytes.\n"
-			" 差分 : %d(0x%x) bytes.\n"
+			//"メモリーリークですぅ\n"
+			//" 開始 : %d(0x%x) bytes.\n"
+			//" 終了 : %d(0x%x) bytes.\n"
+			//" 差分 : %d(0x%x) bytes.\n"
+			"It's a memory leak\n"
+			" Start : %d(0x%x) bytes.\n"
+			" End : %d(0x%x) bytes.\n"
+			" Difference : %d(0x%x) bytes.\n"
 			, start_size
 			, start_size
 			, end_size
