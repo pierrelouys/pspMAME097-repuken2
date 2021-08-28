@@ -229,19 +229,6 @@ int run_mame(int argc, char **argv)
 	{
 		psp_print_color(PSP_COLOR_RED);
 		psp_printf_bbb(
-			"             memory consumption report : \n\n"
-			" available free memory : %d bytes (0x%x bytes) .\n"
-			" used memory           : %d bytes (0x%x bytes) .\n"
-			" memory left           : %d bytes (0x%x bytes) .\n"
-			, start_size
-			, start_size
-			, end_size
-			, end_size
-			, (end_size-start_size)
-			, (end_size-start_size)
-		);
-
-		/*psp_printf_bbb(
 			"メモリーリークですぅ\n"
 			" 開始 : %d(0x%x) bytes.\n"
 			" 終了 : %d(0x%x) bytes.\n"
@@ -252,7 +239,7 @@ int run_mame(int argc, char **argv)
 			, end_size
 			, (end_size-start_size)
 			, (end_size-start_size)
-		);*/
+		);
 		psp_print_color(PSP_COLOR_WHITE);
 	}
 #endif //(1==MEMORY_CHECK)
