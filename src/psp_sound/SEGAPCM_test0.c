@@ -125,10 +125,10 @@ typedef INT32 _sFMSAMPLE_MIX;
 
 static void segapcm_start(int external_clock, int rate)///*int*/UINT8 sndindex, int external_clock, const void *config)
 {
-/* machine->drv->sound[1].config‚ª 1 ‚È‚Ì‚ÍA
-	0(‚Â‚Ü‚èn‚ß‚É“o˜^) ‚ª YM2151 ‚ÅA
-	1(‚Â‚Ü‚è‚Q”Ô–Ú‚É“o˜^) ‚ªsegaPCM‚¾‚©‚çB
-	Ú‚µ‚­‚Í src/drivers/outrun.c ‚ğQÆ‚¹‚æB */
+/* machine->drv->sound[1].configãŒ 1 ãªã®ã¯ã€
+	0(ã¤ã¾ã‚Šå§‹ã‚ã«ç™»éŒ²) ãŒ YM2151 ã§ã€
+	1(ã¤ã¾ã‚Šï¼’ç•ªç›®ã«ç™»éŒ²) ãŒsegaPCMã ã‹ã‚‰ã€‚
+	è©³ã—ãã¯ src/drivers/outrun.c ã‚’å‚ç…§ã›ã‚ˆã€‚ */
 #define REGIST_ON_DRIVER_THE_SEGAPCM_SOUND_NUMBER (1)
 	const struct SEGAPCMinterface *intf = machine->drv->sound[REGIST_ON_DRIVER_THE_SEGAPCM_SOUND_NUMBER].config;
 #undef	REGIST_ON_DRIVER_THE_SEGAPCM_SOUND_NUMBER
@@ -140,8 +140,8 @@ static void segapcm_start(int external_clock, int rate)///*int*/UINT8 sndindex, 
 //	spcm->rate = /*SEGAPCM_SAMPLE15K*/external_clock/*external_clock*/;
 
 	/* rom addr */
-	spcm->rom = (const UINT8 *)memory_region(intf->region); 			/* ‚¿‚È‚İ‚É src/drivers/outrun.c ‚Ìê‡ REGION_SOUND1 */
-	spcm->rom_end = spcm->rom + memory_region_length(intf->region); 	/* ‚¿‚È‚İ‚É src/drivers/outrun.c ‚Ìê‡ REGION_SOUND1 */
+	spcm->rom = (const UINT8 *)memory_region(intf->region); 			/* ã¡ãªã¿ã« src/drivers/outrun.c ã®å ´åˆ REGION_SOUND1 */
+	spcm->rom_end = spcm->rom + memory_region_length(intf->region); 	/* ã¡ãªã¿ã« src/drivers/outrun.c ã®å ´åˆ REGION_SOUND1 */
 
 	/* calc step tables */
 	spcm->step = auto_malloc(sizeof(UINT32)*256);
@@ -156,11 +156,11 @@ static void segapcm_start(int external_clock, int rate)///*int*/UINT8 sndindex, 
 	memset(spcm->ram, 0xff, 0x800);
 
 	/*	*/
-	spcm->bankshift = (UINT8)(intf->bank);	/* ‚¿‚È‚İ‚É src/drivers/outrun.c ‚Ìê‡ BANK_512 */
+	spcm->bankshift = (UINT8)(intf->bank);	/* ã¡ãªã¿ã« src/drivers/outrun.c ã®å ´åˆ BANK_512 */
 
 	/*	*/
 	int mask;
-	mask = intf->bank >> 16;				/* ‚¿‚È‚İ‚É src/drivers/outrun.c ‚Ìê‡ BANK_512 */
+	mask = intf->bank >> 16;				/* ã¡ãªã¿ã« src/drivers/outrun.c ã®å ´åˆ BANK_512 */
 	if(!mask){	mask = BANK_MASK7>>16;}
 
 	{int rom_mask;

@@ -374,7 +374,7 @@ unsigned int m68k_get_reg(void* context, m68k_register_t regnum)
 		case M68K_REG_A6:	return cpu->dar[14];
 		case M68K_REG_A7:	return cpu->dar[15];
 #else
-		/* ’F(m68ki_cpu.dar+8)==REG_D[8]==REG_A[0] ‚È‚Ì‚Å–â‘è‚È‚¢BÚ‚µ‚­‚ÍAm68kcpu.h */
+		/* è¨»ï¼š(m68ki_cpu.dar+8)==REG_D[8]==REG_A[0] ãªã®ã§å•é¡Œãªã„ã€‚è©³ã—ãã¯ã€m68kcpu.h */
 		case M68K_REG_D0 ... M68K_REG_A7:	return cpu->dar[(regnum-M68K_REG_D0)];
 #endif
 		case M68K_REG_PC:	return MASK_OUT_ABOVE_32(cpu->pc);
@@ -446,7 +446,7 @@ void m68k_set_reg(m68k_register_t regnum, unsigned int value)
 		case M68K_REG_A6:	REG_A[6] = MASK_OUT_ABOVE_32(value); return;
 		case M68K_REG_A7:	REG_A[7] = MASK_OUT_ABOVE_32(value); return;
 #else
-		/* ’F(m68ki_cpu.dar+8)==REG_D[8]==REG_A[0] ‚È‚Ì‚Å–â‘è‚È‚¢BÚ‚µ‚­‚ÍAm68kcpu.h */
+		/* è¨»ï¼š(m68ki_cpu.dar+8)==REG_D[8]==REG_A[0] ãªã®ã§å•é¡Œãªã„ã€‚è©³ã—ãã¯ã€m68kcpu.h */
 		case M68K_REG_D0 ... M68K_REG_A7:	REG_D[(regnum-M68K_REG_D0)] = MASK_OUT_ABOVE_32(value); return;
 #endif
 		case M68K_REG_PC:	m68ki_jump(MASK_OUT_ABOVE_32(value)); return;

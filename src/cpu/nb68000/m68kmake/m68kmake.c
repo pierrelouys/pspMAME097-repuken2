@@ -25,8 +25,8 @@ from (C)2006 PSP battle bursery scrool.
 ================================================
 (battle nursery school: PSP KAIHATU YOUTIEN.japan )
 ================================================
-  ‚o‚r‚oŠJ”­—c’t‰€	http://ameblo.jp/pspdevblog/  i–{ŠÙjiƒuƒƒOj
-  ‚o‚r‚oŠJ”­—c’t‰€	http://psp.nukenin.jp/		  i•ÊŠÙji‚g‚oj
+  ï¼°ï¼³ï¼°é–‹ç™ºå¹¼ç¨šåœ’	http://ameblo.jp/pspdevblog/  ï¼ˆæœ¬é¤¨ï¼‰ï¼ˆãƒ–ãƒ­ã‚°ï¼‰
+  ï¼°ï¼³ï¼°é–‹ç™ºå¹¼ç¨šåœ’	http://psp.nukenin.jp/		  ï¼ˆåˆ¥é¤¨ï¼‰ï¼ˆï¼¨ï¼°ï¼‰
 ================================================
 
 */
@@ -904,7 +904,7 @@ static void generate_opcode_handler(FILE* filep, body_struct* body, replace_stru
 	set_opcode_struct(opinfo, op, ea_mode);
 	get_base_name(str, op);
 	#if 0
-	/* —v‚ç‚È‚¢(m68000‚Ì–½—ß‚ğuŠO‚©‚çŒ©‚é•K—v«v‚Í–³‚¢) */
+	/* è¦ã‚‰ãªã„(m68000ã®å‘½ä»¤ã‚’ã€Œå¤–ã‹ã‚‰è¦‹ã‚‹å¿…è¦æ€§ã€ã¯ç„¡ã„) */
 	/* I not need the case, that looking from external. */
 	//write_prototype(g_prototype_file, str);
 	fprintf(g_prototype_file, "static void %s(void);\n", str);/*dummy_prote types*/
@@ -912,7 +912,7 @@ static void generate_opcode_handler(FILE* filep, body_struct* body, replace_stru
 	add_opcode_output_table_entry(op, str);
 	//write_function_name(filep, str);
 	//fprintf(filep, "static void %s(void)\n", str);
-	fprintf(filep, "OP(%s)\n", str);	// inline goto ‘Î‰
+	fprintf(filep, "OP(%s)\n", str);	// inline goto å¯¾å¿œ
 
 	/* Add any replace strings needed */
 	if(ea_mode != EA_MODE_NONE)
@@ -1350,7 +1350,7 @@ int main(int argc, char **argv)
 			if(table_header_read)
 				error_exit("Duplicate table header");
 			read_insert(table_header_insert/*temp_insert*/);
-//			fprintf(g_table_file, "%s", table_header_insert/*temp_insert*/);//moved to header inseart location.// ƒwƒbƒ_‚Ìo—ÍˆÊ’u•ÏXmame117
+//			fprintf(g_table_file, "%s", table_header_insert/*temp_insert*/);//moved to header inseart location.// ãƒ˜ãƒƒãƒ€ã®å‡ºåŠ›ä½ç½®å¤‰æ›´mame117
 			table_header_read = 1;
 		}
 		else if(strcmp(section_id, ID_OPHANDLER_HEADER) == 0)
@@ -1431,7 +1431,7 @@ int main(int argc, char **argv)
 			if(!ophandler_footer_read)	error_exit("Missing opcode handler footer");
 			if(!ophandler_body_read)	error_exit("Missing opcode handler body");
 
-			fprintf(g_table_file, "%s", table_header_insert/*temp_insert*/);// moved from header inseart location.// ƒwƒbƒ_‚Ìo—ÍˆÊ’u•ÏXmame117
+			fprintf(g_table_file, "%s", table_header_insert/*temp_insert*/);// moved from header inseart location.// ãƒ˜ãƒƒãƒ€ã®å‡ºåŠ›ä½ç½®å¤‰æ›´mame117
 			print_opcode_output_table(g_table_file);
 
 			fprintf(g_prototype_file, "%s\n\n", prototype_footer_insert);

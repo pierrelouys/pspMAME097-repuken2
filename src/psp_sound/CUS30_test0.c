@@ -178,7 +178,7 @@ WRITE8_HANDLER( namcos1_cus30_w )
 			switch (offset & 7)
 			{
 			case 0x00:
-				voice->volume = data & 0x0f;	/* ƒ‚ƒmƒ‰ƒ‹‚Ìê‡‚Ì‰¹—Ê */
+				voice->volume = data & 0x0f;	/* ãƒ¢ãƒŽãƒ©ãƒ«ã®å ´åˆã®éŸ³é‡ */
 			/*	voice->volume[0] = data & 0x0f;  */
 				break;
 			case 0x01:
@@ -195,8 +195,8 @@ WRITE8_HANDLER( namcos1_cus30_w )
 				break;
 			case 0x04:
 				if (++voice == namcos1->last_channel){	voice = namcos1->channel_list;}
-				/* ƒXƒeƒŒƒI‚Ìê‡A‚±‚±‚ÅuŽŸ‚Ìv‰¹—Ê */
-			/*	voice->volume[1] = data & 0x0f;  */ /* ’F‚±‚±‚ÍŽŸ‚ÌVOICE‚Ì‰¹—Ê */
+				/* ã‚¹ãƒ†ãƒ¬ã‚ªã®å ´åˆã€ã“ã“ã§ã€Œæ¬¡ã®ã€éŸ³é‡ */
+			/*	voice->volume[1] = data & 0x0f;  */ /* è¨»ï¼šã“ã“ã¯æ¬¡ã®VOICEã®éŸ³é‡ */
 				voice->noise_sw = ((data & 0x80) >> 7);/* noise switch */
 				break;
 			}

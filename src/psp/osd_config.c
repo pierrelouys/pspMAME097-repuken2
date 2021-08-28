@@ -1545,7 +1545,7 @@ int cli_frontend_init( int argc, char **argv )
 		/* since the cpuintrf structure is filled dynamically now, we have to init first */
 		cpuintrf_init();
 		#ifndef PSP_DIRECT_STREAM
-		/* 専用サウンド時には含まない． */
+		/* 蟆ら畑繧オ繧ヲ繝ウ繝画凾縺ォ縺ッ蜷ォ縺セ縺ェ縺シ*/
 		sndintrf_init();
 		#endif // PSP_DIRECT_STREAM
 	}

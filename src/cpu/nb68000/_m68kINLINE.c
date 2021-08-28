@@ -593,7 +593,7 @@ INLINE void m68ki_exception_trap(uint vector)
 	m68ki_jump_vector(vector);
 
 	/* Use up some clock cycles */
-	USE_CYCLES(34/*CYC_EXCEPTION[vector]*/);/*34==c68kÉ^ÉuÉìÅAÉeÉLÉgÅ[*/
+	USE_CYCLES(34/*CYC_EXCEPTION[vector]*/);/*34==c68k„Çø„Éñ„É≥„ÄÅ„ÉÜ„Ç≠„Éà„Éº*/
 }
 
 #if 0
@@ -609,7 +609,7 @@ INLINE void m68ki_exception_trapN(uint vector)
 	USE_CYCLES(CYC_EXCEPTION[vector]);
 }
 #else
-	/*É^ÉuÉìÅAÉeÉLÉgÅ[*/
+	/*„Çø„Éñ„É≥„ÄÅ„ÉÜ„Ç≠„Éà„Éº*/
 	#define m68ki_exception_trapN m68ki_exception_trap
 #endif
 
@@ -689,7 +689,7 @@ INLINE void m68ki_exception_1010(void)
 	/* Use up some clock cycles and undo the instruction's cycles */
 	USE_CYCLES(4/*CYC_EXCEPTION[EXCEPTION_1010]*/ - CYC_INSTRUCTION[REG_IR]);
 	#else
-	USE_CYCLES(34);/*34==c68kÉ^ÉuÉìÅAÉeÉLÉgÅ[*/
+	USE_CYCLES(34);/*34==c68k„Çø„Éñ„É≥„ÄÅ„ÉÜ„Ç≠„Éà„Éº*/
 	#endif
 }
 
@@ -715,7 +715,7 @@ INLINE void m68ki_exception_1111(void)
 	/* Use up some clock cycles and undo the instruction's cycles */
 	USE_CYCLES(4/*CYC_EXCEPTION[EXCEPTION_1111]*/ - CYC_INSTRUCTION[REG_IR]);
 	#else
-	USE_CYCLES(34);/*34==c68kÉ^ÉuÉìÅAÉeÉLÉgÅ[*/
+	USE_CYCLES(34);/*34==c68k„Çø„Éñ„É≥„ÄÅ„ÉÜ„Ç≠„Éà„Éº*/
 	#endif
 }
 
@@ -750,7 +750,7 @@ INLINE void m68ki_exception_illegal(void)
 }
 
 #if 0/*???*/
-/* 010 020 à»ç~ */
+/* 010 020 ‰ª•Èôç */
 /* Exception for format errror in RTE */
 INLINE void m68ki_exception_format_error(void)
 {
@@ -865,7 +865,7 @@ void m68ki_exception_interrupt(uint int_level)
 
 	/* Defer cycle counting until later */
 	#if 1
-	/* è≠Çµè¨Ç≥Ç¢ */
+	/* Â∞ë„ÅóÂ∞è„Åï„ÅÑ */
 	if(vector<48)	/*CPU_INT_CYCLES +=*/ USE_CYCLES(CYC_EXCEPTION[vector]);
 	else			/*CPU_INT_CYCLES +=*/ USE_CYCLES(4);
 	#else

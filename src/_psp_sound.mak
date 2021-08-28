@@ -7,10 +7,10 @@
 
 #ifeq ($(TARGET),ARIENAI)
 
-	# ê—pƒTƒEƒ“ƒh‚Ìê‡AƒfƒBƒŒƒNƒgƒŠ[‚ð’Ç‰ÁB
+	# å°‚ç”¨ã‚µã‚¦ãƒ³ãƒ‰ã®å ´åˆã€ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªãƒ¼ã‚’è¿½åŠ ã€‚
 	OBJDIRS += $(OBJ)/psp_sound 
 
-## direct stream ŽÀŒ±
+## direct stream å®Ÿé¨“
 
 
 	ifeq ($(TARGET),namcos86)
@@ -20,7 +20,7 @@
 	OPT_DEFS += -DLINK_MAME_SPEAKER=0
 	endif
 
-	# ‘¬“x‚ª’x‚¢ƒJƒ‰
+	# é€Ÿåº¦ãŒé…ã„ã‚«ãƒ©
 	ifeq ($(TARGET),turbo_outrun)
 	SOUNDOBJS = $(OBJ)/psp_sound/sound_outrun.o
 	OPT_DEFS += -DPSP_DIRECT_STREAM=1
@@ -28,14 +28,14 @@
 	OPT_DEFS += -DLINK_MAME_SPEAKER=0
 	endif
 
-	# ƒƒ‚ƒŠ‚ª‘«‚è‚È‚¢ƒJƒ‰
+	# ãƒ¡ãƒ¢ãƒªãŒè¶³ã‚Šãªã„ã‚«ãƒ©
 #	ifeq ($(TARGET),cotton)
 #	SOUNDOBJS = $(OBJ)/psp_sound/sound_cotton.o
 #	OPT_DEFS += -DPSP_DIRECT_STREAM=1
 #	OPT_DEFS += -DLINK_MAME_SOUND=0
 #	endif
 
-	# ƒiƒ“ƒgƒiƒN
+	# ãƒŠãƒ³ãƒˆãƒŠã‚¯
 	ifeq ($(TARGET),fantasy_zone)
 	SOUNDOBJS = $(OBJ)/psp_sound/sound_outrun.o
 	OPT_DEFS += -DPSP_DIRECT_STREAM=1
@@ -43,7 +43,7 @@
 	OPT_DEFS += -DLINK_MAME_SPEAKER=0
 	endif
 
-	# ‘¬“x‚ª’x‚¢ƒJƒ‰
+	# é€Ÿåº¦ãŒé…ã„ã‚«ãƒ©
 	ifeq ($(TARGET),taitoB)
 	SOUNDOBJS = $(OBJ)/psp_sound/sound_2610_8MHz.o
 	OPT_DEFS += -DPSP_DIRECT_STREAM=1
@@ -51,7 +51,7 @@
 	OPT_DEFS += -DLINK_MAME_SPEAKER=0
 	endif
 
-	# ‘¬“x‚ª’x‚¢ƒJƒ‰
+	# é€Ÿåº¦ãŒé…ã„ã‚«ãƒ©
 	ifeq ($(TARGET),night_striker)
 	SOUNDOBJS = $(OBJ)/psp_sound/sound_2610_8MHz.o
 	OPT_DEFS += -DPSP_DIRECT_STREAM=1
@@ -59,8 +59,8 @@
 	OPT_DEFS += -DLINK_MAME_SPEAKER=0
 	endif
 
-# ‰¹(ADPCM)‚ª‚¨‚©‚µ‚¢
-	# ‘¬“x‚ª’x‚¢ƒJƒ‰
+# éŸ³(ADPCM)ãŒãŠã‹ã—ã„
+	# é€Ÿåº¦ãŒé…ã„ã‚«ãƒ©
 	ifeq ($(TARGET),ninjya_warriors)
 	SOUNDOBJS = $(OBJ)/psp_sound/sound_2610_8MHz.o
 	OPT_DEFS += -DPSP_DIRECT_STREAM=1
@@ -68,14 +68,14 @@
 	OPT_DEFS += -DLINK_MAME_SPEAKER=0
 	endif
 
-#	# ‘¬“x‚ª’x‚¢ƒJƒ‰
+#	# é€Ÿåº¦ãŒé…ã„ã‚«ãƒ©
 #	ifeq ($(TARGET),zerowing)
 #	SOUNDOBJS = $(OBJ)/psp_sound/sound_3526_3812_4MHz.o
 #	OPT_DEFS += -DPSP_DIRECT_STREAM=1
 #	OPT_DEFS += -DLINK_MAME_SOUND=0
 #	endif
 
-	# ƒiƒ“ƒgƒiƒN
+	# ãƒŠãƒ³ãƒˆãƒŠã‚¯
 	ifeq ($(TARGET),namcoNA)
 	SOUNDOBJS = $(OBJ)/psp_sound/sound_NA.o
 	OPT_DEFS += -DPSP_DIRECT_STREAM=1
@@ -83,7 +83,7 @@
 	OPT_DEFS += -DLINK_MAME_SPEAKER=0
 	endif
 
-	# ƒiƒ“ƒgƒiƒN
+	# ãƒŠãƒ³ãƒˆãƒŠã‚¯
 	ifeq ($(TARGET),ajax)
 	SOUNDOBJS = $(OBJ)/psp_sound/sound_a_jax.o
 	OPT_DEFS += -DPSP_DIRECT_STREAM=1
@@ -91,8 +91,8 @@
 	OPT_DEFS += -DLINK_MAME_SPEAKER=0
 	endif
 
-#‚¾‚ß(ì‚Á‚Ä‚È‚¢)
-#	# ƒTƒCƒhƒA[ƒ€ •sˆÀ’è‚Ìˆ×
+#ã ã‚(ä½œã£ã¦ãªã„)
+#	# ã‚µã‚¤ãƒ‰ã‚¢ãƒ¼ãƒ  ä¸å®‰å®šã®ç‚º
 #	ifeq ($(TARGET),ninjya_kun2)
 #	SOUNDOBJS = $(OBJ)/psp_sound/sound_ninjya_kun2.o
 #	OPT_DEFS += -DPSP_DIRECT_STREAM=1

@@ -26,7 +26,7 @@
 
 /* Gens_FM */
 
-/* Rolling Thunder (new version [SOUND FM] #02 ‚ª–Â‚ç‚È‚¢) */
+/* Rolling Thunder (new version [SOUND FM] #02 ãŒé³´ã‚‰ãªã„) */
 
 //#include "./../psp/psp_menu.h"
 
@@ -237,7 +237,7 @@ void mame_sound_frame_update(int p){}//void sound_frame_update(void)/* src/mame.
 //#include "sound/ns86snd.h"
 
 
-/* 0:g‚í‚ñ, 1:g‚¤ 44100ê—pƒ~ƒLƒT|g—p‰Â”Û */
+/* 0:ä½¿ã‚ã‚“, 1:ä½¿ã† 44100å°‚ç”¨ãƒŸã‚­ã‚µâˆ’ä½¿ç”¨å¯å¦ */
 #define USE_FIXED44100 0
 //#define USE_FIXED44100 0
 
@@ -249,7 +249,7 @@ static void ns86_sound_update(int p)
 	s16 *buffer = (s16 *)p;
 	s16 mixing_buffer[PSP_SOUND_SAMPLES];
 	#if (1==USE_FIXED44100)
-	/* ‚¢‚¸‚ê‚É‚¹‚æ44100 ‚Í–¢‚¾À—pˆæ‚Å‚Í‚È‚¢ */
+	/* ã„ãšã‚Œã«ã›ã‚ˆ44100 ã¯æœªã å®Ÿç”¨åŸŸã§ã¯ãªã„ */
 	if(SND_44100==(sr))
 	{
 		YM2151Update_stream(mixing_buffer, PSP_SOUND_SAMPLES);
@@ -288,14 +288,14 @@ static void ns86_sound_update(int p)
 	}
 }
 #else
-/* jumptable® */
+/* jumptableå¼ */
 static void ns86_sound_update(int p)
 {
 	int i;
 	s16 *buffer = (s16 *)p;
 	s16 mixing_buffer[PSP_SOUND_SAMPLES];
 	#if (1==USE_FIXED44100)
-	/* ‚¢‚¸‚ê‚É‚¹‚æ 44100 ‚Í–¢‚¾À—pˆæ‚Å‚Í‚È‚¢ */
+	/* ã„ãšã‚Œã«ã›ã‚ˆ 44100 ã¯æœªã å®Ÿç”¨åŸŸã§ã¯ãªã„ */
 	if(SND_44100==(sr))
 	{
 		YM2151Update_stream(mixing_buffer, PSP_SOUND_SAMPLES);
@@ -388,7 +388,7 @@ int mame_sound_start(void)
 #endif
 
 #if 0
-	YM2151Init(4000000, samplerate, NULL);// FZ‚àoutrun‚à4[MHz]
+	YM2151Init(4000000, samplerate, NULL);// FZã‚‚outrunã‚‚4[MHz]
 	#if (1==USE_THE_SEGAPCM)
 	segapcm_start(15625, samplerate);
 	#endif //(1==USE_THE_SEGAPCM)
@@ -451,7 +451,7 @@ int sndnum_clock(int sndnum)
 {
 	switch(sndnum)
 	{
-	case 0: return 4000000; /* 4.000[MHz] */  // FZ‚àoutrun‚à4[MHz]
+	case 0: return 4000000; /* 4.000[MHz] */  // FZã‚‚outrunã‚‚4[MHz]
 	case 1: return 24000;	/* 15.625[kHz] */
 	case 2: return 6000000;
 //	case 3: return 12345;
@@ -463,15 +463,15 @@ const char *sndnum_get_info_string(int sndnum, UINT32 state)
 {
 	switch(sndnum)
 	{
-	case 0: return "YM2151";	// FZ‚àoutrun‚à2151.
-	case 1: return "Namco CUS30"/*"SEGA PCM"*/;	// outrun‚Ì‚İ.
+	case 0: return "YM2151";	// FZã‚‚outrunã‚‚2151.
+	case 1: return "Namco CUS30"/*"SEGA PCM"*/;	// outrunã®ã¿.
 	case 2: return "Namco 63701X";
 //	case 3: return "TEST 12345";
 //	case 4: return "TEST 77777";
 	}
 	return ""/*"dummy_STR"*/;
 }
-//////‚æ‚­ƒƒJƒ“ƒiƒCB
+//////ã‚ˆããƒ¯ã‚«ãƒ³ãƒŠã‚¤ã€‚
 #if 0
 int sound_get_user_gain_count(void)
 {

@@ -608,7 +608,7 @@ int sound_start(void)
 //TMK	finalmix = auto_malloc(Machine->sample_rate * sizeof(*finalmix));
 	finalmixCur =finalmixCurNow =finalmixCounter =0;
 	finalmixLen =Machine->sample_rate;
-	finalmixLen =((finalmixLen +0x7ff) & ~0x7ff); // 2048‚Ì”{”‚É‚È‚é—l’²®
+	finalmixLen =((finalmixLen +0x7ff) & ~0x7ff); // 2048ã®å€æ•°ã«ãªã‚‹æ§˜èª¿æ•´
 	finalmix = auto_malloc(finalmixLen * sizeof(*finalmix));
 
 	leftmix = auto_malloc(Machine->sample_rate * sizeof(*leftmix));
@@ -1180,12 +1180,12 @@ void sound_frame_update(void)
 	}
 
 	if (wavfile)
-		wav_add_data_16(wavfile, &finalmix[finalmixCurNow], samples_this_frame * 2);	// ƒf[ƒ^‚Í³í‚Å‚È‚¢
+		wav_add_data_16(wavfile, &finalmix[finalmixCurNow], samples_this_frame * 2);	// ãƒ‡ãƒ¼ã‚¿ã¯æ­£å¸¸ã§ãªã„
 //TMK		wav_add_data_16(wavfile, finalmix, samples_this_frame * 2);
 
 	/* play the result */
 //TMK	samples_this_frame = osd_update_audio_stream(finalmix);
-	samples_this_frame = osd_update_audio_stream(&finalmix[finalmixCurNow]);		// ƒf[ƒ^‚Í³í‚Å‚È‚¢
+	samples_this_frame = osd_update_audio_stream(&finalmix[finalmixCurNow]);		// ãƒ‡ãƒ¼ã‚¿ã¯æ­£å¸¸ã§ãªã„
 
 	/* update the streamer */
 	streams_frame_update();
@@ -1805,7 +1805,7 @@ int mame_sound_start(void)
 	//if (nosound_mode){	machine->sample_rate = 5512/*11025*/;}
 	//if (0==machine->sample_rate){	machine->sample_rate = 5512;}
 	if (0==Machine->sample_rate){	Machine->sample_rate = 1024;}
-	/*1024 ƒˆƒNƒƒJƒ‰ƒ“‚ª¬‚³‚È”š(4‚Æ‚©)‚Å‚Íƒ_ƒiPSP‚ÅSOUND_OFF‚ªÀs‚Å‚«‚È‚¢j */
+	/*1024 ãƒ¨ã‚¯ãƒ¯ã‚«ãƒ©ãƒ³ãŒå°ã•ãªæ•°å­—(4ã¨ã‹)ã§ã¯ãƒ€ãƒ¡ï¼ˆPSPã§SOUND_OFFãŒå®Ÿè¡Œã§ããªã„ï¼‰ */
 //		machine->sample_rate = 11025;
 
 	/* initialize the interfaces */
@@ -1824,15 +1824,15 @@ int mame_sound_start(void)
 
 	/* allocate memory for mix buffers */
 #if (0==PSP_MAME_STREAMING_MODE)
-/* TMK ŒİŠ· */
+/* TMK äº’æ› */
 	finalmixLen =Machine->sample_rate;
 #if 1
-	finalmixLen =((finalmixLen +0x7ff) & ~0x7ff); // 2048‚Ì”{”‚É‚È‚é—l’²®
-//	finalmixLen =((finalmixLen +0x3ff) & ~0x3ff); // 1024‚Ì”{”‚É‚È‚é—l’²®
-//	finalmixLen =((finalmixLen +0x00f) & ~0x00f); //   16‚Ì”{”‚É‚È‚é—l’²®
+	finalmixLen =((finalmixLen +0x7ff) & ~0x7ff); // 2048ã®å€æ•°ã«ãªã‚‹æ§˜èª¿æ•´
+//	finalmixLen =((finalmixLen +0x3ff) & ~0x3ff); // 1024ã®å€æ•°ã«ãªã‚‹æ§˜èª¿æ•´
+//	finalmixLen =((finalmixLen +0x00f) & ~0x00f); //   16ã®å€æ•°ã«ãªã‚‹æ§˜èª¿æ•´
 #else
-//	if (finalmixLen&1){finalmixLen++;} // Šï”‚É‚È‚ç‚ñ—l’²®HHi‹ô”‚É‚·‚éj
-//	if (finalmixLen&0x0f){finalmixLen+=0x10;finalmixLen&=0xffff;} // 16‚Ì”{”‚É’²®HH(“®‚­‚ªƒmƒCƒY‚Åƒ_ƒ)
+//	if (finalmixLen&1){finalmixLen++;} // å¥‡æ•°ã«ãªã‚‰ã‚“æ§˜èª¿æ•´ï¼Ÿï¼Ÿï¼ˆå¶æ•°ã«ã™ã‚‹ï¼‰
+//	if (finalmixLen&0x0f){finalmixLen+=0x10;finalmixLen&=0xffff;} // 16ã®å€æ•°ã«èª¿æ•´ï¼Ÿï¼Ÿ(å‹•ããŒãƒã‚¤ã‚ºã§ãƒ€ãƒ¡)
 #endif
 	finalmix = auto_malloc(finalmixLen * sizeof(*finalmix));
 

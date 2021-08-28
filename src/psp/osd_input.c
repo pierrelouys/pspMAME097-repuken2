@@ -26,8 +26,8 @@
 /* Returned control data */
 typedef struct _ctrl_data
 {
-	UINT32 frame;	// ƒ}ƒCƒNƒ•bH
-	UINT32 buttons;	// ƒ{ƒ^ƒ“î•ñ
+	UINT32 frame;	// ãƒã‚¤ã‚¯ãƒ­ç§’ï¼Ÿ
+	UINT32 buttons;	// ãƒœã‚¿ãƒ³æƒ…å ±
 	UINT8  analog[2];	// 0:X 1:Y
 	UINT8  dummy[6];
 } ctrl_data_t;

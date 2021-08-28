@@ -5321,7 +5321,7 @@ OP(m68k_op_bra_8)
 	m68ki_trace_t0();				   /* auto-disable (see m68kcpu.h) */
 	m68ki_branch_8(MASK_OUT_ABOVE_8(REG_IR));
 	#if (1==M68K_USE_PPC)
-	if(REG_PC == REG_PPC)/*ñ≥å¿ÉãÅ[Év*/
+	if(REG_PC == REG_PPC)/*ÁÑ°Èôê„É´„Éº„Éó*/
 	{
 		USE_ALL_CYCLES();
 	}
@@ -5337,7 +5337,7 @@ OP(m68k_op_bra_16)
 	m68ki_trace_t0();			   /* auto-disable (see m68kcpu.h) */
 	m68ki_branch_16(offset);
 	#if (1==M68K_USE_PPC)
-	if(REG_PC == REG_PPC)/*ñ≥å¿ÉãÅ[Év*/
+	if(REG_PC == REG_PPC)/*ÁÑ°Èôê„É´„Éº„Éó*/
 	{
 		USE_ALL_CYCLES();
 	}
@@ -9749,7 +9749,7 @@ OP(m68k_op_jmp_32_ai)
 	m68ki_jump(EA_AY_AI_32());
 	m68ki_trace_t0();				   /* auto-disable (see m68kcpu.h) */
 	#if (1==M68K_USE_PPC)
-	if(REG_PC == REG_PPC)/*ñ≥å¿ÉãÅ[Év*/
+	if(REG_PC == REG_PPC)/*ÁÑ°Èôê„É´„Éº„Éó*/
 	{
 		USE_ALL_CYCLES();
 	}
@@ -9763,7 +9763,7 @@ OP(m68k_op_jmp_32_di)
 	m68ki_jump(EA_AY_DI_32());
 	m68ki_trace_t0();				   /* auto-disable (see m68kcpu.h) */
 	#if (1==M68K_USE_PPC)
-	if(REG_PC == REG_PPC)/*ñ≥å¿ÉãÅ[Év*/
+	if(REG_PC == REG_PPC)/*ÁÑ°Èôê„É´„Éº„Éó*/
 	{
 		USE_ALL_CYCLES();
 	}
@@ -9777,7 +9777,7 @@ OP(m68k_op_jmp_32_ix)
 	m68ki_jump(EA_AY_IX_32());
 	m68ki_trace_t0();				   /* auto-disable (see m68kcpu.h) */
 	#if (1==M68K_USE_PPC)
-	if(REG_PC == REG_PPC)/*ñ≥å¿ÉãÅ[Év*/
+	if(REG_PC == REG_PPC)/*ÁÑ°Èôê„É´„Éº„Éó*/
 	{
 		USE_ALL_CYCLES();
 	}
@@ -9791,7 +9791,7 @@ OP(m68k_op_jmp_32_aw)
 	m68ki_jump(EA_AW_32());
 	m68ki_trace_t0();				   /* auto-disable (see m68kcpu.h) */
 	#if (1==M68K_USE_PPC)
-	if(REG_PC == REG_PPC)/*ñ≥å¿ÉãÅ[Év*/
+	if(REG_PC == REG_PPC)/*ÁÑ°Èôê„É´„Éº„Éó*/
 	{
 		USE_ALL_CYCLES();
 	}
@@ -9805,7 +9805,7 @@ OP(m68k_op_jmp_32_al)
 	m68ki_jump(EA_AL_32());
 	m68ki_trace_t0();				   /* auto-disable (see m68kcpu.h) */
 	#if (1==M68K_USE_PPC)
-	if(REG_PC == REG_PPC)/*ñ≥å¿ÉãÅ[Év*/
+	if(REG_PC == REG_PPC)/*ÁÑ°Èôê„É´„Éº„Éó*/
 	{
 		USE_ALL_CYCLES();
 	}
@@ -9819,7 +9819,7 @@ OP(m68k_op_jmp_32_pcdi)
 	m68ki_jump(EA_PCDI_32());
 	m68ki_trace_t0();				   /* auto-disable (see m68kcpu.h) */
 	#if (1==M68K_USE_PPC)
-	if(REG_PC == REG_PPC)/*ñ≥å¿ÉãÅ[Év*/
+	if(REG_PC == REG_PPC)/*ÁÑ°Èôê„É´„Éº„Éó*/
 	{
 		USE_ALL_CYCLES();
 	}
@@ -9833,7 +9833,7 @@ OP(m68k_op_jmp_32_pcix)
 	m68ki_jump(EA_PCIX_32());
 	m68ki_trace_t0();				   /* auto-disable (see m68kcpu.h) */
 	#if (1==M68K_USE_PPC)
-	if(REG_PC == REG_PPC)/*ñ≥å¿ÉãÅ[Év*/
+	if(REG_PC == REG_PPC)/*ÁÑ°Èôê„É´„Éº„Éó*/
 	{
 		USE_ALL_CYCLES();
 	}

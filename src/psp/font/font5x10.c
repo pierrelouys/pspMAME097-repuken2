@@ -34,7 +34,7 @@ bc(M,M,v,v,M,M,v,v),//
 bc(M,M,v,v,M,M,v,v),//
 bc(v,v,M,M,v,v,M,M),//
 bc(v,v,M,M,v,v,M,M),//
-// Åõ
+// ‚óã
 bc(v,v,M,M,M,v,v,v),//
 bc(v,M,v,v,v,M,v,v),//
 bc(M,v,v,v,v,v,M,v),//
@@ -43,7 +43,7 @@ bc(M,v,v,v,v,v,M,v),//
 bc(v,M,v,v,v,M,v,v),//
 bc(v,v,M,M,M,v,v,v),//
 bc(v,v,v,v,v,v,v,v),//
-// Å~
+// √ó
 bc(M,v,v,v,v,v,M,v),//
 bc(v,M,v,v,v,M,v,v),//
 bc(v,v,M,v,M,v,v,v),//
@@ -52,7 +52,7 @@ bc(v,v,M,v,M,v,v,v),//
 bc(v,M,v,v,v,M,v,v),//
 bc(M,v,v,v,v,v,M,v),//
 bc(v,v,v,v,v,v,v,v),//
-// Å†
+// ‚ñ°
 bc(M,M,M,M,M,M,M,v),//
 bc(M,v,v,v,v,v,M,v),//
 bc(M,v,v,v,v,v,M,v),//
@@ -61,7 +61,7 @@ bc(M,v,v,v,v,v,M,v),//
 bc(M,v,v,v,v,v,M,v),//
 bc(M,M,M,M,M,M,M,v),//
 bc(v,v,v,v,v,v,v,v),//
-// Å¢
+// ‚ñ≥
 bc(v,v,v,M,v,v,v,v),//
 bc(v,v,M,v,M,v,v,v),//
 bc(v,v,M,v,M,v,v,v),//
@@ -70,7 +70,7 @@ bc(v,M,v,v,v,M,v,v),//
 bc(M,v,v,v,v,v,M,v),//
 bc(M,M,M,M,M,M,M,v),//
 bc(v,v,v,v,v,v,v,v),//
-// Å™
+// ‚Üë
 bc(v,v,v,M,v,v,v,v),//
 bc(v,v,M,M,M,v,v,v),//
 bc(v,M,M,M,M,M,v,v),//
@@ -79,7 +79,7 @@ bc(v,v,v,M,v,v,v,v),//
 bc(v,v,v,M,v,v,v,v),//
 bc(v,v,v,M,v,v,v,v),//
 bc(v,v,v,v,v,v,v,v),//
-// Å®
+// ‚Üí
 bc(v,v,v,v,v,v,v,v),//
 bc(v,v,v,v,M,v,v,v),//
 bc(v,v,v,v,M,M,v,v),//
@@ -88,7 +88,7 @@ bc(v,v,v,v,M,M,v,v),//
 bc(v,v,v,v,M,v,v,v),//
 bc(v,v,v,v,v,v,v,v),//
 bc(v,v,v,v,v,v,v,v),//
-// Å´
+// ‚Üì
 bc(v,v,v,M,v,v,v,v),//
 bc(v,v,v,M,v,v,v,v),//
 bc(v,v,v,M,v,v,v,v),//
@@ -97,7 +97,7 @@ bc(v,M,M,M,M,M,v,v),//
 bc(v,v,M,M,M,v,v,v),//
 bc(v,v,v,M,v,v,v,v),//
 bc(v,v,v,v,v,v,v,v),//
-// Å©
+// ‚Üê
 bc(v,v,v,v,v,v,v,v),//
 bc(v,v,M,v,v,v,v,v),//
 bc(v,M,M,v,v,v,v,v),//

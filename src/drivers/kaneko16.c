@@ -704,9 +704,9 @@ ADDRESS_MAP_END
 READ16_HANDLER( gtmr_wheel_r )
 {
 	if ( (readinputport(4) & 0x1800) == 0x10)	// DSW setting
-		return	readinputport(5)<<8;			// 360° Wheel
+		return	readinputport(5)<<8;			// 360ãƒ¼ Wheel
 	else
-		return	readinputport(5);				// 270° Wheel
+		return	readinputport(5);				// 270ãƒ¼ Wheel
 }
 
 static int bank0;
@@ -845,13 +845,13 @@ READ16_HANDLER( gtmr2_wheel_r )
 {
 	switch (readinputport(4) & 0x1800)
 	{
-		case 0x0000:	// 270° A. Wheel
+		case 0x0000:	// 270ãƒ¼ A. Wheel
 			return	(readinputport(5));
 			break;
-		case 0x1000:	// 270° D. Wheel
+		case 0x1000:	// 270ãƒ¼ D. Wheel
 			return	(readinputport(6) << 8);
 			break;
-		case 0x0800:	// 360° Wheel
+		case 0x0800:	// 360ãƒ¼ Wheel
 			return	(readinputport(7) << 8);
 			break;
 		default:

@@ -318,16 +318,16 @@ static void init_palette( int colors )
 
 //#ifdef PSP_VRAM_BLIT
 #if 0
-/* ‚±‚Ì•ÏX‚Å‚³‚ç‚Éud‚¢...v‚¾‚ªƒƒCƒ“ƒƒ‚ƒŠ‚Í(256kBytes)ß–ño—ˆ‚é”¤B */
-/* —á‚¦‚Î rezon ‚Í ‚½‚Á‚½‚Ì 128kBytes ‘«‚è‚È‚¢‚¾‚¯‚Å“®‚©‚È‚¢B(ADJUST_GU_MEMORY_KB:psp_video.h) */
+/* ã“ã®å¤‰æ›´ã§ã•ã‚‰ã«ã€Œé‡ã„...ã€ã ãŒãƒ¡ã‚¤ãƒ³ãƒ¡ãƒ¢ãƒªã¯(256kBytes)ç¯€ç´„å‡ºæ¥ã‚‹ç­ˆã€‚ */
+/* ä¾‹ãˆã° rezon ã¯ ãŸã£ãŸã® 128kBytes è¶³ã‚Šãªã„ã ã‘ã§å‹•ã‹ãªã„ã€‚(ADJUST_GU_MEMORY_KB:psp_video.h) */
 
-	/* •ÏŠ·ƒe[ƒuƒ‹‚ð‚u‚q‚`‚l‚ÉŠm•Û */
+	/* å¤‰æ›ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’ï¼¶ï¼²ï¼¡ï¼­ã«ç¢ºä¿ */
 	blit_lookup_low = (UINT32 *)psp_frame_addr(tex_frame, 0, 0);
 #else
-/* Œ»ó ‚Ç‚Á‚¿(VRAM_blit on/off)(mame_bitmap ‚ð‚u‚q‚`‚l‚ÉŠm•Û^mame_bitmap ‚ðƒƒCƒ“ƒƒ‚ƒŠ‚ÉŠm•Û)‚Ì•ûŽ®‚Å‚àA
-	‚±‚ê(•ÏŠ·ƒe[ƒuƒ‹‚ðƒƒCƒ“ƒƒ‚ƒŠ‚ÉŠm•Û)‚Ì•û‚ª‘¬‚¢D */
+/* ç¾çŠ¶ ã©ã£ã¡(VRAM_blit on/off)(mame_bitmap ã‚’ï¼¶ï¼²ï¼¡ï¼­ã«ç¢ºä¿ï¼mame_bitmap ã‚’ãƒ¡ã‚¤ãƒ³ãƒ¡ãƒ¢ãƒªã«ç¢ºä¿)ã®æ–¹å¼ã§ã‚‚ã€
+	ã“ã‚Œ(å¤‰æ›ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’ãƒ¡ã‚¤ãƒ³ãƒ¡ãƒ¢ãƒªã«ç¢ºä¿)ã®æ–¹ãŒé€Ÿã„ï¼Ž */
 
-	/* •ÏŠ·ƒe[ƒuƒ‹‚ðƒƒCƒ“ƒƒ‚ƒŠ‚ÉŠm•Û */
+	/* å¤‰æ›ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’ãƒ¡ã‚¤ãƒ³ãƒ¡ãƒ¢ãƒªã«ç¢ºä¿ */
 	blit_lookup_low = auto_malloc( 65536*4 );
 #endif //PSP_VRAM_BLIT
 
@@ -339,7 +339,7 @@ static void init_palette( int colors )
 	{
 //#if (0!=LINK_ROT)
 #if (360<LINK_ROT)
-/*  mame_palettized 16ƒrƒbƒgF ê—pƒ‚[ƒhŽž‚ÍŠÜ‚Ü‚È‚¢(direct mode ê—p) */
+/*  mame_palettized 16ãƒ“ãƒƒãƒˆè‰² å°‚ç”¨ãƒ¢ãƒ¼ãƒ‰æ™‚ã¯å«ã¾ãªã„(direct mode å°‚ç”¨) */
 /*  0!=LINK_ROT *//*  360!=LINK_ROT *//* 9360==LINK_ROT */
 		if( bitmap_depth == 32 )
 		{
@@ -812,7 +812,7 @@ int osd_create_display(const struct osd_create_params *params, UINT32 *rgb_compo
 	if (rgb_components)
 	{
 #if (0!=LINK_ROT)
-/* ‹­§[H]16ƒrƒbƒgƒ‚[ƒhŽž‚ÍŠÜ‚Ü‚È‚¢ */
+/* å¼·åˆ¶[H]16ãƒ“ãƒƒãƒˆãƒ¢ãƒ¼ãƒ‰æ™‚ã¯å«ã¾ãªã„ */
 		if ( bitmap_depth == 32 )
 		{
 		//	if( video_depth == 24 || video_depth == 32 )
@@ -1205,7 +1205,7 @@ void osd_update_video_and_audio(struct mame_display *display)
 		}
 		else
 		#else //USE_throttle
-		//if (wait_vsync){	v_sync();} // Œ»Ý blit.c(psp_font.c) ‚Åv_sync(); Žæ‚Á‚Ä‚é‚Ì‚Å‚±‚±‚Í–³‚µB
+		//if (wait_vsync){	v_sync();} // ç¾åœ¨ blit.c(psp_font.c) ã§v_sync(); å–ã£ã¦ã‚‹ã®ã§ã“ã“ã¯ç„¡ã—ã€‚
 		#endif //USE_throttle
 			curr = osd_cycles();
 
@@ -1494,4 +1494,4 @@ void osd_pause(int paused)
 }
 
 
-/* ‚±‚±‚Éblit‚ð’Ç‰Á‚·‚é‚ÆA‰½ŒÌ‚©’x‚­‚È‚éB */
+/* ã“ã“ã«blitã‚’è¿½åŠ ã™ã‚‹ã¨ã€ä½•æ•…ã‹é…ããªã‚‹ã€‚ */

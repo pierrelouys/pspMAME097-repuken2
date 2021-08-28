@@ -5,20 +5,20 @@
 #------------------------------------------------------------------------------
 
 
-#«EBOOT.PBP uŽÀsˆ³kv‚É‚µ‚½‚¢‚È‚ç#‚ðŠO‚µ‚ÄƒRƒ“ƒpƒCƒ‹‚µ‚Ä‚ËB
+#â†“EBOOT.PBP ã€Œå®Ÿè¡Œåœ§ç¸®ã€ã«ã—ãŸã„ãªã‚‰#ã‚’å¤–ã—ã¦ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã—ã¦ã­ã€‚
  COMPRESS_PBP = 1
 
 
 
-# ŽÀsˆ³k : PC ‚Å‚¢‚¤[UPX](ultimate packed exetracter)‚Æ“¯‚¶‹ZpB
-# uƒƒ‚ƒŠ‚Éˆ³k‚³‚ê‚Ä‚é–{‘Ì‚ðŽ©“®‚Å“WŠJ‚µ‚Ä‚©‚çŽÀs‚·‚év‚Ì—ªBƒ^ƒuƒ“B
+# å®Ÿè¡Œåœ§ç¸® : PC ã§ã„ã†[UPX](ultimate packed exetracter)ã¨åŒã˜æŠ€è¡“ã€‚
+# ã€Œãƒ¡ãƒ¢ãƒªã«åœ§ç¸®ã•ã‚Œã¦ã‚‹æœ¬ä½“ã‚’è‡ªå‹•ã§å±•é–‹ã—ã¦ã‹ã‚‰å®Ÿè¡Œã™ã‚‹ã€ã®ç•¥ã€‚ã‚¿ãƒ–ãƒ³ã€‚
 
-# EBOOT.PBP ‚Ì–{‘ÌƒvƒƒOƒ‰ƒ€‚ð psp‚ÅŽÀs’¼‘O‚ÉŽ©“®“WŠJ(gzip)‚·‚éB
-# ‚»‚Ìˆ× EBOOT.PBP ‚ÌƒTƒCƒY‚ªŒ¸‚ç‚¹‚éB(ŽÀs‘¬“x‚Í•Ï‚í‚ç‚È‚¢)
-# ‚Ü‚½u‹N“®‚Ü‚Å‚Ì‘¬“xv‚àŒ´—“I‚É‚Í ƒƒ‚ƒJ(Duo)‚ª’x‚¯‚ê‚Î’x‚¢’öA‘¬‚­‚È‚éB
-# ‚½‚¾‚µŒÝŠ·«‚Í‚æ‚­‚í‚©‚ç‚ñB
+# EBOOT.PBP ã®æœ¬ä½“ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã‚’ pspã§å®Ÿè¡Œç›´å‰ã«è‡ªå‹•å±•é–‹(gzip)ã™ã‚‹ã€‚
+# ãã®ç‚º EBOOT.PBP ã®ã‚µã‚¤ã‚ºãŒæ¸›ã‚‰ã›ã‚‹ã€‚(å®Ÿè¡Œé€Ÿåº¦ã¯å¤‰ã‚ã‚‰ãªã„)
+# ã¾ãŸã€Œèµ·å‹•ã¾ã§ã®é€Ÿåº¦ã€ã‚‚åŽŸç†çš„ã«ã¯ ãƒ¡ãƒ¢ã‚«(Duo)ãŒé…ã‘ã‚Œã°é…ã„ç¨‹ã€é€Ÿããªã‚‹ã€‚
+# ãŸã ã—äº’æ›æ€§ã¯ã‚ˆãã‚ã‹ã‚‰ã‚“ã€‚
 
-# Œ³‚Ì 30% ‚©‚ç 50% ’ö“x‚É EBOOT.PBP ‚ª¬‚³‚­‚È‚éB
+# å…ƒã® 30% ã‹ã‚‰ 50% ç¨‹åº¦ã« EBOOT.PBP ãŒå°ã•ããªã‚‹ã€‚
 
 
 

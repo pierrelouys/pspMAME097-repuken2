@@ -130,7 +130,7 @@ c13_u12.u12     HN624116 - GFX
 
 *** ROMSET: vgoalsca
 
-Tecmo V Goal Soccer ©1994? Tecmo
+Tecmo V Goal Soccer ã‚¥1994? Tecmo
 
 CPU: 68000, Z80
 Sound: YM2610

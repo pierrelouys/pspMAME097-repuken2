@@ -1236,9 +1236,9 @@ static void YM2151Update_stream(s16 *mixing_buffer, int length)
 //static void *namcona_start(/*int*/UINT8 sndindex, int clock, const void *config)
 static void YM2151Init(int clock, int rate/*, FM_IRQHANDLER_2151 IRQHandler*/)
 {
-/* machine->drv->sound[0].configÇ™ 0 Ç»ÇÃÇÕÅA
-	0(Ç¬Ç‹ÇËénÇﬂÇ…ìoò^) Ç™ NAMCO_NA ÇæÇ©ÇÁÅB
-	è⁄ÇµÇ≠ÇÕ src/drivers/namcona1.c ÇéQè∆ÇπÇÊÅB */
+/* machine->drv->sound[0].config„Åå 0 „Å™„ÅÆ„ÅØ„ÄÅ
+	0(„Å§„Åæ„ÇäÂßã„ÇÅ„Å´ÁôªÈå≤) „Åå NAMCO_NA „Å†„Åã„Çâ„ÄÇ
+	Ë©≥„Åó„Åè„ÅØ src/drivers/namcona1.c „ÇíÂèÇÁÖß„Åõ„Çà„ÄÇ */
 #define REGIST_ON_DRIVER_THE_NAMCO_NA_SOUND_NUMBER (0)
 	const struct NAMCONAinterface *intf = machine->drv->sound[REGIST_ON_DRIVER_THE_NAMCO_NA_SOUND_NUMBER].config;// config;
 #undef	REGIST_ON_DRIVER_THE_NAMCO_NA_SOUND_NUMBER
@@ -1447,8 +1447,8 @@ void namcona_get_info(void *token, UINT32 state, union sndinfo *info)
 //#include "sound/ns86snd.h"
 
 
-/* 0:égÇÌÇÒ, 1:égÇ§ 44100êÍópÉ~ÉLÉTÅ|égópâ¬î€ */
-/* namco NA ÇÕäÓñ{ìIÇ…44100Ç™ïWèÄ */
+/* 0:‰Ωø„Çè„Çì, 1:‰Ωø„ÅÜ 44100Â∞ÇÁî®„Éü„Ç≠„Çµ‚àí‰ΩøÁî®ÂèØÂê¶ */
+/* namco NA „ÅØÂü∫Êú¨ÁöÑ„Å´44100„ÅåÊ®ôÊ∫ñ */
 //#define USE_FIXED44100 0
 #define USE_FIXED44100 1
 
@@ -1460,7 +1460,7 @@ static void ns86_sound_update(int p)
 	s16 *buffer = (s16 *)p;
 	s16 mixing_buffer[PSP_SOUND_SAMPLES *(1+USE_EMU_STEREO) ];
 	#if (1==USE_FIXED44100)
-	/* Ç¢Ç∏ÇÍÇ…ÇπÇÊ44100 ÇÕñ¢Çæé¿ópàÊÇ≈ÇÕÇ»Ç¢ */
+	/* „ÅÑ„Åö„Çå„Å´„Åõ„Çà44100 „ÅØÊú™„Å†ÂÆüÁî®Âüü„Åß„ÅØ„Å™„ÅÑ */
 	if(SND_44100==(sr))
 	{
 		YM2151Update_stream(mixing_buffer, PSP_SOUND_SAMPLES);
@@ -1499,14 +1499,14 @@ static void ns86_sound_update(int p)
 	}
 }
 #else
-/* jumptableéÆ */
+/* jumptableÂºè */
 static void ns86_sound_update(int p)
 {
 	int i;
 	s16 *buffer = (s16 *)p;
 	s16 mixing_buffer[PSP_SOUND_SAMPLES];
 	#if (1==USE_FIXED44100)
-	/* Ç¢Ç∏ÇÍÇ…ÇπÇÊ 44100 ÇÕñ¢Çæé¿ópàÊÇ≈ÇÕÇ»Ç¢ */
+	/* „ÅÑ„Åö„Çå„Å´„Åõ„Çà 44100 „ÅØÊú™„Å†ÂÆüÁî®Âüü„Åß„ÅØ„Å™„ÅÑ */
 	if(SND_44100==(sr))
 	{
 		YM2151Update_stream(mixing_buffer, PSP_SOUND_SAMPLES);
@@ -1593,7 +1593,7 @@ int mame_sound_start(void)
 	psp_sound->callback = ns86_sound_update;
 
 //	YM2151Init(3579545, samplerate, NULL);
-	YM2151Init(/*42667*//*48000*//*61440*/65536/*4000000*/, samplerate/*, NULL*/);// FZÇ‡outrunÇ‡4[MHz]
+	YM2151Init(/*42667*//*48000*//*61440*/65536/*4000000*/, samplerate/*, NULL*/);// FZ„ÇÇoutrun„ÇÇ4[MHz]
 //#if 0
 //	namco_cus30_init(24000, samplerate, 8);
 //	n63701x_init(6000000, samplerate);
@@ -1647,7 +1647,7 @@ int sndnum_clock(int sndnum)
 {
 //	switch(sndnum)
 //	{
-//	case 0: return 4000000; /* 4.000[MHz] */  // FZÇ‡outrunÇ‡4[MHz]
+//	case 0: return 4000000; /* 4.000[MHz] */  // FZ„ÇÇoutrun„ÇÇ4[MHz]
 //	case 1: return 15625;	/* 15.625[kHz] */
 //	case 2: return 99999;
 //	case 3: return 12345;
@@ -1660,8 +1660,8 @@ const char *sndnum_get_info_string(int sndnum, UINT32 state)
 {
 	switch(sndnum)
 	{
-	case 0: return "namco NA";	// FZÇ‡outrunÇ‡2151.
-//	case 1: return "SEGA PCM";	// outrunÇÃÇ›.
+	case 0: return "namco NA";	// FZ„ÇÇoutrun„ÇÇ2151.
+//	case 1: return "SEGA PCM";	// outrun„ÅÆ„Åø.
 //	case 2: return "TEST 99999";
 //	case 3: return "TEST 12345";
 //	case 4: return "TEST 77777";

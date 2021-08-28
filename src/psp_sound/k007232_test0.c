@@ -1,16 +1,16 @@
 
-/* ����7232�̓��m������p�̏�A MAME��K007232���� �ƃ~�L�V���O�d�l�̌݊����Ȃ��B */
+/* この7232はモノラル専用の上、 MAMEのK007232音源 とミキシング仕様の互換がない。 */
 /*
-mame119 mix �� 50% ���w�肵���ꍇ�A����7232�ł͂Q�{���Ė�T��(6.25%)loss�ł��B
-�i�܂�93.75% ==((50 * 2)-6.25)�B�Q�Ŋ����46.825% �܂� ���w��� 46.825% mix(mame119���Z)�j
+mame119 mix で 50% を指定した場合、この7232では２倍して約５％(6.25%)lossです。
+（つまり93.75% ==((50 * 2)-6.25)。２で割れば46.825% つまり 無指定で 46.825% mix(mame119換算)）
 
-�� ��̓I�ɁB
+■ 具体的に。
 	MDRV_SOUND_ADD(YM2151, 3579545)
 	MDRV_SOUND_ROUTE(ALL_OUTPUTS, "mono", 1.0) // 100%
 
 	MDRV_SOUND_ADD(K007232, 3579545)
 	MDRV_SOUND_ROUTE(ALL_OUTPUTS, "mono", 0.46825) // 46.825%
-�̗l�Ɏw�肵���̂Ɠ������ɂȂ�B
+の様に指定したのと同じ事になる。
 
 */
 /*********************************************************/
@@ -36,7 +36,7 @@ support for the K007232_VOL() macro.
 added external port callback, and functions to set the volume of the channels
 
 */
-/* salamander PCM chip. �����֎ւ�PCM�`�b�v */
+/* salamander PCM chip. 沙羅曼蛇のPCMチップ */
 
 //#include "driver.h"
 //#include "k007232.h"

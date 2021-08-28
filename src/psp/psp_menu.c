@@ -6,157 +6,157 @@
 //#include "pg.h"
 //#include "colbl.c"
 
-/* ƒJƒ‰[ƒƒjƒ…[‚Å‚Ì‚wƒ{ƒ^ƒ“i‚OF–³ŒøA‚PF—LŒøj */
+/* ã‚«ãƒ©ãƒ¼ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã§ã®ï¼¸ãƒœã‚¿ãƒ³ï¼ˆï¼ï¼šç„¡åŠ¹ã€ï¼‘ï¼šæœ‰åŠ¹ï¼‰ */
 #define USE_COLOR_MENU_X_BUTTON 1
 
 
 #define NOW_DATE   " "__DATE__" "
-#define DEVELOPPER "developed by repuken2                            from original src by ŠJçèŠJ”­—c’t‰€"
-//äåæçèŠJ”­—c’t‰€
+#define DEVELOPPER "developed by repuken2                            from original src by é–‹è½£é—ƒJç™ºå¹¼ç¨šåœ’"
+//âˆ½âˆâˆµâˆ«âˆ¬é–‹ç™ºå¹¼ç¨šåœ’
 
 #ifdef namcoNA
-	#define MENU_STR1 "ÊËÌÍÎÚÛÜNA(Z12)"
-	#define MENU_STR2 "ê—pƒXƒeƒŒƒIƒTƒEƒ“ƒh44100!"
+	#define MENU_STR1 "Â¬â‡’â‡”âˆ€âˆƒâˆ âŠ¥âŒ’NA(Z12)"
+	#define MENU_STR2 "å°‚ç”¨ã‚¹ãƒ†ãƒ¬ã‚ªã‚µã‚¦ãƒ³ãƒ‰44100!"
 #endif
 #ifdef halleys
 	#define MENU_STR1 "TAITO86 / HALLEY'S COMET(Z02)"
-	#define MENU_STR2 "ƒnƒŒ[ƒYƒRƒƒbƒg"
+	#define MENU_STR2 "ãƒãƒ¬ãƒ¼ã‚ºã‚³ãƒ¡ãƒƒãƒˆ"
 #endif
 #ifdef taitoAX
-	#define MENU_STR1 "ÊËÌÍÎÚÛ AX(Z08)"
-	#define MENU_STR2 "­‚µi‰»H"
+	#define MENU_STR1 "Â¬â‡’â‡”âˆ€âˆƒâˆ âŠ¥ AX(Z08)"
+	#define MENU_STR2 "å°‘ã—é€²åŒ–ï¼Ÿ"
 #endif
 #ifdef m72
 	#define MENU_STR1 " irem m72(Z04)"
-	#define MENU_STR2 "‚Ü‚¾d‚¢‚Å‚·B"
+	#define MENU_STR2 "ã¾ã é‡ã„ã§ã™ã€‚"
 #endif
 #ifdef namcos86
-	#define MENU_STR1 "ÊËÌÍÎÚÛÜ86(mame”Å)"
-	#define MENU_STR2 "—‚¿‚È‚¢‚Å‚­‚ê‚¦‚¦‚¦‚¦‚¥B"
+	#define MENU_STR1 "Â¬â‡’â‡”âˆ€âˆƒâˆ âŠ¥âŒ’86(mameç‰ˆ)"
+	#define MENU_STR2 "è½ã¡ãªã„ã§ãã‚Œãˆãˆãˆãˆã‡ã€‚"
 #endif
 #ifdef bubblesys
 	#define MENU_STR1 "konami85 bubble system(Z04)"
-	#define MENU_STR2 "¹—…ğÖ‚ÍA‚Ü‚¾d‚¢"
+	#define MENU_STR2 "æ²™ç¾…â„«è›‡ã¯ã€ã¾ã é‡ã„"
 #endif
 #ifdef thunder_cross
 	#define MENU_STR1 "konami88 THUNDER CROSS(Z01)"
-	#define MENU_STR2 "‰¹‚ªƒIƒJƒVƒC(;^;)"
+	#define MENU_STR2 "éŸ³ãŒã‚ªã‚«ã‚·ã‚¤(;^;)"
 #endif
 #ifdef zerowing
-	#define MENU_STR1 "ÊËÌÍÎÚÛÜ90(Z01)"
-	#define MENU_STR2 "ŒÃ‚«—Ç‚«“ŒˆŸ‚É—Ü‚¹‚æ        "
+	#define MENU_STR1 "Â¬â‡’â‡”âˆ€âˆƒâˆ âŠ¥âŒ’90(Z01)"
+	#define MENU_STR2 "å¤ãè‰¯ãæ±äºœã«æ¶™ã›ã‚ˆ        "
 #endif
 #ifdef raizing
 	#define MENU_STR1 "Toaplan92/Raizing93(Z02)"
-	#define MENU_STR2 "’Bl‰¤/(–‚–@‘åìí)"
+	#define MENU_STR2 "é”äººç‹/(é­”æ³•å¤§ä½œæˆ¦)"
 #endif
 #ifdef nmk
 	#define MENU_STR1 "UPL91/NMK93 (Z02)"
-	#define MENU_STR2 "‚â‚Á‚Ï‚¨‚¢‚µ‚¢ˆ‚ª“®‚©‚È‚¢..."
+	#define MENU_STR2 "ã‚„ã£ã±ãŠã„ã—ã„å‡¦ãŒå‹•ã‹ãªã„..."
 #endif
 #ifdef seta
 	#define MENU_STR1 "SETA90/Atena91(Z04)"
-	#define MENU_STR2 "’n“¹‚ÉVERSION UPB"
+	#define MENU_STR2 "åœ°é“ã«VERSION UPã€‚"
 #endif
 #ifdef starforce
 	#define MENU_STR1 "TEHKAN(tecmo)84 Star Force(Z02)"
-	#define MENU_STR2 " ‹Æ–±,¢‚‹´"
+	#define MENU_STR2 "â–¡æ¥­å‹™,â–³é«˜æ©‹"
 #endif
 #ifdef terracre
 	#define MENU_STR1 "Terra Cresta  Nichibutsu85(Z01)"
-	#define MENU_STR2 "WINGER•œŠˆ?"
+	#define MENU_STR2 "WINGERå¾©æ´»?"
 #endif
 #ifdef mappy
-	#define MENU_STR1 "ÊËÌÍÎÚÛÜ83 MAPPY(Z05)"
-	#define MENU_STR2 "phozon‚Æ‚©“®‚©‚È‚¢‚µ"
+	#define MENU_STR1 "Â¬â‡’â‡”âˆ€âˆƒâˆ âŠ¥âŒ’83 MAPPY(Z05)"
+	#define MENU_STR2 "phozonã¨ã‹å‹•ã‹ãªã„ã—"
 #endif
 #ifdef pacland
-	#define MENU_STR1 "ÊËÌÍÎÚÛÜPAC-LAND(Z03)"
-	#define MENU_STR2 "JUMP‚Í¶.‘OŒã‚Í›‚Æ "
+	#define MENU_STR1 "Â¬â‡’â‡”âˆ€âˆƒâˆ âŠ¥âŒ’PAC-LAND(Z03)"
+	#define MENU_STR2 "JUMPã¯å·¦.å‰å¾Œã¯â—‹ã¨â–¡"
 #endif
 #ifdef air_buster
-	#define MENU_STR1 "ÊËÌÍÎÚÛ90(Z02)"
+	#define MENU_STR1 "Â¬â‡’â‡”âˆ€âˆƒâˆ âŠ¥90(Z02)"
 	#define MENU_STR2 "AIR BUSTER / DJ-BOY"
 #endif
 
 #ifdef darwin4078
 	#define MENU_STR1 "DECO86 DARWIN4078(Z02)"
-	#define MENU_STR2 /*"goe ‚ÉŠ´Ó! "*/"B-Wings mame112ˆÈ~‚Ö"
+	#define MENU_STR2 /*"goe æ°ã«æ„Ÿè¬! "*/"B-Wings mame112ä»¥é™ã¸"
 #endif
 
 #ifdef ninjya_kun2
-	#define MENU_STR1 "ÊËÌÍ vs ‚b‚`‚o‚b‚n‚l ”EÒ‚­‚ñ(A03)"
-	#define MENU_STR2 "  ‰€™–ñ‚Q–¼ +"
+	#define MENU_STR1 "Â¬â‡’â‡”âˆ€ vs ï¼£ï¼¡ï¼°ï¼£ï¼¯ï¼­ å¿è€…ãã‚“(A03)"
+	#define MENU_STR2 "  åœ’å…ç´„ï¼’å +"
 #endif
 #ifdef gun_smoke
-	#define MENU_STR1 "ƒKƒ“ƒXƒ‚[ƒN(A00)[ ][ +~][~][~+›][›]‚T•ûŒü"
+	#define MENU_STR1 "ã‚¬ãƒ³ã‚¹ãƒ¢ãƒ¼ã‚¯(A00)[â–¡][â–¡+Ã—][Ã—][Ã—+â—‹][â—‹]ï¼•æ–¹å‘"
 	#define MENU_STR2 ""
 #endif // gun_smoke
 #ifdef crazy_climber
-	#define MENU_STR1 "ƒNƒŒ[ƒW[ƒNƒ‰ƒCƒ}[(A00)"
-	#define MENU_STR2 "ƒAƒiƒƒOƒL[‚Í–³Œø‚Å‚·B"
+	#define MENU_STR1 "ã‚¯ãƒ¬ãƒ¼ã‚¸ãƒ¼ã‚¯ãƒ©ã‚¤ãƒãƒ¼(A00)"
+	#define MENU_STR2 "ã‚¢ãƒŠãƒ­ã‚°ã‚­ãƒ¼ã¯ç„¡åŠ¹ã§ã™ã€‚"
 #endif // crazy_climber
 #ifdef makai_mura
-	#define MENU_STR1 "CAPCOM85 –‚ŠE‘º(A01)"
-	#define MENU_STR2 "‹ò‚¢s‚­‚¹!! (?)"
+	#define MENU_STR1 "CAPCOM85 é­”ç•Œæ‘(A01)"
+	#define MENU_STR2 "å–°ã„å°½ãã›!! (?)"
 #endif
 
 #ifdef chuuka_taisen
-	#define MENU_STR1 "ÊËÌÍÎÚÛ 88 chuuka_taisen(Z00)"
-	#define MENU_STR2 "‚±‚Á‚»‚è’†‰Ø‘åí"
+	#define MENU_STR1 "Â¬â‡’â‡”âˆ€âˆƒâˆ âŠ¥ 88 chuuka_taisen(Z00)"
+	#define MENU_STR2 "ã“ã£ãã‚Šä¸­è¯å¤§æˆ¦"
 #endif
 #ifdef srd08
 	#define MENU_STR1 "DECO86 Super Real Darwin(Z00)"
-	#define MENU_STR2 "“®‚©‚ñ"
+	#define MENU_STR2 "å‹•ã‹ã‚“"
 #endif
 #ifdef fantasy_zone
-	#define MENU_STR1 "ÊËÌÍ86 FantasyZone(A02)"
-	#define MENU_STR2 "FZˆÈŠO ‚ ‚Æ‚Í‚¢‚ç<—ª>"
+	#define MENU_STR1 "Â¬â‡’â‡”âˆ€86 FantasyZone(A02)"
+	#define MENU_STR2 "FZä»¥å¤– ã‚ã¨ã¯ã„ã‚‰<ç•¥>"
 #endif
 //#ifdef outrun
-//	#define MENU_STR1 "ÊËÌÍ86 OutRun(Z00)"
-//	#define MENU_STR2 "ƒ}[ƒNIII”Å‚Æv‚¦‚Î —V‚×<“ä>"
+//	#define MENU_STR1 "Â¬â‡’â‡”âˆ€86 OutRun(Z00)"
+//	#define MENU_STR2 "ãƒãƒ¼ã‚¯IIIç‰ˆã¨æ€ãˆã° éŠã¹<è¬>"
 //#endif
 #ifdef turbo_outrun
-	#define MENU_STR1 "ÊËÌÍ86 turbo/OutRun(A02)"
-	#define MENU_STR2 "ƒAƒN¢ƒuƒŒ›ƒMƒA~ƒ^ƒ{ "
+	#define MENU_STR1 "Â¬â‡’â‡”âˆ€86 turbo/OutRun(A02)"
+	#define MENU_STR2 "ã‚¢ã‚¯â–³ãƒ–ãƒ¬â—‹ã‚®ã‚¢Ã—ã‚¿ãƒœâ–¡"
 #endif
 #ifdef cotton
 	#define MENU_STR1 "wb34_test0"
-	#define MENU_STR2 "‹N“®•û–@‚Í“Áê‚¾‚©‚çAà–¾‘“Ç‚ß"
+	#define MENU_STR2 "èµ·å‹•æ–¹æ³•ã¯ç‰¹æ®Šã ã‹ã‚‰ã€èª¬æ˜æ›¸èª­ã‚"
 #endif
 
 #ifdef mario_bros
 	#define MENU_STR1 "Nintendo1983 Mario Brothers."
-	#define MENU_STR2 "Šé‰æ ‚©‚æ & »ì"
+	#define MENU_STR2 "ä¼ç”» ã‹ã‚ˆ & è£½ä½œ"
 #endif
 
 #ifdef pacman
-	#define MENU_STR1 "ÊËÌÍ1982 Pengo."
-	#define MENU_STR2 "ƒyƒ“ƒSˆÈŠO‚ÍƒIƒ}ƒP‚Å‚·‚£‚—‚—‚—   "
+	#define MENU_STR1 "Â¬â‡’â‡”âˆ€1982 Pengo."
+	#define MENU_STR2 "ãƒšãƒ³ã‚´ä»¥å¤–ã¯ã‚ªãƒã‚±ã§ã™ã…ï½—ï½—ï½—   "
 #endif // pacman
 
 #ifdef taitoB
-	#define MENU_STR1 "ÊËÌÍÎÚÛ ‚a(A00)"
-	#define MENU_STR2 "–l‚½‚¿‚ÍA‘Ò‚Á‚Ä‚¢‚½‚ñ‚¾...   "
+	#define MENU_STR1 "Â¬â‡’â‡”âˆ€âˆƒâˆ âŠ¥ ï¼¢(A00)"
+	#define MENU_STR2 "åƒ•ãŸã¡ã¯ã€å¾…ã£ã¦ã„ãŸã‚“ã ...   "
 #endif // taitoB
 
 #ifdef darius
-	#define MENU_STR1 "ÊËÌÍÎÚÛ ‚c‚`‚q‚h‚t‚r(A00)"
-	#define MENU_STR2 "‚R‰æ–Ê‚¾‚¨...   "
+	#define MENU_STR1 "Â¬â‡’â‡”âˆ€âˆƒâˆ âŠ¥ ï¼¤ï¼¡ï¼²ï¼©ï¼µï¼³(A00)"
+	#define MENU_STR2 "ï¼“ç”»é¢ã ãŠ...   "
 #endif // darius
 
 #ifdef ninjya_warriors
-	#define MENU_STR1 "ÊËÌÍÎÚÛ ƒjƒ“ƒWƒƒƒEƒH[ƒŠƒA[ƒY ‚c‚`‚q‚h‚t‚rII"
+	#define MENU_STR1 "Â¬â‡’â‡”âˆ€âˆƒâˆ âŠ¥ ãƒ‹ãƒ³ã‚¸ãƒ£ã‚¦ã‚©ãƒ¼ãƒªã‚¢ãƒ¼ã‚º ï¼¤ï¼¡ï¼²ï¼©ï¼µï¼³II"
 	#define MENU_STR2 " "
 #endif // ninjya_warriors
 
 
 #ifndef MENU_STR1
-	#define MENU_STR1 "äåæçè MAME DEATHRASH!!!(0.97s)" //ŠJ
+	#define MENU_STR1 "âˆ½âˆâˆµâˆ«âˆ¬ MAME DEATHRASH!!!(0.97s)" //é–‹
 #endif
 #ifndef MENU_STR2
-	#define MENU_STR2 ""//"‚à‚Á‚Æ‘¬‚­‚È‚¢‚Æ—V‚×‚ñI"
+	#define MENU_STR2 ""//"ã‚‚ã£ã¨é€Ÿããªã„ã¨éŠã¹ã‚“ï¼"
 #endif
 #define APP_TITLE MENU_STR1 NOW_DATE MENU_STR2 DEVELOPPER
 
@@ -264,7 +264,7 @@ UINT32 buttons;
 	ps_X=(is_X != rs_X);
 	ps_Q=(is_Q != rs_Q);
 
-	/* key pressed time counter at a frame */ /* —v‚·‚é‚ÉƒI[ƒgƒŠƒs[ƒg */
+	/* key pressed time counter at a frame */ /* è¦ã™ã‚‹ã«ã‚ªãƒ¼ãƒˆãƒªãƒ”ãƒ¼ãƒˆ */
 	if(is_U) cs_U++;	if(ps_U) cs_U=0;
 	if(is_D) cs_D++;	if(ps_D) cs_D=0;
 	if(is_F) cs_F++;	if(ps_F) cs_F=0;
@@ -352,15 +352,15 @@ int bBitmap;
 u16 bgBitmap[480*272];
 static void psp_frame(const char *msg0, const char *msg1)
 {
-	if (bBitmap)/* •Ç† */
+	if (bBitmap)/* å£ç´™ */
 	{	BitBlt(0, 0, 480, 272, /*1,*/ bgBitmap);}
-	else/* •Ç†‚È‚µ */
+	else/* å£ç´™ãªã— */
 	{	psp_fill_frame(draw_frame, CNVCOL15TO32(setting.color[0]));}
 //	{	pgFillvram(setting.color[0/*2*/]);}
 	psp_print(0, 0, setting.color[3], APP_TITLE);
-	// ƒƒbƒZ[ƒW‚È‚Ç
+	// ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãªã©
 	if (msg0) psp_print(17, 14, setting.color[2], msg0);
-	// ˜g
+	// æ 
 #if 1
 	/*pgDrawFrame*/psp_box_frame(draw_frame, 17-16, 25, 463+16, 248+10, setting.color[1]);
 	/*pgDrawFrame*/psp_box_frame(draw_frame, 18-16, 26, 462+16, 247+10, setting.color[1]);
@@ -373,13 +373,13 @@ static void psp_frame(const char *msg0, const char *msg1)
 		psp_box_rect( draw_frame,	setting.color[1], &tbounds);
 	}
 #endif
-	// ‘€ìà–¾
+	// æ“ä½œèª¬æ˜
 	if(msg1) psp_print(17, 252+10, setting.color[2], msg1);
 }
 
 
 void Draw_All(void)
-{                                                         //›FÀs ‚kFİ’èƒƒjƒ…[ ¢FƒGƒ~ƒ…ƒŒ[ƒ^‚ÌI—¹
+{                                                         //â—‹ï¼šå®Ÿè¡Œ ï¼¬ï¼šè¨­å®šãƒ¡ãƒ‹ãƒ¥ãƒ¼ â–³ï¼šã‚¨ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚¿ã®çµ‚äº†
 	psp_frame(/*NULL*/drivers[dlist_curpos]->name/*mes*/, "Controls>> circle : run game ,LTrigger: config ,triangle: exit");
 
     long freeMem;
@@ -400,7 +400,7 @@ void Draw_All(void)
 	psp_print(110, 27, setting.color[3], memInfo);
 
 	int i;
-	// ƒQ[ƒ€ƒŠƒXƒg
+	// ã‚²ãƒ¼ãƒ ãƒªã‚¹ãƒˆ
 	i = dlist_start;
 	while (i < (dlist_start+PATHLIST_H))
 	{
@@ -490,7 +490,7 @@ int Control(void)
 		}
 		else if (ps_A && is_A)
 		{
-			//psp_frame("ALO! ‚Ü‚½—V‚ñ‚Å‚Ë" DEVELOPPER, "~F‚â‚Á‚ÏƒLƒƒƒ“ƒZƒ‹  ›FI—¹" );
+			//psp_frame("ALO! ã¾ãŸéŠã‚“ã§ã­" DEVELOPPER, "Ã—ï¼šã‚„ã£ã±ã‚­ãƒ£ãƒ³ã‚»ãƒ«  â—‹ï¼šçµ‚äº†" );
 			psp_frame(""," circle : confirm   cross : cancel" );
 			psp_print(40,120, setting.color[3], " WTF!!!??? QUITTING ALREADY??!!! press Circle to confirm");
 			v_sync();
@@ -516,7 +516,7 @@ int Control(void)
 
 
 
-/* REPEAT_TIME_W: ƒI[ƒgƒŠƒs[ƒg‚ª‚©‚©‚é‚Ü‚Å‚ÌŠÔ */
+/* REPEAT_TIME_W: ã‚ªãƒ¼ãƒˆãƒªãƒ”ãƒ¼ãƒˆãŒã‹ã‹ã‚‹ã¾ã§ã®æ™‚é–“ */
 #define REPEAT_TIME_W 6
 
 #define MENU2_Y_OFFS  (5-1-1)
@@ -530,7 +530,7 @@ void Draw_Confirm(void)
 {
 	psp_frame(drivers[dlist_curpos]->name, "CIRCLE : CONFIRM , CROSS : CANCEL  ** Argentina campion 2010!!!**");
 	psp_print(MENU2C_X_OFFS, ( 9*10), setting.color[3], drivers[dlist_curpos]->description);
-	psp_print(MENU2B_X_OFFS, (12*10), setting.color[3], "Press circle to run game");//"‚ğÀs‚µ‚Ü‚·B"
+	psp_print(MENU2B_X_OFFS, (12*10), setting.color[3], "Press circle to run game");//"ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚"
 	v_sync();
 //	pgScreenFlip();
 	psp_flip_screen(/*1*/);
@@ -702,7 +702,7 @@ void load_config(void)
 
 
 
-// ”¼“§–¾ˆ—
+// åŠé€æ˜å‡¦ç†
 static u16 rgbTransp(u16 fgRGB, u16 bgRGB, int alpha)
 {
 //	unsigned int R, G, B;
@@ -811,7 +811,7 @@ void psp_colorconfig(void)
 		#if (1==USE_COLOR_MENU_X_BUTTON)
 		else if( ps_X && is_X )
 		{
-			break;/*–ß‚é*/
+			break;/*æˆ»ã‚‹*/
 		}
 		#endif //(1==USE_COLOR_MENU_X_BUTTON)
 		else if( ps_O && is_O ){
@@ -849,23 +849,23 @@ void psp_colorconfig(void)
 		sel_count &=15;
 
 		if (sel >= COLOR0_R && sel <= BG_BRIGHT)
-		{	psp_frame(NULL, "©¨F’l‚Ì•ÏX"
+		{	psp_frame(NULL, "â†â†’ï¼šå€¤ã®å¤‰æ›´"
 			#if (1==USE_COLOR_MENU_X_BUTTON)
-				"  ~FƒƒCƒ“ƒƒjƒ…[‚É–ß‚é"
+				"  Ã—ï¼šãƒ¡ã‚¤ãƒ³ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã«æˆ»ã‚‹"
 			#endif //(1==USE_COLOR_MENU_X_BUTTON)
 			);
 		} else if (sel == INIT)
-		{	psp_frame(NULL, "›Fİ’è‚ğ‰Šú‰»‚·‚é"
+		{	psp_frame(NULL, "â—‹ï¼šè¨­å®šã‚’åˆæœŸåŒ–ã™ã‚‹"
 			#if (1==USE_COLOR_MENU_X_BUTTON)
-				"  ~FƒƒCƒ“ƒƒjƒ…[‚É–ß‚é"
+				"  Ã—ï¼šãƒ¡ã‚¤ãƒ³ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã«æˆ»ã‚‹"
 			#endif //(1==USE_COLOR_MENU_X_BUTTON)
 			);
 		} else
-		{	psp_frame(NULL, "›"
+		{	psp_frame(NULL, "â—‹"
 			#if (1==USE_COLOR_MENU_X_BUTTON)
-				"~"
+				"Ã—"
 			#endif //(1==USE_COLOR_MENU_X_BUTTON)
-				"FƒƒCƒ“ƒƒjƒ…[‚É–ß‚é"
+				"ï¼šãƒ¡ã‚¤ãƒ³ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã«æˆ»ã‚‹"
 			);
 		}
 
@@ -1051,27 +1051,27 @@ void psp_menu(void)
 
 		{// sprintf(tmp, "selected item #%d",sel );
 #if 0
-/* uà–¾v“ü‚ê‚é‚Æu•sˆÀ’èv‚É‚È‚é‚Ì‚Åu”p~vB */
+/* ã€Œèª¬æ˜ã€å…¥ã‚Œã‚‹ã¨ã€Œä¸å®‰å®šã€ã«ãªã‚‹ã®ã§ã€Œå»ƒæ­¢ã€ã€‚ */
 		const char *setumei[]={
-			"OFF‚ÅA‰¹‚È‚µ‚Å‚·B",
+			"OFFã§ã€éŸ³ãªã—ã§ã™ã€‚",
 			#if (0!=LINK_ROT)
-			"‰æ–Ê‚Ìc‰¡‚Å‚·B([H]‚ª‰¡PSP‚Í•’ÊA[V]‚ªcPSP‚ğ‰ñ“])B",
+			"ç”»é¢ã®ç¸¦æ¨ªã§ã™ã€‚([H]ãŒæ¨ªï¼PSPã¯æ™®é€šã€[V]ãŒç¸¦ï¼PSPã‚’å›è»¢)ã€‚",
 			#endif //(0!=LINK_ROT)
-			"ƒtƒŒ[ƒ€ƒXƒLƒbƒv‚Å‚·B00‚Íu‚OƒtƒŒ[ƒ€ƒXƒLƒbƒvvA‚Â‚Ü‚èƒtƒ‹ƒtƒŒ[ƒ€•`‰æB",
-			"VSYNC“ü‚ê‚é‚Æd‚¢...orz",
-			"ƒfƒoƒbƒO—pFPS•\\¦B(•\\¦ƒ‹[ƒ`ƒ“‚ª’x‚¢‚Ì‚Å) 3%`5%’ö“x’x‚­‚È‚é‚æ‚¤‚Å‚·B",
-			"‚»‚ç333MHz‚ÉŒˆ‚Ü‚Á‚Ä‚Ü‚·B",
-			"ƒƒjƒ…[‚Ìuš‚ÌFv‚Ìİ’è‚Å‚·B",
-			"ƒtƒ@ƒCƒ‰[(ƒQ[ƒ€‘I‘ğ‰æ–Ê)‚É–ß‚è‚Ü‚·B",
+			"ãƒ•ãƒ¬ãƒ¼ãƒ ã‚¹ã‚­ãƒƒãƒ—ã§ã™ã€‚00ã¯ã€Œï¼ãƒ•ãƒ¬ãƒ¼ãƒ ã‚¹ã‚­ãƒƒãƒ—ã€ã€ã¤ã¾ã‚Šãƒ•ãƒ«ãƒ•ãƒ¬ãƒ¼ãƒ æç”»ã€‚",
+			"VSYNCå…¥ã‚Œã‚‹ã¨é‡ã„...orz",
+			"ãƒ‡ãƒãƒƒã‚°ç”¨FPSè¡¨\ç¤ºã€‚(è¡¨\ç¤ºãƒ«ãƒ¼ãƒãƒ³ãŒé…ã„ã®ã§) 3%ã€œ5%ç¨‹åº¦é…ããªã‚‹ã‚ˆã†ã§ã™ã€‚",
+			"ãã‚‰333MHzã«æ±ºã¾ã£ã¦ã¾ã™ã€‚",
+			"ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã®ã€Œå­—ã®è‰²ã€ã®è¨­å®šã§ã™ã€‚",
+			"ãƒ•ã‚¡ã‚¤ãƒ©ãƒ¼(ã‚²ãƒ¼ãƒ é¸æŠç”»é¢)ã«æˆ»ã‚Šã¾ã™ã€‚",
 			};
 			strcpy(tmp, &setumei[sel][0] );
 #endif
 			if (sel < ITEM_COLOR_CONFIG)
-				psp_frame(NULL/*tmp*/, "©¨F’l‚Ì•ÏX  ~‚kFƒQ[ƒ€‘I‘ğ‰æ–Ê‚É–ß‚é");
+				psp_frame(NULL/*tmp*/, "â†â†’ï¼šå€¤ã®å¤‰æ›´  Ã—ï¼¬ï¼šã‚²ãƒ¼ãƒ é¸æŠç”»é¢ã«æˆ»ã‚‹");
 			else if (sel == ITEM_COLOR_CONFIG)
-				psp_frame(NULL/*tmp*/, "›FƒJƒ‰[İ’èƒƒjƒ…[‚ÉˆÚ“®  ~‚kFƒQ[ƒ€‘I‘ğ‰æ–Ê‚É–ß‚é");
+				psp_frame(NULL/*tmp*/, "â—‹ï¼šã‚«ãƒ©ãƒ¼è¨­å®šãƒ¡ãƒ‹ãƒ¥ãƒ¼ã«ç§»å‹•  Ã—ï¼¬ï¼šã‚²ãƒ¼ãƒ é¸æŠç”»é¢ã«æˆ»ã‚‹");
 			else
-				psp_frame(NULL/*tmp*/, "›~‚kFƒQ[ƒ€‘I‘ğ‰æ–Ê‚É–ß‚é");
+				psp_frame(NULL/*tmp*/, "â—‹Ã—ï¼¬ï¼šã‚²ãƒ¼ãƒ é¸æŠç”»é¢ã«æˆ»ã‚‹");
 		}
 #define MENU1_Y_SPACER 11
 	//	if(setting.sound_ON_OFF)

@@ -50,7 +50,7 @@ int run_mame(int argc, char **argv);
 
 
 //============================================================
-//	HOMEキー関連
+//	HOME繧ュ繝シ髢「騾」
 //============================================================
 
 //============================================================
@@ -93,7 +93,7 @@ static SceKernelCallbackFunction/*int*/ PowerCallback(int unknown, int pwrflags,
 //	CreateCallbackThread
 //============================================================
 /*--------------------------------------------------------
-	コールバックスレッド作成
+	繧ウ繝シ繝ォ繝舌ャ繧ッ繧ケ繝ャ繝ラ菴懈
 --------------------------------------------------------*/
 
 static int CallbackThread(SceSize/*int*/ args, void *argp)
@@ -113,8 +113,7 @@ static int CallbackThread(SceSize/*int*/ args, void *argp)
 
 
 /*--------------------------------------------------------
-	コールバックスレッド設定
---------------------------------------------------------*/
+	繧ウ繝シ繝ォ繝舌ャ繧ッ繧ケ繝ャ繝ラ險ュ螳--------------------------------------------------------*/
 
 /* Sets up the callback thread and returns its thread id */
 static /*int*/void SetupCallbacks(void)
@@ -146,7 +145,7 @@ return sceIoMkdir(dir,0777);
 }
 
 //============================================================
-//	メイン
+//	繝。繧、繝ウ
 //============================================================
 
 #ifdef KERNEL_MODE
@@ -172,7 +171,7 @@ int main(int argc, char *argv[])
 	//psp_printf_init();
 	//pgcInit();
 #ifndef KERNEL_MODE
-	setCurDir(argv[0]);/* ユーザーモード時のみ使用 */
+	setCurDir(argv[0]);/* 繝ヲ繝シ繧カ繝シ繝「繝シ繝画凾縺ョ縺ソ菴ソ逕ィ */
 #endif //KERNEL_MODE
 	_argv[_argc++] = getCurDir();
 
@@ -232,7 +231,7 @@ int main(int argc, char *argv[])
 	save_config();
 	psp_video_exit();
 #ifndef KERNEL_MODE
-	sceKernelExitGame();/* ユーザーモード時のみ使用 */
+	sceKernelExitGame();/* 繝ヲ繝シ繧カ繝シ繝「繝シ繝画凾縺ョ縺ソ菴ソ逕ィ */
 #endif
 	return 0;
 }
@@ -247,7 +246,7 @@ void main_thread_set_priority(int priority)
 
 int main(int argc, char *argv[])
 {
-	setCurDir(argv[0]);/* カーネルモードの場合はここで。 */
+	setCurDir(argv[0]);/* 繧ォ繝シ繝阪Ν繝「繝シ繝峨蝣エ蜷医縺薙％縺ァ縲*/
     printf(argv[0]);
 	main_thread = sceKernelCreateThread(
 		"User Mode Thread",
@@ -260,7 +259,7 @@ int main(int argc, char *argv[])
 	sceKernelStartThread(main_thread, 0, 0);
 	sceKernelWaitThreadEnd(main_thread, NULL);
 
-	sceKernelExitGame();/* カーネルモードの場合はここで。 */
+	sceKernelExitGame();/* 繧ォ繝シ繝阪Ν繝「繝シ繝峨蝣エ蜷医縺薙％縺ァ縲*/
 
 	return 0;
 }

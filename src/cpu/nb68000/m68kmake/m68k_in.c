@@ -2442,7 +2442,7 @@ M68KMAKE_OP(bra, 8, ., .)
 	m68ki_trace_t0();				   /* auto-disable (see m68kcpu.h) */
 	m68ki_branch_8(MASK_OUT_ABOVE_8(REG_IR));
 	#if (1==M68K_USE_PPC)
-	if(REG_PC == REG_PPC)/*ñ≥å¿ÉãÅ[Év*/
+	if(REG_PC == REG_PPC)/*ÁÑ°Èôê„É´„Éº„Éó*/
 	{
 		USE_ALL_CYCLES();
 	}
@@ -2458,7 +2458,7 @@ M68KMAKE_OP(bra, 16, ., .)
 	m68ki_trace_t0();			   /* auto-disable (see m68kcpu.h) */
 	m68ki_branch_16(offset);
 	#if (1==M68K_USE_PPC)
-	if(REG_PC == REG_PPC)/*ñ≥å¿ÉãÅ[Év*/
+	if(REG_PC == REG_PPC)/*ÁÑ°Èôê„É´„Éº„Éó*/
 	{
 		USE_ALL_CYCLES();
 	}
@@ -3512,7 +3512,7 @@ M68KMAKE_OP(jmp, 32, ., .)
 	m68ki_jump(M68KMAKE_GET_EA_AY_32);
 	m68ki_trace_t0();				   /* auto-disable (see m68kcpu.h) */
 	#if (1==M68K_USE_PPC)
-	if(REG_PC == REG_PPC)/*ñ≥å¿ÉãÅ[Év*/
+	if(REG_PC == REG_PPC)/*ÁÑ°Èôê„É´„Éº„Éó*/
 	{
 		USE_ALL_CYCLES();
 	}

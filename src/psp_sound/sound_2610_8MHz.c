@@ -279,8 +279,8 @@ typedef void (*FM_IRQHANDLER_2610)(/*void *param,*/int irq);
   #define RENDER_DIV72_MODE 1
 
 #if (1==RENDER_DIV72_MODE)
-//	#define CLOCK_DIV72 (clock/72)/* MAME1.16‚Å‚Í‚±‚¤‚È‚Á‚Ä‚½(ok?) */
-//	#define CLOCK_DIV72_OPN ((clock/72)/RENDER_DIV_TYPE)/*(clock/(72*RENDER_DIV_TYPE))“¯‚¶‚©‚Æ*//*((clock/72)/RENDER_DIV_TYPE)*//* ‚±‚Ì•Ó‚ÅŠ¨•ÙB */
+//	#define CLOCK_DIV72 (clock/72)/* MAME1.16ã§ã¯ã“ã†ãªã£ã¦ãŸ(ok?) */
+//	#define CLOCK_DIV72_OPN ((clock/72)/RENDER_DIV_TYPE)/*(clock/(72*RENDER_DIV_TYPE))åŒã˜ã‹ã¨*//*((clock/72)/RENDER_DIV_TYPE)*//* ã“ã®è¾ºã§å‹˜å¼ã€‚ */
 
 	#if 1
 		#define CLOCK_DIV72_OPN        (/*rate*/machine->sample_rate/*machine->sample_rate*/)/* */
@@ -290,10 +290,10 @@ typedef void (*FM_IRQHANDLER_2610)(/*void *param,*/int irq);
 		#define CLOCK_DIV72_OPN_STREAM (/*rate*/rate/*machine->sample_rate*/)/* */
 	#endif
 
-//	#define CLOCK_DIV72_SSG ((clock/(72*RENDER_DIV_TYPE))*(machine->sample_rate/44100))/*((clock/72)/RENDER_DIV_TYPE)*//* ƒ_ƒ */
+//	#define CLOCK_DIV72_SSG ((clock/(72*RENDER_DIV_TYPE))*(machine->sample_rate/44100))/*((clock/72)/RENDER_DIV_TYPE)*//* ãƒ€ãƒ¡ */
 #else
-	#define CLOCK_DIV72 (machine->sample_rate)/* MAME0.97‚Å‚Í‚±‚¤‚È‚Á‚Ä‚½(mistake?) */
-//	#define CLOCK_DIV72 ((machine->sample_rate)/RENDER_DIV_TYPE)/*low-fi‰ß‚¬‚é...*/
+	#define CLOCK_DIV72 (machine->sample_rate)/* MAME0.97ã§ã¯ã“ã†ãªã£ã¦ãŸ(mistake?) */
+//	#define CLOCK_DIV72 ((machine->sample_rate)/RENDER_DIV_TYPE)/*low-fiéãã‚‹...*/
 #endif
 
 /*
@@ -1039,7 +1039,7 @@ void SSG_write(
 {
 	int old;
 	#if 0
-	/*ƒTƒCƒY‚ª‘å‚«‚­‚È‚éH*/
+	/*ã‚µã‚¤ã‚ºãŒå¤§ãããªã‚‹ï¼Ÿ*/
 //	/*PSG->Regs*/YM2610.REGS[r] = v;
 	#endif
 	/* A note about the period of tones, noise and envelope: for speed reasons,*/
@@ -1557,7 +1557,7 @@ static void Z_AY8910_Update(void *param,stream_sample_t **inputs, stream_sample_
 
 
 #if 0
-/* —v‚ç‚È‚¢‚ç‚µ‚¢(?) */
+/* è¦ã‚‰ãªã„ã‚‰ã—ã„(?) */
 void Z_AY8910_set_volume(u8 chip,int channel,int volume)
 {
 	struct ym2610_info/*Z_AY8910*/ *PSG = sndti_token(SOUND_AY8910, chip);
@@ -4113,7 +4113,7 @@ WRITE8_HANDLER( YM2610_w )
 		/* HARDWARE_BUG??? */
 		/* Write register to SSG emulator */
 		if( /*v*/data < 16 ) /*(*OPN->ST.SSG->write)*//*psg_write*/SSG_write(/*OPN->ST.param,*/0,data/*v*/);
-		/*  (ƒ}ƒjƒ…ƒAƒ‹‚Ç‚¤‚è‚È‚çA‚±‚¤‚¢‚¤“®ì‚Í–³‚¢”¤‚¾‚ªÀÛ‚Ì‚Æ‚±‚ë)—Ç‚­‰ğ‚©‚ç‚È‚¢B */
+		/*  (ãƒãƒ‹ãƒ¥ã‚¢ãƒ«ã©ã†ã‚Šãªã‚‰ã€ã“ã†ã„ã†å‹•ä½œã¯ç„¡ã„ç­ˆã ãŒå®Ÿéš›ã®ã¨ã“ã‚)è‰¯ãè§£ã‹ã‚‰ãªã„ã€‚ */
 		#endif
 		break;
 
@@ -4141,7 +4141,7 @@ WRITE8_HANDLER( YM2610_w )
 		case 0x10: /* DeltaT ADPCM */
 #if 1
 			#if 0
-			YM2610UpdateReq(OPN->ST.param);/*‚±‚±‚ÍA—v‚ç‚È‚¢‚Á‚Û‚¢*/
+			YM2610UpdateReq(OPN->ST.param);/*ã“ã“ã¯ã€è¦ã‚‰ãªã„ã£ã½ã„*/
 			#endif
 			OPNB_ADPCMB_write(&/*F2610->*/YM2610.deltaT,addr/*-0x10*/,data/*v*/);
 #else
@@ -4172,13 +4172,13 @@ WRITE8_HANDLER( YM2610_w )
 			break;
 		case 0x20:	/* Mode Register */
 			#if 0
-			YM2610UpdateReq(OPN->ST.param);/*ƒeƒXƒg–³Œø*/
+			YM2610UpdateReq(OPN->ST.param);/*ãƒ†ã‚¹ãƒˆç„¡åŠ¹*/
 			#endif
 			OPNWriteMode(/*OPN,*/addr,data/*v*/);
 			break;
 		default:	/* OPN section */
 			#if 0
-			YM2610UpdateReq(OPN->ST.param);/*ƒeƒXƒg–³Œø*/
+			YM2610UpdateReq(OPN->ST.param);/*ãƒ†ã‚¹ãƒˆç„¡åŠ¹*/
 			#endif
 			/* write register */
 			OPNWriteReg(/*OPN,*/addr,data/*v*/);
@@ -4195,7 +4195,7 @@ WRITE8_HANDLER( YM2610_w )
 		if (/*F2610->*/YM2610.addr_A1 != 1)
 			break;	/* verified on real YM2608 */
 		#if 0
-		YM2610UpdateReq(OPN->ST.param);/*ƒeƒXƒg–³Œø*/
+		YM2610UpdateReq(OPN->ST.param);/*ãƒ†ã‚¹ãƒˆç„¡åŠ¹*/
 		#endif
 		addr = OPN->ST.address | 0x100;
 //#ifdef _STATE_H
@@ -4261,7 +4261,7 @@ static int zYM2610TimerOver(/*void *chip,*/int c)
 	else
 	{
 		#if 0
-		YM2610UpdateReq(/*F2610->*/YM2610.OPN.ST.param);/*ƒeƒXƒg–³Œø*/
+		YM2610UpdateReq(/*F2610->*/YM2610.OPN.ST.param);/*ãƒ†ã‚¹ãƒˆç„¡åŠ¹*/
 		#endif
 		/* Timer A */
 		/* timer update */
@@ -4282,7 +4282,7 @@ static void timer_callback_0(void *param)		/* Timer A */
 //	zYM2610TimerOver(/*info->chip,*/0);
 	{
 		#if 0
-		YM2610UpdateReq(/*F2610->*/YM2610.OPN.ST.param);/*ƒeƒXƒg–³Œø*/
+		YM2610UpdateReq(/*F2610->*/YM2610.OPN.ST.param);/*ãƒ†ã‚¹ãƒˆç„¡åŠ¹*/
 		#endif
 		/* Timer A */
 		/* timer update */
@@ -4351,7 +4351,7 @@ static void TimerHandler(/*void *param,*/int c,int count,double stepTime)
 
 #if 0
 /* update request from fm.c */
-void YM2610UpdateRequest(void *param)/*ƒeƒXƒg–³Œø*/
+void YM2610UpdateRequest(void *param)/*ãƒ†ã‚¹ãƒˆç„¡åŠ¹*/
 {
 	struct ym2610_info *info = param;
 	stream_update(info->stream,100);
@@ -4377,9 +4377,9 @@ void YM2610UpdateRequest(void *param)/*ƒeƒXƒg–³Œø*/
 //static void *ym2610_start(/*int*/UINT8 sndindex, int clock, const void *config)
 static void YM2610Init(int clock, int rate/*, FM_IRQHANDLER_2610 IRQHandler*/)
 {
-/* machine->drv->sound[0].config‚ª 0 ‚È‚Ì‚ÍA
-	0(‚Â‚Ü‚èn‚ß‚É“o˜^) ‚ªYM2610‚¾‚©‚çB
-	Ú‚µ‚­‚Í src/drivers/metal_black.c ‚ğQÆ‚¹‚æB */
+/* machine->drv->sound[0].configãŒ 0 ãªã®ã¯ã€
+	0(ã¤ã¾ã‚Šå§‹ã‚ã«ç™»éŒ²) ãŒYM2610ã ã‹ã‚‰ã€‚
+	è©³ã—ãã¯ src/drivers/metal_black.c ã‚’å‚ç…§ã›ã‚ˆã€‚ */
 #define REGIST_ON_DRIVER_THE_2610_SOUND_NUMBER (0)
 	const struct YM2610interface *intf = machine->drv->sound[REGIST_ON_DRIVER_THE_2610_SOUND_NUMBER].config;
 #undef  REGIST_ON_DRIVER_THE_2610_SOUND_NUMBER
@@ -4684,9 +4684,9 @@ WRITE8_HANDLER( YM2610_w )
 
 
 #if 0//(1==USE_YM2610_LSB0_INTERFACE)
-/* MAME‚Å‚Í taitoZ ˆÈŠO‚É–³‚¢B */
+/* MAMEã§ã¯ taitoZ ä»¥å¤–ã«ç„¡ã„ã€‚ */
 /*taito_z only*/
-/* TAITO Z SYSTEM ê—p */
+/* TAITO Z SYSTEM å°‚ç”¨ */
 /************************************************/
 /* Status Read for YM2610 - Chip 0				*/
 /************************************************/
@@ -4759,7 +4759,7 @@ WRITE16_HANDLER( YM2610_data_port_0_B_lsb_w )
 
 
 #if 0
-/* MAME‚É‚Í(2610‚ª•¡”‚ ‚é•¨‚Í)‘¶İ‚µ‚È‚¢B(‚Á‚Ä‚ä[‚©u¢‚Ì’†v‚É‚È‚³‚»‚¤) */
+/* MAMEã«ã¯(2610ãŒè¤‡æ•°ã‚ã‚‹ç‰©ã¯)å­˜åœ¨ã—ãªã„ã€‚(ã£ã¦ã‚†ãƒ¼ã‹ã€Œä¸–ã®ä¸­ã€ã«ãªã•ãã†) */
 
 /************************************************/
 /* Status Read for YM2610 - Chip 1				*/
@@ -5007,7 +5007,7 @@ int mame_sound_start(void)
 
 
 //	YM2151Init(3579545, samplerate, NULL);
-	YM2610Init(8000000, samplerate/*, NULL*/);// FZ‚àoutrun‚à4[MHz]
+	YM2610Init(8000000, samplerate/*, NULL*/);// FZã‚‚outrunã‚‚4[MHz]
 //#if 0
 //	namco_cus30_init(24000, samplerate, 8);
 //	n63701x_init(6000000, samplerate);
@@ -5074,7 +5074,7 @@ int sndnum_clock(int sndnum)
 #if 0
 	switch(sndnum)
 	{
-	case 0:	return 8000000;	/* 8.000[MHz] */  // FZ‚àoutrun‚à4[MHz]
+	case 0:	return 8000000;	/* 8.000[MHz] */  // FZã‚‚outrunã‚‚4[MHz]
 //	case 1:	return 15625;	/* 15.625[kHz] */
 //	case 2:	return 99999;
 //	case 3:	return 12345;
@@ -5082,7 +5082,7 @@ int sndnum_clock(int sndnum)
 	}
 	return 0;
 #else
-	return 8000000;	/* 8.000[MHz] */  // FZ‚àoutrun‚à4[MHz]
+	return 8000000;	/* 8.000[MHz] */  // FZã‚‚outrunã‚‚4[MHz]
 #endif
 }
 const char *sndnum_get_info_string(int sndnum, UINT32 state)
@@ -5090,20 +5090,20 @@ const char *sndnum_get_info_string(int sndnum, UINT32 state)
 #if 0
 	switch(sndnum)
 	{
-	case 0:	return "YM2610";	// FZ‚àoutrun‚à2151.
-//	case 1:	return "SEGA PCM";	// outrun‚Ì‚İ.
+	case 0:	return "YM2610";	// FZã‚‚outrunã‚‚2151.
+//	case 1:	return "SEGA PCM";	// outrunã®ã¿.
 //	case 2:	return "TEST 99999";
 //	case 3:	return "TEST 12345";
 //	case 4:	return "TEST 77777";
 	}
 	return ""/*"dummy_STR"*/;
 #else
-	return "YM2610";	// FZ‚àoutrun‚à2151.
+	return "YM2610";	// FZã‚‚outrunã‚‚2151.
 #endif
 }
-//////‚æ‚­ƒƒJƒ“ƒiƒCB
+//////ã‚ˆããƒ¯ã‚«ãƒ³ãƒŠã‚¤ã€‚
 #if 0
-void sndti_set_output_gain(int type, snd_index_t index, int output, float gain)	/* ‰¹—ÊƒRƒ“ƒgƒ[ƒ‹ */
+void sndti_set_output_gain(int type, snd_index_t index, int output, float gain)	/* éŸ³é‡ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ« */
 {
 //	int sndnum = sound_matrix[type][index] - 1;
 //	if (sndnum < 0)

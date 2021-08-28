@@ -668,7 +668,7 @@ zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),
 #else
-/* JIS ‘æ‚P…€ ŒÝŠ· */
+/* JIS ç¬¬ï¼‘æ°´æº– äº’æ› */
 //+0
 zc(v,v,v,v,v,v,v,v,v,v),
 zc(v,v,v,v,v,v,v,v,v,v),

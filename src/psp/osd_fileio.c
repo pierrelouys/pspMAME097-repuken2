@@ -15,7 +15,7 @@
 #include <ctype.h>
 
 #if 0
-	/* ���̕����́APSPSDK �ɍs���Ηv��Ȃ��Ȃ�炵��(?) */
+	/* この部分は、PSPSDK に行けば要らなくなるらしい(?) */
 	//#include <fcntl.h>
 	#include <sys/stat.h>
 	#include <unistd.h>

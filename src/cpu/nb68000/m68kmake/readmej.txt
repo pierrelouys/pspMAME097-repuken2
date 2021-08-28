@@ -3,46 +3,46 @@
 
 								  Version 3.3
 
-	 A �|�[�^�u�� ���g���[�� M680x0 �v���Z�b�T �G�~�����[�V���� �G���W��.
+	 A ポータブル モトローラ M680x0 プロセッサ エミュレーション エンジン.
 			Copyright 1998-2001 Karl Stenerud.	All rights reserved.
 
 
-�͂��߂�:
+はじめに:
 ------------
 
-Musashi �́A���g���[���� 68000, 68010, 68EC020, �� 68020 �̃G�~�����[�^�[���B
- �b����ŋL�q�����B
-���̃G�~�����[�^�[�́A�R���p�N�g�ɂȂ鎖�ƁA���s���x����������ڎw���ď������B
+Musashi は、モトローラの 68000, 68010, 68EC020, と 68020 のエミュレーターだ。
+ Ｃ言語で記述した。
+このエミュレーターは、コンパクトになる事と、実行速度が速い事を目指して書いた。
 
-�`�m�r�h�|�b�����ŋL�q�������A�C�����C���֐����g���Ă���B
-�����͌����ɂ͂`�m�r�h�����ł͂Ȃ����A�u�`�m�r�h�@�b�X�w�v�̊�͏[�����Ă���B
+ＡＮＳＩ−Ｃ準拠で記述したが、インライン関数も使っている。
+ここは厳密にはＡＮＳＩ準拠ではないが、「ＡＮＳＩ　Ｃ９Ｘ」の基準は充たしている。
 
-����́A���݂��܂��������̂l�`�l�d�v���W�F�N�g�̈�ŁA�Q�N�ȏ�̍Ό���������
-���삳�ꂽ���̂ł���B
+これは、現在うまく活動中のＭＡＭＥプロジェクトの一環で、２年以上の歳月をかけて
+製作されたものである。
  MAME project (www.mame.net)http://www.mame.net/
-�l�D�`�D�l�D�d�D�iMultiple Arcade Machine Emulator�j�v���W�F�N�g
-�}���`�u�A�[�P�[�h�}�V���v�G�~�����[�^�[�̃v���W�F�N�g�B
-�u�߂��݂�A�߂��ށA�i�܂߁A����Ȃ���j�ʂɂȂ�ČĂ�ł��������ǂ��v
-���Ȃ݂Ɂu�A�[�P�[�h�}�V���v���Ă̂́A�Q�[���Z���^�[��A�~���[�Y�����g�Z���^�[�ŁA
-���Â����i�R�C���j������ėV�ԃQ�[���̎��ł��B�m���Ă�H�V�񂾎�����H
-�����Ńe���r�ɂȂ��Q�[���@��g�т̃Q�[���Ƃ͈Ⴄ�񂾂�B���������̗p�ɁA
-�l�D�d�D�r�D�r�D�v���W�F�N�g���Ă����Z��v���W�F�N�g���A�������肷��B
-�iMultiple Emulator Super System�j�u�p��ŃQ�[���@�͂Ȃ�Ƃ��V�X�e�����Č����ׁv
+Ｍ．Ａ．Ｍ．Ｅ．（Multiple Arcade Machine Emulator）プロジェクト
+マルチ「アーケードマシン」エミュレーターのプロジェクト。
+「めぇみゅ、めぇむ、（まめ、ぢゃないよ）別になんて呼んでもいいけどさ」
+ちなみに「アーケードマシン」ってのは、ゲームセンターやアミューズメントセンターで、
+一回づつお金（コイン）をいれて遊ぶゲームの事です。知ってる？遊んだ事ある？
+うちでテレビにつなぐゲーム機や携帯のゲームとは違うんだよ。そおいうの用に、
+Ｍ．Ｅ．Ｓ．Ｓ．プロジェクトっていう兄弟プロジェクトが、あったりする。
+（Multiple Emulator Super System）「英語でゲーム機はなんとかシステムって言う為」
 
-���C�Z���X�⒘�쌠�Ȃ�
+ライセンスや著作権など
 LICENSE AND COPYRIGHT:
 ---------------------
 
 The Musashi M680x0 emulator is copyright 1998-2001 Karl Stenerud.
 
-���̃A�[�J�C�u�Ɋ܂ރ\�[�X�R�[�h�́A��`�p�r�ȊO�Ȃ�A���R�Ɏg���Ă悢�B
+このアーカイブに含むソースコードは、宣伝用途以外なら、自由に使ってよい。
 The source code included in this archive is provided AS-IS, free for any
 non-commercial purpose.
 
-�v���O�����Ɏg�p����ꍇ�͂Ȃ�ׂ��N���W�b�g���c���Ă����ė~�����B
+プログラムに使用する場合はなるべくクレジットを残しておいて欲しい。
 If you build a program using this core, please give credit to the author.
 
-��`�p�r�Ɏg�������̂Ȃ�A���̐l�Ƃ̘A��������̂ŁA���ɃR���^�N�g���Ƃ��ė~�����B
+宣伝用途に使いたいのなら、他の人との連絡もあるので、私にコンタクトをとって欲しい。
 If you wish to use this core in a commercial environment, please contact
 the author to discuss commercial licensing.
 
@@ -50,7 +50,7 @@ the author to discuss commercial licensing.
 
 AVAILABILITY:
 ------------
-�ŐV�ł́A�����ɂ���B
+最新版は、ここにある。
 The latest version of this code can be obtained at:
 http://kstenerud.cjb.net
 
@@ -58,39 +58,39 @@ http://kstenerud.cjb.net
 
 CONTACTING THE AUTHOR:
 ---------------------
-���ɃR���^�N�g���Ƃ肽���̂Ȃ�A���L�B
+私にコンタクトをとりたいのなら、下記。
 I can be reached at kstenerud@mame.net
 
 
 
-��{�I�Ȑݒ�
+基本的な設定
 BASIC CONFIGURATION:
 -------------------
-���삳�������̂Ȃ�A��{�I�ȂU�W�O�O�O�̐ݒ�����߂Ȃ���΂Ȃ�Ȃ��B
+動作させたいのなら、基本的な６８０００の設定を決めなければならない。
 The basic configuration will give you a standard 68000 that has sufficient
 functionality to work in a primitive environment.
 
-���̐ݒ�́A��Ɋ��荞�݊֘A�ŁA���荞�ݎ��ɂP�̃f�o�C�X�ŗǂ����B
-�f�o�C�X�����ł��A�I�[�g�x�N�^�̊��荞�݁i�x�N�^���j���󂯕t���邩�ǂ����B
-���ꂩ��A���荞�݃��[�`�����畜�A�̍ۂɊ��荞�ݐ����N���A�[�i�܂�P���O�j
-���Ă��ǂ����B�i�����ǁA���d���荞�݂��ĉ\��������񂾂�Ȃ��B�B�B�j�B
+この設定は、主に割り込み関連で、割り込み時に１つのデバイスで良いか。
+デバイスがいつでも、オートベクタの割り込み（ベクタ割）を受け付けるかどうか。
+それから、割り込みルーチンから復帰の際に割り込み線をクリアー（つまり１→０）
+しても良いか。（だけど、多重割り込みって可能性もあるんだよなぁ。。。）。
 his setup assumes that you only have 1 device interrupting it, that the
 device will always request an autovectored interrupt, and it will always clear
 the interrupt before the interrupt service routine finishes (but could
 possibly re-assert the interrupt).
-�����܂ŁA���߂��Ⴆ�΁A���Ƃ́A�A�h���X�o�X�͈̔͂ƁA
-�u�g���b�L���O�Ȃ��v�̐ݒ�ƁA���ƃv���t�F�`�i��ǂ݁j���ߎg�����ǂ����������B
+ここまで、決めちゃえば、あとは、アドレスバスの範囲と、
+「トラッキングなし」の設定と、あとプリフェチ（先読み）命令使うかどうかだけだ。
 TYou will have only one address space, no tracing, and no instruction prefetch.
 
-��{�I�Ȑݒ�̎����ɂ��āB
+基本的な設定の実装について。
 To implement the basic configuration:
 
-�um68kconf.h�v�ɂ��āA�C�����C����uDECL_SPEC�v�Ăяo���ɂ��āA���Ȃ���
-�R���p�C�����ǂ��Ȃ��Ă�̂��m�F���Ă���B�i��X�͂f�b�b���Ǝv���Đݒ肵���j
+「m68kconf.h」について、インラインや「DECL_SPEC」呼び出しについて、あなたの
+コンパイラがどうなってんのか確認してくれ。（我々はＧＣＣだと思って設定した）
 - Open m68kconf.h and verify that the settings for INLINE and DECL_SPEC will
   work with your compiler. (They are set for gcc)
 
-�z�X�g���̃v���O�����ł̎g�����͂���Ȋ֐��Ŏg���Ă���B
+ホスト側のプログラムでの使い方はこんな関数で使ってくれ。
 - In your host program, implement the following functions:
 	unsigned int  m68k_read_memory_8(unsigned int address);
 	unsigned int  m68k_read_memory_16(unsigned int address);
@@ -99,13 +99,13 @@ To implement the basic configuration:
 	void m68k_write_memory_16(unsigned int address, unsigned int value);
 	void m68k_write_memory_32(unsigned int address, unsigned int value);
 
-��L�̊֐����g���O�ɁA��x�́um68k_pulse_reset()�v���Ă�ł���B
-�������ĂԂƏ�̊֐��Ŏg���Ă���ݒ�A�܂�U�W�O���O�R�A�̐ݒ肪�����������d�g�݂��B
+上記の関数を使う前に、一度は「m68k_pulse_reset()」を呼んでくれ。
+こいつを呼ぶと上の関数で使っている設定、つまり６８０ｘ０コアの設定が初期化される仕組みだ。
 - In your host program, be sure to call m68k_pulse_reset() once before calling
   any of the other functions as this initializes the core.
 
-�um68k_execute()�v���g���΂U�W�O���O�R�A�����s�o���邵�A
-�um68k_set_irq()�v�ŁA���荞�݃x�N�^�̐ݒ���o����B
+「m68k_execute()」を使えば６８０ｘ０コアが実行出来るし、
+「m68k_set_irq()」で、割り込みベクタの設定も出来る。
 - Use m68k_execute() to execute instructions and m68k_set_irq() to cause an
   interrupt.
 

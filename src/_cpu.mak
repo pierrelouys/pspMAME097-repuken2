@@ -840,9 +840,9 @@ endif
 # (i8080) NEC V-series, Intel i80x86 compatible
 #-------------------------------------------------
 
-# V20 V25 ‚Í 8bit bus.
-# V30 V33 ‚Í 16bit bus. ‚¾‚ª mame097 ‚Å‚Í 8bit bus ‚Å emulate.
-# ˆê•û V60 ‚Í 16bit bus. V70 ‚Í 32bit bus. (V20/25/30/33 (i80x86Œn) ‚Æ V60/V70 (RISCŒn) ‚Í İŒv‚ª‘S‘Rˆá‚¤)
+# V20 V25 ã¯ 8bit bus.
+# V30 V33 ã¯ 16bit bus. ã ãŒ mame097 ã§ã¯ 8bit bus ã§ emulate.
+# ä¸€æ–¹ V60 ã¯ 16bit bus. V70 ã¯ 32bit bus. (V20/25/30/33 (i80x86ç³») ã¨ V60/V70 (RISCç³») ã¯ è¨­è¨ˆãŒå…¨ç„¶é•ã†)
 
 ifneq ($(filter V20,$(CPUS)),)
 OBJDIRS += $(OBJ_CPU)/nec
@@ -946,13 +946,13 @@ endif
 #CPU_SELECT = TYPE_BZ80
 #CPU_SELECT = TYPE_Z80FZ1
 #endif
-######## taito Œn ########
+######## taito ç³» ########
 #ifeq ($(TARGET),taitoAX)
-# CPU_SELECT = TYPE_BZ80  # (ƒŒƒCƒ“ƒ{[ƒAƒCƒ‰ƒ“ƒh“™)ƒeƒ“ƒ|‚ª’x‚·‚¬‚éB
+# CPU_SELECT = TYPE_BZ80  # (ãƒ¬ã‚¤ãƒ³ãƒœãƒ¼ã‚¢ã‚¤ãƒ©ãƒ³ãƒ‰ç­‰)ãƒ†ãƒ³ãƒãŒé…ã™ãã‚‹ã€‚
 # CPU_SELECT = TYPE_Z80R118B
 #endif
 #ifeq ($(TARGET),taitoB)
-# CPU_SELECT = TYPE_BZ80  ## (ƒKƒ“ƒtƒƒ“ƒeƒBƒA“™)ƒeƒ“ƒ|‚ª’x‚·‚¬‚éB
+# CPU_SELECT = TYPE_BZ80  ## (ã‚¬ãƒ³ãƒ•ãƒ­ãƒ³ãƒ†ã‚£ã‚¢ç­‰)ãƒ†ãƒ³ãƒãŒé…ã™ãã‚‹ã€‚
 # CPU_SELECT = TYPE_Z80R118B
 #endif
 ifeq ($(TARGET),darius)
@@ -963,15 +963,15 @@ ifeq ($(TARGET),ninjya_warriors)
 # TYPE_Z80S2  [SF#02(b)](933kb) fskip7_22050_sound_test_0xBB_PAUSE_ON 62-64%(61-65%)
 # TYPE_BZ80   [BZ a #00](947kb) fskip7_22050_sound_test_0xBB_PAUSE_ON 64-65%(63-67%)
 # TYPE_Z80FZ1 [FZ#02(e)](944kb) fskip7_22050_sound_test_0xBB_PAUSE_ON 62-64%(61-65%)
-# TYPE_CPU_SELECT = BZ80 # ‰¹o‚È‚¢–‚ª‚ ‚éB
- # TYPE_REFZ80 ‚È‚ç ok!
+# TYPE_CPU_SELECT = BZ80 # éŸ³å‡ºãªã„äº‹ãŒã‚ã‚‹ã€‚
+ # TYPE_REFZ80 ãªã‚‰ ok!
 #CPU_SELECT = TYPE_Z80R097A
  CPU_SELECT = TYPE_Z80R118B
 #CPU_SELECT = TYPE_Z80FZ1
 endif
 ####################
 ifeq ($(TARGET),thunder_cross)
-# ‰¹‚ªƒIƒJƒVƒC‚Ì‚ÅŠ·‘•ÀŒ±B
+# éŸ³ãŒã‚ªã‚«ã‚·ã‚¤ã®ã§æ›è£…å®Ÿé¨“ã€‚
  CPU_SELECT = TYPE_Z80S2
 #CPU_SELECT = TYPE_BZ80
 endif
@@ -986,7 +986,7 @@ endif
 
 ####################
 ifeq ($(TARGET),ninjya_kun2)
-# (ninjya_kun2‚Ìê‡‚Ì‚İ‰½ŒÌ‚©)ˆê”Ô“®ì‚ªˆÀ’è‚µ‘¬‚¢.(Z80FZ2‚æ‚è‘¬‚¢)
+# (ninjya_kun2ã®å ´åˆã®ã¿ä½•æ•…ã‹)ä¸€ç•ªå‹•ä½œãŒå®‰å®šã—é€Ÿã„.(Z80FZ2ã‚ˆã‚Šé€Ÿã„)
  CPU_SELECT = TYPE_Z80S2
 endif
 ifeq ($(TARGET),gun_smoke)
@@ -996,17 +996,17 @@ ifeq ($(TARGET),crazy_climber)
  CPU_SELECT = TYPE_Z80S2
 endif
 #ifeq ($(TARGET),ARIENAI)
-# “Á•Ê‚¨‚Ü‚¯”Å‚Ì‚İ
+# ç‰¹åˆ¥ãŠã¾ã‘ç‰ˆã®ã¿
 #	ifeq ($(TARGET),starforce)
 #	CPU_SELECT = TYPE_Z80S2
 #	endif
 #endif
 ####################
 ifeq ($(CPU_SELECT),TYPE_Z80FZ1)
-#air_buster‚Í‚±‚ê‚Å‚Í€‚ÊB
-#raizing‚Í‚±‚Ìz80‚ÅƒCƒPƒ‹‚Á‚Û‚¢BiŠm”F‚ÍŠ®‘S‚Å‚È‚¢j
-#fantasy_zone‚Í‚±‚Ìz80
-#starforce‚Í‚±‚Ìz80‚ÅƒCƒPƒ‹B
+#air_busterã¯ã“ã‚Œã§ã¯æ­»ã¬ã€‚
+#raizingã¯ã“ã®z80ã§ã‚¤ã‚±ãƒ«ã£ã½ã„ã€‚ï¼ˆç¢ºèªã¯å®Œå…¨ã§ãªã„ï¼‰
+#fantasy_zoneã¯ã“ã®z80
+#starforceã¯ã“ã®z80ã§ã‚¤ã‚±ãƒ«ã€‚
 ifneq ($(filter Z80,$(CPUS)),)
 OBJDIRS += $(OBJ_CPU)/z80fz2e
 CPUDEFS += -DHAS_Z80=1
@@ -1020,8 +1020,8 @@ endif
 endif
 ####################
 ifeq ($(CPU_SELECT),TYPE_Z80S2)
-#air_buster‚±‚Ìz80
-#starforce‚Í‚±‚Ìz80
+#air_busterã“ã®z80
+#starforceã¯ã“ã®z80
 ifneq ($(filter Z80,$(CPUS)),)
 OBJDIRS += $(OBJ_CPU)/z80s2c
 CPUDEFS += -DHAS_Z80=1
@@ -1217,17 +1217,17 @@ endif
 
 ###################
 
-# ƒ_ƒ‰ƒCƒAƒX‚Í NA68000 NB68000 ‚Å‚ÍA‹N“®o—ˆ‚È‚¢B
+# ãƒ€ãƒ©ã‚¤ã‚¢ã‚¹ã¯ NA68000 NB68000 ã§ã¯ã€èµ·å‹•å‡ºæ¥ãªã„ã€‚
 #ifeq ($(TARGET),darius)
 # CPU_SELECT = TYPE_ND68K
 #endif
 
-# ‚ñ‚ÆAŒ»ó(2007-08-24)‚±‚ê‚­‚ç‚¢‚Ì·D
+# ã‚“ã¨ã€ç¾çŠ¶(2007-08-24)ã“ã‚Œãã‚‰ã„ã®å·®ï¼
 # link NB68000(EBOOT.PBP 977,583bytes(955kb)) fskip07@22050 72% at outrun game start line.
 # link ND68000(EBOOT.PBP 957,464bytes(936kb)) fskip07@22050 68% at outrun game start line.
-#	ƒRƒ“ƒpƒNƒg	‘å‚«‚¢   NB68000  <  ND68000 ¬‚³‚¢
-#	Às‘¬“x	‘¬‚¢     NB68000  >  ND68000 ’x‚¢
-#	ƒ_ƒ‰ƒCƒAƒX	‹N“®•s‰Â NB68000 <<< ND68000 ‰Â”\
+#	ã‚³ãƒ³ãƒ‘ã‚¯ãƒˆ	å¤§ãã„   NB68000  <  ND68000 å°ã•ã„
+#	å®Ÿè¡Œé€Ÿåº¦	é€Ÿã„     NB68000  >  ND68000 é…ã„
+#	ãƒ€ãƒ©ã‚¤ã‚¢ã‚¹	èµ·å‹•ä¸å¯ NB68000 <<< ND68000 å¯èƒ½
 #ifeq ($(TARGET),turbo_outrun)
 # CPU_SELECT = TYPE_ND68K
 #endif

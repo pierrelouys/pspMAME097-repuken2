@@ -63,7 +63,7 @@ extern int finalmixLen, finalmixCur, finalmixCurNow, finalmixCounter;
 
 /**/
 //#define PGA_CHANNELS 3
-#define PGA_CHANNELS 1		// tmk 1ŒÂ‚Å‚æ‚³‚°H
+#define PGA_CHANNELS 1		// tmk 1å€‹ã§ã‚ˆã•ã’ï¼Ÿ
 //#define PGA_SAMPLES 512
 #define PGA_SAMPLES 1024
 #define MAXVOLUME 0x8000
@@ -449,7 +449,7 @@ static void __wavout_snd0_callback(short *_buf, unsigned long _reqn)
 		}
 	}
 
-	//powercalc(_buf);	//’P‚Éwave‚ğo‚·‚¾‚¯‚È‚ç•s—v
+	//powercalc(_buf);	//å˜ã«waveã‚’å‡ºã™ã ã‘ãªã‚‰ä¸è¦
 
 	wavout_snd0_playptr=ptr;
 	wi->playptr=ptr;
@@ -682,7 +682,7 @@ static void updateaudiostream( int throttle )
 
 //	wavinfo_bg.samplecount =stream_cache_len;
 //	wavinfo_bg.wavdata =stream_cache_data;
-//	wavinfo_bg.playptr =0;				// ƒ|ƒCƒ“ƒ^‚ğƒŠƒZƒbƒg
+//	wavinfo_bg.playptr =0;				// ãƒã‚¤ãƒ³ã‚¿ã‚’ãƒªã‚»ãƒƒãƒˆ
 //	wavinfo_bg.playptr_frac =0;
 
 /*	static int cache_len =0;

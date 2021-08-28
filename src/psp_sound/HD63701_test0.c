@@ -16,8 +16,8 @@ of each block there's a table listing the start offset of each sample.
 Samples are 8 bit unsigned, 0xff marks the end of the sample. 0x00 is used for
 silence compression: '00 nn' must be replaced by nn+1 times '80'.
 
-–óiƒ_ƒCƒ^ƒCjF‚±‚Ìƒ`ƒbƒv‚Í–w‚Çu‚Wƒrƒbƒg‚o‚b‚lv‚Æˆê‚¾‚¯‚ÇA
-0x00‚Ìƒf[ƒ^[‚¾‚¯uƒ‰ƒ“ƒŒƒ“ƒOƒXL’£‹@”\v‚ª‚Â‚¢‚Ä‚é‚Å‚Ã‚ËB
+è¨³ï¼ˆãƒ€ã‚¤ã‚¿ã‚¤ï¼‰ï¼šã“ã®ãƒãƒƒãƒ—ã¯æ®†ã©ã€Œï¼˜ãƒ“ãƒƒãƒˆï¼°ï¼£ï¼­ã€ã¨ä¸€ç·’ã ã‘ã©ã€
+0x00ã®ãƒ‡ãƒ¼ã‚¿ãƒ¼ã ã‘ã€Œãƒ©ãƒ³ãƒ¬ãƒ³ã‚°ã‚¹ä¼¸å¼µæ©Ÿèƒ½ã€ãŒã¤ã„ã¦ã‚‹ã§ã¥ã­ã€‚
 
 ***************************************************************************/
 
@@ -83,7 +83,7 @@ static void n63701x_update(int length)
 		if (v->playing)
 		{
 //			static const int vol_table[4] = { 26, 84, 200, 258 };
-/* ‘¼‚Ì‰¹Œ¹‚Æ‰¹‚ğ¬‚º‚é”{—¦ */
+/* ä»–ã®éŸ³æºã¨éŸ³ã‚’æ··ãœã‚‹å€ç‡ */
 #define N63701X_MIX_MULTI 2.5
 			static const int vol_table[4] =
 			{
@@ -114,22 +114,22 @@ static void n63701x_update(int length)
 					{
 						int data = base[(pos++) & 0xffff];
 
-						if (0xff==data) /* end of sample(0xff‚Í‚¨‚µ‚Ü‚¢) */
+						if (0xff==data) /* end of sample(0xffã¯ãŠã—ã¾ã„) */
 						{
 							v->playing = 0;
 							v->stream_pos = 0;
 							sample = 0;
 							break;
 						}
-						else if (0x00==data)	/* silence compressioni‚O‚Íƒ‰ƒ“ƒŒƒ“ƒOƒX‚Åˆ³kÏ‚İj */
+						else if (0x00==data)	/* silence compressionï¼ˆï¼ã¯ãƒ©ãƒ³ãƒ¬ãƒ³ã‚°ã‚¹ã§åœ§ç¸®æ¸ˆã¿ï¼‰ */
 						{
 							data = base[(pos++) & 0xffff];
 							v->silence_counter = data;
 							sample = 0;
 						}
-						else	/* ‚»‚êˆÈŠO‚Íu‚Wƒrƒbƒg‚o‚b‚lv */
+						else	/* ãã‚Œä»¥å¤–ã¯ã€Œï¼˜ãƒ“ãƒƒãƒˆï¼°ï¼£ï¼­ã€ */
 						{
-							sample = vol * (data - 0x80);	/* 0x80ˆø‚¢‚Äu•„†v‚ğ•ÏŠ·D */
+							sample = vol * (data - 0x80);	/* 0x80å¼•ã„ã¦ã€Œç¬¦å·ã€ã‚’å¤‰æ›ï¼ */
 						}
 					}
 				}

@@ -2,10 +2,10 @@
 #include "blit.h"
 //#include "pg.h"
 
-/* ‚±‚Ìblit‚ÍuŒ³‚Í8ƒrƒbƒgF‚©16ƒrƒbƒgF‚©32ƒrƒbƒgFv‚©‚Â
-uƒpƒŒƒbƒgƒ‚[ƒh‚ ‚èê—pv‚©‚Â
-u‰æ–Ê‰ñ“]‚ ‚èv */
-/* ’FPSP‚Í16ƒrƒbƒgF‚È‚Ì‚ÅAu??ƒrƒbƒgF(¨ƒpƒŒƒbƒg)¨16ƒrƒbƒgFv“]‘—BŠg‘å—¦‚ÍA‹­§‚P”{B */
+/* ã“ã®blitã¯ã€Œå…ƒã¯8ãƒ“ãƒƒãƒˆè‰²ã‹16ãƒ“ãƒƒãƒˆè‰²ã‹32ãƒ“ãƒƒãƒˆè‰²ã€ã‹ã¤
+ã€Œãƒ‘ãƒ¬ãƒƒãƒˆãƒ¢ãƒ¼ãƒ‰ã‚ã‚Šå°‚ç”¨ã€ã‹ã¤
+ã€Œç”»é¢å›è»¢ã‚ã‚Šã€ */
+/* è¨»ï¼šPSPã¯16ãƒ“ãƒƒãƒˆè‰²ãªã®ã§ã€ã€Œ??ãƒ“ãƒƒãƒˆè‰²(â†’ãƒ‘ãƒ¬ãƒƒãƒˆ)â†’16ãƒ“ãƒƒãƒˆè‰²ã€è»¢é€ã€‚æ‹¡å¤§ç‡ã¯ã€å¼·åˆ¶ï¼‘å€ã€‚ */
 
 //#define VRAMTOP		((char *)(0x04000000 +0x40000000))	// +0x40000000 Non Chache?
 #define VRAMTOP		((char *)(0x04000000))	// +0x40000000 Non Chache?
@@ -231,7 +231,7 @@ void bitblit_psp_direct( mame_bitmap *bitmap, int sx, int sy, int sw, int sh)//,
 	}
 	if (my_show_fps)
 	{
-		/* FPS •\¦ */
+		/* FPS è¡¨ç¤º */
 		//pline_buf =(void *)g_offset_dx_dy + (ppp_showframe?0:FRAMESIZE16);
 		/*psp_box_fill*/psp_box_clear( draw_frame,  8,  0, 8+(7*13), 0+(5+3) );//, 0x000000 /*DEF_COLOR0*//*0*/);
 	//	psp_print(      8,  0,                    0xffffff /*DEF_COLOR3*/, osd_FPS_text/*"Initialize"*/);
@@ -256,7 +256,7 @@ void bitblit_psp_direct( mame_bitmap *bitmap, int sx, int sy, int sw, int sh)//,
 #if 0
 	my_pgScreenFlip();
 #else
-//	if (wait_vsync){	v_sync();}/* ‚±‚±‚Å‚Í—v‚ç‚È‚¢Bsrc/psp/psp_video.c/psp_flip_screen();QÆ‚¹‚æB */
+//	if (wait_vsync){	v_sync();}/* ã“ã“ã§ã¯è¦ã‚‰ãªã„ã€‚src/psp/psp_video.c/psp_flip_screen();å‚ç…§ã›ã‚ˆã€‚ */
 	psp_flip_screen(/*1*/);
 #endif
 }

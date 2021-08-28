@@ -27,7 +27,7 @@
 
 /* Gens_FM */
 
-/* Rolling Thunder (new version [SOUND FM] #02 ‚ª–Â‚ç‚È‚¢) */
+/* Rolling Thunder (new version [SOUND FM] #02 ãŒé³´ã‚‰ãªã„) */
 
 //#include "./../psp/psp_menu.h"
 
@@ -269,7 +269,7 @@ void mame_sound_frame_update(int p){}//void sound_frame_update(void)/* src/mame.
 //#include "sound/ns86snd.h"
 
 
-/* 0:g‚í‚ñ, 1:g‚¤ 44100ê—pƒ~ƒLƒT|g—p‰Â”Û */
+/* 0:ä½¿ã‚ã‚“, 1:ä½¿ã† 44100å°‚ç”¨ãƒŸã‚­ã‚µâˆ’ä½¿ç”¨å¯å¦ */
 #define USE_FIXED44100 0
 //#define USE_FIXED44100 0
 
@@ -281,7 +281,7 @@ static void ns86_sound_update(int p)
 	s16 *buffer = (s16 *)p;
 	s16 mixing_buffer[PSP_SOUND_SAMPLES];
 	#if (1==USE_FIXED44100)
-	/* ‚¢‚¸‚ê‚É‚¹‚æ44100 ‚Í–¢‚¾À—pˆæ‚Å‚Í‚È‚¢ */
+	/* ã„ãšã‚Œã«ã›ã‚ˆ44100 ã¯æœªã å®Ÿç”¨åŸŸã§ã¯ãªã„ */
 	if(SND_44100==(sr))
 	{
 		YM2151Update_stream(mixing_buffer, PSP_SOUND_SAMPLES);
@@ -320,14 +320,14 @@ static void ns86_sound_update(int p)
 	}
 }
 #else
-/* jumptable® */
+/* jumptableå¼ */
 static void ns86_sound_update(int p)
 {
 	int i;
 	s16 *buffer = (s16 *)p;
 	s16 mixing_buffer[PSP_SOUND_SAMPLES];
 	#if (1==USE_FIXED44100)
-	/* ‚¢‚¸‚ê‚É‚¹‚æ 44100 ‚Í–¢‚¾À—pˆæ‚Å‚Í‚È‚¢ */
+	/* ã„ãšã‚Œã«ã›ã‚ˆ 44100 ã¯æœªã å®Ÿç”¨åŸŸã§ã¯ãªã„ */
 	if(SND_44100==(sr))
 	{
 		YM2151Update_stream(mixing_buffer, PSP_SOUND_SAMPLES);
@@ -414,7 +414,7 @@ int mame_sound_start(void)
 	psp_sound->callback = ns86_sound_update;
 
 //	YM2151Init(3579545, samplerate, NULL);
-	YM2151Init(3579545, samplerate, NULL);// FZ‚àoutrun‚à4[MHz]
+	YM2151Init(3579545, samplerate, NULL);// FZã‚‚outrunã‚‚4[MHz]
 #if 0
 	namco_cus30_init(24000, samplerate, 8);
 	n63701x_init(6000000, samplerate);
@@ -483,29 +483,29 @@ int sndnum_clock(int sndnum)
 {
 //	switch(sndnum)
 //	{
-//	case 0: return 3579545; /* 4.000[MHz] */  // FZ‚àoutrun‚à4[MHz]
+//	case 0: return 3579545; /* 4.000[MHz] */  // FZã‚‚outrunã‚‚4[MHz]
 //	case 1: return 3579545;	/* 15.625[kHz] */
 //	case 2: return 3579545;
 //	case 3: return 12345;
 //	case 4: return 77777;
 //	}
 //	return 0;
-	return 3579545;	/* 3.579545[Hz] (?)  */ /* ƒTƒ“ƒ_[ƒNƒƒX‚Å‚¨‚©‚µ‚­‚È‚é(?) */
-//	return 3570000;	/* 3.570000[Hz] (?)  */ /* ƒTƒ“ƒ_[ƒNƒƒX‚Å³í(?) */
+	return 3579545;	/* 3.579545[Hz] (?)  */ /* ã‚µãƒ³ãƒ€ãƒ¼ã‚¯ãƒ­ã‚¹ã§ãŠã‹ã—ããªã‚‹(?) */
+//	return 3570000;	/* 3.570000[Hz] (?)  */ /* ã‚µãƒ³ãƒ€ãƒ¼ã‚¯ãƒ­ã‚¹ã§æ­£å¸¸(?) */
 }
 const char *sndnum_get_info_string(int sndnum, UINT32 state)
 {
 	switch(sndnum)
 	{
-	case 0: return "YM2151";	// FZ‚àoutrun‚à2151.
-	case 1: return "K007232";	// outrun‚Ì‚İ.
+	case 0: return "YM2151";	// FZã‚‚outrunã‚‚2151.
+	case 1: return "K007232";	// outrunã®ã¿.
 	case 2: return "K007232";
 //	case 3: return "TEST 12345";
 //	case 4: return "TEST 77777";
 	}
 	return ""/*"dummy_STR"*/;
 }
-//////‚æ‚­ƒƒJƒ“ƒiƒCB
+//////ã‚ˆããƒ¯ã‚«ãƒ³ãƒŠã‚¤ã€‚
 #if 0
 int sound_get_user_gain_count(void)
 {

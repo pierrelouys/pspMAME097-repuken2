@@ -67,19 +67,19 @@ static void clear_vram(void)
 //============================================================
 extern UINT8 wait_vsync;
 #if 1
-static UINT8 swap_buf;/* v-sync on ‚Å‚à‘¬“x’á‰º‚È‚µIII•û® */
+static UINT8 swap_buf;/* v-sync on ã§ã‚‚é€Ÿåº¦ä½ä¸‹ãªã—ï¼ï¼ï¼æ–¹å¼ */
 #endif
 void psp_flip_screen(void)//int vsync)
 {
 #if 0
-/* ]—ˆ‚Ì•û®(–{•¨‚Ì v-sync ‚Å‚Í‘¬“x’á‰º‚·‚é) */
+/* å¾“æ¥ã®æ–¹å¼(æœ¬ç‰©ã® v-sync ã§ã¯é€Ÿåº¦ä½ä¸‹ã™ã‚‹) */
 //	if (vsync)      {sceDisplayWaitVblankStart();/* v_sync(); */}
 //	if (wait_vsync) {sceDisplayWaitVblankStart();/* v_sync(); */}
 	show_frame = draw_frame;
 	draw_frame = sceGuSwapBuffers();
 #else
 
-/* v-sync on ‚Å‚à‘¬“x’á‰º‚È‚µIII•û®(rukaB‚ ‚è‚ª‚Æ‚¨‚Áh) */
+/* v-sync on ã§ã‚‚é€Ÿåº¦ä½ä¸‹ãªã—ï¼ï¼ï¼æ–¹å¼(rukaæ°ã€‚ã‚ã‚ŠãŒã¨ãŠã£â€) */
 
 //	#define aaa_PIXELSIZE	1				//in short
 	#define aaa_LINESIZE	512 			//in short
@@ -110,11 +110,11 @@ void psp_flip_screen(void)//int vsync)
 //	#undef aaa_PIXELSIZE
 #endif
 }
-/* ’FusceDisplayWaitVblankCB()v‚ğg‚¤•û®‚à‚ ‚é‚ç‚µ‚¢i“äj */
-//      0x36cdfade,sceDisplayWaitVblank         i•`‰æŠJnˆÊ’u‚Å‘Ò‚ÂHj
-//      0x8eb9ec49,sceDisplayWaitVblankCB       i•`‰æŠJnˆÊ’u‚ÌƒR[ƒ‹ƒoƒbƒNHj
-//      0x984c27e7,sceDisplayWaitVblankStart    i•`‰æI—¹ˆÊ’u‚Å‘Ò‚ÂHj
-//      0x46f186c3,sceDisplayWaitVblankStartCB  i•`‰æI—¹ˆÊ’u‚ÌƒR[ƒ‹ƒoƒbƒNHj
+/* æ³¨ï¼šã€ŒsceDisplayWaitVblankCB()ã€ã‚’ä½¿ã†æ–¹å¼ã‚‚ã‚ã‚‹ã‚‰ã—ã„ï¼ˆè¬ï¼‰ */
+//      0x36cdfade,sceDisplayWaitVblank         ï¼ˆæç”»é–‹å§‹ä½ç½®ã§å¾…ã¤ï¼Ÿï¼‰
+//      0x8eb9ec49,sceDisplayWaitVblankCB       ï¼ˆæç”»é–‹å§‹ä½ç½®ã®ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯ï¼Ÿï¼‰
+//      0x984c27e7,sceDisplayWaitVblankStart    ï¼ˆæç”»çµ‚äº†ä½ç½®ã§å¾…ã¤ï¼Ÿï¼‰
+//      0x46f186c3,sceDisplayWaitVblankStartCB  ï¼ˆæç”»çµ‚äº†ä½ç½®ã®ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯ï¼Ÿï¼‰
 
 //============================================================
 //	psp_video_init
@@ -123,7 +123,7 @@ void psp_flip_screen(void)//int vsync)
 void psp_video_init(void)
 {
 #if 1
-	swap_buf=0;/* v-sync on ‚Å‚à‘¬“x’á‰º‚È‚µIII•û® */
+	swap_buf=0;/* v-sync on ã§ã‚‚é€Ÿåº¦ä½ä¸‹ãªã—ï¼ï¼ï¼æ–¹å¼ */
 #endif
 	draw_frame  = (void *)(FRAMESIZE * 0);
 	show_frame  = (void *)(FRAMESIZE * 1);
@@ -420,7 +420,7 @@ void psp_box_frame(void *frame, int x1, int y1, int x2, int y2, UINT16 color)
 //============================================================
 //	psp_box_clear
 //============================================================
-/* ’Furect\‘¢‘Ìvg‚¤‚æ‚èAƒR[ƒh‚ª¬‚³‚­‚Ä‘¬‚¢B */
+/* è¨»ï¼šã€Œrectæ§‹é€ ä½“ã€ä½¿ã†ã‚ˆã‚Šã€ã‚³ãƒ¼ãƒ‰ãŒå°ã•ãã¦é€Ÿã„ã€‚ */
 void psp_box_clear(void *frame, int x1, int y1, int x2, int y2/*, UINT32 color32*/)
 {
 	sceGuStart(GU_DIRECT, gulist);

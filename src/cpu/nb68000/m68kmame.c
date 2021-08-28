@@ -187,13 +187,13 @@ static void m68000_set_info(UINT32 state, union cpuinfo *info)
 		/* --- the following bits of info are set as pointers to data or functions --- */
 		case CPUINFO_PTR_IRQ_CALLBACK:				m68k_set_int_ack_callback(info->irqcallback); break;
 #if (1==M68K_USE_SYS16_CALLBACK)
-		// CPUINFO_PTR_M68K_RESET_CALLBACK outrun/cotton/x-board ‚ÅŽg‚¤
+		// CPUINFO_PTR_M68K_RESET_CALLBACK outrun/cotton/x-board ã§ä½¿ã†
 		case CPUINFO_PTR_M68K_RESET_CALLBACK:		m68k_set_reset_instr_callback(info->f); 	break;
 
-		// CPUINFO_PTR_M68K_CMPILD_CALLBACK sys16“™‚ÅŽg‚¤
+		// CPUINFO_PTR_M68K_CMPILD_CALLBACK sys16ç­‰ã§ä½¿ã†
 		case CPUINFO_PTR_M68K_CMPILD_CALLBACK:		m68k_set_cmpild_instr_callback((void (*)(unsigned int,int))(info->f));		break;
 
-		// CPUINFO_PTR_M68K_RTE_CALLBACK sys16“™‚ÅŽg‚¤
+		// CPUINFO_PTR_M68K_RTE_CALLBACK sys16ç­‰ã§ä½¿ã†
 		case CPUINFO_PTR_M68K_RTE_CALLBACK: 		m68k_set_rte_instr_callback(info->f);		break;
 #endif // (1==M68K_USE_SYS16_CALLBACK)
 	}
@@ -214,7 +214,7 @@ void m68000_get_info(UINT32 state, union cpuinfo *info)
 		case CPUINFO_INT_DEFAULT_IRQ_VECTOR:			info->i = -1;							break;
 		case CPUINFO_INT_ENDIANNESS:					info->i = CPU_IS_BE;					break;
 #if (1==PSP_2006)
-/* ]—ˆŒÝŠ·—p */
+/* å¾“æ¥äº’æ›ç”¨ */
 		case CPUINFO_INT_CLOCK_DIVIDER: 				info->i = 1;							break;
 		case CPUINFO_INT_MIN_INSTRUCTION_BYTES: 		info->i = 2;							break;
 		case CPUINFO_INT_MAX_INSTRUCTION_BYTES: 		info->i = 10;							break;
@@ -251,7 +251,7 @@ void m68000_get_info(UINT32 state, union cpuinfo *info)
 		case CPUINFO_INT_INPUT_STATE + 6:				info->i = 0;	/* fix me */			break;
 		case CPUINFO_INT_INPUT_STATE + 7:				info->i = 0;	/* fix me */			break;
 #if (1==PSP_2006)
-/* ]—ˆŒÝŠ·—p */
+/* å¾“æ¥äº’æ›ç”¨ */
 		case CPUINFO_INT_PREVIOUSPC:					info->i = m68k_get_reg(NULL, M68K_REG_PPC); break;
 #endif //(1==PSP_2006)
 
@@ -303,7 +303,7 @@ void m68000_get_info(UINT32 state, union cpuinfo *info)
 		/* --- the following bits of info are returned as NULL-terminated strings --- */
 		case CPUINFO_STR_NAME:							info->s = (char *) "68000"; break;
 #if (1==PSP_2006)
-/* ]—ˆŒÝŠ·—p */
+/* å¾“æ¥äº’æ›ç”¨ */
 //		case CPUINFO_STR_CORE_FAMILY:					info->s = (char *) "Motorola 68K"; break;
 //		case CPUINFO_STR_CORE_VERSION:					info->s = (char *) "3.2"; break;
 //		case CPUINFO_STR_CORE_CREDITS:					info->s = (char *) "Copyright 1999-2000 Karl Stenerud. All rights reserved. (2.1 fixes HJB)"); break;

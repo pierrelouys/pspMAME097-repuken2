@@ -22,7 +22,7 @@ OSOBJS = \
 	$(OBJ)/psp/psp_data.o \
 	$(OBJ)/psp/debugPsp.o \
 
-#	psp_font��blit��Z���B   $(OBJ)/psp/blit.o 
+#	psp_fontとblitを融合。   $(OBJ)/psp/blit.o 
 
 #	$(OBJ)/psp/y_malloc.o 
 #	$(OBJ)/psp/v_malloc.o 
@@ -58,23 +58,23 @@ endif
 # PSPSDK settings
 #------------------------------------------------------------------------------
 
-## [��p icon�w��]�̏ꍇ
+## [専用 icon指定]の場合
 ifneq ($(filter ICON,$(PSP_EXTENSION_OPTS)),)
 	PSP_EBOOT_ICON = icon/$(TARGET).png
 endif
 
-## �^�C�g���������ꍇ�ɐݒ�
+## タイトルが無い場合に設定
 ifeq ($(PSP_EBOOT_TITLE),)
 PSP_EBOOT_TITLE = "MAME 0.97 $(TARGET)"
 endif
 
-## �A�C�R���������ꍇ�ɕW����ݒ�
+## アイコンが無い場合に標準を設定
 ifeq ($(PSP_EBOOT_ICON),)
 PSP_EBOOT_ICON = icon/ico0_mamePSpDeathrash_VOL_3.png
 endif
 
 
-## �z�z�\�[�X(zip size)���傫���Ȃ肷����̂ŁA�b��I�ɃA�C�R������
+## 配布ソース(zip size)が大きくなりすぎるので、暫定的にアイコン共通
 #PSP_EBOOT_ICON = icon/icon0.png
 
 EXTRA_TARGETS = maked_directry EBOOT.PBP copy_bak_pbp
@@ -87,7 +87,7 @@ EXTRA_CLEAN = pspclean
 
 #SPRITE_OLD = 1
 
-#���J�[�l�����[�h�ɂ������Ȃ�#���O���ăR���p�C�����ĂˁB
+#↓カーネルモードにしたいなら#を外してコンパイルしてね。
 #KERNEL_MODE = 1
 
 

@@ -122,7 +122,7 @@ INLINE UINT16 font_get_code(const char *s, int *type)
 
 
 //============================================================
-//	psp_putcw (ëSäpäøéö)
+//	psp_putcw (ÂÖ®ËßíÊº¢Â≠ó)
 //============================================================
 
 void psp_putcw_frame(void *frame, UINT16 x, UINT16 y, UINT16 code, UINT16 color)
@@ -152,7 +152,7 @@ void psp_putcw_frame(void *frame, UINT16 x, UINT16 y, UINT16 code, UINT16 color)
 
 
 //============================================================
-//	psp_putc (îºäpï∂éö)
+//	psp_putc (ÂçäËßíÊñáÂ≠ó)
 //============================================================
 
 void psp_putc_frame(void *frame, UINT16 x, UINT16 y, UINT8 code, UINT16 color)
@@ -288,7 +288,7 @@ void psp_printf_bbb(const char *text, ...)
 			case '\n':
 			case '\r':
 			case 0x00:
-				console_x=SCR_WIDTH;/* â¸çs */
+				console_x=SCR_WIDTH;/* ÊîπË°å */
 			}
 			console_x += 7;
 			s++;
@@ -324,7 +324,7 @@ return 0;
 
 
 
-/* âΩåÃÇ©Ç±Ç±Ç™ë¨Ç¢ */
+/* ‰ΩïÊïÖ„Åã„Åì„Åì„ÅåÈÄü„ÅÑ */
 
 //#include "driver.h"
 #if (0==LINK_ROT)

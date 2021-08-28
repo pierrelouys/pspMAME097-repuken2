@@ -11,7 +11,7 @@
 #include "driver.h"
 //#include "ticker.h"
 
-/* MAMEI—¹‚Éƒƒ‚ƒŠ[‚ª‚«‚¿‚ñ‚ÆŠJ•ú‚³‚ê‚½‚©ƒ`ƒFƒbƒN‚·‚é(1==ON, 0==OFF) */
+/* MAMEçµ‚äº†æ™‚ã«ãƒ¡ãƒ¢ãƒªãƒ¼ãŒãã¡ã‚“ã¨é–‹æ”¾ã•ã‚ŒãŸã‹ãƒã‚§ãƒƒã‚¯ã™ã‚‹(1==ON, 0==OFF) */
   #define DEBUG_MAME_MEMORY_CHECK 1
 //#define DEBUG_MAME_MEMORY_CHECK 0
 
@@ -242,10 +242,10 @@ int run_mame(int argc, char **argv)
 		);
 
 		/*psp_printf_bbb(
-			"ƒƒ‚ƒŠ[ƒŠ[ƒN‚Å‚·‚£\n"
-			" ŠJn : %d(0x%x) bytes.\n"
-			" I—¹ : %d(0x%x) bytes.\n"
-			" ·•ª : %d(0x%x) bytes.\n"
+			"ãƒ¡ãƒ¢ãƒªãƒ¼ãƒªãƒ¼ã‚¯ã§ã™ã…\n"
+			" é–‹å§‹ : %d(0x%x) bytes.\n"
+			" çµ‚äº† : %d(0x%x) bytes.\n"
+			" å·®åˆ† : %d(0x%x) bytes.\n"
 			, start_size
 			, start_size
 			, end_size
