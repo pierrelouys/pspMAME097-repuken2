@@ -20,10 +20,10 @@ BUILD_PRX = 1
 
 
 #################
-# ‚½‚Ô‚ñ“®‚­(?)‚à‚Ì
+# ãŸã¶ã‚“å‹•ã(?)ã‚‚ã®
 #################
 
-#---- TAITO ÀŒ±
+#---- TAITO å®Ÿé¨“
 
 #TARGET = ninjya_warriors
 #TARGET = darius
@@ -32,61 +32,61 @@ BUILD_PRX = 1
 #TARGET = halleys
 
 #TARGET = night_striker
-	# GFX(psp‚Ìƒƒ‚ƒŠ)‚ª‘«‚è‚È‚¢‚Ì‚Å–³—‚â‚è•\¦B‰æ–Ê‚ªƒoƒO‚éB
+	# GFX(pspã®ãƒ¡ãƒ¢ãƒª)ãŒè¶³ã‚Šãªã„ã®ã§ç„¡ç†ã‚„ã‚Šè¡¨ç¤ºã€‚ç”»é¢ãŒãƒã‚°ã‚‹ã€‚
 
-#---- namco ÀŒ±
+#---- namco å®Ÿé¨“
 
 #TARGET = namcoNA
 #TARGET = mappy
 #TARGET = pacman
-	# ’Fpengo ‚Í ƒZƒK ‚¾‚¯‚Ç ƒiƒ€ƒR‰¹Œ¹B
+	# è¨»ï¼špengo ã¯ ã‚»ã‚¬ ã ã‘ã© ãƒŠãƒ ã‚³éŸ³æºã€‚
 
 #TARGET = namcos86
-	# namcos86 : mame”Å‚Í ’x‚¢‚Ì‚ÅA‚ ‚­‚Ü‚ÅÀŒ±—pBNJ‚Ìê—p”Åg‚¨‚¤B
-	# ’Fmame”Å‚ÌÀŒ±F‰¹Œ¹‚â‚b‚o‚t“™‚ÌŒİŠ·«ŒŸØ—p“rB
+	# namcos86 : mameç‰ˆã¯ é…ã„ã®ã§ã€ã‚ãã¾ã§å®Ÿé¨“ç”¨ã€‚NJæ°ã®å°‚ç”¨ç‰ˆä½¿ãŠã†ã€‚
+	# è¨»ï¼šmameç‰ˆã®å®Ÿé¨“ï¼šéŸ³æºã‚„ï¼£ï¼°ï¼µç­‰ã®äº’æ›æ€§æ¤œè¨¼ç”¨é€”ã€‚
 
-#---- UPL/capcom ÀŒ± (UVC : UPL vs CAPCOM)
+#---- UPL/capcom å®Ÿé¨“ (UVC : UPL vs CAPCOM)
 
 #TARGET = ninjya_kun2
 
-#---- capcom ÀŒ±
+#---- capcom å®Ÿé¨“
 
 #TARGET = street_fighter
 #TARGET = makai_mura
 #TARGET = gun_smoke
 
-#---- SEGA ÀŒ±
+#---- SEGA å®Ÿé¨“
 
 #TARGET = turbo_outrun
 #TARGET = fantasy_zone
 	#fantasy_zone ok[20070124]
-	#fantasy_zone ng[20070206]I—¹‚Å‚«‚È‚¢
+	#fantasy_zone ng[20070206]çµ‚äº†ã§ããªã„
 
-#---- IREM ÀŒ±
+#---- IREM å®Ÿé¨“
 
 #TARGET = m72
-	#ê—ptilemapì‚è’¼‚³‚È‚¢‚ÆƒoƒO‚éBCPU‚à•sˆÀ’èB
+	#å°‚ç”¨tilemapä½œã‚Šç›´ã•ãªã„ã¨ãƒã‚°ã‚‹ã€‚CPUã‚‚ä¸å®‰å®šã€‚
 
-#---- TOUA ÀŒ±
+#---- TOUA å®Ÿé¨“
 #TARGET = zerowing
 #TARGET = raizing
 	#raizing ok[20070124]
 
-#---- NMKÀŒ±
+#---- NMKå®Ÿé¨“
 #TARGET = nmk
 
-#---- SETA ÀŒ±
+#---- SETA å®Ÿé¨“
 
 #TARGET = seta
 
-#---- Nichibutu ÀŒ±
+#---- Nichibutu å®Ÿé¨“
 
 #TARGET = terracre
 	#terracre ng[20070323](YM3526_ng psg_ok)
-	#terracre ok[20070617]ƒhƒ‰ƒCƒo(src/drivers/terracre.c)(ym3526_info11)‚ÌƒoƒO‚ÅFA.
+	#terracre ok[20070617]ãƒ‰ãƒ©ã‚¤ãƒ(src/drivers/terracre.c)(ym3526_info11)ã®ãƒã‚°ã§FA.
 #TARGET = crazy_climber
 
-#---- konami ÀŒ±
+#---- konami å®Ÿé¨“
 
 #TARGET = ajax
 #############NEW MAKES!!!
@@ -95,73 +95,73 @@ BUILD_PRX = 1
 TARGET = konami3
 
 #TARGET = thunder_cross
-	#thunder_cross ok[20070319](‚Å‚à‰¹2151(test c)ƒIƒJƒVƒC)
+	#thunder_cross ok[20070319](ã§ã‚‚éŸ³2151(test c)ã‚ªã‚«ã‚·ã‚¤)
 #TARGET = bubblesys
 	#bubblesys ng[20070206]
-	#bubblesys ok[20070621](‚Å‚à‰¹ºƒ~ƒLƒVƒ“ƒO•Ï)
+	#bubblesys ok[20070621](ã§ã‚‚éŸ³å£°ãƒŸã‚­ã‚·ãƒ³ã‚°å¤‰)
 
 #TARGET = circus_charlie
 
-#---- kaneko ÀŒ±
+#---- kaneko å®Ÿé¨“
 
 #TARGET = air_buster
 	#air_buster ok[20070203](z80s2)
 
-#---- DECO ÀŒ±
+#---- DECO å®Ÿé¨“
 
 #TARGET = darwin4078
 	#darwin4078 ok[20070619]
 
-#---- tecmo/tehkan ÀŒ±
+#---- tecmo/tehkan å®Ÿé¨“
 
 #TARGET = starforce
 
-#---- nintendo ÀŒ±
+#---- nintendo å®Ÿé¨“
 
 #TARGET = mario_bros
 
-#---- UNIVERSAL ÀŒ±
+#---- UNIVERSAL å®Ÿé¨“
 
 #TARGET = mr_do
 
-#---- SNK ÀŒ±
+#---- SNK å®Ÿé¨“
 
 #TARGET = aso
 
 
 
-#################ª‚±‚±‚ğ•Ï‚¦‚é‚Ì‚Å‚Á‚·B
+#################â†‘ã“ã“ã‚’å¤‰ãˆã‚‹ã®ã§ã£ã™ã€‚
 
 
 #################
-# ˆê‰“®‚­‚ªAi‰¹Œ¹‚â‚b‚o‚t“™‚ÌjÀŒ±‚ª–Ú“I‚È‚à‚Ì
+# ä¸€å¿œå‹•ããŒã€ï¼ˆéŸ³æºã‚„ï¼£ï¼°ï¼µç­‰ã®ï¼‰å®Ÿé¨“ãŒç›®çš„ãªã‚‚ã®
 #################
 
-#---- TAITO ÀŒ±
+#---- TAITO å®Ÿé¨“
 
 #TARGET = qix
-	# qix : (’Fdiscrete‰¹Œ¹AÀŒ±—p) ‚Æ‚Ä‚Â‚à‚È‚­’x‚·‚¬‚ÄA
-	# iƒpƒ‰ƒ[ƒ^[‚ğ—\‚ßƒZƒbƒg‚µ‚Ä•Ê‚ÉƒŒƒ“ƒ_ƒŠƒ“ƒO‚Æ‚©jÀ‘••û–@•Ï‚¦‚È‚¢ŒÀ‚èA
-	# Œ»óÀ—p«‚Í‚È‚¢B
+	# qix : (è¨»ï¼šdiscreteéŸ³æºã€å®Ÿé¨“ç”¨) ã¨ã¦ã¤ã‚‚ãªãé…ã™ãã¦ã€
+	# ï¼ˆãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ãƒ¼ã‚’äºˆã‚ã‚»ãƒƒãƒˆã—ã¦åˆ¥ã«ãƒ¬ãƒ³ãƒ€ãƒªãƒ³ã‚°ã¨ã‹ï¼‰å®Ÿè£…æ–¹æ³•å¤‰ãˆãªã„é™ã‚Šã€
+	# ç¾çŠ¶å®Ÿç”¨æ€§ã¯ãªã„ã€‚
 
 
-#---- DECO ÀŒ±
+#---- DECO å®Ÿé¨“
 
 #TARGET = battlera
-	# battlera : (’FHuC6280ÀŒ±—p) (HuC6280‰¹Œ¹‚ª)’x‚·‚¬‚ÄŒ»óÀ—p«‚Í‚È‚¢B
+	# battlera : (è¨»ï¼šHuC6280å®Ÿé¨“ç”¨) (HuC6280éŸ³æºãŒ)é…ã™ãã¦ç¾çŠ¶å®Ÿç”¨æ€§ã¯ãªã„ã€‚
 
 
 #################
-# “®‚­‚©ƒƒJƒ‰ƒiƒC(‚½‚Ô‚ñ“®‚©‚È‚¢)‚à‚Ì
+# å‹•ãã‹ãƒ¯ã‚«ãƒ©ãƒŠã‚¤(ãŸã¶ã‚“å‹•ã‹ãªã„)ã‚‚ã®
 #################
 
 #################
 #TARGET = darius2_dual
 #TARGET = block_block
 
-#################ª‚ß‚àB
+#################â†‘ã‚ã‚‚ã€‚
 
-#---- TAITO ÀŒ±
+#---- TAITO å®Ÿé¨“
 
 #TARGET = full_throttle
 #TARGET = chuuka_taisen
@@ -177,50 +177,50 @@ TARGET = konami3
 #TARGET = taitoA2
 #TARGET = taito2
 
-#---- namco ÀŒ±
+#---- namco å®Ÿé¨“
 
 #TARGET = pacland
 	#pacland ng[20070205]
 	#pacland ng[20070319]
-	# pacland : söŒë‚µ‚½‚ªŒ»ó[20070915]“®‚©‚È‚¢BŒ´ˆö•s–¾B
-	#ƒ\[ƒX‚ÍFX•Ï‚¦‚½(“®‚©‚»‚¤‚Æ–ß‚µ‚½‚è)‚Ì‚ÅÌ‚Ì•¨‚æ‚èˆ«‚¢B
+	# pacland : è©¦è¡ŒéŒ¯èª¤ã—ãŸãŒç¾çŠ¶[20070915]å‹•ã‹ãªã„ã€‚åŸå› ä¸æ˜ã€‚
+	#ã‚½ãƒ¼ã‚¹ã¯è‰²ã€…å¤‰ãˆãŸ(å‹•ã‹ãã†ã¨æˆ»ã—ãŸã‚Š)ã®ã§æ˜”ã®ç‰©ã‚ˆã‚Šæ‚ªã„ã€‚
 
-#TARGET = namcos1	# ‹N“®‚µ‚È‚¢B
+#TARGET = namcos1	# èµ·å‹•ã—ãªã„ã€‚
 
-#---- SEGA ÀŒ±
+#---- SEGA å®Ÿé¨“
 
-#TARGET = space_harrier	# Œƒ’xB
+#TARGET = space_harrier	# æ¿€é…ã€‚
 #TARGET = cotton
 
-#---- konami ÀŒ±
+#---- konami å®Ÿé¨“
 #TARGET = gaia_police
 
-#---- TOUA ÀŒ±
-#TARGET = slapfight	# ‹N“®‚µ‚È‚¢B
+#---- TOUA å®Ÿé¨“
+#TARGET = slapfight	# èµ·å‹•ã—ãªã„ã€‚
 
-#---- DECO ÀŒ±
+#---- DECO å®Ÿé¨“
 #TARGET = srd08
 #TARGET = deco16
 #TARGET = kuga
-	# kuga : ‹N“®‚µ‚È‚¢B
+	# kuga : èµ·å‹•ã—ãªã„ã€‚
 #TARGET = the_great_ragtime_show
-	# decoic16 •¡G‚·‚¬...orz
+	# decoic16 è¤‡é›‘ã™ã...orz
 
-#---- sega ÀŒ±
-#TARGET = sys16	# ‹N“®‚µ‚È‚¢B
+#---- sega å®Ÿé¨“
+#TARGET = sys16	# èµ·å‹•ã—ãªã„ã€‚
 
-#---- JALECO ÀŒ±
-#TARGET = megasys1	# Œƒ’xBƒoƒO‚éB•sˆÀ’èB
+#---- JALECO å®Ÿé¨“
+#TARGET = megasys1	# æ¿€é…ã€‚ãƒã‚°ã‚‹ã€‚ä¸å®‰å®šã€‚
 
-#---- tecnos ÀŒ±
-#TARGET = ddragon	# Œƒ’xBƒoƒO‚éB•sˆÀ’èB
+#---- tecnos å®Ÿé¨“
+#TARGET = ddragon	# æ¿€é…ã€‚ãƒã‚°ã‚‹ã€‚ä¸å®‰å®šã€‚
 
-#---- capcom ÀŒ±
-# black draon ‚Í tilemap g‚¤ŒÀ‚èuƒƒ‚ƒŠ‚ª‘«‚è‚È‚­‚ÄPSP‚Å‹N“®‚Å‚«‚È‚¢v‚Å‚·B
-#TARGET = black_dragon	# ‹N“®‚µ‚È‚¢B
+#---- capcom å®Ÿé¨“
+# black draon ã¯ tilemap ä½¿ã†é™ã‚Šã€Œãƒ¡ãƒ¢ãƒªãŒè¶³ã‚Šãªãã¦PSPã§èµ·å‹•ã§ããªã„ã€ã§ã™ã€‚
+#TARGET = black_dragon	# èµ·å‹•ã—ãªã„ã€‚
 
-#---- SEIBU ÀŒ±
-#TARGET = raiden	# ‹N“®‚µ‚È‚¢B
+#---- SEIBU å®Ÿé¨“
+#TARGET = raiden	# èµ·å‹•ã—ãªã„ã€‚
 
 
 #------------------------------------------------------------------------------
@@ -243,7 +243,7 @@ OPT_DEFS = -D$(TARGET)=1
 # Configurations
 #------------------------------------------------------------------------------
 
-# ’FOSD‚Í«—ˆ‘Î‰‚µ‚½‚¢‹C‚à‚·‚éƒPƒh ‚Ü‚¾ì‚Á‚Ä‚È‚¢‚Å‚·BpspˆÈŠO‚ÍƒRƒ“ƒpƒCƒ‹o—ˆ‚Ü‚¹‚ñB
+# è¨»ï¼šOSDã¯å°†æ¥å¯¾å¿œã—ãŸã„æ°—ã‚‚ã™ã‚‹ã‚±ãƒ‰ ã¾ã ä½œã£ã¦ãªã„ã§ã™ã€‚pspä»¥å¤–ã¯ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«å‡ºæ¥ã¾ã›ã‚“ã€‚
 # set this the operating system you're building for. ... but now only "psp".
   OSD = psp
 # OSD = msdos
@@ -290,25 +290,25 @@ OBJ_SNDHRDW   = $(OBJ)/sndhrdw
 #VPATH=src $(wildcard $(SRC)/cpu/*)
 
 # uncomment next line to use the new multiwindow debugger
-#NEW_DEBUGGER = 1 # ”p~
+#NEW_DEBUGGER = 1 # å»ƒæ­¢
 
 
 #------------------------------------------------------------------------------
 # Compiler Defines
 #------------------------------------------------------------------------------
 
-CDEFS = \
-	-DLSB_FIRST \
-	-DINLINE="static __inline__" \
+CDEFS = Â¥
+	-DLSB_FIRST Â¥
+	-DINLINE="static __inline__" Â¥
 	-DPI=M_PI 
 
-#	-DCRLF=3 # ”p~
-#	-DPSP=1  # •Ê‚Åİ’è
-#	-DCLOCKS_PER_SEC=1000000 # ”p~
-#	-include psp/psp_main.h  # •Ê‚Åİ’è
+#	-DCRLF=3 # å»ƒæ­¢
+#	-DPSP=1  # åˆ¥ã§è¨­å®š
+#	-DCLOCKS_PER_SEC=1000000 # å»ƒæ­¢
+#	-include psp/psp_main.h  # åˆ¥ã§è¨­å®š
 
 #ifdef NEW_DEBUGGER
-#CDEFS += -DNEW_DEBUGGER # ”p~
+#CDEFS += -DNEW_DEBUGGER # å»ƒæ­¢
 #endif
 
 
@@ -323,16 +323,16 @@ else
 CFLAGS = 
 endif
 
-CFLAGS += \
-	-fomit-frame-pointer \
-	-fno-strict-aliasing \
-	-Wno-sign-compare \
-	-Wunused \
-	-Wpointer-arith \
-	-Wundef \
-	-Wformat \
-	-Wwrite-strings \
-	-Wdisabled-optimization \
+CFLAGS += Â¥
+	-fomit-frame-pointer Â¥
+	-fno-strict-aliasing Â¥
+	-Wno-sign-compare Â¥
+	-Wunused Â¥
+	-Wpointer-arith Â¥
+	-Wundef Â¥
+	-Wformat Â¥
+	-Wwrite-strings Â¥
+	-Wdisabled-optimization Â¥
 	-Wbad-function-cast
 
 #	-std=gnu99 
@@ -349,11 +349,11 @@ CFLAGS += \
 # File include path
 #------------------------------------------------------------------------------
 
-INCDIR = \
-	$(SRC) \
-	$(SRC)/includes \
-	$(SRC)/debug \
-	$(SRC)/$(OSD) \
+INCDIR = Â¥
+	$(SRC) Â¥
+	$(SRC)/includes Â¥
+	$(SRC)/debug Â¥
+	$(SRC)/$(OSD) Â¥
 	$(SRC)/zlib
 
 
@@ -381,11 +381,11 @@ ZLIB = $(OBJ)/libz.a
 #------------------------------------------------------------------------------
 
 CPUOBJS   = 
-SOUNDOBJS = $(OBJ)/sndintrf.o $(OBJ_SOUND)/streams.o $(OBJ)/sound/flt_vol.o $(OBJ)/sound/flt_rc.o \
+SOUNDOBJS = $(OBJ)/sndintrf.o $(OBJ_SOUND)/streams.o $(OBJ)/sound/flt_vol.o $(OBJ)/sound/flt_rc.o Â¥
 
 # windows/dos extra include. 'make all' only, need it at first ???. 
-# windows ‚â dos ‚Ì gcc(ming)‚Ì make.exe(3.X.X. ??) ‚Í 'make all' ‚Ì‹@”\‚ªŠ®‘S‚Å–³‚¢ƒ~ƒ^ƒCB(_$(OSD).mak‚É‘‚¢‚Ä‚à–³Œø)
-# ‚¾‚©‚ç‚±‚±‚ÌêŠ‚É•K—vB
+# windows ã‚„ dos ã® gcc(ming)ã® make.exe(3.X.X. ??) ã¯ 'make all' ã®æ©Ÿèƒ½ãŒå®Œå…¨ã§ç„¡ã„ãƒŸã‚¿ã‚¤ã€‚(_$(OSD).makã«æ›¸ã„ã¦ã‚‚ç„¡åŠ¹)
+# ã ã‹ã‚‰ã“ã“ã®å ´æ‰€ã«å¿…è¦ã€‚
 ifeq ($(OSD),msdos)
 all:	maked_directry $(EXTRA_TARGETS)
 endif
@@ -404,21 +404,19 @@ include $(SRC)/$(OSD)/_$(OSD).mak
 # Object Directory
 #------------------------------------------------------------------------------
 
-OBJDIRS += \
-	obj \
-	$(OBJ) \
-	$(OBJ)/$(OSD) \
-	$(OBJ_CPU) \
-	$(OBJ_AUDIO) \
-	$(OBJ_SOUND) \
-	$(OBJ_DRIVERS) \
-	$(OBJ_MACHINE) \
-	$(OBJ_VIDEO) \
-	$(OBJ_SNDHRDW) \
-	$(OBJ)/etc \
-	$(OBJ)/zlib \
-	pbp \
-	pbp/$(TARGET)
+OBJDIRS += Â¥
+	obj Â¥
+	$(OBJ) Â¥
+	$(OBJ)/$(OSD) Â¥
+	$(OBJ_CPU) Â¥
+	$(OBJ_AUDIO) Â¥
+	$(OBJ_SOUND) Â¥
+	$(OBJ_DRIVERS) Â¥
+	$(OBJ_MACHINE) Â¥
+	$(OBJ_VIDEO) Â¥
+	$(OBJ_SNDHRDW) Â¥
+	$(OBJ)/etc Â¥
+	$(OBJ)/zlib Â¥
 
 
 CDEFS += $(CPUDEFS) $(SOUNDDEFS) $(COREDEFS) $(DRVDEFS) $(OPT_DEFS)
@@ -433,7 +431,7 @@ OBJS  += $(CPUOBJS) $(SOUNDOBJS) $(COREOBJS) $(DRVLIBS) $(OSOBJS) $(ZLIB)
 # Include build.mak for PSPSDK
 #------------------------------------------------------------------------------
 
-# ’F ‚±‚±‚Í  pspsdk ‚Ì“s‡ãAuŒãv‚ÉƒCƒ“ƒNƒ‹[ƒhB
+# è¨»ï¼š ã“ã“ã¯  pspsdk ã®éƒ½åˆä¸Šã€ã€Œå¾Œã€ã«ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰ã€‚
 
 ifeq ($(OSD),psp)
 USE_MY_PSPSDK = 1
@@ -441,7 +439,7 @@ ifdef USE_MY_PSPSDK
 	PSPSDK=$(shell psp-config --pspsdk-path)
 	include $(PSPSDK)/lib/build.mak
 #else
-	# unjemu_source_20070223 ŒİŠ·v + uEBOOT.PBP Àsˆ³k ‘Î‰v
+	# ã€Œnjemu_source_20070223 äº’æ›ã€ + ã€ŒEBOOT.PBP å®Ÿè¡Œåœ§ç¸® å¯¾å¿œã€
 #	include $(SRC)/$(OSD)/_build.mak
 #endif
 else
@@ -453,12 +451,12 @@ endif
 # Make Rules
 #------------------------------------------------------------------------------
 
-$(OBJ)/libz.a: \
-	$(OBJ)/zlib/adler32.o \
-	$(OBJ)/zlib/crc32.o \
-	$(OBJ)/zlib/inflate.o \
-	$(OBJ)/zlib/inftrees.o \
-	$(OBJ)/zlib/inffast.o \
+$(OBJ)/libz.a: Â¥
+	$(OBJ)/zlib/adler32.o Â¥
+	$(OBJ)/zlib/crc32.o Â¥
+	$(OBJ)/zlib/inflate.o Â¥
+	$(OBJ)/zlib/inftrees.o Â¥
+	$(OBJ)/zlib/inffast.o Â¥
 	$(OBJ)/zlib/zutil.o
 
 #	$(OBJ)/zlib/trees.o 
@@ -483,10 +481,10 @@ $(OBJ)/%.a:
 	@echo Archiving $@...
 	@$(AR) -r $@ $^
 
-# ˆÈ‰º‚Qs‚Í •s—v Aæ‚Á‚Ä‚à\‚í‚È‚¢B # ”p~
-#$(sort $(OBJDIRS)):                   # ”p~
-#	@$(MD) -p $(subst //,\,$@)         # ”p~
-# •s—v ‚ÍA‚±‚±‚Ü‚ÅB                  # ”p~
+# ä»¥ä¸‹ï¼’è¡Œã¯ ä¸è¦ ã€å–ã£ã¦ã‚‚æ§‹ã‚ãªã„ã€‚ # å»ƒæ­¢
+#$(sort $(OBJDIRS)):                   # å»ƒæ­¢
+#	@$(MD) -p $(subst //,Â¥,$@)         # å»ƒæ­¢
+# ä¸è¦ ã¯ã€ã“ã“ã¾ã§ã€‚                  # å»ƒæ­¢
 
 pspclean:
 	@echo Remove all object files and directories.
@@ -500,12 +498,8 @@ pspclean:
 
 maked_directry:
 	@echo Making object tree for $(TARGET) ...
-	@$(MD) -p $(subst //,\,$(sort $(OBJDIRS)))
+	@$(MD) -p $(subst //,Â¥,$(sort $(OBJDIRS)))
 	@$(RM) -f PARAM.SFO
-
-copy_bak_pbp: 
-	@cp EBOOT.PBP pbp/$(TARGET)
-	@ls -l EBOOT.PBP
 
 ## re-make the M68000
 68:
@@ -546,14 +540,10 @@ sound:
 	@$(RM) -f $(OBJ)/drivers/*.o
 	@$(RM) -f $(OBJ)/psp_sound/*.o
 
-delpbp:
-	@echo Delete all pbp tree ...
-	@$(RM) -f -rd pbp
-
 
 ifeq ($(OSD),windows)
-#DELTREE = deltree /Y obj     # ”p~
-#DELTREE = $(RM) -f -r $(OBJ) # ”p~
+#DELTREE = deltree /Y obj     # å»ƒæ­¢
+#DELTREE = $(RM) -f -r $(OBJ) # å»ƒæ­¢
 DELTREE = $(RM) -f -r obj
 endif
 
@@ -573,4 +563,3 @@ rr:
 
 lse:
 	ls -al *.PBP
-
