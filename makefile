@@ -297,9 +297,9 @@ OBJ_SNDHRDW   = $(OBJ)/sndhrdw
 # Compiler Defines
 #------------------------------------------------------------------------------
 
-CDEFS = ¥
-	-DLSB_FIRST ¥
-	-DINLINE="static __inline__" ¥
+CDEFS = \
+	-DLSB_FIRST \
+	-DINLINE="static __inline__" \
 	-DPI=M_PI 
 
 #	-DCRLF=3 # 廃止
@@ -323,16 +323,16 @@ else
 CFLAGS = 
 endif
 
-CFLAGS += ¥
-	-fomit-frame-pointer ¥
-	-fno-strict-aliasing ¥
-	-Wno-sign-compare ¥
-	-Wunused ¥
-	-Wpointer-arith ¥
-	-Wundef ¥
-	-Wformat ¥
-	-Wwrite-strings ¥
-	-Wdisabled-optimization ¥
+CFLAGS += \
+	-fomit-frame-pointer \
+	-fno-strict-aliasing \
+	-Wno-sign-compare \
+	-Wunused \
+	-Wpointer-arith \
+	-Wundef \
+	-Wformat \
+	-Wwrite-strings \
+	-Wdisabled-optimization \
 	-Wbad-function-cast
 
 #	-std=gnu99 
@@ -349,11 +349,11 @@ CFLAGS += ¥
 # File include path
 #------------------------------------------------------------------------------
 
-INCDIR = ¥
-	$(SRC) ¥
-	$(SRC)/includes ¥
-	$(SRC)/debug ¥
-	$(SRC)/$(OSD) ¥
+INCDIR = \
+	$(SRC) \
+	$(SRC)/includes \
+	$(SRC)/debug \
+	$(SRC)/$(OSD) \
 	$(SRC)/zlib
 
 
@@ -381,7 +381,7 @@ ZLIB = $(OBJ)/libz.a
 #------------------------------------------------------------------------------
 
 CPUOBJS   = 
-SOUNDOBJS = $(OBJ)/sndintrf.o $(OBJ_SOUND)/streams.o $(OBJ)/sound/flt_vol.o $(OBJ)/sound/flt_rc.o ¥
+SOUNDOBJS = $(OBJ)/sndintrf.o $(OBJ_SOUND)/streams.o $(OBJ)/sound/flt_vol.o $(OBJ)/sound/flt_rc.o \
 
 # windows/dos extra include. 'make all' only, need it at first ???. 
 # windows や dos の gcc(ming)の make.exe(3.X.X. ??) は 'make all' の機能が完全で無いミタイ。(_$(OSD).makに書いても無効)
@@ -404,19 +404,19 @@ include $(SRC)/$(OSD)/_$(OSD).mak
 # Object Directory
 #------------------------------------------------------------------------------
 
-OBJDIRS += ¥
-	obj ¥
-	$(OBJ) ¥
-	$(OBJ)/$(OSD) ¥
-	$(OBJ_CPU) ¥
-	$(OBJ_AUDIO) ¥
-	$(OBJ_SOUND) ¥
-	$(OBJ_DRIVERS) ¥
-	$(OBJ_MACHINE) ¥
-	$(OBJ_VIDEO) ¥
-	$(OBJ_SNDHRDW) ¥
-	$(OBJ)/etc ¥
-	$(OBJ)/zlib ¥
+OBJDIRS += \
+	obj \
+	$(OBJ) \
+	$(OBJ)/$(OSD) \
+	$(OBJ_CPU) \
+	$(OBJ_AUDIO) \
+	$(OBJ_SOUND) \
+	$(OBJ_DRIVERS) \
+	$(OBJ_MACHINE) \
+	$(OBJ_VIDEO) \
+	$(OBJ_SNDHRDW) \
+	$(OBJ)/etc \
+	$(OBJ)/zlib \
 
 
 CDEFS += $(CPUDEFS) $(SOUNDDEFS) $(COREDEFS) $(DRVDEFS) $(OPT_DEFS)
@@ -451,12 +451,12 @@ endif
 # Make Rules
 #------------------------------------------------------------------------------
 
-$(OBJ)/libz.a: ¥
-	$(OBJ)/zlib/adler32.o ¥
-	$(OBJ)/zlib/crc32.o ¥
-	$(OBJ)/zlib/inflate.o ¥
-	$(OBJ)/zlib/inftrees.o ¥
-	$(OBJ)/zlib/inffast.o ¥
+$(OBJ)/libz.a: \
+	$(OBJ)/zlib/adler32.o \
+	$(OBJ)/zlib/crc32.o \
+	$(OBJ)/zlib/inflate.o \
+	$(OBJ)/zlib/inftrees.o \
+	$(OBJ)/zlib/inffast.o \
 	$(OBJ)/zlib/zutil.o
 
 #	$(OBJ)/zlib/trees.o 
@@ -483,7 +483,7 @@ $(OBJ)/%.a:
 
 # 以下２行は 不要 、取っても構わない。 # 廃止
 #$(sort $(OBJDIRS)):                   # 廃止
-#	@$(MD) -p $(subst //,¥,$@)         # 廃止
+#	@$(MD) -p $(subst //,\,$@)         # 廃止
 # 不要 は、ここまで。                  # 廃止
 
 pspclean:
@@ -498,7 +498,7 @@ pspclean:
 
 maked_directry:
 	@echo Making object tree for $(TARGET) ...
-	@$(MD) -p $(subst //,¥,$(sort $(OBJDIRS)))
+	@$(MD) -p $(subst //,\,$(sort $(OBJDIRS)))
 	@$(RM) -f PARAM.SFO
 
 ## re-make the M68000
