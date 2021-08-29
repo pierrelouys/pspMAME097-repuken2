@@ -4,11 +4,12 @@ PSP_EBOOT_TITLE = pspMame Deathrash Vol 3
 
 # a tiny compile is without Neogeo games
 COREDEFS += -DTINY_COMPILE=1
-COREDEFS += -DTINY_NAME="driver_armedf"
+COREDEFS += -DTINY_NAME="driver_armedf\
+    ,driver_momoko"
 
 
-COREDEFS += -DTINY_POINTER="&driver_armedf"
-
+COREDEFS += -DTINY_POINTER="&driver_armedf\
+    ,&driver_momoko"
 
 # uses these CPUs
 CPUS+=M6809_ORIG
@@ -33,6 +34,7 @@ SOUNDS+=DAC
 
 DRVLIBS = \
 	$(OBJ)/vidhrdw/armedf.o $(OBJ)/drivers/armedf.o \
+	$(OBJ)/vidhrdw/momoko.o $(OBJ)/drivers/momoko.o \
 		$(OBJ)/vidhrdw/lkage.o \
         
 
@@ -47,4 +49,3 @@ DRVLIBS = \
 
 # MAME specific core objs
 COREOBJS += $(OBJ)/tiny.o $(OBJ)/cheat.o
-
