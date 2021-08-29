@@ -38,12 +38,12 @@
 #define MAX_PATH 256
 #endif
 
-#include "psp_ticker.h"
+#include "ticker.h"
 #include "psp_file.h"
 #include "psp_font.h"
-#include "psp_sound.h"
+#include "sound.h"
 #include "psp_video.h"
-#include "psp_menu.h"
+#include "menu.h"
 
 extern volatile int psp_loop;
 extern volatile int psp_sleep;

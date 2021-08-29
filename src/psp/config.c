@@ -12,7 +12,7 @@
 //#include "psp_main.h"
 //#include "psp_menu.h"
 
-#include "inc_rc.h"
+#include "rc.h"
 
 extern SETTING setting;
 extern int keyorientation;

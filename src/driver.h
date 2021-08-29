@@ -70,7 +70,7 @@
 #include "profiler.h"
 #include "fileDefs.h"
 
-#include "psp/psp_main.h"
+#include "psp/main.h"
 
 #ifdef MESS
 #include "messdrv.h"

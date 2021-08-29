@@ -6,19 +6,19 @@ include $(SRC)/$(OSD)_sound/_psp_sound.mak
 
 # only PSP specific output files and rules
 OSOBJS = \
-	$(OBJ)/psp/psp_psp.o \
+	$(OBJ)/psp/psp.o \
 	$(OBJ)/psp/osd_cycles.o \
-	$(OBJ)/psp/osd_video.o \
+	$(OBJ)/psp/video.o \
 	$(OBJ)/psp/psp_font.o \
-	$(OBJ)/psp/psp_sound.o \
-	$(OBJ)/psp/osd_input.o \
-	$(OBJ)/psp/psp_ticker.o \
-	$(OBJ)/psp/osd_config.o \
-	$(OBJ)/psp/osd_fileio.o \
-	$(OBJ)/psp/psp_main.o \
+	$(OBJ)/psp/sound.o \
+	$(OBJ)/psp/input.o \
+	$(OBJ)/psp/ticker.o \
+	$(OBJ)/psp/config.o \
+	$(OBJ)/psp/fileio.o \
+	$(OBJ)/psp/pspmain.o \
 	$(OBJ)/psp/psp_file.o \
 	$(OBJ)/psp/psp_video.o \
-	$(OBJ)/psp/psp_menu.o \
+	$(OBJ)/psp/menu.o \
 	$(OBJ)/psp/psp_data.o \
 
 #	psp_fontとblitを融合。   $(OBJ)/psp/blit.o 
