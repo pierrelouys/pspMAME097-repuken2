@@ -92,7 +92,7 @@ BUILD_PRX = 1
 #############NEW MAKES!!!
 
 #TARGET = konami2
-TARGET = konami3
+TARGET = armedf
 
 #TARGET = thunder_cross
 	#thunder_cross ok[20070319](でも音2151(test c)オカシイ)
