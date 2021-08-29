@@ -2,7 +2,8 @@
 
 shopt -s nullglob
 
-list="c mak txt"
+#list="c mak txt"
+list="mak txt"
 for ext in $list
 do
     echo "$ext"
@@ -15,8 +16,9 @@ do
         mkdir -p $fulldir
         echo $base
         nkf -S -w $f > $fulldir"$base"
-        read -p "Press any key to resume ..."
+        #read -p "Press any key to resume ..."
     done
 done
 
 shopt -u nullglob
+

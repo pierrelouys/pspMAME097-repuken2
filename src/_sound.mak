@@ -184,7 +184,7 @@ endif
 #-------------------------------------------------
 
 ##############
-# mame����OPN(YM2203/YM2610/YM2610B)�pSSG�̏ꍇ�A�u��Łv�C���N���[�h�B
+# mame純正OPN(YM2203/YM2610/YM2610B)用SSGの場合、「後で」インクルード。
 ifneq ($(filter AY8910,$(SOUNDS)),)
 SOUNDDEFS += -DHAS_AY8910=1
 SOUNDOBJS += $(OBJ_SOUND)/ay8910.o
@@ -684,7 +684,7 @@ SOUNDDEFS += -DHAS_YM2203=0
 endif
 endif
 ########
-#/* �T�C�h�A�[���_���H�H�H */
+#/* サイドアームダメ？？？ */
 ifeq ($(YM2203TYPE),TESTC_1STREAM)
 ifneq ($(filter YM2203,$(SOUNDS)),)
 SOUNDDEFS += -DHAS_YM2203=1
@@ -713,7 +713,7 @@ endif
 
 ifneq ($(filter YM2608,$(SOUNDS)),)
 SOUNDDEFS += -DHAS_YM2608=1
-# SOUNDS+=AY8910@ # �����uay8910ym�v���g��Ȃ��ꍇ�ɒǋL�B
+# SOUNDS+=AY8910@ # もし「ay8910ym」を使わない場合に追記。
 SOUNDOBJS += $(OBJ_SOUND)/2608intf.o $(OBJ_SOUND)/ay8910ym.o $(OBJ_SOUND)/fm.o $(OBJ_SOUND)/ymdeltat.o
 else
 SOUNDDEFS += -DHAS_YM2608=0
@@ -730,7 +730,7 @@ endif
 ifeq ($(YM2610TYPE),REF2610)
 ifneq ($(filter YM2610,$(SOUNDS)),)
 SOUNDDEFS += -DHAS_YM2610=1
-# SOUNDS+=AY8910@ # �����uay8910ym�v���g��Ȃ��ꍇ�ɒǋL�B
+# SOUNDS+=AY8910@ # もし「ay8910ym」を使わない場合に追記。
 SOUNDOBJS += $(OBJ_SOUND)/2610intf.o $(OBJ_SOUND)/ay8910ym.o $(OBJ_SOUND)/fm.o $(OBJ_SOUND)/ymdeltat.o
 else
 SOUNDDEFS += -DHAS_YM2610=0
@@ -757,7 +757,7 @@ endif
 #########
 ifneq ($(filter YM2610B,$(SOUNDS)),)
 SOUNDDEFS += -DHAS_YM2610B=1
-# SOUNDS+=AY8910@ # �����uay8910ym�v���g��Ȃ��ꍇ�ɒǋL�B
+# SOUNDS+=AY8910@ # もし「ay8910ym」を使わない場合に追記。
 SOUNDOBJS += $(OBJ_SOUND)/2610intf.o $(OBJ_SOUND)/ay8910ym.o $(OBJ_SOUND)/fm.o $(OBJ_SOUND)/ymdeltat.o
 else
 SOUNDDEFS += -DHAS_YM2610B=0
@@ -776,7 +776,7 @@ endif
 
 ifneq ($(filter YM2612,$(SOUNDS)),)
 SOUNDDEFS += -DHAS_YM2612=1
-# SOUNDS+=AY8910@ # �����uay8910ym�v���g��Ȃ��ꍇ�ɒǋL�B $(OBJ_SOUND)/ay8910ym.o
+# SOUNDS+=AY8910@ # もし「ay8910ym」を使わない場合に追記。 $(OBJ_SOUND)/ay8910ym.o
 SOUNDOBJS += $(OBJ_SOUND)/2612intf.o $(OBJ_SOUND)/fm.o
 else
 SOUNDDEFS += -DHAS_YM2612=0
@@ -784,7 +784,7 @@ endif
 
 ifneq ($(filter YM3438,$(SOUNDS)),)
 SOUNDDEFS += -DHAS_YM3438=1
-# SOUNDS+=AY8910@ # �����uay8910ym�v���g��Ȃ��ꍇ�ɒǋL�B $(OBJ_SOUND)/ay8910ym.o
+# SOUNDS+=AY8910@ # もし「ay8910ym」を使わない場合に追記。 $(OBJ_SOUND)/ay8910ym.o
 SOUNDOBJS += $(OBJ_SOUND)/2612intf.o $(OBJ_SOUND)/fm.o
 else
 SOUNDDEFS += -DHAS_YM3438=0

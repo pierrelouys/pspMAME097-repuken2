@@ -3,7 +3,7 @@
 COREOBJS += \
 	$(OBJ)/mame.o \
 
-## [tilemap]�W��TILEMAP�A�g��Ȃ��Ȃ�P(�����ݒ�)�B(��{�͂P)
+## [tilemap]標準TILEMAP、使わないなら１(自動設定)。(基本は１)
 ifneq ($(filter NO_TILEMAP,$(PSP_EXTENSION_OPTS)),)
 	OPT_DEFS += -DLINK_TILEMAP=0
 else
@@ -63,7 +63,7 @@ COREOBJS += \
 #	$(OBJ)/artwork.o \
 	
 
-## [state]�_�~�[�i�݊�������ׁ̈j
+## [state]ダミー（互換性向上の為）
 ifneq ($(filter STATE,$(PSP_EXTENSION_OPTS)),)
 	OPT_DEFS += -DLINK_STATE=1
 	COREOBJS += $(OBJ)/state.o 
@@ -71,7 +71,7 @@ else
 	OPT_DEFS += -DLINK_STATE=0
 endif
 
-## [common eeprom]�W��EEP-ROM
+## [common eeprom]標準EEP-ROM
 ifneq ($(filter EEPROM,$(PSP_EXTENSION_OPTS)),)
 	OPT_DEFS += -DLINK_EEPROM=1
 	OPT_DEFS += -DLINK_NVRAM=1
@@ -81,7 +81,7 @@ else
 endif
 
 
-## [cheat]�_�~�[�i�݊�������ׁ̈j
+## [cheat]ダミー（互換性向上の為）
 #ifneq ($(filter CHEAT,$(PSP_EXTENSION_OPTS)),)
 #	OPT_DEFS += -DLINK_CHEAT=1
 #	COREOBJS += $(OBJ)/cheat.o 

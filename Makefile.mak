@@ -20,10 +20,10 @@ PSP_LARGE_MEMORY = 1
 
 
 #################
-# ‚½‚Ô‚ñ“®‚­(?)‚à‚Ì
+# ãŸã¶ã‚“å‹•ã(?)ã‚‚ã®
 #################
 
-#---- TAITO ŽÀŒ±
+#---- TAITO å®Ÿé¨“
 
 #TARGET = ninjya_warriors
 #TARGET = darius
@@ -32,61 +32,61 @@ PSP_LARGE_MEMORY = 1
 #TARGET = halleys
 
 #TARGET = night_striker
-	# GFX(psp‚Ìƒƒ‚ƒŠ)‚ª‘«‚è‚È‚¢‚Ì‚Å–³—‚â‚è•\Ž¦B‰æ–Ê‚ªƒoƒO‚éB
+	# GFX(pspã®ãƒ¡ãƒ¢ãƒª)ãŒè¶³ã‚Šãªã„ã®ã§ç„¡ç†ã‚„ã‚Šè¡¨ç¤ºã€‚ç”»é¢ãŒãƒã‚°ã‚‹ã€‚
 
-#---- namco ŽÀŒ±
+#---- namco å®Ÿé¨“
 
 #TARGET = namcoNA
 #TARGET = mappy
 #TARGET = pacman
-	# ’Fpengo ‚Í ƒZƒK ‚¾‚¯‚Ç ƒiƒ€ƒR‰¹Œ¹B
+	# è¨»ï¼špengo ã¯ ã‚»ã‚¬ ã ã‘ã© ãƒŠãƒ ã‚³éŸ³æºã€‚
 
 #TARGET = namcos86
-	# namcos86 : mame”Å‚Í ’x‚¢‚Ì‚ÅA‚ ‚­‚Ü‚ÅŽÀŒ±—pBNJŽ‚Ìê—p”ÅŽg‚¨‚¤B
-	# ’Fmame”Å‚ÌŽÀŒ±F‰¹Œ¹‚â‚b‚o‚t“™‚ÌŒÝŠ·«ŒŸØ—p“rB
+	# namcos86 : mameç‰ˆã¯ é…ã„ã®ã§ã€ã‚ãã¾ã§å®Ÿé¨“ç”¨ã€‚NJæ°ã®å°‚ç”¨ç‰ˆä½¿ãŠã†ã€‚
+	# è¨»ï¼šmameç‰ˆã®å®Ÿé¨“ï¼šéŸ³æºã‚„ï¼£ï¼°ï¼µç­‰ã®äº’æ›æ€§æ¤œè¨¼ç”¨é€”ã€‚
 
-#---- UPL/capcom ŽÀŒ± (UVC : UPL vs CAPCOM)
+#---- UPL/capcom å®Ÿé¨“ (UVC : UPL vs CAPCOM)
 
 #TARGET = ninjya_kun2
 
-#---- capcom ŽÀŒ±
+#---- capcom å®Ÿé¨“
 
 #TARGET = street_fighter
 #TARGET = makai_mura
 #TARGET = gun_smoke
 
-#---- SEGA ŽÀŒ±
+#---- SEGA å®Ÿé¨“
 
 #TARGET = turbo_outrun
 #TARGET = fantasy_zone
 	#fantasy_zone ok[20070124]
-	#fantasy_zone ng[20070206]I—¹‚Å‚«‚È‚¢
+	#fantasy_zone ng[20070206]çµ‚äº†ã§ããªã„
 
-#---- IREM ŽÀŒ±
+#---- IREM å®Ÿé¨“
 
 #TARGET = m72
-	#ê—ptilemapì‚è’¼‚³‚È‚¢‚ÆƒoƒO‚éBCPU‚à•sˆÀ’èB
+	#å°‚ç”¨tilemapä½œã‚Šç›´ã•ãªã„ã¨ãƒã‚°ã‚‹ã€‚CPUã‚‚ä¸å®‰å®šã€‚
 
-#---- TOUA ŽÀŒ±
+#---- TOUA å®Ÿé¨“
 #TARGET = zerowing
 #TARGET = raizing
 	#raizing ok[20070124]
 
-#---- NMKŽÀŒ±
+#---- NMKå®Ÿé¨“
 #TARGET = nmk
 
-#---- SETA ŽÀŒ±
+#---- SETA å®Ÿé¨“
 
 #TARGET = seta
 
-#---- Nichibutu ŽÀŒ±
+#---- Nichibutu å®Ÿé¨“
 
 #TARGET = terracre
 	#terracre ng[20070323](YM3526_ng psg_ok)
-	#terracre ok[20070617]ƒhƒ‰ƒCƒo(src/drivers/terracre.c)(ym3526_info11)‚ÌƒoƒO‚ÅFA.
+	#terracre ok[20070617]ãƒ‰ãƒ©ã‚¤ãƒ(src/drivers/terracre.c)(ym3526_info11)ã®ãƒã‚°ã§FA.
 #TARGET = crazy_climber
 
-#---- konami ŽÀŒ±
+#---- konami å®Ÿé¨“
 
 #TARGET = ajax
 #############NEW MAKES!!!
@@ -95,73 +95,73 @@ PSP_LARGE_MEMORY = 1
 TARGET = armedf
 
 #TARGET = thunder_cross
-	#thunder_cross ok[20070319](‚Å‚à‰¹2151(test c)ƒIƒJƒVƒC)
+	#thunder_cross ok[20070319](ã§ã‚‚éŸ³2151(test c)ã‚ªã‚«ã‚·ã‚¤)
 #TARGET = bubblesys
 	#bubblesys ng[20070206]
-	#bubblesys ok[20070621](‚Å‚à‰¹ºƒ~ƒLƒVƒ“ƒO•Ï)
+	#bubblesys ok[20070621](ã§ã‚‚éŸ³å£°ãƒŸã‚­ã‚·ãƒ³ã‚°å¤‰)
 
 #TARGET = circus_charlie
 
-#---- kaneko ŽÀŒ±
+#---- kaneko å®Ÿé¨“
 
 #TARGET = air_buster
 	#air_buster ok[20070203](z80s2)
 
-#---- DECO ŽÀŒ±
+#---- DECO å®Ÿé¨“
 
 #TARGET = darwin4078
 	#darwin4078 ok[20070619]
 
-#---- tecmo/tehkan ŽÀŒ±
+#---- tecmo/tehkan å®Ÿé¨“
 
 #TARGET = starforce
 
-#---- nintendo ŽÀŒ±
+#---- nintendo å®Ÿé¨“
 
 #TARGET = mario_bros
 
-#---- UNIVERSAL ŽÀŒ±
+#---- UNIVERSAL å®Ÿé¨“
 
 #TARGET = mr_do
 
-#---- SNK ŽÀŒ±
+#---- SNK å®Ÿé¨“
 
 #TARGET = aso
 
 
 
-#################ª‚±‚±‚ð•Ï‚¦‚é‚Ì‚Å‚Á‚·B
+#################â†‘ã“ã“ã‚’å¤‰ãˆã‚‹ã®ã§ã£ã™ã€‚
 
 
 #################
-# ˆê‰ž“®‚­‚ªAi‰¹Œ¹‚â‚b‚o‚t“™‚ÌjŽÀŒ±‚ª–Ú“I‚È‚à‚Ì
+# ä¸€å¿œå‹•ããŒã€ï¼ˆéŸ³æºã‚„ï¼£ï¼°ï¼µç­‰ã®ï¼‰å®Ÿé¨“ãŒç›®çš„ãªã‚‚ã®
 #################
 
-#---- TAITO ŽÀŒ±
+#---- TAITO å®Ÿé¨“
 
 #TARGET = qix
-	# qix : (’Fdiscrete‰¹Œ¹AŽÀŒ±—p) ‚Æ‚Ä‚Â‚à‚È‚­’x‚·‚¬‚ÄA
-	# iƒpƒ‰ƒ[ƒ^[‚ð—\‚ßƒZƒbƒg‚µ‚Ä•Ê‚ÉƒŒƒ“ƒ_ƒŠƒ“ƒO‚Æ‚©jŽÀ‘••û–@•Ï‚¦‚È‚¢ŒÀ‚èA
-	# Œ»óŽÀ—p«‚Í‚È‚¢B
+	# qix : (è¨»ï¼šdiscreteéŸ³æºã€å®Ÿé¨“ç”¨) ã¨ã¦ã¤ã‚‚ãªãé…ã™ãŽã¦ã€
+	# ï¼ˆãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ãƒ¼ã‚’äºˆã‚ã‚»ãƒƒãƒˆã—ã¦åˆ¥ã«ãƒ¬ãƒ³ãƒ€ãƒªãƒ³ã‚°ã¨ã‹ï¼‰å®Ÿè£…æ–¹æ³•å¤‰ãˆãªã„é™ã‚Šã€
+	# ç¾çŠ¶å®Ÿç”¨æ€§ã¯ãªã„ã€‚
 
 
-#---- DECO ŽÀŒ±
+#---- DECO å®Ÿé¨“
 
 #TARGET = battlera
-	# battlera : (’FHuC6280ŽÀŒ±—p) (HuC6280‰¹Œ¹‚ª)’x‚·‚¬‚ÄŒ»óŽÀ—p«‚Í‚È‚¢B
+	# battlera : (è¨»ï¼šHuC6280å®Ÿé¨“ç”¨) (HuC6280éŸ³æºãŒ)é…ã™ãŽã¦ç¾çŠ¶å®Ÿç”¨æ€§ã¯ãªã„ã€‚
 
 
 #################
-# “®‚­‚©ƒƒJƒ‰ƒiƒC(‚½‚Ô‚ñ“®‚©‚È‚¢)‚à‚Ì
+# å‹•ãã‹ãƒ¯ã‚«ãƒ©ãƒŠã‚¤(ãŸã¶ã‚“å‹•ã‹ãªã„)ã‚‚ã®
 #################
 
 #################
 #TARGET = darius2_dual
 #TARGET = block_block
 
-#################ª‚ß‚àB
+#################â†‘ã‚ã‚‚ã€‚
 
-#---- TAITO ŽÀŒ±
+#---- TAITO å®Ÿé¨“
 
 #TARGET = full_throttle
 #TARGET = chuuka_taisen
@@ -177,50 +177,50 @@ TARGET = armedf
 #TARGET = taitoA2
 #TARGET = taito2
 
-#---- namco ŽÀŒ±
+#---- namco å®Ÿé¨“
 
 #TARGET = pacland
 	#pacland ng[20070205]
 	#pacland ng[20070319]
-	# pacland : ŽŽsöŒë‚µ‚½‚ªŒ»ó[20070915]“®‚©‚È‚¢BŒ´ˆö•s–¾B
-	#ƒ\[ƒX‚ÍFX•Ï‚¦‚½(“®‚©‚»‚¤‚Æ–ß‚µ‚½‚è)‚Ì‚ÅÌ‚Ì•¨‚æ‚èˆ«‚¢B
+	# pacland : è©¦è¡ŒéŒ¯èª¤ã—ãŸãŒç¾çŠ¶[20070915]å‹•ã‹ãªã„ã€‚åŽŸå› ä¸æ˜Žã€‚
+	#ã‚½ãƒ¼ã‚¹ã¯è‰²ã€…å¤‰ãˆãŸ(å‹•ã‹ãã†ã¨æˆ»ã—ãŸã‚Š)ã®ã§æ˜”ã®ç‰©ã‚ˆã‚Šæ‚ªã„ã€‚
 
-#TARGET = namcos1	# ‹N“®‚µ‚È‚¢B
+#TARGET = namcos1	# èµ·å‹•ã—ãªã„ã€‚
 
-#---- SEGA ŽÀŒ±
+#---- SEGA å®Ÿé¨“
 
-#TARGET = space_harrier	# Œƒ’xB
+#TARGET = space_harrier	# æ¿€é…ã€‚
 #TARGET = cotton
 
-#---- konami ŽÀŒ±
+#---- konami å®Ÿé¨“
 #TARGET = gaia_police
 
-#---- TOUA ŽÀŒ±
-#TARGET = slapfight	# ‹N“®‚µ‚È‚¢B
+#---- TOUA å®Ÿé¨“
+#TARGET = slapfight	# èµ·å‹•ã—ãªã„ã€‚
 
-#---- DECO ŽÀŒ±
+#---- DECO å®Ÿé¨“
 #TARGET = srd08
 #TARGET = deco16
 #TARGET = kuga
-	# kuga : ‹N“®‚µ‚È‚¢B
+	# kuga : èµ·å‹•ã—ãªã„ã€‚
 #TARGET = the_great_ragtime_show
-	# decoic16 •¡ŽG‚·‚¬...orz
+	# decoic16 è¤‡é›‘ã™ãŽ...orz
 
-#---- sega ŽÀŒ±
-#TARGET = sys16	# ‹N“®‚µ‚È‚¢B
+#---- sega å®Ÿé¨“
+#TARGET = sys16	# èµ·å‹•ã—ãªã„ã€‚
 
-#---- JALECO ŽÀŒ±
-#TARGET = megasys1	# Œƒ’xBƒoƒO‚éB•sˆÀ’èB
+#---- JALECO å®Ÿé¨“
+#TARGET = megasys1	# æ¿€é…ã€‚ãƒã‚°ã‚‹ã€‚ä¸å®‰å®šã€‚
 
-#---- tecnos ŽÀŒ±
-#TARGET = ddragon	# Œƒ’xBƒoƒO‚éB•sˆÀ’èB
+#---- tecnos å®Ÿé¨“
+#TARGET = ddragon	# æ¿€é…ã€‚ãƒã‚°ã‚‹ã€‚ä¸å®‰å®šã€‚
 
-#---- capcom ŽÀŒ±
-# black draon ‚Í tilemap Žg‚¤ŒÀ‚èuƒƒ‚ƒŠ‚ª‘«‚è‚È‚­‚ÄPSP‚Å‹N“®‚Å‚«‚È‚¢v‚Å‚·B
-#TARGET = black_dragon	# ‹N“®‚µ‚È‚¢B
+#---- capcom å®Ÿé¨“
+# black draon ã¯ tilemap ä½¿ã†é™ã‚Šã€Œãƒ¡ãƒ¢ãƒªãŒè¶³ã‚Šãªãã¦PSPã§èµ·å‹•ã§ããªã„ã€ã§ã™ã€‚
+#TARGET = black_dragon	# èµ·å‹•ã—ãªã„ã€‚
 
-#---- SEIBU ŽÀŒ±
-#TARGET = raiden	# ‹N“®‚µ‚È‚¢B
+#---- SEIBU å®Ÿé¨“
+#TARGET = raiden	# èµ·å‹•ã—ãªã„ã€‚
 
 
 #------------------------------------------------------------------------------
@@ -243,7 +243,7 @@ OPT_DEFS = -D$(TARGET)=1
 # Configurations
 #------------------------------------------------------------------------------
 
-# ’FOSD‚Í«—ˆ‘Î‰ž‚µ‚½‚¢‹C‚à‚·‚éƒPƒh ‚Ü‚¾ì‚Á‚Ä‚È‚¢‚Å‚·BpspˆÈŠO‚ÍƒRƒ“ƒpƒCƒ‹o—ˆ‚Ü‚¹‚ñB
+# è¨»ï¼šOSDã¯å°†æ¥å¯¾å¿œã—ãŸã„æ°—ã‚‚ã™ã‚‹ã‚±ãƒ‰ ã¾ã ä½œã£ã¦ãªã„ã§ã™ã€‚pspä»¥å¤–ã¯ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«å‡ºæ¥ã¾ã›ã‚“ã€‚
 # set this the operating system you're building for. ... but now only "psp".
   OSD = psp
 # OSD = msdos
@@ -290,7 +290,7 @@ OBJ_VIDEO   = $(OBJ)/vidhrdw
 #VPATH=src $(wildcard $(SRC)/cpu/*)
 
 # uncomment next line to use the new multiwindow debugger
-#NEW_DEBUGGER = 1 # ”pŽ~
+#NEW_DEBUGGER = 1 # å»ƒæ­¢
 
 
 #------------------------------------------------------------------------------
@@ -302,13 +302,13 @@ CDEFS = \
 	-DINLINE="static __inline__" \
 	-DPI=M_PI 
 
-#	-DCRLF=3 # ”pŽ~
-#	-DPSP=1  # •Ê‚ÅÝ’è
-#	-DCLOCKS_PER_SEC=1000000 # ”pŽ~
-#	-include psp/psp_main.h  # •Ê‚ÅÝ’è
+#	-DCRLF=3 # å»ƒæ­¢
+#	-DPSP=1  # åˆ¥ã§è¨­å®š
+#	-DCLOCKS_PER_SEC=1000000 # å»ƒæ­¢
+#	-include psp/psp_main.h  # åˆ¥ã§è¨­å®š
 
 #ifdef NEW_DEBUGGER
-#CDEFS += -DNEW_DEBUGGER # ”pŽ~
+#CDEFS += -DNEW_DEBUGGER # å»ƒæ­¢
 #endif
 
 
@@ -384,8 +384,8 @@ CPUOBJS   =
 SOUNDOBJS = $(OBJ)/sndintrf.o $(OBJ_SOUND)/streams.o $(OBJ)/sound/flt_vol.o $(OBJ)/sound/flt_rc.o \
 
 # windows/dos extra include. 'make all' only, need it at first ???. 
-# windows ‚â dos ‚Ì gcc(ming)‚Ì make.exe(3.X.X. ??) ‚Í 'make all' ‚Ì‹@”\‚ªŠ®‘S‚Å–³‚¢ƒ~ƒ^ƒCB(_$(OSD).mak‚É‘‚¢‚Ä‚à–³Œø)
-# ‚¾‚©‚ç‚±‚±‚ÌêŠ‚É•K—vB
+# windows ã‚„ dos ã® gcc(ming)ã® make.exe(3.X.X. ??) ã¯ 'make all' ã®æ©Ÿèƒ½ãŒå®Œå…¨ã§ç„¡ã„ãƒŸã‚¿ã‚¤ã€‚(_$(OSD).makã«æ›¸ã„ã¦ã‚‚ç„¡åŠ¹)
+# ã ã‹ã‚‰ã“ã“ã®å ´æ‰€ã«å¿…è¦ã€‚
 ifeq ($(OSD),msdos)
 all:	maked_directry $(EXTRA_TARGETS)
 endif
@@ -416,7 +416,7 @@ OBJDIRS += \
 	$(OBJ_VIDEO) \
     $(OBJ_SNDHRDW) \
 	$(OBJ)/etc \
-	$(OBJ)/zlib \
+	$(OBJ)/zlib
 
 
 CDEFS += $(CPUDEFS) $(SOUNDDEFS) $(COREDEFS) $(DRVDEFS) $(OPT_DEFS)
@@ -431,7 +431,7 @@ OBJS  += $(CPUOBJS) $(SOUNDOBJS) $(COREOBJS) $(DRVLIBS) $(OSOBJS) $(ZLIB)
 # Include build.mak for PSPSDK
 #------------------------------------------------------------------------------
 
-# ’F ‚±‚±‚Í  pspsdk ‚Ì“s‡ãAuŒãv‚ÉƒCƒ“ƒNƒ‹[ƒhB
+# è¨»ï¼š ã“ã“ã¯  pspsdk ã®éƒ½åˆä¸Šã€ã€Œå¾Œã€ã«ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰ã€‚
 
 ifeq ($(OSD),psp)
 USE_MY_PSPSDK = 1
@@ -439,7 +439,7 @@ ifdef USE_MY_PSPSDK
 	PSPSDK=$(shell psp-config --pspsdk-path)
 	include $(PSPSDK)/lib/build.mak
 #else
-	# unjemu_source_20070223 ŒÝŠ·v + uEBOOT.PBP ŽÀsˆ³k ‘Î‰žv
+	# ã€Œnjemu_source_20070223 äº’æ›ã€ + ã€ŒEBOOT.PBP å®Ÿè¡Œåœ§ç¸® å¯¾å¿œã€
 #	include $(SRC)/$(OSD)/_build.mak
 #endif
 else
@@ -481,10 +481,10 @@ $(OBJ)/%.a:
 	@echo Archiving $@...
 	@$(AR) -r $@ $^
 
-# ˆÈ‰º‚Qs‚Í •s—v AŽæ‚Á‚Ä‚à\‚í‚È‚¢B # ”pŽ~
-#$(sort $(OBJDIRS)):                   # ”pŽ~
-#	@$(MD) -p $(subst //,\,$@)         # ”pŽ~
-# •s—v ‚ÍA‚±‚±‚Ü‚ÅB                  # ”pŽ~
+# ä»¥ä¸‹ï¼’è¡Œã¯ ä¸è¦ ã€å–ã£ã¦ã‚‚æ§‹ã‚ãªã„ã€‚ # å»ƒæ­¢
+#$(sort $(OBJDIRS)):                   # å»ƒæ­¢
+#	@$(MD) -p $(subst //,\,$@)         # å»ƒæ­¢
+# ä¸è¦ ã¯ã€ã“ã“ã¾ã§ã€‚                  # å»ƒæ­¢
 
 pspclean:
 	@echo Remove all object files and directories.
@@ -501,9 +501,9 @@ maked_directry:
 	@$(MD) -p $(subst //,\,$(sort $(OBJDIRS)))
 	@$(RM) -f PARAM.SFO
 
-# copy_bak_pbp: 
-	# @cp EBOOT.PBP pbp/$(TARGET)
-	# @ls -l EBOOT.PBP
+#copy_bak_pbp: 
+# 	@cp EBOOT.PBP pbp/$(TARGET)
+# 	@ls -l EBOOT.PBP
 
 ## re-make the M68000
 68:
@@ -550,8 +550,8 @@ delpbp:
 
 
 ifeq ($(OSD),windows)
-#DELTREE = deltree /Y obj     # ”pŽ~
-#DELTREE = $(RM) -f -r $(OBJ) # ”pŽ~
+#DELTREE = deltree /Y obj     # å»ƒæ­¢
+#DELTREE = $(RM) -f -r $(OBJ) # å»ƒæ­¢
 DELTREE = $(RM) -f -r obj
 endif
 
