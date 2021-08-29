@@ -46,7 +46,7 @@ OSOBJS = \
 ##RM = rm -rd
 #RM = rm -f
 
-ifeq ($(PSPDEV),)
+ifeq ($(PSPSDK),)
 MD = -mkdir
 RM = -rm
 else

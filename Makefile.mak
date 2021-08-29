@@ -282,6 +282,7 @@ OBJ_AUDIO   = $(OBJ)/audio
 OBJ_SOUND   = $(OBJ)/sound
 OBJ_DRIVERS = $(OBJ)/drivers
 OBJ_MACHINE = $(OBJ)/machine
+OBJ_SNDHRDW = $(OBJ)/sndhrdw
 #OBJ_VIDEO   = $(OBJ)/video
 OBJ_VIDEO   = $(OBJ)/vidhrdw
 
@@ -362,7 +363,7 @@ INCDIR = \
 
 LIBDIR =
 #LDFLAGS = -s
-LDFLAGS      = -losl -lpspgum_vfpu -lpspvfpu
+LDFLAGS      = -lpspgum_vfpu -lpspvfpu
 #LDFLAGS      = -L$(PSPDEV)/lib -lstdc++ -lSDL_mixer -lSDL -lSDL_gfx -lm -lGL -lvorbisidec
 #LDFLAGS     += -L$(PSPSDK)/lib -lpspvfpu -lpspdebug -lpspgu -lpspctrl -lpspge -lpspdisplay -lpsphprm -lpspsdk -lpsprtc -lpspaudio -lc -lpspuser -lpsputility -lpspkernel -lpspnet_inet -lpsppower 
 
@@ -413,6 +414,7 @@ OBJDIRS += \
 	$(OBJ_DRIVERS) \
 	$(OBJ_MACHINE) \
 	$(OBJ_VIDEO) \
+    $(OBJ_SNDHRDW) \
 	$(OBJ)/etc \
 	$(OBJ)/zlib \
 	pbp \
