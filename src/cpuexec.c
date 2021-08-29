@@ -261,17 +261,13 @@ int cpu_init(void)
 	for (cpunum = 0; cpunum < MAX_CPU; cpunum++)
 	{
 		int cputype = Machine->drv->cpu[cpunum].cpu_type;
-        logWriteY("cpuexec.c@cpu_init(): dentro del for , val1='cputype'","","",666,cputype,0);
 
 		/* if this is a dummy, stop looking */
 		if (cputype == CPU_DUMMY){
-			logWriteY("cpuexec.c@cpu_init(): dentro del for , cputype=='DUMMY'","","",666,cputype,0);
 			break;
 		}
 		/* set the save state tag */
 		state_save_set_current_tag(cpunum + 1);
-        logWriteY("cpuexec.c@cpu_init(): dentro del for , paso state_save_set_current_tag()","","",666,cputype,0);
-
 
 		/* initialize the cpuinfo struct */
 		memset(&cpu[cpunum], 0, sizeof(cpu[cpunum]));
@@ -280,47 +276,32 @@ int cpu_init(void)
 		cpu[cpunum].clockscale = 1.0;
 		cpu[cpunum].localtime = time_zero;
 
-        logWriteY("cpuexec.c@cpu_init(): dentro del for , paso bloque cpu[cpunum].localtime = time_zero;","","",666,cputype,0);
-
 		/* compute the cycle times */
 		sec_to_cycles[cpunum] = cpu[cpunum].clockscale * cpu[cpunum].clock;
 		cycles_to_sec[cpunum] = 1.0 / sec_to_cycles[cpunum];
 		cycles_per_second[cpunum] = sec_to_cycles[cpunum];
 		subseconds_per_cycle[cpunum] = MAX_SUBSECONDS / sec_to_cycles[cpunum];
 
-		logWriteY("cpuexec.c@cpu_init(): dentro del for , paso bloque subseconds_per_cycle[cpunum]","","",666,cputype,0);
-
 		/* initialize this CPU */
 		if (cpuintrf_init_cpu(cpunum, cputype)){
 			return 1;
-		logWriteX("cpuexec.c@cpu_init(): cpuintrf_init_cpu --> return 1","","",666);
 		}
 	}
-
-    logWriteX("cpuexec.c@cpu_init(): paso el for buscando CPU...","","",666);
 
 	/* compute the perfect interleave factor */
 	compute_perfect_interleave();
 
-    logWriteX("cpuexec.c@cpu_init(): paso compute_perfect_interleave()...","","",666);
-
 	/* save some stuff in tag 0 */
 	state_save_set_current_tag(0);
-
-	logWriteX("cpuexec.c@cpu_init(): paso state_save_set_current_tag()...","","",666);
 
 	state_save_register_INT32("cpu", 0, "watchdog count", &watchdog_counter, 1);
 
 
-    logWriteX("cpuexec.c@cpu_init(): paso state_save_register_INT32()...","","",666);
-
 	/* reset the IRQ lines and save those */
 	if (cpuint_init()){
-	   logWriteX("cpuexec.c@cpu_init(): cpuint_init() --> return 1","","",666);
 		return 1;
 	}
 
-	logWriteX("cpuexec.c@cpu_init(): zafo de todas --> return 0","","",666);
 	return 0;
 }
 
@@ -428,25 +409,18 @@ void cpu_run(void)
 		/* prepare everything to run */
 		cpu_pre_run();
 
-		//logWriteX("cpu_run: paso cpu_pre_run()...","","",sceKernelGetThreadId());
-
 		/* loop until the user quits or resets */
 		time_to_reset = 0;
 		while (!time_to_quit && !time_to_reset)
 		{
 			profiler_mark(PROFILER_EXTRA);
 
-			//logWriteX("cpu_run: paso profiler_mark()...","","",sceKernelGetThreadId());
-
 			/* if we have a load/save scheduled, handle it */
 			if (loadsave_schedule != LOADSAVE_NONE){
 				handle_loadsave();
-                //logWriteX("cpu_run: paso handle_loadsave()...","","",sceKernelGetThreadId());
 			}
 			/* execute CPUs */
 			cpu_timeslice();
-
-            //logWriteX("cpu_run: paso cpu_timeslice()...","","",sceKernelGetThreadId());
 
 			profiler_mark(PROFILER_END);
 		}

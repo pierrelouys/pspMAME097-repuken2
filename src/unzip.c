@@ -206,7 +206,6 @@ ZIP* openzip(int pathtype, int pathindex, const char* zipfile) {
 
 	/* get length */
 	zip->length = osd_ftell(zip->fp);
-	logWriteY("(openZip) pechando largo del zip...v1='zip->length'","","",sceKernelGetThreadId(),zip->length,0);
 	if (zip->length < 0) {
         errormsg ("Get file size", ERROR_FILESYSTEM3, zipfile);//<----- aca pincha!
 		osd_fclose(zip->fp);

@@ -20,7 +20,6 @@ OSOBJS = \
 	$(OBJ)/psp/psp_video.o \
 	$(OBJ)/psp/psp_menu.o \
 	$(OBJ)/psp/psp_data.o \
-	$(OBJ)/psp/debugPsp.o \
 
 #	psp_fontとblitを融合。   $(OBJ)/psp/blit.o 
 

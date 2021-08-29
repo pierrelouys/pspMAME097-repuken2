@@ -69,7 +69,6 @@
 #include "tilemap.h"
 #include "profiler.h"
 #include "fileDefs.h"
-#include "debugPsp.h"
 
 #include "psp/psp_main.h"
 

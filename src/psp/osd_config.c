@@ -1071,10 +1071,6 @@ static void parse_cmdline( int argc, char **argv, int game_index )
 		/*config_ror =*/keyorientation =0;
 	}
 
-    char algo[256];
-    sprintf(algo,"osd_config: enchufando setting.screensize=='%d'",setting.screensize);
-    logWriteX(algo,"","",678);
-
     setBlitMode(setting.screensize);
 
 	wait_vsync      = setting.vsync_ON_OFF;
@@ -1109,9 +1105,6 @@ static void parse_cmdline( int argc, char **argv, int game_index )
 		if(0==(setting.sound_rate))	{options.samplerate = 0;	}
 	else{options.samplerate = 44100/(setting.sound_rate);	}
 
-        char dbg2[128];
-        sprintf(dbg2,"options.samplerate=='%d',setting.sound_rate=='%d'",options.samplerate,setting.sound_rate);
-        logWriteX("OSD_CONFIG-SOUND- : ",dbg2,"",666);
 
 //TMK ADD END
 

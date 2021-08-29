@@ -176,16 +176,12 @@ int main(int argc, char *argv[])
 #endif //KERNEL_MODE
 	_argv[_argc++] = getCurDir();
 
-    sprintf(fHell,"%s%s",getCurDir(),"pspLogDelOrto.txt");
-	openLog(fHell);
-
 
     sprintf(nvramDir,"%snvram",getCurDir());
 
-    if(!existDir(nvramDir)){
-      mkDir(nvramDir);
-      logWriteX(nvramDir," : no existe el dir, creandolo...","",678);
-    }
+//    if(!existDir(nvramDir)){
+//      mkDir(nvramDir);
+//    }
 
 	Get_DriverList();
 

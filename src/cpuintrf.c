@@ -971,18 +971,12 @@ int cpuintrf_init_cpu(int cpunum, int cputype)
 	char familyname[256];
 	int j;
 
-	logWriteX("cpuintrf.c: entro a cpuintrf_init_cpu","","",777);
-
 	/* fill in the type and interface */
 	cpu[cpunum].intf = cpuintrf[cputype];
 	cpu[cpunum].cputype = cputype;
 
-    logWriteX("cpuintrf.c: paso el bloque cpu[cpunum].cputype","","",777);
-
 	/* determine the family index */
 	strcpy(familyname, cputype_core_file(cputype));
-
-	logWriteX("cpuintrf.c: paso strcpy(familyname, cputype_core_file(cputype));","","",777);
 
 
 	for (j = 0; j < CPU_COUNT; j++)
@@ -992,30 +986,20 @@ int cpuintrf_init_cpu(int cpunum, int cputype)
 			break;
 		}
 
-    logWriteX("cpuintrf.c: a punto de alocar el contexto","","",777);
-
 	/* allocate a context buffer for the CPU */
 	cpu[cpunum].context = malloc(cpu[cpunum].intf.context_size);
 
-	logWriteX("cpuintrf.c: aloco el contexto","","",777);
-
 	if (cpu[cpunum].context == NULL)
 	{
-
-		logWriteX("cpuintrf.c: el contexto es NULL!!!","","",777);
 
 		/* that's really bad :( */
 		logerror("CPU #%d failed to allocate context buffer (%d bytes)!\n", cpunum, (int)cpu[cpunum].intf.context_size);
 		return 1;
 	}
 
-    logWriteX("cpuintrf.c: aloco el contexto","","",777);
-
 	/* zap the context buffer */
 	memset(cpu[cpunum].context, 0, cpu[cpunum].intf.context_size);
 
-
-    logWriteX("cpuintrf.c: paso memset(cpu[cpunum].context, 0, cpu[cpunum].intf.context_size);","","",777);
 
 	/* initialize the CPU and stash the context */
 	activecpu = cpunum;
