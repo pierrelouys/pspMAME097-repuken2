@@ -1,61 +1,61 @@
 PSPMAME r0.4 source
                                                        TMK
 
-PSPMAME�̃\�[�X�ł��B
-�I���W�i������̕ύX���������\�[�X�̂ݎ��^���Ă��܂��B
-MAME0.97 ���x�[�X�ɂȂ��Ă��܂��B
-src/psp�t�H���_��PSP�p�R�[�h��msdos�p�̃R�[�h���Q�l��PSP�����ɍ쐬���Ă���܂��B
-�i�@��ˑ��R�[�h�̂������������Ɋ܂܂�Ă��܂��B�j
+PSPMAMEのソースです。
+オリジナルからの変更があったソースのみ収録しています。
+MAME0.97 がベースになっています。
+src/pspフォルダがPSP用コードでmsdos用のコードを参考にPSP向けに作成してあります。
+（機種依存コードのが多くがここに含まれています。）
 
 
-�R���p�C�����@�F
-�@�R���p�C�����FCygwin
-�@�R���p�C���Fhttp://psp-dev.org/pukiwiki/ �� mips-elf��
+コンパイル方法：
+　コンパイル環境：Cygwin
+　コンパイラ：http://psp-dev.org/pukiwiki/ の mips-elf版
 
-�@make TARGET=namco [enter]
+　make TARGET=namco [enter]
 
-  �ȂǂƂ��ăR���p�C�����܂��B
-�@���̏ꍇ�Asrc/namco.mak ���C���N���[�h����܂��B
-  src�t�H���_�ɂ͓��l�Ɋ����mak�t�@�C��������܂��̂ŁA
-�@�������Q�l�ɂ��đg�ݍ��݂����h���C�o��g�ݍ���ŉ������B
+  などとしてコンパイルします。
+　この場合、src/namco.mak がインクルードされます。
+  srcフォルダには同様に幾つかのmakファイルがありますので、
+　それらを参考にして組み込みたいドライバを組み込んで下さい。
 
-�@�����mak��obj/drivers���Q�Ƃ��܂��B
+　幾つかのmakはobj/driversを参照します。
 
-�@make [enter]
+　make [enter]
 
-�@�Ƃ��āA�R���p�C�����ďo����A�[�J�C�u�t�@�C��(.a)��
-�@obj/drivers�փR�s�[���Ă����܂��傤�B
-�@�i���Ɏ��Ԃ��|����܂��j
+　として、コンパイルして出来るアーカイブファイル(.a)を
+　obj/driversへコピーしておきましょう。
+　（非常に時間が掛かります）
 
-�@���ƁAIcon0.png��namco.png�Ƀ��l�[�����邩�A��p�̃A�C�R����p�ӂ���icon�t�H���_�ɒu���ĉ������B
-
-
-���L�����F
-�@�E�i�������ׁ̈j�R���p�C������double��float�ɒu�������Ă��܂��B
-�@�@����̂����œ����Ȃ��h���C�o�Ƃ������邩������܂���B
-�@�@�x�N�^�[��T�E���h�����������̂����ꂩ���H
-
-�@�ECPS��SYSTEM1���̓������s���œ����Ȃ��B
-�@�@�J�[�l���̃������͎g���Ȃ��̂��ȁH
-
-�@�Efloat �� int �ւ̑���Ńt���[�Y�B
-�@�@�������[�s���ȊO�Ńt���[�Y���d���I�t�ƂȂ�p�^�[����
-�@�@���̃P�[�X��������܂���B
-�@�@�ϊ��֐��ǂ����ɂȂ��H
-
-�@�E�Q�[���̍Ď��s�Ńt���[�Y�B
-�@�@�ϐ��̏��������̖�肩�H
+　あと、Icon0.pngをnamco.pngにリネームするか、専用のアイコンを用意してiconフォルダに置いて下さい。
 
 
-�Q�l�F
-�@���̃v���O�����̍쐬�ɂ������āA�����̃v���O�������Q�l�ɂ�����A�܂��͂��̈ꕔ���p�N�b�Ă��Ă���܂��B
-�@���ꂼ��̍�җl�Ɋ��Ӓv���܂��B
-�@�EGB File Selector
-�@�ERIN
-�@�ENEOGEOCD
-�@�E������..
+特記事項：
+　・（高速化の為）コンパイル時にdoubleをfloatに置き換えています。
+　　これのせいで動かないドライバとかもあるかもしれません。
+　　ベクターやサウンドがおかしいのもこれかも？
+
+　・CPSやSYSTEM1等はメモリ不足で動かない。
+　　カーネルのメモリは使えないのかな？
+
+　・float → int への代入でフリーズ。
+　　メモリー不足以外でフリーズ＞電源オフとなるパターンは
+　　このケースかもしれません。
+　　変換関数どこかにない？
+
+　・ゲームの再実行でフリーズ。
+　　変数の初期化等の問題か？
 
 
-�W�]�F
-�@������A�t�@���^�W�[�]�[���A�X�y�n���AR-TYPE����
-�@�V�ׂ�ʂ̑��x�œ����������E�E
+参考：
+　このプログラムの作成にあたって、多くのプログラムを参考にしたり、またはその一部をパクッてきております。
+　それぞれの作者様に感謝致します。
+　・GB File Selector
+　・RIN
+　・NEOGEOCD
+　・他多数..
+
+
+展望：
+　源平や、ファンタジーゾーン、スペハリ、R-TYPE等が
+　遊べる位の速度で動かしたい・・

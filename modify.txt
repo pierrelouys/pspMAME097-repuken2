@@ -1,9 +1,9 @@
-ƒRƒA‰ü•Ïî•ñ	r0.4
+ã‚³ã‚¢æ”¹å¤‰æƒ…å ±	r0.4
 
-drivers/trackfld.c		˜AËƒ{ƒ^ƒ“’Ç‰Á
-sound/namco54.c			ƒtƒŠ[ƒY‘Îô
-inptport.c			ƒ{ƒ^ƒ“‚Ìİ’è‚ğPSPŒü‚¯‚Éˆê•”•ÏX
-mame.c				CFG•Û‘¶ƒ^ƒCƒ~ƒ“ƒO•ÏX“™
-osdepend.h			cycles_t‚ÌŒ^•ÏX
-sndintrf.c			PSPŒü‚¯ƒpƒtƒH[ƒ}ƒ“ƒX‰ü‘P“™
-usrintrf.c			CFG•Û‘¶ƒ^ƒCƒ~ƒ“ƒO•ÏX“™
+drivers/trackfld.c		é€£å°„ãƒœã‚¿ãƒ³è¿½åŠ 
+sound/namco54.c			ãƒ•ãƒªãƒ¼ã‚ºå¯¾ç­–
+inptport.c			ãƒœã‚¿ãƒ³ã®è¨­å®šã‚’PSPå‘ã‘ã«ä¸€éƒ¨å¤‰æ›´
+mame.c				CFGä¿å­˜ã‚¿ã‚¤ãƒŸãƒ³ã‚°å¤‰æ›´ç­‰
+osdepend.h			cycles_tã®å‹å¤‰æ›´
+sndintrf.c			PSPå‘ã‘ãƒ‘ãƒ•ã‚©ãƒ¼ãƒãƒ³ã‚¹æ”¹å–„ç­‰
+usrintrf.c			CFGä¿å­˜ã‚¿ã‚¤ãƒŸãƒ³ã‚°å¤‰æ›´ç­‰

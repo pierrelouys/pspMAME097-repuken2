@@ -13,7 +13,7 @@
 #PSP SLIM STUFF -repuken2-
 
 PSP_LARGE_MEMORY = 1
-BUILD_PRX = 1
+#BUILD_PRX = 1
 
 # set this to mame, mess or the destination you want to build.
 
@@ -417,8 +417,6 @@ OBJDIRS += \
     $(OBJ_SNDHRDW) \
 	$(OBJ)/etc \
 	$(OBJ)/zlib \
-	pbp \
-	pbp/$(TARGET)
 
 
 CDEFS += $(CPUDEFS) $(SOUNDDEFS) $(COREDEFS) $(DRVDEFS) $(OPT_DEFS)
@@ -503,9 +501,9 @@ maked_directry:
 	@$(MD) -p $(subst //,\,$(sort $(OBJDIRS)))
 	@$(RM) -f PARAM.SFO
 
-copy_bak_pbp: 
-	@cp EBOOT.PBP pbp/$(TARGET)
-	@ls -l EBOOT.PBP
+# copy_bak_pbp: 
+	# @cp EBOOT.PBP pbp/$(TARGET)
+	# @ls -l EBOOT.PBP
 
 ## re-make the M68000
 68:
