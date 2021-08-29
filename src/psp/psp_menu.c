@@ -11,7 +11,7 @@
 
 
 #define NOW_DATE   " "__DATE__" "
-#define DEVELOPPER "developed by repuken2                            from original src by 開轣闃J発幼稚園"
+#define DEVELOPPER "- original by TMK & ＰＳＰ開発幼稚園"
 //∽∝∵∫∬開発幼稚園
 
 #ifdef namcoNA
@@ -153,7 +153,7 @@
 
 
 #ifndef MENU_STR1
-	#define MENU_STR1 "∽∝∵∫∬ MAME DEATHRASH!!!(0.97s)" //開
+	#define MENU_STR1 "pspMAME 0.97" //開
 #endif
 #ifndef MENU_STR2
 	#define MENU_STR2 ""//"もっと速くないと遊べん！"
@@ -380,7 +380,7 @@ static void psp_frame(const char *msg0, const char *msg1)
 
 void Draw_All(void)
 {                                                         //○：実行 Ｌ：設定メニュー △：エミュレータの終了
-	psp_frame(/*NULL*/drivers[dlist_curpos]->name/*mes*/, "Controls>> circle : run game ,LTrigger: config ,triangle: exit");
+	psp_frame(/*NULL*/drivers[dlist_curpos]->name/*mes*/, "◯: run game L: settings △: exit");
 
     long freeMem;
     long largestFreeBlock;
@@ -491,8 +491,8 @@ int Control(void)
 		else if (ps_A && is_A)
 		{
 			//psp_frame("ALO! また遊んでね" DEVELOPPER, "×：やっぱキャンセル  ○：終了" );
-			psp_frame(""," circle : confirm   cross : cancel" );
-			psp_print(40,120, setting.color[3], " WTF!!!??? QUITTING ALREADY??!!! press Circle to confirm");
+			psp_frame(""," ×: cancel   ○: quit" );
+			psp_print(40,120, setting.color[3], " Press ○ to quit");
 			v_sync();
 		//	pgScreenFlip();
 			psp_flip_screen(/*1*/);
@@ -528,9 +528,9 @@ int Control(void)
 
 void Draw_Confirm(void)
 {
-	psp_frame(drivers[dlist_curpos]->name, "CIRCLE : CONFIRM , CROSS : CANCEL  ** Argentina campion 2010!!!**");
+	psp_frame(drivers[dlist_curpos]->name, "○: run   ×: cancel");
 	psp_print(MENU2C_X_OFFS, ( 9*10), setting.color[3], drivers[dlist_curpos]->description);
-	psp_print(MENU2B_X_OFFS, (12*10), setting.color[3], "Press circle to run game");//"を実行します。"
+	psp_print(MENU2B_X_OFFS, (12*10), setting.color[3], "Press ○ to run game");//"を実行します。"
 	v_sync();
 //	pgScreenFlip();
 	psp_flip_screen(/*1*/);
@@ -581,9 +581,9 @@ void save_config(void)
 #define PSP333MHz (3)
 
 
-/* set default to fskip07 */
+/* set default to fskip00 */
 #ifndef SET_DEFAULT_FSKIPS
-	#define SET_DEFAULT_FSKIPS SET_FSKIP_07
+	#define SET_DEFAULT_FSKIPS SET_FSKIP_00
 #endif // SET_DEFAULT_FSKIPS
 /* set default to off the video syncronization for draw. */
 #define SET_DEFAULT_VSYNC_ON_OFF SET_ON
@@ -602,8 +602,8 @@ void save_config(void)
 #endif // SET_DEFAULT_PSP_CLOCK
 
 
-//#define SET_DEFAULT_SCREEN SCR_X1
-#define SET_DEFAULT_SCREEN SCR_STRETCH
+#define SET_DEFAULT_SCREEN SCR_X1
+//#define SET_DEFAULT_SCREEN SCR_STRETCH
 
 void load_config(void)
 {
@@ -628,7 +628,7 @@ void load_config(void)
 		sceIoClose(fd);
 		/* check if ignore value, forced in range. */
 //		#if (0!=LINK_ROT)
-//		if(/*setting.screensize<0 ||*/ setting.screensize > (SCR_MAX-1)) setting.screensize = SET_DEFAULT_SCREEN;
+		if(/*setting.screensize<0 ||*/ setting.screensize > (SCR_MAX-1)) setting.screensize = SET_DEFAULT_SCREEN;
 //		#endif //(0!=LINK_ROT)
 		if(setting.frameskip > /*9*/60) 						setting.frameskip=/*0*/60;
 		//if(setting.sound_rate<0 || setting.sound_rate>2)		setting.sound_rate = /*0*/2;
@@ -641,9 +641,9 @@ void load_config(void)
 	}
 
 	strcpy(setting.vercnf, CONFIG_VER);
-/*	#if (0!=LINK_ROT)
+//	#if (0!=LINK_ROT)
 	setting.screensize		= SET_DEFAULT_SCREEN;
-	#endif //(0!=LINK_ROT)*/
+//	#endif //(0!=LINK_ROT)
 	setting.frameskip		= SET_DEFAULT_FSKIPS;
 	setting.vsync_ON_OFF	= SET_DEFAULT_VSYNC_ON_OFF;
 	setting.limit_ON_OFF	= SET_DEFAULT_LIMIT_ON_OFF;
@@ -849,15 +849,15 @@ void psp_colorconfig(void)
 		sel_count &=15;
 
 		if (sel >= COLOR0_R && sel <= BG_BRIGHT)
-		{	psp_frame(NULL, "←→：値の変更"
+		{	psp_frame(NULL, "←→：change values" //"←→：値の変更"
 			#if (1==USE_COLOR_MENU_X_BUTTON)
-				"  ×：メインメニューに戻る"
+				"  ×：back to main menu" //"  ×：メインメニューに戻る"
 			#endif //(1==USE_COLOR_MENU_X_BUTTON)
 			);
 		} else if (sel == INIT)
-		{	psp_frame(NULL, "○：設定を初期化する"
+		{	psp_frame(NULL, "○：restore defaults" //"○：設定を初期化する"
 			#if (1==USE_COLOR_MENU_X_BUTTON)
-				"  ×：メインメニューに戻る"
+				"  ×：back to main menu" //"  ×：メインメニューに戻る"
 			#endif //(1==USE_COLOR_MENU_X_BUTTON)
 			);
 		} else
@@ -865,7 +865,7 @@ void psp_colorconfig(void)
 			#if (1==USE_COLOR_MENU_X_BUTTON)
 				"×"
 			#endif //(1==USE_COLOR_MENU_X_BUTTON)
-				"：メインメニューに戻る"
+				": back to main menu" //"：メインメニューに戻る"
 			);
 		}
 
@@ -1067,11 +1067,11 @@ void psp_menu(void)
 			strcpy(tmp, &setumei[sel][0] );
 #endif
 			if (sel < ITEM_COLOR_CONFIG)
-				psp_frame(NULL/*tmp*/, "←→：値の変更  ×Ｌ：ゲーム選択画面に戻る");
+				psp_frame(NULL/*tmp*/, "←→：change value  ×Ｌ：back to game selection"); //"←→：値の変更  ×Ｌ：ゲーム選択画面に戻る"
 			else if (sel == ITEM_COLOR_CONFIG)
-				psp_frame(NULL/*tmp*/, "○：カラー設定メニューに移動  ×Ｌ：ゲーム選択画面に戻る");
+				psp_frame(NULL/*tmp*/, "○：open color settings  ×Ｌ：back to game selection"); //"○：カラー設定メニューに移動  ×Ｌ：ゲーム選択画面に戻る"
 			else
-				psp_frame(NULL/*tmp*/, "○×Ｌ：ゲーム選択画面に戻る");
+				psp_frame(NULL/*tmp*/, "○×Ｌ：back to game selection"); //"○×Ｌ：ゲーム選択画面に戻る"
 		}
 #define MENU1_Y_SPACER 11
 	//	if(setting.sound_ON_OFF)

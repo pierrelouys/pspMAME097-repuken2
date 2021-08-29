@@ -1,15 +1,17 @@
-PSP_EBOOT_TITLE = pspMame Deathrash Vol 3
+PSP_EBOOT_TITLE = pspMame
 
 #OPT_DEFS += -DLINK_ROT=1
 
 # a tiny compile is without Neogeo games
 COREDEFS += -DTINY_COMPILE=1
 COREDEFS += -DTINY_NAME="driver_armedf\
-    ,driver_momoko"
+    ,driver_momoko\
+    ,driver_baddudes"
 
 
 COREDEFS += -DTINY_POINTER="&driver_armedf\
-    ,&driver_momoko"
+    ,&driver_momoko\
+    ,&driver_baddudes"
 
 # uses these CPUs
 CPUS+=M6809_ORIG
@@ -18,9 +20,8 @@ CPUS+=HD63701_ORIG
 CPUS+=M6803
 
 CPUS+=M68000_ORIG
-
-#M68000_ORIG
-#CPUS+=TMS34010_ORIG__@NOT
+CPUS+=M6502_ORIG
+CPUS+=H6280
 
 # uses these SOUNDs
 SOUNDS+=YM2610_ORIG
@@ -30,12 +31,14 @@ SOUNDS+=YM2610B_ORIG
 
 SOUNDS+=YM3812_ORIG
 SOUNDS+=DAC
+SOUNDS+=OKIM6295
 
 
 DRVLIBS = \
 	$(OBJ)/vidhrdw/armedf.o $(OBJ)/drivers/armedf.o \
 	$(OBJ)/vidhrdw/momoko.o $(OBJ)/drivers/momoko.o \
 		$(OBJ)/vidhrdw/lkage.o \
+	$(OBJ)/machine/dec0.o $(OBJ)/vidhrdw/dec0.o $(OBJ)/drivers/dec0.o \
         
 
 #$(OBJ)/machine/ticket.o \ SHOULD LEAVE        
