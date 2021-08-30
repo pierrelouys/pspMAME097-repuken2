@@ -25,7 +25,7 @@
 #include <stdio.h>
 
 #include "unzip.h"
-#include "inc_rc.h"
+#include "rc.h"
 
 #define VERBOSE		0
 
