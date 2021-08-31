@@ -167,7 +167,7 @@ extern char *osd_FPS_text;
 //extern UINT8 wait_vsync;
 
 
-void bitblit_psp_direct( mame_bitmap *bitmap, int sx, int sy, int sw, int sh)//, int dx, int dy )
+void bitblit_psp_direct( struct mame_bitmap *bitmap, int sx, int sy, int sw, int sh)//, int dx, int dy )
 {
 //	int n_dstwidth;
 //	int n_dstoffset;

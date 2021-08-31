@@ -7,6 +7,7 @@
 //void bitblit_psp(		 mame_bitmap *bitmap, int sx, int sy, int sw, int sh );
 //void bitblit_psp_dma(	 mame_bitmap *bitmap, int sx, int sy, int sw, int sh );
 //void bitblit_psp_mov(	 mame_bitmap *bitmap, int sx, int sy, int sw, int sh );
+void bitblit_psp_direct( struct mame_bitmap *bitmap, int sx, int sy, int sw, int sh );
 void bitblit_psp_direct_256( struct mame_bitmap *bitmap, int sx, int sy, int sw, int sh );
 void bitblit_psp_direct_288( struct mame_bitmap *bitmap, int sx, int sy, int sw, int sh );
 void bitblit_psp_direct_320( struct mame_bitmap *bitmap, int sx, int sy, int sw, int sh );
