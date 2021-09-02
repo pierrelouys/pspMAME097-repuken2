@@ -50,6 +50,7 @@ enum
 	CPU_I188,
 	CPU_I286,
 	CPU_V20,
+	CPU_NEC30,	/*New V30 only */
 	CPU_V30,
 	CPU_V33,
 	CPU_V60,

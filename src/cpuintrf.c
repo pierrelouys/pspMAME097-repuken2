@@ -362,6 +362,9 @@ const struct
 #if (HAS_V20)
 	{ CPU_V20, v20_get_info },
 #endif
+#if (HAS_NEC30)
+	{ CPU_NEC30, v30_get_info },
+#endif
 #if (HAS_V30  || HAS_V30_ORIG)
 	{ CPU_V30, v30_get_info },
 #endif

@@ -1,2 +1,2 @@
 
-[https://github.com/pierrelouys/pspMAME097-repuken2/compare/conservative...pierrelouys:main](https://github.com/pierrelouys/pspMAME097-repuken2/compare/conservative...pierrelouys:main)
+Custom branch with modified drivers, CPUs.
