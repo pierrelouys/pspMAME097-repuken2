@@ -16,7 +16,6 @@ OSOBJS = \
 	$(OBJ)/psp/config.o \
 	$(OBJ)/psp/fileio.o \
 	$(OBJ)/psp/pspmain.o \
-	$(OBJ)/psp/psp_file.o \
 	$(OBJ)/psp/psp_video.o \
 	$(OBJ)/psp/menu.o \
 	$(OBJ)/psp/psp_data.o \

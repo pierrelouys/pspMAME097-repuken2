@@ -130,6 +130,28 @@ static /*int*/void SetupCallbacks(void)
 //	return thread_id;
 }
 
+#define MAXPATH   0x108
+
+static char curdir[MAXPATH];
+
+char *getCurDir(void) {
+	return curdir;
+}
+
+static int  curdir_length;
+
+void setCurDir(const char *path)
+{
+	char *p;
+
+	memset(curdir, 0, MAX_PATH);
+	strncpy(curdir, path, MAX_PATH - 1);
+
+	p = strrchr(curdir, '/');
+	if (p != NULL) *(p + 1) = '\0';
+
+	curdir_length = strlen(curdir);
+}
 
 int existDir(const char* dir)
 {
@@ -158,8 +180,6 @@ int main(int argc, char *argv[])
 //	int res = 0;
 	char *_argv[5];
 	int _argc = 0;
-    char fHell[512];
-    char nvramDir[256];
 
 	psp_loop = 1;
 	psp_sleep = 0;
@@ -175,9 +195,6 @@ int main(int argc, char *argv[])
 	setCurDir(argv[0]);/* ユーザーモード時のみ使用 */
 #endif //KERNEL_MODE
 	_argv[_argc++] = getCurDir();
-
-
-    sprintf(nvramDir,"%snvram",getCurDir());
 
 //    if(!existDir(nvramDir)){
 //      mkDir(nvramDir);

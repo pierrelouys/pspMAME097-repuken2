@@ -8,16 +8,16 @@
 #include "driver.h"
 
 // PSP headers
-#include "psp_file.h"
+//#include "psp_file.h"
 
 #include <errno.h>
 #include <limits.h>
 #include <ctype.h>
+#include <sys/stat.h>
 
 #if 0
 	/* Ç±ÇÃïîï™ÇÕÅAPSPSDK Ç…çsÇØÇŒóvÇÁÇ»Ç≠Ç»ÇÈÇÁÇµÇ¢(?) */
 	//#include <fcntl.h>
-	#include <sys/stat.h>
 	#include <unistd.h>
 	#include "syscall.h"
 #endif
@@ -174,7 +174,7 @@ static void create_path(char *path, int has_filename)
 		return;
 
 	/* if the path already exists, we're done */
-	if(psp_stat( path, &s ) == 0 )
+	if(stat( path, &s ) == 0 )
 		return;
 
 	/* create the path */
@@ -455,7 +455,7 @@ int osd_get_path_info(int pathtype, int pathindex, const char *filename)
 #endif
 
 	/* get the file attributes */
-	if( psp_stat( fullpath, &s ) != 0 )
+	if( stat( fullpath, &s ) != 0 )
 	{
 	// tmkdbg
 	//	psp_printf_bbb(fullpath);				psp_print_color(PSP_COLOR_BLUE);
@@ -523,21 +523,8 @@ osd_file *osd_fopen(int pathtype, int pathindex, const char *filename, const cha
 	if (strchr(mode, '+'))
 		attrib = O_RDWR;
 
-#if 1
 	/* compose the full path */
 	compose_path(fullpath, pathtype, pathindex, filename);
-
-	printf("ACA TA!!! : fullpath=='%s',filename=='%s'\n",fullpath,filename);
-#else
-	if (pathtype < FILETYPE_RAW || pathtype >= FILETYPE_end)
-		pathtype = FILETYPE_RAW;
-
-	if (pathtype == FILETYPE_RAW)
-		strcpy(fullpath, filename);
-//		sprintf(fullpath, "%s", filename);
-	else
-		sprintf(fullpath, "%s/%s", pathlist[pathtype], filename);
-#endif
 
 	/* attempt to open the file */
 //	file->handle = open( fullpath, attrib | disposition | O_BINARY, S_IRUSR | S_IWUSR  );

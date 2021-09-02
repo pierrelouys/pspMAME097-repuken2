@@ -39,7 +39,7 @@
 #endif
 
 #include "ticker.h"
-#include "psp_file.h"
+//#include "psp_file.h"
 #include "psp_font.h"
 #include "sound.h"
 #include "psp_video.h"
