@@ -1074,6 +1074,7 @@ static void parse_cmdline( int argc, char **argv, int game_index )
     setBlitMode(setting.screensize);
 
 	wait_vsync      = setting.vsync_ON_OFF;
+	ui_show_fps_set(setting.show_fps_ON_OFF);
 	limit_max_speed = setting.limit_ON_OFF;
 
 	enable_sound =soundcard;//	soundcard =*/setting.sound_ON_OFF;

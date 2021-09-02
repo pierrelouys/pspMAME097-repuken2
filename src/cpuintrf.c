@@ -428,12 +428,9 @@ const struct
 #if (HAS_M6802)
 	{ CPU_M6802, m6802_get_info },
 #endif
-#if (REPUKEN2_DEATHRASH)
-{ CPU_M6803, m6803_get_info },
-#endif
-/*#if (HAS_M6803)
+#if (HAS_M6803)
 	{ CPU_M6803, m6803_get_info },
-#endif*/
+#endif
 #if (HAS_M6808 || HAS_M6808_ORIG)
 	{ CPU_M6808, m6808_get_info },
 #endif

@@ -1008,7 +1008,7 @@ static const char *scr_names[] = {
 		);
 
 		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_LIMIT_SPEED +(1)	)*(MENU1_Y_SPACER)),	setting.color[3], setting.limit_ON_OFF		? "LIMIT SPEED:  " "ON" STR_DEFAULT : "LIMIT SPEED:  " "OFF"			);
-		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_SHOW_FPS	+(1)	)*(MENU1_Y_SPACER)),	setting.color[3], setting.show_fps_ON_OFF	? "SHOW FPS:     " "ON" 			: "SHOW FPS:     " "OFF" /*STR_DEFAULT*/);
+		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_SHOW_FPS	+(1)	)*(MENU1_Y_SPACER)),	setting.color[3], setting.show_fps_ON_OFF	? "SHOW FPS:     " "ON" 			: "SHOW FPS:     " "OFF" STR_DEFAULT);
 		//7
 		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_CPU_CLOCK	+(1+1)	)*(MENU1_Y_SPACER)),	setting.color[3],"CPU CLOCK:    " "%s",cpu_clocks[setting.cpu_clock]);
 		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_COLOR_CONFIG+(1+1)	)*(MENU1_Y_SPACER)),	setting.color[3],"COLOR CONFIG");
