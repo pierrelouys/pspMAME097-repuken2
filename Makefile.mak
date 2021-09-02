@@ -154,7 +154,7 @@ $(OBJ)/libz.a: \
 
 # zlib only sized optimized (-O1)
 $(OBJ)/zlib/%.o: $(SRC)/zlib/%.c
-	@echo Compiling Expat $<...
+	@echo Compiling Zlib $<...
 	@$(CC) $(CDEFS) -O1 $(CFLAGS) -c $< -o $@
 
 $(OBJ)/expat/%.o: $(SRC)/expat/%.c
