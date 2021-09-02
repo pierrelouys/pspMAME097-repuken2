@@ -382,22 +382,22 @@ void Draw_All(void)
 {                                                         //○：実行 Ｌ：設定メニュー △：エミュレータの終了
 	psp_frame(/*NULL*/drivers[dlist_curpos]->name/*mes*/, "◯: run game L: settings △: exit");
 
-    long freeMem;
-    long largestFreeBlock;
-    int sizeFreeMemMb;
-    int largestBlockMb;
-    char memInfo[80];
+    // long freeMem;
+    // long largestFreeBlock;
+    // int sizeFreeMemMb;
+    // int largestBlockMb;
+    // char memInfo[80];
 
-    freeMem = sceKernelTotalFreeMemSize();//total free mem available
-    largestFreeBlock = sceKernelMaxFreeMemSize();//largest free mem block available
+    // freeMem = sceKernelTotalFreeMemSize();//total free mem available
+    // largestFreeBlock = sceKernelMaxFreeMemSize();//largest free mem block available
 
-    sizeFreeMemMb = (int)(freeMem / 1024)/1024;
-    largestBlockMb = (int)(largestFreeBlock / 1024)/1024;
+    // sizeFreeMemMb = (int)(freeMem / 1024)/1024;
+    // largestBlockMb = (int)(largestFreeBlock / 1024)/1024;
 
-    sprintf(memInfo,"<<freemem='%d' mb, largest-freememblock='%d' mb>>",sizeFreeMemMb,largestBlockMb);
+    // sprintf(memInfo,"<<freemem='%d' mb, largest-freememblock='%d' mb>>",sizeFreeMemMb,largestBlockMb);
 
 
-	psp_print(110, 27, setting.color[3], memInfo);
+	// psp_print(110, 27, setting.color[3], memInfo);
 
 	int i;
 	// ゲームリスト
@@ -611,8 +611,8 @@ void load_config(void)
 	char CfgPath[MAX_PATH];
 	char *p;
 
-	sprintf(CfgPath, "%sPSPMAME.CFG", getCurDir());
-	remove(CfgPath);
+//	sprintf(CfgPath, "%sPSPMAME.CFG", getCurDir());
+//	remove(CfgPath);
 
 	memset(&setting, 0, sizeof(setting));
 
