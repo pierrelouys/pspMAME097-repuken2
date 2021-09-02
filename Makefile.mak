@@ -75,7 +75,8 @@ INCDIR = \
 	$(SRC)/includes \
 	$(SRC)/debug \
 	$(SRC)/$(OSD) \
-	$(SRC)/zlib
+	$(SRC)/zlib \
+	$(SRC)/expat
 
 #------------------------------------------------------------------------------
 # Linker Flags
@@ -89,6 +90,7 @@ LDFLAGS      = -lpspgum_vfpu -lpspvfpu
 #------------------------------------------------------------------------------
 
 ZLIB = $(OBJ)/libz.a
+EXPAT = $(OBJ)/libexpat.a
 
 #------------------------------------------------------------------------------
 # Include Make Files
@@ -120,11 +122,12 @@ OBJDIRS += \
 	$(OBJ_VIDEO) \
     $(OBJ_SNDHRDW) \
 	$(OBJ)/etc \
-	$(OBJ)/zlib
+	$(OBJ)/zlib \
+	$(OBJ)/expat
 
 
 CDEFS += $(CPUDEFS) $(SOUNDDEFS) $(COREDEFS) $(DRVDEFS) $(OPT_DEFS)
-OBJS  += $(CPUOBJS) $(SOUNDOBJS) $(COREOBJS) $(DRVLIBS) $(OSOBJS) $(ZLIB)
+OBJS  += $(CPUOBJS) $(SOUNDOBJS) $(COREOBJS) $(DRVLIBS) $(OSOBJS) $(ZLIB) $(EXPAT)
 
 
 #------------------------------------------------------------------------------
@@ -139,6 +142,8 @@ include $(PSPSDK)/lib/build.mak
 # Make Rules
 #------------------------------------------------------------------------------
 
+$(OBJ)/libexpat.a: $(OBJ)/expat/xmlparse.o $(OBJ)/expat/xmlrole.o $(OBJ)/expat/xmltok.o
+
 $(OBJ)/libz.a: \
 	$(OBJ)/zlib/adler32.o \
 	$(OBJ)/zlib/crc32.o \
@@ -149,8 +154,12 @@ $(OBJ)/libz.a: \
 
 # zlib only sized optimized (-O1)
 $(OBJ)/zlib/%.o: $(SRC)/zlib/%.c
-	@echo Compiling Zlib $<...
+	@echo Compiling Expat $<...
 	@$(CC) $(CDEFS) -O1 $(CFLAGS) -c $< -o $@
+
+$(OBJ)/expat/%.o: $(SRC)/expat/%.c
+	@echo Compiling Expat $<...
+	@$(CC) $(CDEFS) -O1 -c $< -o $@
 
 # speed optimized (-O3)
 $(OBJ)/%.o: $(SRC)/%.c
