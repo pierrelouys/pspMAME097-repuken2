@@ -1,7 +1,3 @@
-
-
-#MY_NAME =""
-
 include $(SRC)/$(OSD)_sound/_psp_sound.mak
 
 # only PSP specific output files and rules
@@ -20,29 +16,9 @@ OSOBJS = \
 	$(OBJ)/psp/menu.o \
 	$(OBJ)/psp/psp_data.o \
 
-#	psp_fontとblitを融合。   $(OBJ)/psp/blit.o 
-
-#	$(OBJ)/psp/y_malloc.o 
-#	$(OBJ)/psp/v_malloc.o 
-#	$(OBJ)/psp/rc.o 
-##$(OBJ)/psp/misc.o 
-#$(OBJ)/psp/debugwin.o 
-#$(OBJ)/psp/fronthlp.o 
-#	$(OBJ)/psp/malloc.o 
-#	$(OBJ)/psp/y_malloc.o 
-#	$(OBJ)/psp/malloc.o 
-#	$(OBJ)/psp/v_malloc.o 
-#	$(OBJ)/psp/fpgnulib.o 
-
 #------------------------------------------------------------------------------
 # Utilities
 #------------------------------------------------------------------------------
-
-##MD = -mkdir.exe
-##MD = mkdir -p
-#MD = mkdir
-##RM = rm -rd
-#RM = rm -f
 
 ifeq ($(PSPSDK),)
 MD = -mkdir
@@ -66,15 +42,7 @@ ifeq ($(PSP_EBOOT_TITLE),)
 PSP_EBOOT_TITLE = "MAME 0.97 $(TARGET)"
 endif
 
-## アイコンが無い場合に標準を設定
-# ifeq ($(PSP_EBOOT_ICON),)
-# PSP_EBOOT_ICON = icon/ico0_mamePSpDeathrash_VOL_3.png
-# endif
-
-
 ## 配布ソース(zip size)が大きくなりすぎるので、暫定的にアイコン共通
-#PSP_EBOOT_ICON = icon/icon0.png
-
 PSP_EBOOT_ICON = ICON0.PNG
 
 EXTRA_TARGETS = maked_directry EBOOT.PBP # copy_bak_pbp

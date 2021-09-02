@@ -286,9 +286,6 @@ UINT32 osd_fwrite(osd_file *file, const void *buffer, UINT32 length);
 void osd_fclose(osd_file *file);
 
 
-/*repuken2: helper to keep current directory available, needed by osd_fopen and related funcs*/
-void setCurrentAppDirectory(char* newCurDir);
-char* getCurrentAppDirectory(void);
 
 /******************************************************************************
 
