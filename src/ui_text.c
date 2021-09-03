@@ -92,6 +92,7 @@ static const char *mame_default_text[] =
 
 	"Cheat",
 	"Memory Card",
+	"Quit",
 
 	/* input */
 	"Digital Speed",

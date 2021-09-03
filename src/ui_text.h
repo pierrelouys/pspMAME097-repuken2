@@ -86,6 +86,7 @@ enum
 	UI_returntogame,
 	UI_cheat,
 	UI_memorycard,
+	UIstr_quit_emulator,
 
 	/* input stuff */
 	UI_keyjoyspeed,

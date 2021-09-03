@@ -91,8 +91,4 @@ void CLIB_DECL usrintf_showmessage(const char *text,...);
 void CLIB_DECL usrintf_showmessage_secs(int seconds, const char *text,...);
 #endif
 
-/*UI new Texts*/
-
-#define UIstr_quit_emulator "End this Game"
-
 #endif

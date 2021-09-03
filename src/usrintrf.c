@@ -3204,7 +3204,7 @@ int memcard_menu(struct mame_bitmap *bitmap, int selection)
 #ifndef MESS
 enum { UI_SWITCH = 0,UI_DEFGROUP,UI_CODE,UI_ANALOG,UI_CALIBRATE,
 		UI_STATS,UI_GAMEINFO, UI_HISTORY,
-		UI_CHEAT,UI_RESET,UI_MEMCARD,UI_EXIT/*,UI_QUIT_GAME*/ };
+		UI_CHEAT,UI_RESET,UI_MEMCARD,UI_EXIT,UI_QUIT_GAME };
 #else
 enum { UI_SWITCH = 0,UI_DEFGROUP,UI_CODE,UI_ANALOG,UI_CALIBRATE,
 		UI_GAMEINFO, UI_IMAGEINFO,UI_FILEMANAGER,UI_TAPECONTROL,
@@ -3346,7 +3346,7 @@ static void setup_menu_init(void)
 
 	append_menu(UI_resetgame, UI_RESET);
 	append_menu(UI_returntogame, UI_EXIT);
-	//append_menu(UIstr_quit_emulator, UI_QUIT_GAME);
+	append_menu(UIstr_quit_emulator, UI_QUIT_GAME);
 	menu_item[menu_total] = 0; /* terminate array */
 }
 
@@ -3474,11 +3474,11 @@ static int setup_menu(struct mame_bitmap *bitmap, int selected)
 				sel = -1;
 				break;
 
-			/*case UI_QUIT_GAME:
+			case UI_QUIT_GAME:
                 menu_lastselected = 0;
 				sel = -1;
 				psp_loop = 1;
-                break;*/
+                break;
 		}
 	}
 
