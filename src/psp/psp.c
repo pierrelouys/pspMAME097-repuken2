@@ -231,9 +231,9 @@ int run_mame(int argc, char **argv)
 		psp_print_color(PSP_COLOR_RED);
 		psp_printf_bbb(
 			"             memory consumption report : \n\n"
-			" available free memory : %d bytes (0x%x bytes) .\n"
-			" used memory           : %d bytes (0x%x bytes) .\n"
-			" memory left           : %d bytes (0x%x bytes) .\n"
+			" äJén start                : %d bytes (0x%x bytes) .\n"
+			" èIóπ end                  : %d bytes (0x%x bytes) .\n"
+			" ç∑ï™ difference           : %d bytes (0x%x bytes) .\n"
 			, start_size
 			, start_size
 			, end_size
