@@ -1,4 +1,4 @@
-PSP_EBOOT_TITLE = pspMame
+PSP_EBOOT_TITLE = pspMame experiment
 
 #OPT_DEFS += -DLINK_ROT=1
 
@@ -8,14 +8,16 @@ COREDEFS += -DTINY_NAME="driver_armedf\
     ,driver_momoko\
     ,driver_baddudes\
     ,driver_avspirit\
-    ,driver_citycon"
+    ,driver_citycon\
+    ,driver_ssriders"
 
 
 COREDEFS += -DTINY_POINTER="&driver_armedf\
     ,&driver_momoko\
     ,&driver_baddudes\
     ,&driver_avspirit\
-    ,&driver_citycon"
+    ,&driver_citycon\
+    ,&driver_ssriders"
 
 # uses these CPUs
 CPUS+=M6809@
@@ -39,6 +41,11 @@ SOUNDS+=DAC@
 SOUNDS+=OKIM6295@
 SOUNDS+=YM2151@
 SOUNDS+=AY8910@
+SOUNDS+=K053260@
+SOUNDS+=SAMPLES@
+SOUNDS+=K007232@
+SOUNDS+=K054539@
+SOUNDS+=UPD7759@
 
 
 DRVLIBS = \
@@ -48,6 +55,8 @@ DRVLIBS = \
 		$(OBJ)/vidhrdw/lkage.o \
 	$(OBJ)/machine/dec0.o $(OBJ)/vidhrdw/dec0.o $(OBJ)/drivers/dec0.o \
 	$(OBJ)/vidhrdw/citycon.o $(OBJ)/drivers/citycon.o \
+	$(OBJ)/vidhrdw/tmnt.o $(OBJ)/drivers/tmnt.o \
+    	$(OBJ)/vidhrdw/konamiic.o \
 
 
 # MAME specific core objs
