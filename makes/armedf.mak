@@ -7,13 +7,15 @@ COREDEFS += -DTINY_COMPILE=1
 COREDEFS += -DTINY_NAME="driver_armedf\
     ,driver_momoko\
     ,driver_baddudes\
-    ,driver_avspirit"
+    ,driver_avspirit\
+    ,driver_citycon"
 
 
 COREDEFS += -DTINY_POINTER="&driver_armedf\
     ,&driver_momoko\
     ,&driver_baddudes\
-    ,&driver_avspirit"
+    ,&driver_avspirit\
+    ,&driver_citycon"
 
 # uses these CPUs
 CPUS+=M6809@
@@ -24,6 +26,7 @@ CPUS+=M6803@
 CPUS+=M68000@
 CPUS+=M6502@
 CPUS+=H6280@
+CPUS+=M6809E@
 
 # uses these SOUNDs
 SOUNDS+=YM2610@
@@ -35,6 +38,7 @@ SOUNDS+=YM3812@
 SOUNDS+=DAC@
 SOUNDS+=OKIM6295@
 SOUNDS+=YM2151@
+SOUNDS+=AY8910@
 
 
 DRVLIBS = \
@@ -43,16 +47,8 @@ DRVLIBS = \
 	$(OBJ)/vidhrdw/momoko.o $(OBJ)/drivers/momoko.o \
 		$(OBJ)/vidhrdw/lkage.o \
 	$(OBJ)/machine/dec0.o $(OBJ)/vidhrdw/dec0.o $(OBJ)/drivers/dec0.o \
-        
+	$(OBJ)/vidhrdw/citycon.o $(OBJ)/drivers/citycon.o \
 
-#$(OBJ)/machine/ticket.o \ SHOULD LEAVE        
-		
-#$(OBJ)/vidhrdw/taito_f3.o $(OBJ)/sndhrdw/taito_f3.o $(OBJ)/drivers/taito_f3.o \
-#DRVLIBS = \
-#	$(OBJ)/konami.a \
-	
-#$(OBJ)/konami.a: \
-#$(OBJ)/vidhrdw/gberet.o $(OBJ)/drivers/gberet.o \
 
 # MAME specific core objs
 COREOBJS += $(OBJ)/tiny.o $(OBJ)/cheat.o
