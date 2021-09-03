@@ -288,9 +288,9 @@ const struct
 } cpuintrf_map[] =
 {
 	{ CPU_DUMMY, dummy_get_info },
-
+#if (HAS_Z80)
 	{ CPU_Z80, z80_get_info },
-
+#endif
 #if (HAS_Z180)
 	{ CPU_Z180, z180_get_info },
 #endif

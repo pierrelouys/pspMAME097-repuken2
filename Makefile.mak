@@ -33,8 +33,6 @@ OBJ_DRIVERS = $(OBJ)/drivers
 OBJ_MACHINE = $(OBJ)/machine
 OBJ_SNDHRDW = $(OBJ)/sndhrdw
 OBJ_VIDEO   = $(OBJ)/vidhrdw
-
-
 #------------------------------------------------------------------------------
 # Compiler Defines
 #------------------------------------------------------------------------------
@@ -101,8 +99,7 @@ SOUNDOBJS = $(OBJ)/sndintrf.o $(OBJ_SOUND)/streams.o $(OBJ)/sound/flt_vol.o $(OB
 
 # include the various .mak files
 include ./makes/$(TARGET).mak
-include $(SRC)/_cpu.mak
-include $(SRC)/_sound.mak
+include $(SRC)/rules.mak
 include $(SRC)/_emu.mak
 include $(SRC)/$(OSD)/_$(OSD).mak
 
