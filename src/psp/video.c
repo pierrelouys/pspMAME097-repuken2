@@ -1180,7 +1180,7 @@ void osd_update_video_and_audio(struct mame_display *display)
 			#else
 			{
 				/* wait for video sync but use normal throttling */
-				if (wait_vsync){	v_sync();}
+				//if (wait_vsync){	v_sync();}
 			#endif
 
 				curr = osd_cycles();
