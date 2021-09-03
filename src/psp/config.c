@@ -59,11 +59,11 @@ static char *dos_strip_extension(char *filename);
 //extern int triple_buffer;
 extern /*int*/UINT8 wait_vsync;
 extern /*int*/UINT8 limit_max_speed;
+extern int throttle;
 //extern float screen_aspect;
 //extern int keep_aspect;
 
 extern int frameskip,autoframeskip;
-//extern int throttle;
 //extern int vscanlines, hscanlines;
 //extern int video_sync;
 //extern int stretch;
@@ -1075,7 +1075,7 @@ static void parse_cmdline( int argc, char **argv, int game_index )
 
 	wait_vsync      = setting.vsync_ON_OFF;
 	ui_show_fps_set(setting.show_fps_ON_OFF);
-	limit_max_speed = setting.limit_ON_OFF;
+	throttle = setting.limit_ON_OFF;
 
 	enable_sound =soundcard;//	soundcard =*/setting.sound_ON_OFF;
 

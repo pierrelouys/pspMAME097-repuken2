@@ -160,7 +160,7 @@ static /*int*/UINT8 bitmap_depth;
 //static /*int*/UINT8 video_sync;
 /*static*/ /*int*/UINT8 wait_vsync;
 UINT8 limit_max_speed;
-#define USE_throttle 0
+#define USE_throttle 1
 #if (1==USE_throttle)
 int throttle;       /* toggled by F10 */
 #endif
