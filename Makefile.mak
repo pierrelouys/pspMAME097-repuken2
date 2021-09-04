@@ -33,6 +33,7 @@ OBJ_DRIVERS = $(OBJ)/drivers
 OBJ_MACHINE = $(OBJ)/machine
 OBJ_SNDHRDW = $(OBJ)/sndhrdw
 OBJ_VIDEO   = $(OBJ)/vidhrdw
+
 #------------------------------------------------------------------------------
 # Compiler Defines
 #------------------------------------------------------------------------------
@@ -100,8 +101,143 @@ SOUNDOBJS = $(OBJ)/sndintrf.o $(OBJ_SOUND)/streams.o $(OBJ)/sound/flt_vol.o $(OB
 # include the various .mak files
 include ./makes/$(TARGET).mak
 include $(SRC)/rules.mak
-include $(SRC)/_emu.mak
-include $(SRC)/$(OSD)/_$(OSD).mak
+include $(SRC)/$(OSD)_sound/_psp_sound.mak
+
+# only PSP specific output files and rules
+OSOBJS = \
+	$(OBJ)/psp/psp.o \
+	$(OBJ)/psp/osd_cycles.o \
+	$(OBJ)/psp/video.o \
+	$(OBJ)/psp/psp_font.o \
+	$(OBJ)/psp/sound.o \
+	$(OBJ)/psp/input.o \
+	$(OBJ)/psp/ticker.o \
+	$(OBJ)/psp/config.o \
+	$(OBJ)/psp/fileio.o \
+	$(OBJ)/psp/pspmain.o \
+	$(OBJ)/psp/psp_video.o \
+	$(OBJ)/psp/menu.o \
+	$(OBJ)/psp/psp_data.o \
+
+# the core object files (without target specific objects;
+# those are added in the target.mak files)
+COREOBJS += \
+	$(OBJ)/mame.o \
+
+## [tilemap]標準TILEMAP、使わないなら１(自動設定)。(基本は１)
+ifneq ($(filter NO_TILEMAP,$(PSP_EXTENSION_OPTS)),)
+	OPT_DEFS += -DLINK_TILEMAP=0
+else
+	OPT_DEFS += -DLINK_TILEMAP=1
+	COREOBJS += $(OBJ)/tilemap.o 
+endif
+
+COREOBJS += \
+	$(OBJ)/version.o \
+    $(OBJ)/drawgfx.o \
+	$(OBJ)/common.o \
+	$(OBJ)/usrintrf.o \
+	$(OBJ)/ui_text.o \
+	$(OBJ)/cpuintrf.o \
+	$(OBJ)/cpuexec.o \
+	$(OBJ)/cpuint.o \
+	$(OBJ)/memory.o \
+	$(OBJ)/timer.o \
+	$(OBJ)/palette.o \
+	$(OBJ)/input.o \
+	$(OBJ)/inptport.o \
+	$(OBJ)/config.o \
+	$(OBJ_VIDEO)/generic.o \
+	$(OBJ)/vidhrdw/vector.o \
+	$(OBJ)/machine/eeprom.o \
+	$(OBJ)/profiler.o \
+	$(OBJ)/unzip.o \
+	$(OBJ)/audit.o \
+	$(OBJ)/fileio.o \
+	$(OBJ)/state.o \
+	$(OBJ)/datafile.o \
+    $(OBJ)/hiscore.o \
+	$(OBJ)/png.o \
+	$(OBJ)/hash.o \
+	$(OBJ)/sha1.o \
+	$(OBJ)/chd.o \
+	$(OBJ)/md5.o \
+	$(OBJ)/sound/wavwrite.o \
+	$(OBJ)/harddisk.o	
+
+## [state]ダミー（互換性向上の為）
+ifneq ($(filter STATE,$(PSP_EXTENSION_OPTS)),)
+	OPT_DEFS += -DLINK_STATE=1
+	COREOBJS += $(OBJ)/state.o 
+else
+	OPT_DEFS += -DLINK_STATE=0
+endif
+
+## [common eeprom]標準EEP-ROM
+ifneq ($(filter EEPROM,$(PSP_EXTENSION_OPTS)),)
+	OPT_DEFS += -DLINK_EEPROM=1
+	OPT_DEFS += -DLINK_NVRAM=1
+	COREOBJS += $(OBJ)/machine/eeprom.o 
+else
+	OPT_DEFS += -DLINK_EEPROM=0
+endif
+
+## [cheat]ダミー（互換性向上の為）
+OPT_DEFS += -DLINK_CHEAT=0
+
+#------------------------------------------------------------------------------
+# Utilities
+#------------------------------------------------------------------------------
+
+ifeq ($(PSPSDK),)
+MD = -mkdir
+RM = -rm
+else
+MD = -mkdir.exe
+RM = -rm.exe
+endif
+
+#------------------------------------------------------------------------------
+# PSPSDK settings
+#------------------------------------------------------------------------------
+
+## [専用 icon指定]の場合
+ifneq ($(filter ICON,$(PSP_EXTENSION_OPTS)),)
+	PSP_EBOOT_ICON = icon/$(TARGET).png
+endif
+
+## タイトルが無い場合に設定
+ifeq ($(PSP_EBOOT_TITLE),)
+PSP_EBOOT_TITLE = "MAME 0.97 $(TARGET)"
+endif
+
+## 配布ソース(zip size)が大きくなりすぎるので、暫定的にアイコン共通
+PSP_EBOOT_ICON = ICON0.PNG
+
+EXTRA_TARGETS = maked_directry EBOOT.PBP # copy_bak_pbp
+EXTRA_CLEAN = pspclean
+
+#------------------------------------------------------------------------------
+# Configurations
+#------------------------------------------------------------------------------
+
+#SPRITE_OLD = 1
+
+#↓カーネルモードにしたいなら#を外してコンパイルしてね。
+#KERNEL_MODE = 1
+
+
+ifdef KERNEL_MODE
+CDEFS += -DKERNEL_MODE=1
+endif
+
+#------------------------------------------------------------------------------
+# Library
+#------------------------------------------------------------------------------
+
+USE_PSPSDK_LIBC = 1
+
+LIBS = -lm -lc -lpspaudio -lpspgu -lpsppower -lpsprtc
 
 #------------------------------------------------------------------------------
 # Object Directory
@@ -125,7 +261,6 @@ OBJDIRS += \
 
 CDEFS += $(CPUDEFS) $(SOUNDDEFS) $(COREDEFS) $(DRVDEFS) $(OPT_DEFS)
 OBJS  += $(CPUOBJS) $(SOUNDOBJS) $(COREOBJS) $(DRVLIBS) $(OSOBJS) $(ZLIB) $(EXPAT)
-
 
 #------------------------------------------------------------------------------
 # Include build.mak for PSPSDK

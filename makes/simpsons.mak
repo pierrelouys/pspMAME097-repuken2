@@ -1,5 +1,3 @@
-PSP_EBOOT_TITLE = pspMame
-
 #OPT_DEFS += -DLINK_ROT=1
 
 # a tiny compile is without Neogeo games
