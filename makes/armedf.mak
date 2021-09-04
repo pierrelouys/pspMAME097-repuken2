@@ -1,6 +1,4 @@
-PSP_EBOOT_TITLE = pspMame experiment
-
-#OPT_DEFS += -DLINK_ROT=1
+#OPT_DEFS += -DLINK_ROT=360
 
 # a tiny compile is without Neogeo games
 COREDEFS += -DTINY_COMPILE=1

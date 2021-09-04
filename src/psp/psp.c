@@ -33,7 +33,7 @@ extern int cli_frontend_init(int argc, char **argv);
 
 #if (1==DEBUG_MAME_MEMORY_CHECK)
 
-static UINT32 start_size, end_size;
+UINT32 start_size, end_size;
 
 //============================================================
 //	check_free_memory

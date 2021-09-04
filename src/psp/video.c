@@ -315,9 +315,8 @@ static void update_palette(struct mame_display *display)
 
 static void init_palette( int colors )
 {
-
-//#ifdef PSP_VRAM_BLIT
-#if 0
+//#define PSP_VRAM_BLIT
+#ifdef PSP_VRAM_BLIT
 /* この変更でさらに「重い...」だがメインメモリは(256kBytes)節約出来る筈。 */
 /* 例えば rezon は たったの 128kBytes 足りないだけで動かない。(ADJUST_GU_MEMORY_KB:psp_video.h) */
 
@@ -627,60 +626,9 @@ if(video_swapxy){
         }
         else { //NORMAL, SIN ROTACION
 
-         switch(gameW){
-
-          case 240:
-
                 bitblit = bitblit_psp_direct_320;
                 masterVertStretch = (int)(272 / (272 - gameH) ) + 1;
                 masterHorzStretch = (int)(480 / (480 - gameW) ) -1;
-
-               break;
-
-          case 256:
-
-               bitblit = bitblit_psp_direct_256;
-               masterVertStretch = (int)(272 / (272 - gameH) ) + 1;
-               masterHorzStretch = (int)(480 / (480 - gameW) ) - 1;
-               masterHorizStretchRemain = (int)( 480 / (480 % (480 - gameW) ) ) - 6;
-
-               break;
-
-          case 288://not working properly, fix it
-
-               bitblit = bitblit_psp_direct_320_noAdjust;
-               masterVertStretch = (int)(272 / (272 - gameH) ) + 1;
-               masterHorzStretch = (int)(480 / (480 - gameW) );
-
-               masterScreenOffset = (512 * 0) + 24;
-
-               break;
-
-          case 304:
-
-               bitblit = bitblit_psp_direct_320_noAdjust;
-               masterVertStretch = (int)(272 / (272 - gameH) ) + 1;
-               masterHorzStretch = (int)(480 / (480 - gameW) );
-
-               masterScreenOffset = (512 * 0) + 12;
-
-               break;
-
-          case 320:
-
-                 bitblit = bitblit_psp_direct_320;
-                 masterVertStretch = (int)(272 / (272 - gameH) ) + 1;
-                 masterHorzStretch = (int)(480 / (480 - gameW) ) -1;
-
-               break;
-
-          default:
-
-                bitblit = bitblit_psp_direct_320;
-                masterVertStretch = (int)(272 / (272 - gameH) ) + 1;
-                masterHorzStretch = (int)(480 / (480 - gameW) ) -1;
-         }
-
       }//if !ROT
 
          break;//case 0

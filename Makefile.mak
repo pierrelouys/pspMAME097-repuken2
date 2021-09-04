@@ -208,7 +208,7 @@ endif
 
 ## タイトルが無い場合に設定
 ifeq ($(PSP_EBOOT_TITLE),)
-PSP_EBOOT_TITLE = "MAME 0.97 $(TARGET)"
+PSP_EBOOT_TITLE = MAME 0.97 $(TARGET)
 endif
 
 ## 配布ソース(zip size)が大きくなりすぎるので、暫定的にアイコン共通
