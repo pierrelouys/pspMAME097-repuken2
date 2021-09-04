@@ -230,7 +230,8 @@ int run_mame(int argc, char **argv)
 	{
 		psp_print_color(PSP_COLOR_RED);
 		psp_printf_bbb(
-			"             memory consumption report : \n\n"
+			"             メモリーリークですぅ\n"
+            " memory : \n\n"
 			" 開始 start                : %d bytes (0x%x bytes) .\n"
 			" 終了 end                  : %d bytes (0x%x bytes) .\n"
 			" 差分 difference           : %d bytes (0x%x bytes) .\n"

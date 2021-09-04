@@ -4141,7 +4141,7 @@ static DRIVER_INIT( cuebrckj )
 	shuffle(memory_region(REGION_GFX2),memory_region_length(REGION_GFX2));
 }
 
-GAME( 1989, cuebrckj, cuebrick, cuebrckj, mia,      cuebrckj, ROT0,  "Konami", "Cue Brick (World version D)" )
+GAME( 1989, cuebrckj, 0, cuebrckj, mia,      cuebrckj, ROT0,  "Konami", "Cue Brick (World version D)" )
 
 GAME( 1989, mia,      0,        mia,      mia,      mia,      ROT0,  "Konami", "M.I.A. - Missing in Action (version T)" )
 GAME( 1989, mia2,     mia,      mia,      mia,      mia,      ROT0,  "Konami", "M.I.A. - Missing in Action (version S)" )

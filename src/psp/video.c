@@ -151,7 +151,7 @@ static int xmultiply,ymultiply;
 
 static int frameskip_counter;
 static int frameskipadjust;
-//static int frames_displayed;
+static int frames_displayed;
 //static cycles_t start_time,end_time;	/* to calculate fps average on exit */
 
 static /*int*/u8 warming_up;
@@ -1324,7 +1324,6 @@ void osd_update_video_and_audio(struct mame_display *display)
 		pan_display( display );
 #endif
 
-#if 00
 		if (input_ui_pressed(IPT_UI_FRAMESKIP_INC))
 		{
 			if (autoframeskip)
@@ -1348,7 +1347,7 @@ void osd_update_video_and_audio(struct mame_display *display)
 
 			/* reset the frame counter every time the frameskip key is pressed, so */
 			/* we'll measure the average FPS on a consistent status. */
-		//	frames_displayed = 0;
+			frames_displayed = 0;
 		}
 
 		if (input_ui_pressed(IPT_UI_FRAMESKIP_DEC))
@@ -1371,18 +1370,17 @@ void osd_update_video_and_audio(struct mame_display *display)
 
 			/* reset the frame counter every time the frameskip key is pressed, so */
 			/* we'll measure the average FPS on a consistent status. */
-		//	frames_displayed = 0;
+			frames_displayed = 0;
 		}
 
-		if (input_ui_pressed(IPT_UI_THROTTLE))
-		{
-			throttle ^= 1;
+		// if (input_ui_pressed(IPT_UI_THROTTLE))
+		// {
+			// throttle ^= 1;
 
-			/* reset the frame counter every time the throttle key is pressed, so */
-			/* we'll measure the average FPS on a consistent status. */
-		//	frames_displayed = 0;
-		}
-#endif
+			// /* reset the frame counter every time the throttle key is pressed, so */
+			// /* we'll measure the average FPS on a consistent status. */
+		// //	frames_displayed = 0;
+		// }
 	}
 
 	// if the LEDs have changed, update them
