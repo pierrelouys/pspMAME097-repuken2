@@ -624,40 +624,6 @@ if(video_swapxy){
           bitblit = bitblit_psp_direct_rotated_320_240;
           masterHorzStretch = (int)(480 / (480 - gameW) ) /*+ 1*/;
           masterVertStretch = (int)(272 / (272 - gameH) ) + 1;
-
-          //masterScreenOffset = (512 * 8) + 30;
-
-          #if 0
-          switch(gameW){
-
-          case 224: //240x224 -- xROT ---> 224x240
-
-                bitblit = bitblit_psp_direct_rotated_320_240;
-                masterVertStretch = (int)(272 / (272 - gameH) ) + 1;
-                masterHorzStretch = (int)(480 / (480 - gameW) ) /*+ 1*/;
-
-                masterScreenOffset = (512 * 0) + 15;
-
-               break;
-
-          case 256:
-
-               bitblit = bitblit_psp_direct_rotated_320_240;
-               masterVertStretch = (int)(272 / (272 - gameH) ) + 1;
-               masterHorzStretch = (int)(480 / (480 - gameW) ) - 1;
-               masterHorizStretchRemain = (int)( 480 / (480 % (480 - gameW) ) ) - 6;
-
-               break;
-
-          default:
-
-               bitblit = bitblit_psp_direct_rotated_320_240;
-               masterVertStretch = (int)(272 / (272 - gameH) ) + 1;
-               masterHorzStretch = (int)(480 / (480 - gameW) ) -1;
-
-          }//switch
-         #endif
-
         }
         else { //NORMAL, SIN ROTACION
 
@@ -719,38 +685,7 @@ if(video_swapxy){
 
          break;//case 0
 
-   case 1://SCR_STRETCH_240_320
-         bitblit = bitblit_psp_direct_320;
-         masterVertStretch = (int)(272 / (272 - gameH) ) + 1;
-         masterHorzStretch = (int)(480 / (480 - gameW) ) -1;
-         break;
-
-   case 2://SCR_STRETCH_240_320_NO_ADJUST
-         bitblit = bitblit_psp_direct_320_noAdjust;
-         masterVertStretch = (int)(272 / (272 - gameH) ) + 1;
-         masterHorzStretch = (int)(480 / (480 - gameW) );
-
-         masterScreenOffset = (512 * 0) + 20;
-
-         break;
-
-   case 3://SCR_STRETCH_256
-         bitblit = bitblit_psp_direct_256;
-         masterVertStretch = (int)(272 / (272 - gameH) ) + 1;
-         masterHorzStretch = (int)(480 / (480 - gameW) ) - 1;
-         masterHorizStretchRemain = (int)( 480 / (480 % (480 - gameW) ) ) - 6;
-         break;
-
-
-   case 4://SCR_STRETCH_288
-         bitblit = bitblit_psp_direct_288;
-         masterVertStretch = (int)(272 / (272 - gameH) ) + 1;
-         masterHorzStretch = (int)(480 / (480 - gameW) );
-         masterHorizStretchRemain = (int)( 480 / (480 % (480 - gameW) ) );
-         break;
-
-
-   case 5://SRC_X1
+   case 1://SRC_X1
 
          if(video_swapxy)
           bitblit = bitblit_psp_direct_rotated;

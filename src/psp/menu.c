@@ -959,17 +959,9 @@ void psp_menu(void)
 //#if (0!=LINK_ROT)
 {
 static const char *scr_names[] = {
-	"[666] Auto stretch image",
-	"[666] force stretch image 240-320",
-//	"[H] stretch image",
-	"[666] force stretch image 240-320 NO_ADJUST",
-	"[666] force stretch image 256",
-	"[666] force stretch image 288",
-	"[666] force x1-normal",
-//	"[H] stretch & aspect keep",
-	"[V] rotate (who knows!?)",
-//	"[V] rotate & stretch",
-//	"[V] rotate & stretch & aspect keep",
+	"Auto stretch image",
+	"Force x1-normal",
+	"Rotate",
 };
 		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_SCREEN_SIZE+(1))*(MENU1_Y_SPACER)), setting.color[3], "SCREEN MODE:  %s", scr_names[setting.screensize]);
 }

@@ -49,26 +49,10 @@ enum{
 
 enum{
 	SCR_AUTO_STRETCH=0,              //0
-	SCR_STRETCH_240_320,              //1
-	SCR_STRETCH_240_320_NO_ADJUST,      //2
-//	SCR_STRETCH_ASPECT,
-	SCR_STRETCH_256,                    //3
-	SCR_STRETCH_288,                    //4
-	SCR_X1,                             //5
-	SCR_ROT,                            //6
-//	SCR_ROT_STRETCH,
-//	SCR_ROT_STRETCH_ASPECT,
-	SCR_MAX,//SCR_END,
+	SCR_X1,                          //1
+	SCR_ROT,                         //2
+	SCR_MAX,                         //SCR_END,
 };
-//enum{
-//	SCR_MODE01=0,
-//	SCR_MODE02,
-//	SCR_MODE03,
-//	SCR_MODE04,
-//	SCR_MODE05,
-//	SCR_MODE06,
-//	SCR_MAX,
-//};
 
 #define CONFIG_VER	"PSPMAME_Z00"
 
