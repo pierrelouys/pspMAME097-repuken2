@@ -80,6 +80,8 @@ enum
 	UI_calibrate,
 	UI_bookkeeping,
 	UI_inputspecific,
+	UI_savestate,
+	UI_loadstate,
 	UI_gameinfo,
 	UI_history,
 	UI_resetgame,

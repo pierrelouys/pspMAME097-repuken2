@@ -3202,7 +3202,9 @@ int memcard_menu(struct mame_bitmap *bitmap, int selection)
 
 
 #ifndef MESS
-enum { UI_SWITCH = 0,UI_DEFGROUP,UI_CODE,UI_ANALOG,UI_CALIBRATE,
+enum { UI_SWITCH = 0,UI_DEFGROUP,UI_CODE,
+        UI_SAVE_STATE,UI_LOAD_STATE,
+        UI_ANALOG,UI_CALIBRATE,
 		UI_STATS,UI_GAMEINFO, UI_HISTORY,
 		UI_CHEAT,UI_RESET,UI_MEMCARD,UI_EXIT,UI_QUIT_GAME };
 #else
@@ -3296,6 +3298,8 @@ static void setup_menu_init(void)
 
 	append_menu(UI_inputgeneral, UI_DEFGROUP);
 	append_menu(UI_inputspecific, UI_CODE);
+	append_menu(UI_savestate, UI_SAVE_STATE);
+	append_menu(UI_loadstate, UI_LOAD_STATE);
 
 	if (has_dipswitches())
 		append_menu(UI_dipswitches, UI_SWITCH);
@@ -3479,6 +3483,14 @@ static int setup_menu(struct mame_bitmap *bitmap, int selected)
 				sel = -1;
 				psp_loop = 1;
                 break;
+            case UI_SAVE_STATE:
+				sel = -1;
+        		do_loadsave(bitmap, LOADSAVE_SAVE);
+                break;      
+            case UI_LOAD_STATE:
+				sel = -1;
+        		do_loadsave(bitmap, LOADSAVE_LOAD);
+                break;             
 		}
 	}
 

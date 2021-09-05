@@ -85,6 +85,8 @@ static const char *mame_default_text[] =
 	"Bookkeeping Info",
 
 	"Input (this " CAPSTARTGAMENOUN")",
+	"Save State",
+	"Load State",
 	CAPSTARTGAMENOUN " Information",
 	CAPSTARTGAMENOUN " History",
 	"Reset " CAPSTARTGAMENOUN,

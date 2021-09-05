@@ -412,6 +412,8 @@ struct rc_option config_opts[] =
 
 	// name, shortname, type, dest, deflt, min, max, func, help
 	/* misc */
+	{ "skip_disclaimer", NULL, rc_bool, &options.skip_disclaimer, "0", 0, 0, NULL, "skip displaying the disclaimer screen" },
+	{ "skip_gameinfo", NULL, rc_bool, &options.skip_gameinfo, "0", 0, 0, NULL, "skip displaying the game info screen" },
 	{ "skip_validitychecks", NULL, rc_bool, &options.skip_validitychecks, "1", 0, 0, NULL, "skip doing the code validity checks" },
 	{ NULL,	NULL, rc_end, NULL, NULL, 0, 0,	NULL, NULL }	
 };
@@ -434,6 +436,12 @@ static void parse_cmdline( int argc, char **argv, int game_index )
 	usestereo					= get_bool( "config", "stereo", NULL, 1 );
 	attenuation 				= get_int( "config", "volume", "vol", 0 );
 	sampleratedetect			= get_bool( "config", "sampleratedetect", NULL, 1 );
+
+	/* process language configuration */
+	options.skip_disclaimer		= get_bool( "config", "skip_disclaimer", NULL, 1 );
+	options.skip_gameinfo		= get_bool( "config", "skip_gameinfo", NULL, 0 );
+	options.skip_validitychecks	= get_bool( "config", "skip_validitychecks", NULL, 1 );
+
 #if (1==LINK_BIOS)
 	s_bios						= get_string( "config", "bios", NULL, "default", NULL, NULL, NULL );
 #endif //(1==LINK_BIOS)
