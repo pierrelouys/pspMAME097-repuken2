@@ -405,6 +405,16 @@ static void get_rc_opts( struct rc_option *p_rcopt )
 	}
 }
 
+struct rc_option config_opts[] =
+{
+	{ NULL, NULL, rc_link, frontend_opts, NULL, 0, 0, NULL, NULL },
+	{ NULL, NULL, rc_link, fileio_opts, NULL, 0, 0, NULL, NULL },
+
+	// name, shortname, type, dest, deflt, min, max, func, help
+	/* misc */
+	{ "skip_validitychecks", NULL, rc_bool, &options.skip_validitychecks, "1", 0, 0, NULL, "skip doing the code validity checks" },
+	{ NULL,	NULL, rc_end, NULL, NULL, 0, 0,	NULL, NULL }	
+};
 
 static void parse_cmdline( int argc, char **argv, int game_index )
 {

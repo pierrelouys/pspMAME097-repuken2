@@ -7,7 +7,8 @@ COREDEFS += -DTINY_NAME="driver_armedf\
     ,driver_baddudes\
     ,driver_avspirit\
     ,driver_citycon\
-    ,driver_ssriders"
+    ,driver_ssriders\
+    ,driver_blandia"
 
 
 COREDEFS += -DTINY_POINTER="&driver_armedf\
@@ -15,7 +16,8 @@ COREDEFS += -DTINY_POINTER="&driver_armedf\
     ,&driver_baddudes\
     ,&driver_avspirit\
     ,&driver_citycon\
-    ,&driver_ssriders"
+    ,&driver_ssriders\
+    ,&driver_blandia"
 
 # uses these CPUs
 CPUS+=M6809@
@@ -44,9 +46,11 @@ SOUNDS+=SAMPLES@
 SOUNDS+=K007232@
 SOUNDS+=K054539@
 SOUNDS+=UPD7759@
+SOUNDS+=X1_010@
 
 
 DRVLIBS = \
+	$(OBJ)/vidhrdw/seta.o $(OBJ)/drivers/seta.o \
 	$(OBJ)/vidhrdw/megasys1.o $(OBJ)/drivers/megasys1.o \
 	$(OBJ)/vidhrdw/armedf.o $(OBJ)/drivers/armedf.o \
 	$(OBJ)/vidhrdw/momoko.o $(OBJ)/drivers/momoko.o \
