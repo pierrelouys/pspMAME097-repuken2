@@ -2,7 +2,7 @@ PSP_LARGE_MEMORY = 1
 #BUILD_PRX = 1
 
 ifeq ($(TARGET),)
-TARGET = armedf
+TARGET = mame
 endif
 
 # customize option
@@ -285,14 +285,14 @@ $(OBJ)/libz.a: \
 	$(OBJ)/zlib/inffast.o \
 	$(OBJ)/zlib/zutil.o
 
-# zlib only sized optimized (-O1)
+# zlib, expat only size optimized (-Os)
 $(OBJ)/zlib/%.o: $(SRC)/zlib/%.c
 	@echo Compiling Zlib $<...
-	@$(CC) $(CDEFS) -O1 $(CFLAGS) -c $< -o $@
+	@$(CC) $(CDEFS) -Os $(CFLAGS) -c $< -o $@
 
 $(OBJ)/expat/%.o: $(SRC)/expat/%.c
 	@echo Compiling Expat $<...
-	@$(CC) $(CDEFS) -O1 -c $< -o $@
+	@$(CC) $(CDEFS) -Os -c $< -o $@
 
 # speed optimized (-O3)
 $(OBJ)/%.o: $(SRC)/%.c
