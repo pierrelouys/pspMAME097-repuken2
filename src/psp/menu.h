@@ -48,9 +48,8 @@ enum{
 };
 
 enum{
-	SCR_AUTO_STRETCH=0,              //0
-	SCR_X1,                          //1
-	SCR_ROT,                         //2
+	SCR_X1,                          //0
+	SCR_ROT,                         //1
 	SCR_MAX,                         //SCR_END,
 };
 

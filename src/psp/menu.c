@@ -951,8 +951,7 @@ void psp_menu(void)
 //#if (0!=LINK_ROT)
 {
 static const char *scr_names[] = {
-	"Auto stretch image",
-	"Force x1-normal",
+	"x1-normal",
 	"Rotate",
 };
 		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_SCREEN_SIZE+(1))*(MENU1_Y_SPACER)), setting.color[3], "SCREEN MODE:  %s", scr_names[setting.screensize]);

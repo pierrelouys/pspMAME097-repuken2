@@ -73,10 +73,7 @@ UINT32 *blit_lookup_low/*[ 65536 ]*/;
 //}
 
 static int g_offset_dx_dy;
-static UINT8 my_show_fps;
-
-
-
+//static UINT8 my_show_fps;
 
 static unsigned char *copyline_raw_direct( unsigned char *p_src, unsigned int n_width, int n_pixelmodulo )
 {
@@ -229,24 +226,24 @@ void bitblit_psp_direct( struct mame_bitmap *bitmap, int sx, int sy, int sw, int
 		p_src += n_lineoffset;
 		sh--;
 	}
-	if (my_show_fps)
-	{
-		/* FPS •\Ž¦ */
-		//pline_buf =(void *)g_offset_dx_dy + (ppp_showframe?0:FRAMESIZE16);
-		/*psp_box_fill*/psp_box_clear( draw_frame,  8,  0, 8+(7*13), 0+(5+3) );//, 0x000000 /*DEF_COLOR0*//*0*/);
-	//	psp_print(      8,  0,                    0xffffff /*DEF_COLOR3*/, osd_FPS_text/*"Initialize"*/);
-		{	char *s=osd_FPS_text;
-		UINT16 x;	x=8;
-	//	UINT16 y;	y=0;
-			while (*s)
-			{
-				psp_putc_frame(draw_frame, x, 0/*y*/, *s, 0xffff/*color*/);
-				x += 7;
-				s++;
-			//	if (x >= SCR_WIDTH) break;
-			}
-		}
-	}
+	// if (my_show_fps)
+	// {
+		// /* FPS •\Ž¦ */
+		// //pline_buf =(void *)g_offset_dx_dy + (ppp_showframe?0:FRAMESIZE16);
+		// /*psp_box_fill*/psp_box_clear( draw_frame,  8,  0, 8+(7*13), 0+(5+3) );//, 0x000000 /*DEF_COLOR0*//*0*/);
+	// //	psp_print(      8,  0,                    0xffffff /*DEF_COLOR3*/, osd_FPS_text/*"Initialize"*/);
+		// {	char *s=osd_FPS_text;
+		// UINT16 x;	x=8;
+	// //	UINT16 y;	y=0;
+			// while (*s)
+			// {
+				// psp_putc_frame(draw_frame, x, 0/*y*/, *s, 0xffff/*color*/);
+				// x += 7;
+				// s++;
+			// //	if (x >= SCR_WIDTH) break;
+			// }
+		// }
+	// }
 	#if (1==PSP_CHACHE_WRITEBACKED_ALL)
 	// put back cache off and writeback Dcache
 	pline_buf = (u8*)CACHE_OFF(pline_buf);
@@ -292,7 +289,7 @@ int g_offset_in
 //	pline_buf =line_buf;
 	pline_buf =(unsigned char *)psp_frame_offs(draw_frame, g_offset_dx_dy);
 
-	my_show_fps=setting.show_fps_ON_OFF;
+//	my_show_fps=setting.show_fps_ON_OFF;
 
 //	if( sbpp == 15 ){	blitHV_sbpp = 16;		}
 //	else			{	blitHV_sbpp = sbpp;	}

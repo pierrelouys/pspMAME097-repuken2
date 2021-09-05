@@ -118,6 +118,7 @@ OSOBJS = \
 	$(OBJ)/psp/psp_video.o \
 	$(OBJ)/psp/menu.o \
 	$(OBJ)/psp/psp_data.o \
+	$(OBJ)/psp/blit.o \
 
 # the core object files (without target specific objects;
 # those are added in the target.mak files)

@@ -575,13 +575,9 @@ static void update_visible_area(struct mame_display *display)
 //			0, 0, 0, 0, 0 );
 //	}
 //	else
-	if(video_swapxy){
-      cmultiply = blit_setup_rot(gfx_width, gfx_height, bitmap_depth,video_attributes,video_flipx, video_flipy,
+	
+    cmultiply = blit_setup(gfx_width, gfx_height, bitmap_depth,video_attributes,video_flipx, video_flipy,
                             video_swapxy,((gfx_xoffset + (gfx_yoffset << 9)) << 1));
-	} else {
-     cmultiply = blit_setup(gfx_width, gfx_height, bitmap_depth,video_attributes,video_flipx, video_flipy,
-                            video_swapxy,((gfx_xoffset + (gfx_yoffset << 9)) << 1));
-	}
 }
 
 void setBlitMode(int bmode)
@@ -597,54 +593,7 @@ return blitMode;
 
 void blitPreConfigure()
 {
-//char deathrash[512];
-
-int gameW,gameH;
-
-//vis_max_x - vis_min_x + 1;
-
-
-if(video_swapxy){
-   gameW = Machine->visible_area.max_y - Machine->visible_area.min_y + 1;
-   gameH = Machine->visible_area.max_x - Machine->visible_area.min_x + 1;
-  }else {
-   gameW = Machine->visible_area.max_x - Machine->visible_area.min_x + 1;
-   gameH = Machine->visible_area.max_y - Machine->visible_area.min_y + 1;
-  }
-
-
- switch(blitMode){
-
-
-   case 0://SCR_AUTO_STRETCH
-
-        if(video_swapxy){ //C/ROTACION
-
-          bitblit = bitblit_psp_direct_rotated_320_240;
-          masterHorzStretch = (int)(480 / (480 - gameW) ) /*+ 1*/;
-          masterVertStretch = (int)(272 / (272 - gameH) ) + 1;
-        }
-        else { //NORMAL, SIN ROTACION
-
-                bitblit = bitblit_psp_direct_320;
-                masterVertStretch = (int)(272 / (272 - gameH) ) + 1;
-                masterHorzStretch = (int)(480 / (480 - gameW) ) -1;
-      }//if !ROT
-
-         break;//case 0
-
-   case 1://SRC_X1
-
-         if(video_swapxy)
-          bitblit = bitblit_psp_direct_rotated;
-         else
-          bitblit = bitblit_psp_direct_normal;
-
-         break;
-
-   default: bitblit = bitblit_psp_direct_320;
-  }
-
+    bitblit = bitblit_psp_direct;
 }
 
 

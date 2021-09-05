@@ -326,21 +326,18 @@ return 0;
 
 /* ‰½ŒÌ‚©‚±‚±‚ª‘¬‚¢ */
 
-//#include "driver.h"
-#if (0==LINK_ROT)
-	/* force NO ROTATE 00 mame_palettized 16 mode */
-	#include "blit00_PAL.c"
-#elif (360==LINK_ROT)
-	/* MAME ROTATE 360    mame_palettized 16 mode */
-	#include "blitHV_PAL.c"
-#elif (1000==LINK_ROT)
-	/* force NO ROTATE 00 mame_palettized 16 mode()gu-blit */
-	#include "blit1000_PAL.c"
-#elif (9360==LINK_ROT)
-	/* MAME ROTATE 360    mame_palettized/direct mode */
-	#include "blitHV_ALL.c"
-#endif // LINK_ROT
-
-
-
+// //#include "driver.h"
+// #if (0==LINK_ROT)
+	// /* force NO ROTATE 00 mame_palettized 16 mode */
+	// #include "blit00_PAL.c"
+// #elif (360==LINK_ROT)
+	// /* MAME ROTATE 360    mame_palettized 16 mode */
+	// #include "blitHV_PAL.c"
+// #elif (1000==LINK_ROT)
+	// /* force NO ROTATE 00 mame_palettized 16 mode()gu-blit */
+	// #include "blit1000_PAL.c"
+// #elif (9360==LINK_ROT)
+	// /* MAME ROTATE 360    mame_palettized/direct mode */
+	// #include "blitHV_ALL.c"
+// #endif // LINK_ROT
 
