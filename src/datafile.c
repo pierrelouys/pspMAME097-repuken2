@@ -601,8 +601,8 @@ int load_driver_history (const struct GameDriver *drv, char *buffer, int bufsize
                 /* create index if necessary */
                 if (hist_idx)
                         history = 1;
-                else
-                        history = (index_datafile (&hist_idx) != 0);
+                // else
+                        // history = (index_datafile (&hist_idx) != 0);
 
                 /* load history text */
                 if (hist_idx)
@@ -622,36 +622,37 @@ int load_driver_history (const struct GameDriver *drv, char *buffer, int bufsize
                 ParseClose ();
         }
 
-        if(!mameinfo_filename)
-                mameinfo_filename = "mameinfo.dat";
+        // if(!mameinfo_filename)
+                // mameinfo_filename = "mameinfo.dat";
 
-        /* try to open mameinfo datafile */
-        if (ParseOpen (mameinfo_filename))
-        {
-                /* create index if necessary */
-                if (mame_idx)
-                        mameinfo = 1;
-                else
-                        mameinfo = (index_datafile (&mame_idx) != 0);
+        // /* try to open mameinfo datafile */
+        // if (ParseOpen (mameinfo_filename))
+        // {
+                // /* create index if necessary */
+                // if (mame_idx)
+                        // mameinfo = 1;
+                // else
+                        // mameinfo = (index_datafile (&mame_idx) != 0);
 
-                /* load informational text (append) */
-                if (mame_idx)
-                {
-                        int len = strlen (buffer);
-                        const struct GameDriver *gdrv;
+                // /* load informational text (append) */
+                // if (mame_idx)
+                // {
+                        // int len = strlen (buffer);
+                        // const struct GameDriver *gdrv;
 
-                        gdrv = drv;
-                        do
-                        {
-                                err = load_datafile_text (gdrv, buffer+len, bufsize-len,
-                                                                                  mame_idx, DATAFILE_TAG_MAME);
-                                gdrv = gdrv->clone_of;
-                        } while (err && gdrv);
+                        // gdrv = drv;
+                        // do
+                        // {
+                                // err = load_datafile_text (gdrv, buffer+len, bufsize-len,
+                                                                                  // mame_idx, DATAFILE_TAG_MAME);
+                                // gdrv = gdrv->clone_of;
+                        // } while (err && gdrv);
 
-                        if (err) mameinfo = 0;
-                }
-                ParseClose ();
-        }
+                        // if (err) mameinfo = 0;
+                // }
+                // ParseClose ();
+        // }
 
-        return (history == 0 && mameinfo == 0);
+        // return (history == 0 && mameinfo == 0);
+        return (history == 0);
 }
