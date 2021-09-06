@@ -11,10 +11,6 @@
 #include "driver.h"
 //#include "ticker.h"
 
-/* MAME終了時にメモリーがきちんと開放されたかチェックする(1==ON, 0==OFF) */
-  #define DEBUG_MAME_MEMORY_CHECK 1
-//#define DEBUG_MAME_MEMORY_CHECK 0
-
 //============================================================
 //	PROTOTYPES
 //============================================================

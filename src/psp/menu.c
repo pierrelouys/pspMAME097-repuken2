@@ -241,8 +241,16 @@ static void psp_frame(const char *msg0, const char *msg1)
 
 void Draw_All(void)
 {                                                         //○：実行 Ｌ：設定メニュー △：エミュレータの終了
-	psp_frame(/*NULL*/drivers[dlist_curpos]->name/*mes*/, "◯: run game L: settings △: exit");
+    // display title, year, manufacturer of game in title bar    
+    char game_info[80];
+    sprintf(game_info, "%s (%s, %s)", 
+    drivers[dlist_curpos]->name, 
+    drivers[dlist_curpos]->manufacturer, 
+    drivers[dlist_curpos]->year);
 
+	psp_frame(game_info, "◯: run game L: settings △: exit");
+
+#if (1==DEBUG_MAME_MEMORY_CHECK)
     // show available mem
     if (end_size > 0) 
         {
@@ -250,6 +258,7 @@ void Draw_All(void)
         sprintf(memInfo,"Free memory: %d MB",(end_size / (1024*1024)) );
     	psp_print(333, 27, setting.color[3], memInfo);
         }
+#endif //(1==MEMORY_CHECK)
 
 	int i;
 	// ゲームリスト
@@ -259,17 +268,8 @@ void Draw_All(void)
 		if (i<dlist_num) {
 		    int col;
 			col = setting.color[(i==dlist_curpos)?3:2];
-#ifdef namcoNA
-			/*namcoNA*/
-			psp_print(((4-3)*8)-2, (((i-dlist_start)+4)*10)+((i>10)?5:0), col, drivers[i]->description);
-#else
-	#ifdef namcos86
-			psp_print(((4-3)*8)-2, ((i-dlist_start)+3)*14, col, drivers[i]->description);
-	#else
-//			psp_print(((4-3)*8)-2, ((i-dlist_start)+2)*10, col, drivers[i]->name);
+
 			psp_print(((4-3)*8)-2, ((i-dlist_start)+4)*10, col, drivers[i]->description);
-	#endif
-#endif
 		}
 		i++;
 	}

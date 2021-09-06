@@ -6,7 +6,10 @@ TARGET = mame
 endif
 
 # customize option
-OPT_DEFS = -D$(TARGET)=1
+OPT_DEFS  = -D$(TARGET)=1
+
+# MAME終了時にメモリーがきちんと開放されたかチェックする(1==ON, 0==OFF) 
+OPT_DEFS += -DDEBUG_MAME_MEMORY_CHECK=0
 
 #------------------------------------------------------------------------------
 # Configurations

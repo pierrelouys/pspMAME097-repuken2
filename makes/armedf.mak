@@ -9,7 +9,8 @@ COREDEFS += -DTINY_NAME="driver_armedf\
     ,driver_citycon\
     ,driver_ssriders\
     ,driver_blandia\
-    ,driver_simpsons, driver_simps4pa, driver_simpsn2p, driver_simps2pa, driver_simps2pj"
+    ,driver_simpsons, driver_simps4pa, driver_simpsn2p, driver_simps2pa, driver_simps2pj\
+    ,driver_bublbobl"
 
 
 COREDEFS += -DTINY_POINTER="&driver_armedf\
@@ -19,7 +20,8 @@ COREDEFS += -DTINY_POINTER="&driver_armedf\
     ,&driver_citycon\
     ,&driver_ssriders\
     ,&driver_blandia\
-    ,&driver_simpsons, &driver_simps4pa, &driver_simpsn2p, &driver_simps2pa, &driver_simps2pj"
+    ,&driver_simpsons, &driver_simps4pa, &driver_simpsn2p, &driver_simps2pa, &driver_simps2pj\
+    ,&driver_bublbobl"
 
 # uses these CPUs
 CPUS+=M6809@
@@ -50,6 +52,7 @@ SOUNDS+=K007232@
 SOUNDS+=K054539@
 SOUNDS+=UPD7759@
 SOUNDS+=X1_010@
+SOUNDS+=YM3526@
 
 
 DRVLIBS = \
@@ -64,6 +67,8 @@ DRVLIBS = \
 	$(OBJ)/vidhrdw/citycon.o $(OBJ)/drivers/citycon.o \
 	$(OBJ)/vidhrdw/tmnt.o $(OBJ)/drivers/tmnt.o \
     	$(OBJ)/vidhrdw/konamiic.o \
+	$(OBJ)/vidhrdw/bublbobl.o $(OBJ)/drivers/bublbobl.o $(OBJ)/machine/bublbobl.o \
+	$(OBJ)/machine/random.o \
 
 
 # MAME specific core objs
