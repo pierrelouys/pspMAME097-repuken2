@@ -22,6 +22,9 @@ int	gUnzipQuiet = 0;		/* flag controls error messages */
 #define MIN(x,y) ((x)<(y)?(x):(y))
 #endif
 
+#define printf psp_printf_bbb
+
+
 /* Print a error message */
 void errormsg(const char* extmsg, const char* usermsg, const char* zipname) {
 	/* Output to the user with no internal detail */

@@ -257,7 +257,7 @@ void psp_print_color(UINT16 set_color)
 
 void psp_printf_bbb(const char *text, ...)
 {
-	char *s, buf[256];
+	char *s, buf[4096];
 	int type;
 	va_list arg;
 

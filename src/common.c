@@ -16,6 +16,8 @@
 #include <stdio.h>
 //#define LOG_LOAD
 
+#define printf psp_printf_bbb
+
 
 
 /***************************************************************************
@@ -955,7 +957,7 @@ static void handle_missing_file(struct rom_load_data *romdata, const struct RomM
 	/* anything else is bad */
 	else
 	{
-		psp_printf_bbb("%-12s NOT FOUND\n", ROM_GETNAME(romp));
+		sprintf(&romdata->errorbuf[strlen(romdata->errorbuf)], "%-12s NOT FOUND\n", ROM_GETNAME(romp));
 		romdata->errors++;
 	}
 }
