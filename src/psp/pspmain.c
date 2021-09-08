@@ -153,20 +153,6 @@ void setCurDir(const char *path)
 	curdir_length = strlen(curdir);
 }
 
-int existDir(const char* dir)
-{
-if(sceIoDopen(dir) < 0)
-  return 0;
-
-return 1;
-}
-
-
-int mkDir(const char* dir)
-{
-return sceIoMkdir(dir,0777);
-}
-
 //============================================================
 //	メイン
 //============================================================
@@ -196,9 +182,14 @@ int main(int argc, char *argv[])
 #endif //KERNEL_MODE
 	_argv[_argc++] = getCurDir();
 
-//    if(!existDir(nvramDir)){
-//      mkDir(nvramDir);
-//    }
+    // create nonexisting dirs
+    // bad file descriptor workaround
+    char needed_dirs[4][256] = { "roms", "cfg", "nvram", "sta" };
+    for (int i = 0; i < 4; i++) {
+        if(sceIoDopen(needed_dirs[i]) < 0) {
+            sceIoMkdir(needed_dirs[i], 0777);
+        }
+    }
 
 	Get_DriverList();
 

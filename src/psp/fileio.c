@@ -94,8 +94,8 @@ struct rc_option fileio_opts[] =
 {
 	// name, shortname, type, dest, deflt, min, max, func, help
 	{ "MSDOS path and directory options", NULL, rc_seperator, NULL, NULL, 0, 0, NULL, NULL },
-	{ "rompath",			"rp", rc_string, &pathlist[FILETYPE_ROM].rawpath, "roms;ms0:/psp/game/mamepsp/roms", 0, 0, NULL, "path to romsets" },
-	{ "samplepath", 		"sp", rc_string, &pathlist[FILETYPE_SAMPLE].rawpath, "samples;ms0:/psp/game/mamepsp/samples", 0, 0, NULL, "path to samplesets" },
+	{ "rompath",			"rp", rc_string, &pathlist[FILETYPE_ROM].rawpath, "roms;ms0:/mame/roms", 0, 0, NULL, "path to romsets" },
+	{ "samplepath", 		"sp", rc_string, &pathlist[FILETYPE_SAMPLE].rawpath, "samples;ms0:/mame/samples", 0, 0, NULL, "path to samplesets" },
 #ifdef MSDOS
 	{ "inipath",			NULL, rc_string, &pathlist[FILETYPE_INI].rawpath, ".;ini", 0, 0, NULL, "path to ini files" },
 #else

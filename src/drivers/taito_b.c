@@ -3193,11 +3193,11 @@ MACHINE_DRIVER_END
 static MACHINE_DRIVER_START( silentd )
 
 	/* basic machine hardware */
-	MDRV_CPU_ADD(M68000, 12000000)	/* 16 MHz ??? */ //160000 orig
+	MDRV_CPU_ADD(M68000, 16000000)	/* 16 MHz ??? */
 	MDRV_CPU_PROGRAM_MAP(silentd_readmem,silentd_writemem)
 	MDRV_CPU_VBLANK_INT(silentd_interrupt,1)
 
-	MDRV_CPU_ADD(Z80, 3000000)	/* 4 MHz */
+	MDRV_CPU_ADD(Z80, 4000000)	/* 4 MHz */
 	MDRV_CPU_PROGRAM_MAP(sound_readmem,sound_writemem)
 
 	MDRV_FRAMES_PER_SECOND(60)
@@ -3218,7 +3218,7 @@ static MACHINE_DRIVER_START( silentd )
 	/* sound hardware */
 	MDRV_SPEAKER_STANDARD_MONO("mono")
 
-	MDRV_SOUND_ADD(YM2610, 6000000) //8000000
+	MDRV_SOUND_ADD(YM2610, 8000000)
 	MDRV_SOUND_CONFIG(ym2610_interface_rsaga2)
 	MDRV_SOUND_ROUTE(0, "mono", 0.25)
 	MDRV_SOUND_ROUTE(1, "mono", 1.0)

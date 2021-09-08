@@ -882,6 +882,13 @@ static mame_file *generic_fopen(int pathtype, const char *gamename, const char *
 	mame_file file, *newfile;
 	char tempname[256];
 
+    // bad file descriptor workaround: if open for read and no file, return null
+    if (flags == 1) {
+        if (!mame_faccess (filename, pathtype)) {
+                return NULL;
+        }
+    }
+
 #ifdef MESS
 	int is_absolute_path = osd_is_absolute_path(filename);
 	if (is_absolute_path)

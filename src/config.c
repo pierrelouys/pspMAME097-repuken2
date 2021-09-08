@@ -156,6 +156,14 @@ int config_load(const struct InputPort *input_ports_default, struct InputPort *i
 	curfile.file = mame_fopen(Machine->gamedrv->name, 0, FILETYPE_CONFIG, 0);
 	if (!curfile.file)
 		return 0;
+
+    // bad file descriptor workaround
+    // looks for file in paths listed in src/psp/fileio.c
+	if (!mame_faccess (Machine->gamedrv->name, FILETYPE_CONFIG))
+	{
+        return 0;
+    }
+
 	curfile.filetype = FILE_TYPE_GAME;
 
 	/* load the XML */
@@ -224,6 +232,13 @@ int config_load_default(const struct InputPortDefinition *input_ports_backup, st
 	curfile.file = mame_fopen("default", 0, FILETYPE_CONFIG, 0);
 	if (!curfile.file)
 		return 0;
+
+    // bad file descriptor workaround
+	if (!mame_faccess ("default", FILETYPE_CONFIG))
+	{
+        return 0;
+    }
+
 	curfile.filetype = FILE_TYPE_DEFAULT;
 
 	/* load the XML */
