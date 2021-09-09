@@ -509,8 +509,6 @@ printfnw_("vh_open");	//TMK
 	else
 	{
 
-osd_blitPreconfigure();
-
 psp_clear_screen();
 		/* initialize tilemaps */
 printfnw_("tilemap_init");	//TMK

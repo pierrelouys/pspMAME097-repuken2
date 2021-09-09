@@ -97,15 +97,6 @@ int osd_init(void)
 }
 
 
-int osd_blitPreconfigure(void)
-{
-//select OSD blitting routine
-blitPreConfigure();
-
-return 0;
-}
-
-
 //============================================================
 //	osd_exit
 //============================================================

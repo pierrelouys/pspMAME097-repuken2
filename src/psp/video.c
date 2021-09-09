@@ -558,12 +558,7 @@ static void update_visible_area(struct mame_display *display)
 
     default: bitblit = bitblit_psp_direct;
     }*/
-//bitblit = bitblit_psp_direct_320;
-
-
-
-
-
+bitblit = bitblit_psp_direct;
 
 //	if( show_debugger )
 //	{
@@ -588,12 +583,6 @@ blitMode = bmode;
 int getBlitMode(void)
 {
 return blitMode;
-}
-
-
-void blitPreConfigure()
-{
-    bitblit = bitblit_psp_direct;
 }
 
 

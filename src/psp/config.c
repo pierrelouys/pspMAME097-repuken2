@@ -14,6 +14,8 @@
 extern SETTING setting;
 extern int keyorientation;
 
+float get_config_float(const char *section, const char *name, float def);
+
 extern int blitMode;
 
 //============================================================
@@ -202,6 +204,69 @@ static int get_int( const char *section, const char *option, const char *shortcu
 				res = 0;
 			}
 		}
+	}
+	return res;
+}
+
+static float get_float( const char *section, const char *option, const char *shortcut, float def, float lower, float upper )
+{
+	int i;
+	float res;
+
+	res = def;
+
+	if (!ignorecfg)
+	{
+		/* if the option does not exist, create it */
+		if (get_config_float (section, option, 9999.0) == 9999.0)
+			set_config_float (section, option, def);
+
+		/* look into mame.cfg, [section] */
+		res = get_config_float (section, option, def);
+
+		if( game >= 0 )
+		{
+			/* look into mame.cfg, [srcfile] */
+			res = get_config_float (srcfile, option, res);
+
+			/* look into mame.cfg, [gamename] */
+			res = get_config_float ((char *)drivers[game]->name, option, res);
+		}
+	}
+
+	/* get it from the commandline */
+	for (i = 1; i < mame_argc; i++)
+	{
+		if( mame_argv[ i ][ 0 ] == '-' )
+		{
+			if( stricmp( &mame_argv[ i ][ 1 ], option ) == 0 ||
+				( shortcut && stricmp( &mame_argv[ i ][ 1 ], shortcut ) == 0 ) )
+			{
+				if( i + 1 < mame_argc && isdigit( mame_argv[ i + 1 ][ 0 ] ) )
+				{
+					i++;
+					res = atof( mame_argv[ i ] );
+				}
+				else
+				{
+					res = upper;
+				}
+			}
+			else if( strnicmp( &mame_argv[ i ][ 1 ], "no", 2 ) == 0 &&
+				( stricmp( &mame_argv[ i ][ 3 ], option ) == 0 || 
+				( shortcut && stricmp( &mame_argv[ i ][ 3 ], shortcut ) == 0 ) ) )
+			{
+				res = lower;
+			}
+		}
+	}
+	if( res < lower )
+	{
+		return lower;
+	}
+	else if( res > upper )
+	{
+		return upper;
 	}
 	return res;
 }
@@ -410,6 +475,11 @@ struct rc_option config_opts[] =
 	{ NULL, NULL, rc_link, frontend_opts, NULL, 0, 0, NULL, NULL },
 	{ NULL, NULL, rc_link, fileio_opts, NULL, 0, 0, NULL, NULL },
 
+	/* options supported by the mame core */
+	/* video */
+	{ "brightness", "bright", rc_float, &options.brightness, "1.0", 0.5, 2.0, NULL, "brightness correction"},
+	{ "pause_brightness", NULL, rc_float, &options.pause_bright, "0.65", 0.5, 2.0, NULL, "additional pause brightness"},
+
 	// name, shortname, type, dest, deflt, min, max, func, help
 	/* misc */
 	{ "skip_disclaimer", NULL, rc_bool, &options.skip_disclaimer, "0", 0, 0, NULL, "skip displaying the disclaimer screen" },
@@ -438,6 +508,7 @@ static void parse_cmdline( int argc, char **argv, int game_index )
 	sampleratedetect			= get_bool( "config", "sampleratedetect", NULL, 1 );
 
 	/* process language configuration */
+	options.pause_bright		= get_float( "config", "pause_brightness", NULL, 0.65, 0.5, 2.0 );
 	options.skip_disclaimer		= get_bool( "config", "skip_disclaimer", NULL, 1 );
 	options.skip_gameinfo		= get_bool( "config", "skip_gameinfo", NULL, 0 );
 	options.skip_validitychecks	= get_bool( "config", "skip_validitychecks", NULL, 1 );
@@ -799,3 +870,7 @@ static char *dos_strip_extension(char *filename)
 	return newname;
 }
 
+
+float get_config_float(const char *section, const char *name, float def) {
+	return (def);
+}
