@@ -4,10 +4,10 @@
 //
 //============================================================
 
+#include <pspgu.h>
+#include <pspdisplay.h>
 #include "driver.h"//#include "psp_main.h"
 #include "psp_video.h"
-
-
 
 //============================================================
 //	GLOBAL VARIABLES

@@ -1,3 +1,4 @@
+#include <pspaudio.h>
 #include "driver.h"
 //#include "pg.h"
 //#include "syscall.h"

@@ -4,15 +4,14 @@
 //
 //============================================================
 
+#include <pspctrl.h>
+#include <psppower.h>
+#include <time.h>
 #include "driver.h"
 //#include "psp_main.h"
-#include <time.h>
-
 //#include "pg.h"
 //#include "syscall.h"
 //#include "psp_menu.h"
-
-#include <stdio.h>
 
 //============================================================
 //	PSP module info section

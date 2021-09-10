@@ -13,7 +13,6 @@
 #include <stdarg.h>
 #include <ctype.h>
 
-#include <stdio.h>
 //#define LOG_LOAD
 
 #define printf psp_printf_bbb

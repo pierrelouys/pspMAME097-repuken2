@@ -1,3 +1,4 @@
+#include <pspctrl.h>
 #include "driver.h"
 //#include "psp_main.h"
 //#include "psp_menu.h"
