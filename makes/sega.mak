@@ -112,4 +112,4 @@ $(OBJ)/shared.a: \
 
 
 # MAME specific core objs
-COREOBJS += $(OBJ)/tiny.o $(OBJ)/cheat.o
+COREOBJS += $(OBJ)/tiny.o $(OBJ)/cheat.o $(OBJ)/artwork.o 

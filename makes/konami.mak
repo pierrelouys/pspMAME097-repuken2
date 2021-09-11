@@ -1,126 +1,36 @@
-PSP_EBOOT_TITLE = pspMame Deathrash Vol I
-
-#OPT_DEFS += -DLINK_ROT=1
-
 # a tiny compile is without Neogeo games
 COREDEFS += -DTINY_COMPILE=1
-COREDEFS += -DTINY_NAME="driver_gberet,driver_rushatck,driver_gberetb,driver_mrgoemon\
-,driver_empcity,driver_empcityu,driver_empcityj,driver_stfight\
-,driver_stfighta,driver_chiller,driver_crossbow,driver_cheyenne,driver_kungfum,driver_kungfud,driver_spartanx\
-,driver_kungfub,driver_kungfub2,driver_spelunkr,driver_spelnkrj,driver_spelunk2,driver_bloodbro\
-,driver_bloodbra,driver_weststry,driver_skysmash,driver_cabal,driver_cabal2,driver_cabalbl\
-,driver_toki,driver_tokia,driver_tokij,driver_tokiu,driver_tokib,driver_aliens\
-,driver_cbuster,driver_cbusterw,driver_cbusterj,driver_twocrude,driver_simpsons\
-,driver_truco,driver_trucocl,driver_vendetta\
-,driver_xmen,driver_splatter,driver_pitfall2,driver_pitfallu,driver_chplft,driver_chplftb\
-,driver_chplftbl,driver_wboy,driver_wbdeluxe,driver_wbml,driver_wbmljo,driver_wbmljb,driver_wbmlb\
-,driver_shinobi,driver_shinobl,driver_ddux,driver_dduxbl,driver_goldnaxe,driver_goldnabl\
-,driver_insectx,driver_extrmatn,driver_kageki,driver_exprraid,driver_exprrada\
-,driver_wexpress,driver_wexpresb,driver_wexpresc,driver_shootout,driver_shootouj,driver_shootoub\
-,driver_sidepckt,driver_sidepctj,driver_sidepctb,driver_pcktgal,driver_pcktgalb,driver_pcktgal2\
-,driver_spool3,driver_spool3i,driver_rygar,driver_rygar2,driver_rygarj,driver_crimfght\
-,driver_crimfgt2,driver_crimfgtj,driver_pbaction,driver_pbactio2,driver_tehkanwc\
-,driver_gridiron,driver_teedoff,driver_solomon,driver_jackal,driver_topgunr,driver_jackalj\
-,driver_topgunbl,driver_atetris,driver_atetrisa,driver_atetrisb,driver_shollow,driver_tron\
-,driver_kroozr,driver_domino,driver_wacko,driver_twotiger,driver_journey,driver_streetsm,driver_pow,driver_searchar\
-,driver_ikari3,driver_sqix,driver_sqixa,driver_sqixbl,driver_ddcrew,driver_ddcrewu,driver_ddcrew2,driver_ddcrew1\
-,driver_astorm,driver_astormbl,driver_bayroute,driver_riotcity,driver_puzznic,driver_silentd\
-,driver_spacedx,driver_crimec,driver_rambo3,driver_tmnt,driver_tmnt2,driver_ssriders,driver_mia,driver_asterix\
-,driver_devilw,driver_scontra,driver_gbusters"
+COREDEFS += -DTINY_NAME="driver_600,driver_amidar,driver_amidaro,driver_amidars,driver_amidaru,driver_battlnts,driver_battlntj,driver_bladstle,driver_bladestl,driver_bootcamp,driver_bottom9n,driver_bottom9,driver_pc_cvnia,driver_circusc,driver_circuscc,driver_circusce,driver_circusc2,driver_combascj,driver_combasc,driver_combasct,driver_contraj,driver_pc_cntra,driver_contra,driver_nss_con3,driver_dairesya,driver_devstor3,driver_devstor2,driver_devstors,driver_ddribble,driver_pc_dbldr,driver_fastlane,driver_finalizr,driver_flkatck,driver_frogger,driver_frogseg1,driver_frogseg2,driver_garuka,driver_pc_grdus,driver_pc_grdue,driver_gberet,driver_gryzor,driver_gutangtn,driver_gyrussce,driver_gyruss,driver_hexion,driver_hyprolym,driver_hpolym84,driver_hyperspt,driver_ironhors,driver_jackal,driver_jailbrek,driver_jungler,driver_junglers,driver_junofrst,driver_junofstg,driver_kicker,driver_rockragj,driver_labyrunr,driver_labyrunk,driver_lethalej,driver_lethalen,driver_locomotn,driver_mstadium,driver_manhatan,driver_megaznik,driver_megazone,driver_megazona,driver_megazonb,driver_megazonc,driver_mikie,driver_mikiehs,driver_mogura,driver_mrgoemon,driver_mx5000,driver_pandoras,driver_pingpong,driver_pooyan,driver_pooyans,driver_rackemup,driver_ringohja,driver_roadf,driver_roadf2,driver_rockraga,driver_rockrage,driver_rocnrope,driver_rocnropk,driver_pc_rnatk,driver_rushatck,driver_spyu,driver_spy,driver_scotrsht,driver_scramble,driver_scrambls,driver_shaolins,driver_mikiej,driver_spcking2,driver_stratgyx,driver_stratgys,driver_sbasketu,driver_sbasketo,driver_sbasketb,driver_pc_suprc,driver_scobra,driver_scobrase,driver_scobras,driver_tactcian,driver_tactcan2,driver_pc_tmnt,driver_pc_tmnt2,driver_theend,driver_theends,driver_pc_goons,driver_thehustj,driver_thehustl,driver_mainev2p,driver_mainevto,driver_mainevt,driver_timeplt,driver_timeplta,driver_timepltc,driver_tp84,driver_tp84a,driver_jackalj,driver_topgunr,driver_trackfld,driver_trackflc,driver_pc_tkfld,driver_tricktrp,driver_turpin,driver_turtles,driver_tutankhm,driver_tutankst,driver_hustler,driver_cstlevna,driver_vsgradus,driver_goonies,driver_topgun,driver_wizzquiz,driver_yiear,driver_yiear2"
 
-
-COREDEFS += -DTINY_POINTER="&driver_gberet,&driver_rushatck,&driver_gberetb,&driver_mrgoemon\
-,&driver_empcity,&driver_empcityu,&driver_empcityj,&driver_stfight\
-,&driver_stfighta,&driver_chiller,&driver_crossbow,&driver_cheyenne,&driver_kungfum,&driver_kungfud\
-,&driver_spartanx,&driver_kungfub,&driver_kungfub2,&driver_spelunkr,&driver_spelnkrj,&driver_spelunk2\
-,&driver_bloodbro,&driver_bloodbra,&driver_weststry,&driver_skysmash,&driver_cabal,&driver_cabal2,&driver_cabalbl\
-,&driver_toki,&driver_tokia,&driver_tokij,&driver_tokiu,&driver_tokib,&driver_aliens\
-,&driver_cbuster,&driver_cbusterw,&driver_cbusterj,&driver_twocrude,&driver_simpsons\
-,&driver_truco,&driver_trucocl,&driver_vendetta\
-,&driver_xmen,&driver_splatter,&driver_pitfall2,&driver_pitfallu,&driver_chplft,&driver_chplftb\
-,&driver_chplftbl,&driver_wboy,&driver_wbdeluxe,&driver_wbml,&driver_wbmljo,&driver_wbmljb,&driver_wbmlb\
-,&driver_shinobi,&driver_shinobl,&driver_ddux,&driver_dduxbl,&driver_goldnaxe,&driver_goldnabl\
-,&driver_insectx,&driver_extrmatn,&driver_kageki,&driver_exprraid,&driver_exprrada\
-,&driver_wexpress,&driver_wexpresb,&driver_wexpresc,&driver_shootout,&driver_shootouj,&driver_shootoub\
-,&driver_sidepckt,&driver_sidepctj,&driver_sidepctb,&driver_pcktgal,&driver_pcktgalb,&driver_pcktgal2\
-,&driver_spool3,&driver_spool3i,&driver_rygar,&driver_rygar2,&driver_rygarj,&driver_crimfght\
-,&driver_crimfgt2,&driver_crimfgtj,&driver_pbaction,&driver_pbactio2,&driver_tehkanwc\
-,&driver_gridiron,&driver_teedoff,&driver_solomon,&driver_jackal,&driver_topgunr,&driver_jackalj\
-,&driver_topgunbl,&driver_atetris,&driver_atetrisa,&driver_atetrisb,&driver_shollow,&driver_tron\
-,&driver_kroozr,&driver_domino,&driver_wacko,&driver_twotiger,&driver_journey,&driver_streetsm,&driver_pow,&driver_searchar\
-,&driver_ikari3,&driver_sqix,&driver_sqixa,&driver_sqixbl,&driver_ddcrew,&driver_ddcrewu,&driver_ddcrew2,&driver_ddcrew1\
-,&driver_astorm,&driver_astormbl,&driver_bayroute,&driver_riotcity,&driver_puzznic,&driver_silentd\
-,&driver_spacedx,&driver_crimec,&driver_rambo3,&driver_tmnt,&driver_tmnt2,&driver_ssriders\
-,&driver_mia,&driver_asterix,&driver_devilw,&driver_scontra,&driver_gbusters"
-
+COREDEFS += -DTINY_POINTER="&driver_600,&driver_amidar,&driver_amidaro,&driver_amidars,&driver_amidaru,&driver_battlnts,&driver_battlntj,&driver_bladstle,&driver_bladestl,&driver_bootcamp,&driver_bottom9n,&driver_bottom9,&driver_pc_cvnia,&driver_circusc,&driver_circuscc,&driver_circusce,&driver_circusc2,&driver_combascj,&driver_combasc,&driver_combasct,&driver_contraj,&driver_pc_cntra,&driver_contra,&driver_nss_con3,&driver_dairesya,&driver_devstor3,&driver_devstor2,&driver_devstors,&driver_ddribble,&driver_pc_dbldr,&driver_fastlane,&driver_finalizr,&driver_flkatck,&driver_frogger,&driver_frogseg1,&driver_frogseg2,&driver_garuka,&driver_pc_grdus,&driver_pc_grdue,&driver_gberet,&driver_gryzor,&driver_gutangtn,&driver_gyrussce,&driver_gyruss,&driver_hexion,&driver_hyprolym,&driver_hpolym84,&driver_hyperspt,&driver_ironhors,&driver_jackal,&driver_jailbrek,&driver_jungler,&driver_junglers,&driver_junofrst,&driver_junofstg,&driver_kicker,&driver_rockragj,&driver_labyrunr,&driver_labyrunk,&driver_lethalej,&driver_lethalen,&driver_locomotn,&driver_mstadium,&driver_manhatan,&driver_megaznik,&driver_megazone,&driver_megazona,&driver_megazonb,&driver_megazonc,&driver_mikie,&driver_mikiehs,&driver_mogura,&driver_mrgoemon,&driver_mx5000,&driver_pandoras,&driver_pingpong,&driver_pooyan,&driver_pooyans,&driver_rackemup,&driver_ringohja,&driver_roadf,&driver_roadf2,&driver_rockraga,&driver_rockrage,&driver_rocnrope,&driver_rocnropk,&driver_pc_rnatk,&driver_rushatck,&driver_spyu,&driver_spy,&driver_scotrsht,&driver_scramble,&driver_scrambls,&driver_shaolins,&driver_mikiej,&driver_spcking2,&driver_stratgyx,&driver_stratgys,&driver_sbasketu,&driver_sbasketo,&driver_sbasketb,&driver_pc_suprc,&driver_scobra,&driver_scobrase,&driver_scobras,&driver_tactcian,&driver_tactcan2,&driver_pc_tmnt,&driver_pc_tmnt2,&driver_theend,&driver_theends,&driver_pc_goons,&driver_thehustj,&driver_thehustl,&driver_mainev2p,&driver_mainevto,&driver_mainevt,&driver_timeplt,&driver_timeplta,&driver_timepltc,&driver_tp84,&driver_tp84a,&driver_jackalj,&driver_topgunr,&driver_trackfld,&driver_trackflc,&driver_pc_tkfld,&driver_tricktrp,&driver_turpin,&driver_turtles,&driver_tutankhm,&driver_tutankst,&driver_hustler,&driver_cstlevna,&driver_vsgradus,&driver_goonies,&driver_topgun,&driver_wizzquiz,&driver_yiear,&driver_yiear2"
 
 # uses these CPUs
-CPUS+=KONAMI_ORIG
 CPUS+=G65816@
 CPUS+=HD6309@
-CPUS+=I8039
+CPUS+=I8039@
 CPUS+=M6800@
-CPUS+=M6809_ORIG
+CPUS+=M6809@
 CPUS+=N2A03@
 CPUS+=SPC700@
-CPUS+=Z80_ORIG
-CPUS+=M6803
-CPUS+=M68000_ORIG
-CPUS+=H6280
-CPUS+=HD63701_ORIG
-CPUS+=N7751
-CPUS+=I8751_ORIG
-CPUS+=I8752_ORIG
-CPUS+=M6502_ORIG
-CPUS+=M6808_ORIG
-CPUS+=TMS34010_ORIG__
-CPUS+=M6809E_ORIG__
-CPUS+=ADSP2105_ORIG__
-CPUS+=ADSP2101_ORIG__
-CPUS+=ADSP2100_ORIG__
-CPUS+=ADSP2104_ORIG__
-CPUS+=ADSP2115_ORIG__
-CPUS+=HD63705_ORIGINAL
+CPUS+=Z80@
 
-#M68000_ORIG
 
 # uses these SOUNDs
-SOUNDS+=SN76496
-SOUNDS+=MSM5205
-SOUNDS+=YM2203_ORIG
-SOUNDS+=YM2151_ORIG
-SOUNDS+=OKIM6295
-SOUNDS+=K007232_ORIG
-SOUNDS+=CUSTOM
-SOUNDS+=AY8910
-SOUNDS+=DAC
-SOUNDS+=DMADAC@
-SOUNDS+=NAMCO
-SOUNDS+=TMS5220
+SOUNDS+=AY8910@
+SOUNDS+=CUSTOM@
+SOUNDS+=DAC@
 SOUNDS+=K007232@
 SOUNDS+=K051649@
-SOUNDS+=K054539
-SOUNDS+=YM2413
-SOUNDS+=YM3438
-SOUNDS+=RF5C68
-SOUNDS+=YM2612_ORIG
+SOUNDS+=K054539@
 SOUNDS+=NES@
 SOUNDS+=OKIM6295@
 SOUNDS+=SAMPLES@
 SOUNDS+=SN76496@
-SOUNDS+=UPD7759
+SOUNDS+=UPD7759@
 SOUNDS+=VLM5030@
 SOUNDS+=YM2151@
-SOUNDS+=YM3812_ORIG
-SOUNDS+=K053260_ORIG
-SOUNDS+=SAMPLES
-SOUNDS+=YM3526_ORIG
-SOUNDS+=POKEY
-SOUNDS+=HC55516
-SOUNDS+=YM2610_ORIG
-SOUNDS+=YM2610B_ORIG
-SOUNDS+=C140
-SOUNDS+=NAMCO_CUS30
+SOUNDS+=YM2203@
+SOUNDS+=YM3812@
 
 SOUNDS+=TMS5110@
 SOUNDS+=TMS36XX@
@@ -131,83 +41,65 @@ SOUNDS+=NAMCO@
 #SOUNDS+=MSM5205@
 
 
-
+OBJS=	$(OBJ)/machine/scramble.o $(OBJ)/sndhrdw/scramble.o $(OBJ)/drivers/scramble.o \
+		$(OBJ)/drivers/amidar.o \
+		$(OBJ)/drivers/frogger.o \
+		$(OBJ)/drivers/scobra.o \
+		$(OBJ)/vidhrdw/galaxian.o $(OBJ)/sndhrdw/galaxian.o $(OBJ)/drivers/galaxian.o \
+			$(OBJ)/vidhrdw/bagman.o $(OBJ)/machine/bagman.o $(OBJ)/drivers/bagman.o \
+			$(OBJ)/vidhrdw/pacman.o $(OBJ)/drivers/pacman.o \
+				$(OBJ)/vidhrdw/epos.o $(OBJ)/drivers/epos.o \
+				$(OBJ)/machine/mspacman.o $(OBJ)/machine/pacplus.o \
+				$(OBJ)/machine/jumpshot.o $(OBJ)/machine/theglobp.o \
+				$(OBJ)/machine/acitya.o \
+			$(OBJ)/vidhrdw/phoenix.o $(OBJ)/sndhrdw/phoenix.o $(OBJ)/drivers/phoenix.o \
+				$(OBJ)/sndhrdw/pleiads.o \
+			$(OBJ)/vidhrdw/cclimber.o $(OBJ)/sndhrdw/cclimber.o $(OBJ)/drivers/cclimber.o \
+			$(OBJ)/vidhrdw/ladybug.o $(OBJ)/drivers/ladybug.o \
 
 DRVLIBS = \
-	$(OBJ)/vidhrdw/gberet.o $(OBJ)/drivers/gberet.o \
-		$(OBJ)/machine/stfight.o $(OBJ)/vidhrdw/stfight.o $(OBJ)/drivers/stfight.o \
-		$(OBJ)/sndhrdw/exidy440.o $(OBJ)/vidhrdw/exidy440.o $(OBJ)/drivers/exidy440.o \
-		$(OBJ)/sndhrdw/irem.o $(OBJ)/vidhrdw/m62.o $(OBJ)/drivers/m62.o \
-		$(OBJ)/sndhrdw/seibu.o \
-		$(OBJ)/vidhrdw/bloodbro.o $(OBJ)/drivers/bloodbro.o \
-		$(OBJ)/vidhrdw/cabal.o $(OBJ)/drivers/cabal.o \
-		$(OBJ)/vidhrdw/toki.o $(OBJ)/drivers/toki.o \
-		$(OBJ)/machine/konami.o \
-		$(OBJ)/vidhrdw/konamiic.o \
-		$(OBJ)/vidhrdw/thunderx.o $(OBJ)/drivers/thunderx.o \
-		$(OBJ)/vidhrdw/gbusters.o $(OBJ)/drivers/gbusters.o \
-        $(OBJ)/vidhrdw/crimfght.o $(OBJ)/drivers/crimfght.o \
-		$(OBJ)/vidhrdw/aliens.o $(OBJ)/drivers/aliens.o \
-		$(OBJ)/vidhrdw/cbuster.o $(OBJ)/drivers/cbuster.o \
-		$(OBJ)/vidhrdw/asterix.o $(OBJ)/drivers/asterix.o \
-		$(OBJ)/machine/simpsons.o $(OBJ)/vidhrdw/simpsons.o $(OBJ)/drivers/simpsons.o \
-		$(OBJ)/vidhrdw/truco.o $(OBJ)/drivers/truco.o \
-		$(OBJ)/drivers/trucocl.o $(OBJ)/vidhrdw/trucocl.o \
-		$(OBJ)/vidhrdw/vendetta.o $(OBJ)/drivers/vendetta.o \
-		$(OBJ)/vidhrdw/twin16.o $(OBJ)/drivers/twin16.o \
-		$(OBJ)/vidhrdw/tmnt.o $(OBJ)/drivers/tmnt.o \
-		$(OBJ)/vidhrdw/xmen.o $(OBJ)/drivers/xmen.o \
-		$(OBJ)/vidhrdw/moo.o $(OBJ)/drivers/moo.o \
-		$(OBJ)/machine/namcos1.o $(OBJ)/vidhrdw/namcos1.o $(OBJ)/drivers/namcos1.o \
-		$(OBJ)/vidhrdw/system1.o $(OBJ)/drivers/system1.o \
-		$(OBJ)/vidhrdw/segasyse.o $(OBJ)/drivers/segasyse.o \
-        $(OBJ)/machine/system16.o $(OBJ)/vidhrdw/system16.o $(OBJ)/vidhrdw/sys16spr.o \
-	$(OBJ)/sndhrdw/system16.o $(OBJ)/vidhrdw/segaic16.o $(OBJ)/machine/segaic16.o \
-	$(OBJ)/vidhrdw/segas16a.o $(OBJ)/drivers/segas16a.o \
-	$(OBJ)/vidhrdw/segas16b.o $(OBJ)/drivers/segas16b.o \
-	$(OBJ)/vidhrdw/segas18.o $(OBJ)/drivers/segas18.o \
-	$(OBJ)/drivers/system18.o \
-	$(OBJ)/machine/fd1094.o $(OBJ)/machine/s16fd.o $(OBJ)/machine/fd1089.o \
-	$(OBJ)/machine/mc8123.o \
-	$(OBJ)/drivers/system16.o $(OBJ)/drivers/segas16b.o \
-	$(OBJ)/vidhrdw/segac2.o $(OBJ)/drivers/segac2.o \
-	$(OBJ)/machine/tnzs.o $(OBJ)/vidhrdw/tnzs.o $(OBJ)/drivers/tnzs.o \
-	$(OBJ)/vidhrdw/shootout.o $(OBJ)/drivers/shootout.o \
-	$(OBJ)/vidhrdw/sidepckt.o $(OBJ)/drivers/sidepckt.o \
-	$(OBJ)/vidhrdw/exprraid.o $(OBJ)/drivers/exprraid.o \
-	$(OBJ)/vidhrdw/pcktgal.o $(OBJ)/drivers/pcktgal.o \
-	$(OBJ)/vidhrdw/pbaction.o $(OBJ)/drivers/pbaction.o \
-	$(OBJ)/vidhrdw/tehkanwc.o $(OBJ)/drivers/tehkanwc.o \
-	$(OBJ)/vidhrdw/solomon.o $(OBJ)/drivers/solomon.o \
-	$(OBJ)/vidhrdw/tecmo.o $(OBJ)/drivers/tecmo.o \
-	$(OBJ)/machine/jackal.o $(OBJ)/vidhrdw/jackal.o $(OBJ)/drivers/jackal.o \
-	$(OBJ)/machine/slapstic.o \
-	$(OBJ)/vidhrdw/atetris.o $(OBJ)/drivers/atetris.o \
-	$(OBJ)/machine/mcr.o $(OBJ)/sndhrdw/mcr.o \
-	$(OBJ)/vidhrdw/mcr12.o $(OBJ)/vidhrdw/mcr3.o \
-	$(OBJ)/drivers/mcr1.o $(OBJ)/drivers/mcr2.o $(OBJ)/drivers/mcr3.o \
-	$(OBJ)/vidhrdw/mcr68.o $(OBJ)/drivers/mcr68.o \
-	$(OBJ)/sndhrdw/williams.o \
-	$(OBJ)/vidhrdw/snk68.o $(OBJ)/drivers/snk68.o \
-	$(OBJ)/vidhrdw/superqix.o $(OBJ)/drivers/superqix.o \
-	$(OBJ)/vidhrdw/taitoic.o $(OBJ)/sndhrdw/taitosnd.o \
-	$(OBJ)/vidhrdw/taito_l.o $(OBJ)/drivers/taito_l.o \
-	$(OBJ)/vidhrdw/taito_b.o $(OBJ)/drivers/taito_b.o \
-	$(OBJ)/machine/mb87078.o \
-	$(OBJ)/machine/segacrpt.o \
-        $(OBJ)/machine/z80fmly.o \
-        $(OBJ)/machine/6821pia.o \
-        $(OBJ)/machine/8255ppi.o \
-        $(OBJ)/machine/random.o \
-        $(OBJ)/vidhrdw/res_net.o \
-        
-		
+	obj/drivers/pacman.a obj/drivers/epos.a obj/drivers/nichibut.a \
+	obj/drivers/phoenix.a obj/drivers/namco.a obj/drivers/univers.a obj/drivers/nintendo.a \
+	obj/drivers/midw8080.a obj/drivers/meadows.a obj/drivers/cvs.a obj/drivers/midway.a \
+	obj/drivers/irem.a obj/drivers/gottlieb.a obj/drivers/taito.a obj/drivers/toaplan.a obj/drivers/cave.a \
+	obj/drivers/kyugo.a obj/drivers/williams.a obj/drivers/gremlin.a obj/drivers/vicdual.a \
+	obj/drivers/capcom.a obj/drivers/itech.a obj/drivers/leland.a obj/drivers/sega.a \
+	obj/drivers/dataeast.a obj/drivers/tehkan.a obj/drivers/konami.a \
+	obj/drivers/exidy.a obj/drivers/atari.a obj/drivers/snk.a obj/drivers/alpha.a obj/drivers/technos.a \
+	obj/drivers/stern.a obj/drivers/gameplan.a obj/drivers/zaccaria.a \
+	obj/drivers/upl.a obj/drivers/nmk.a obj/drivers/cinemar.a obj/drivers/cinemav.a \
+	obj/drivers/thepit.a obj/drivers/valadon.a obj/drivers/seibu.a obj/drivers/tad.a obj/drivers/jaleco.a \
+	obj/drivers/vsystem.a obj/drivers/psikyo.a obj/drivers/orca.a obj/drivers/gaelco.a \
+	obj/drivers/kaneko.a obj/drivers/seta.a obj/drivers/atlus.a \
+	obj/drivers/sun.a obj/drivers/suna.a obj/drivers/dooyong.a obj/drivers/tong.a \
+	obj/drivers/comad.a obj/drivers/playmark.a obj/drivers/pacific.a obj/drivers/tecfri.a \
+	obj/drivers/metro.a obj/drivers/venture.a obj/drivers/yunsung.a obj/drivers/zilec.a \
+	obj/drivers/fuuki.a obj/drivers/unico.a obj/drivers/dynax.a \
+	obj/drivers/sigma.a obj/drivers/igs.a obj/drivers/ramtek.a obj/drivers/omori.a obj/drivers/tch.a \
+	obj/drivers/usgames.a obj/drivers/sanritsu.a obj/drivers/rare.a \
+	obj/drivers/alba.a obj/drivers/homedata.a obj/drivers/artmagic.a \
+	obj/drivers/taiyo.a obj/drivers/edevices.a obj/drivers/other.a obj/drivers/excelent.a obj/drivers/nix.a \
+	obj/drivers/arcadia.a obj/drivers/othertrv.a obj/drivers/other68k.a obj/drivers/otherz80.a \
+	obj/drivers/neogeo.a $(OBJ)/shared.a \
 
-#DRVLIBS = \
-#	$(OBJ)/konami.a \
-	
-#$(OBJ)/konami.a: \
-#$(OBJ)/vidhrdw/gberet.o $(OBJ)/drivers/gberet.o \
+$(OBJ)/shared.a: \
+	$(OBJ)/machine/segacrpt.o \
+	$(OBJ)/machine/tmp68301.o \
+	$(OBJ)/machine/6532riot.o \
+	$(OBJ)/machine/z80fmly.o \
+	$(OBJ)/machine/6821pia.o \
+	$(OBJ)/machine/8255ppi.o \
+	$(OBJ)/machine/6522via.o \
+	$(OBJ)/machine/7474.o \
+	$(OBJ)/machine/idectrl.o \
+	$(OBJ)/machine/ticket.o \
+	$(OBJ)/machine/random.o \
+	$(OBJ)/machine/adc083x.o \
+	$(OBJ)/vidhrdw/crtc6845.o \
+	$(OBJ)/vidhrdw/avgdvg.o \
+	$(OBJ)/vidhrdw/poly.o \
+	$(OBJ)/vidhrdw/tlc34076.o \
+	$(OBJ)/vidhrdw/res_net.o \
 
 # MAME specific core objs
 COREOBJS += $(OBJ)/tiny.o $(OBJ)/cheat.o
