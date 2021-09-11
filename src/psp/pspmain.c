@@ -190,11 +190,11 @@ int main(int argc, char *argv[])
         }
     }
 
-	Get_DriverList();
-
 	load_config();
 	load_menu_bg();
 	bgbright_change();
+
+	Get_DriverList(setting.rom_filter);
 
 	while (psp_loop)
 	{
@@ -207,7 +207,7 @@ int main(int argc, char *argv[])
 			if (Confirm_Control())
 			{
 				psp_clear_screen();
-				_argv[_argc] = (char *)drivers[dlist_curpos]->name;
+				_argv[_argc] = (char *)drivers[(int)drv_idx[dlist_curpos]]->name;
 				switch (setting.cpu_clock)
 				{
 				case 0: scePowerSetClockFrequency(222, 222, 111); break;

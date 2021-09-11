@@ -1,4 +1,5 @@
 #include <pspctrl.h>
+#include <sys/stat.h>
 #include "driver.h"
 //#include "psp_main.h"
 //#include "psp_menu.h"
@@ -166,15 +167,52 @@ extern UINT32 end_size;
 //	return control_bef_paddata;
 //}
 
-void Get_DriverList(void)
-{
+void Get_DriverList(int mode) {
+	int i;
+
 	dlist_num = 0;
 
-	while (drivers[dlist_num])
+	for (i =0; drivers[i]; i++)
 		dlist_num++;
 
+	if (0 ==mode) // no check
+	{
+		for (i =0; i <dlist_num; i++)
+			drv_idx[i] =i;
+	} else if (1 ==mode) // filtered
+	{
+		dlist_num =Verify_Roms();
+	}
 	dlist_start  = 0;
 	dlist_curpos = 0;
+}
+
+int Verify_Roms()
+{
+char  *paths[] ={ "roms", "ms0:/mamepsp/roms", 0 };
+int i, j;
+int idx =0;
+struct stat st;
+	for (i =0; drivers[i]; i++) {
+		for (j =0; paths[j]; j++) {
+			char path[40];
+			sprintf(path, "%s/%s.zip", paths[j], drivers[i]->name);
+			if (stat(path, &st) == 0) {
+				drv_idx[idx ++] =i;
+				break;
+			}
+
+			sprintf(path, "%s/%s", paths[j], drivers[i]->name);
+			if (stat(path, &st) == 0) {
+				if (S_ISDIR(st.st_mode)) {
+					drv_idx[idx ++] =i;
+					break;
+				}
+			}
+		}
+	}
+	drv_idx[idx] =-1;
+	return idx;
 }
 
 
@@ -245,9 +283,9 @@ void Draw_All(void)
     // display title, year, manufacturer of game in title bar    
     char game_info[80];
     sprintf(game_info, "%s (%s, %s)", 
-    drivers[dlist_curpos]->name, 
-    drivers[dlist_curpos]->manufacturer, 
-    drivers[dlist_curpos]->year);
+    drivers[(int)drv_idx[dlist_curpos]]->name, 
+    drivers[(int)drv_idx[dlist_curpos]]->manufacturer, 
+    drivers[(int)drv_idx[dlist_curpos]]->year);
 
 	psp_frame(game_info, "ü: run game L: settings ¢: exit");
 
@@ -270,7 +308,7 @@ void Draw_All(void)
 		    int col;
 			col = setting.color[(i==dlist_curpos)?3:2];
 
-			psp_print(((4-3)*8)-2, ((i-dlist_start)+4)*10, col, drivers[i]->description);
+			psp_print(((4-3)*8)-2, ((i-dlist_start)+4)*10, col, drivers[(int)drv_idx[i]]->description);
 		}
 		i++;
 	}
@@ -381,8 +419,8 @@ int Control(void)
 
 void Draw_Confirm(void)
 {
-	psp_frame(drivers[dlist_curpos]->name, "›: run   ~: cancel");
-	psp_print(MENU2C_X_OFFS, ( 9*10), setting.color[3], drivers[dlist_curpos]->description);
+	psp_frame(drivers[(int)drv_idx[dlist_curpos]]->name, "›: run   ~: cancel");
+	psp_print(MENU2C_X_OFFS, ( 9*10), setting.color[3], drivers[(int)drv_idx[dlist_curpos]]->description);
 	psp_print(MENU2B_X_OFFS, (12*10), setting.color[3], "Press › to run game");//"‚ðŽÀs‚µ‚Ü‚·B"
 	v_sync();
 //	pgScreenFlip();
@@ -503,6 +541,7 @@ void load_config(void)
 	setting.show_fps_ON_OFF = SET_OFF;
 //	setting.sound_ON_OFF	= SET_ON;
 	setting.sound_rate		= SET_DEFAULT_SOUND_FREQ;/*default sound rate 44100 */
+	setting.rom_filter  	= SET_OFF;
 
 	setting.color[0] = DEF_COLOR0;
 	setting.color[1] = DEF_COLOR1;
@@ -823,6 +862,7 @@ void psp_menu(void)
 		ITEM_VSYNC,
 		ITEM_LIMIT_SPEED,
 		ITEM_SHOW_FPS,
+        ITEM_ROM_FILTER,
 //---space---
 		ITEM_CPU_CLOCK,
 		ITEM_COLOR_CONFIG,
@@ -855,6 +895,7 @@ void psp_menu(void)
 			case ITEM_VSYNC:		setting.vsync_ON_OFF	= SET_OFF; break;
 			case ITEM_LIMIT_SPEED:	setting.limit_ON_OFF	= SET_OFF; break;
 			case ITEM_SHOW_FPS: 	setting.show_fps_ON_OFF = SET_OFF; break;
+			case ITEM_ROM_FILTER:	setting.rom_filter  	= SET_OFF; Get_DriverList(setting.rom_filter); break;
 			case ITEM_CPU_CLOCK:	if (setting.cpu_clock  > 0) setting.cpu_clock--;	break;
 			}
 		}
@@ -869,6 +910,7 @@ void psp_menu(void)
 			case ITEM_VSYNC:		setting.vsync_ON_OFF	= SET_ON; break;
 			case ITEM_LIMIT_SPEED:	setting.limit_ON_OFF	= SET_ON; break;
 			case ITEM_SHOW_FPS: 	setting.show_fps_ON_OFF = SET_ON; break;
+			case ITEM_ROM_FILTER:	setting.rom_filter  	= SET_ON; Get_DriverList(setting.rom_filter); break;
 			case ITEM_CPU_CLOCK:	if (setting.cpu_clock  <  3) setting.cpu_clock++;  break;
 			}
 		}
@@ -993,6 +1035,7 @@ static const char *scr_names[] = {
 
 		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_LIMIT_SPEED +(1)	)*(MENU1_Y_SPACER)),	setting.color[3], setting.limit_ON_OFF		? "LIMIT SPEED:  " "ON" : "LIMIT SPEED:  " "OFF" STR_DEFAULT			);
 		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_SHOW_FPS	+(1)	)*(MENU1_Y_SPACER)),	setting.color[3], setting.show_fps_ON_OFF	? "SHOW FPS:     " "ON" 			: "SHOW FPS:     " "OFF" STR_DEFAULT);
+		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_ROM_FILTER	+(1+1)	)*(MENU1_Y_SPACER)),	setting.color[3], setting.rom_filter	? "ROM FILTER:   " "ON" 			: "ROM FILTER:   " "OFF" STR_DEFAULT);
 		//7
 		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_CPU_CLOCK	+(1+1)	)*(MENU1_Y_SPACER)),	setting.color[3],"CPU CLOCK:    " "%s",cpu_clocks[setting.cpu_clock]);
 		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_COLOR_CONFIG+(1+1)	)*(MENU1_Y_SPACER)),	setting.color[3],"COLOR CONFIG");

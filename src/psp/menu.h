@@ -15,6 +15,7 @@ typedef struct
 	u8/*u8*//*int*/ sound_skip;
 	u8/*u8*//*int*/ limit_ON_OFF;//sound_ON_OFF_dummy;
 	u8/*u8*//*int*/ sound_rate;
+	u8/*u8*//*int*/ rom_filter;
 	u8/*u8*//*int*/ cpu_clock;
 
 	unsigned long color[4];
@@ -55,9 +56,12 @@ enum{
 
 #define CONFIG_VER	"PSPMAME_Z00"
 
+#define DRVIDX_MAX	1000
+short drv_idx[DRVIDX_MAX];
+
 extern int dlist_curpos;
 
-void Get_DriverList(void);
+void Get_DriverList(int);
 void Draw_All(void);
 int Confirm_Control(void);
 int Control(void);
