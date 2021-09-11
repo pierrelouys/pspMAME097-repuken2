@@ -1284,7 +1284,8 @@ $(OBJ)/other.a: \
 	$(OBJ)/drivers/cybertnk.o \
 
 
-COREOBJS += $(OBJ)/driver.o $(OBJ)/cheat.o $(OBJ)/artwork.o
+COREOBJS += $(OBJ)/driver.o $(OBJ)/cheat.o $(OBJ)/artwork.o \
+     $(OBJ)/sound/filter.o $(OBJ)/cdrom.o
 
 # Files shared across several libraries
 OBJS += \
