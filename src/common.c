@@ -1075,13 +1075,13 @@ static int display_rom_load_results(struct rom_load_data *romdata)
 	/* only display if we have warnings or errors */
 	if (romdata->warnings || romdata->errors)
 	{
-		extern int bailing;
+		// extern int bailing;
 
 		/* display either an error message or a warning message */
 		if (romdata->errors)
 		{
 			strcat(romdata->errorbuf, "ERROR: required files are missing, the game cannot be run.\n");
-			bailing = 1;
+			// bailing = 1;
 		}
 		else
 			strcat(romdata->errorbuf, "WARNING: the game might not run correctly.\n");
@@ -1090,7 +1090,7 @@ static int display_rom_load_results(struct rom_load_data *romdata)
 		printf("%s", romdata->errorbuf);
 
 		/* if we're not getting out of here, wait for a keypress */
-		if (!options.gui_host && !options.skip_warnings && !bailing)
+		if (!options.gui_host && !options.skip_warnings /*&& !bailing */)
 		{
 			int k;
 
