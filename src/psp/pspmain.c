@@ -8,6 +8,7 @@
 #include <psppower.h>
 #include <time.h>
 #include "driver.h"
+#include "../exceptionHandler/exception.h"
 //#include "psp_main.h"
 //#include "pg.h"
 //#include "syscall.h"
@@ -170,6 +171,8 @@ int main(int argc, char *argv[])
 	psp_sleep = 0;
 
 	SetupCallbacks();
+
+    initExceptionHandler();
 
 	psp_video_init();
 	sceCtrlSetSamplingCycle(0);//sceCtrlInit(0);

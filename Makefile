@@ -84,6 +84,8 @@ LDFLAGS      = -lpspgum_vfpu -lpspvfpu
 ZLIB = $(OBJ)/libz.a
 EXPAT = $(OBJ)/libexpat.a
 
+EXCPT = $(OBJ)/exceptionHandler/exception.o
+
 #------------------------------------------------------------------------------
 # Include Make Files
 #------------------------------------------------------------------------------
@@ -222,11 +224,12 @@ OBJDIRS += \
     $(OBJ_SNDHRDW) \
 	$(OBJ)/etc \
 	$(OBJ)/zlib \
-	$(OBJ)/expat
+	$(OBJ)/expat \
+	$(OBJ)/exceptionHandler
 
 
 CDEFS += $(CPUDEFS) $(SOUNDDEFS) $(COREDEFS) $(DRVDEFS) $(OPT_DEFS)
-OBJS  += $(CPUOBJS) $(SOUNDOBJS) $(COREOBJS) $(DRVLIBS) $(OSOBJS) $(ZLIB) $(EXPAT)
+OBJS  += $(CPUOBJS) $(SOUNDOBJS) $(COREOBJS) $(DRVLIBS) $(OSOBJS) $(ZLIB) $(EXPAT) $(EXCPT)
 
 #------------------------------------------------------------------------------
 # Include build.mak for PSPSDK
@@ -258,6 +261,11 @@ $(OBJ)/zlib/%.o: $(SRC)/zlib/%.c
 $(OBJ)/expat/%.o: $(SRC)/expat/%.c
 	@echo Compiling Expat $<...
 	@$(CC) $(CDEFS) -Os -c $< -o $@
+
+# PSP exception handler
+$(OBJ)/exceptionHandler/exception.o: $(SRC)/exceptionHandler/exception.c
+	@echo Compiling exceptionHandler $<...
+	@$(CC) $(CDEFS) -Os $(CFLAGS) -G0  -c $< -o $@
 
 # speed optimized (-O3)
 $(OBJ)/%.o: $(SRC)/%.c
