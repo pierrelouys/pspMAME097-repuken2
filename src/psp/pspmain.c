@@ -229,7 +229,6 @@ int main(int argc, char *argv[])
 				printf("_argv[_argc+1]=='%s'\n",_argv[_argc+1]);*/
 				/*res =*/ run_mame(_argc + 1, _argv);
 				scePowerSetClockFrequency(222, 222, 111);
-				Confirm_Control();
 			}
 			break;
 

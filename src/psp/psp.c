@@ -244,6 +244,7 @@ int run_mame(int argc, char **argv)
 		);*/
 		psp_print_color(PSP_COLOR_WHITE);
 	}
+	Confirm_Control();
 #endif //(1==MEMORY_CHECK)
 
 //	exit(res);
