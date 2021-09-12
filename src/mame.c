@@ -681,7 +681,8 @@ static void shutdown_machine(void)
 	chd_close_all();
 
 	/* reset the CPU system */
-	cpu_exit();
+	// commented out for causing memory access nonsense
+	// cpu_exit();
 
 	/* close down the input system */
 	code_close();
