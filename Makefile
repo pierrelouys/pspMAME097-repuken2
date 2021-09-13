@@ -10,7 +10,7 @@ OPT_DEFS  = -DBUILD_NAME=\"$(TARGET)\"
 OPT_DEFS  += -D$(TARGET)=1
 
 # MAME終了時にメモリーがきちんと開放されたかチェックする(1==ON, 0==OFF) 
-OPT_DEFS += -DDEBUG_MAME_MEMORY_CHECK=0
+OPT_DEFS += -DDEBUG_MAME_MEMORY_CHECK=1
 
 #------------------------------------------------------------------------------
 # Configurations

@@ -250,7 +250,7 @@ void Draw_All(void)
     {
         char memInfo[64];
         sprintf(memInfo,"Free memory: %d KB",(end_size / (1024)) );
-    	psp_print(300, 10, setting.color[3], memInfo);
+    	psp_print(330, 0, setting.color[3], memInfo);
     }
 #endif //(1==MEMORY_CHECK)
 

@@ -197,6 +197,8 @@ int main(int argc, char *argv[])
 	load_menu_bg();
 	bgbright_change();
 
+    if (setting.rom_filter == 1)
+        psp_print(10, 10, setting.color[3], "Filtering list of ROMs...");
 	Get_DriverList(setting.rom_filter);
 
 	while (psp_loop)
