@@ -1,4 +1,5 @@
 -- code from Brujito's Multi Emulator
+-- works with LuaPlayer HM ver 7
 
 ---Cargando imagenes---
 seleccion = Image.load("./img/selector.png")

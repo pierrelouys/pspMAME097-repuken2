@@ -17,3 +17,4 @@
 - `LIMIT SPEED` now works;
 - UI now in (proper) English;
 - there is finally an option to quit in the OSD menu;
+- Lua launcher borrowed from Brujito's Multi Emulator;
