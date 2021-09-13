@@ -154,6 +154,7 @@
 ***************************************************************************/
 
 #define FRAMES_PER_FPS_UPDATE		12
+#define printf psp_printf_bbb
 
 
 
@@ -279,6 +280,7 @@ INLINE void bail_and_print(const char *message)
 	{
 		bailing = 1;
 		printf("%s\n", message);
+        Confirm_Control();
 	}
 }
 
@@ -1046,6 +1048,7 @@ static int decode_graphics(const struct GfxDecodeInfo *gfxdecodeinfo)
 		{
 			bailing = 1;
 			printf("Out of memory decoding gfx\n");
+            Confirm_Control();
 			return 1;
 		}
 
@@ -2344,6 +2347,11 @@ int mame_validitychecks(void)
 	if (mess_validitychecks())
 		error = 1;
 #endif /* MESS */
+
+    if (error == 1)
+    {
+        Confirm_Control();
+    }
 
 	return error;
 }
