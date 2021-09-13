@@ -247,11 +247,11 @@ void Draw_All(void)
 #if (1==DEBUG_MAME_MEMORY_CHECK)
     // show available mem
     if (end_size > 0) 
-        {
-        char memInfo[80];
-        sprintf(memInfo,"Free memory: %d MB",(end_size / (1024*1024)) );
-    	psp_print(333, 27, setting.color[3], memInfo);
-        }
+    {
+        char memInfo[64];
+        sprintf(memInfo,"Free memory: %d KB",(end_size / (1024)) );
+    	psp_print(300, 10, setting.color[3], memInfo);
+    }
 #endif //(1==MEMORY_CHECK)
 
 	int i;

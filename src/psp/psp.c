@@ -213,7 +213,7 @@ int run_mame(int argc, char **argv)
 #if (1==DEBUG_MAME_MEMORY_CHECK)
 	end_size = check_free_memory();
 
-	if (start_size != end_size)
+	if (0) //(start_size != end_size)
 	{
 		psp_print_color(PSP_COLOR_RED);
 		psp_printf_bbb(
@@ -243,8 +243,8 @@ int run_mame(int argc, char **argv)
 			, (end_size-start_size)
 		);*/
 		psp_print_color(PSP_COLOR_WHITE);
+    	Confirm_Control();
 	}
-	Confirm_Control();
 #endif //(1==MEMORY_CHECK)
 
 //	exit(res);
