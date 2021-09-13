@@ -1,14 +1,9 @@
 #include <pspctrl.h>
 #include <sys/stat.h>
 #include "driver.h"
-//#include "psp_main.h"
-//#include "psp_menu.h"
-//#include "pg.h"
-//#include "colbl.c"
 
 /* ÉJÉâÅ[ÉÅÉjÉÖÅ[Ç≈ÇÃÇwÉ{É^ÉìÅiÇOÅFñ≥å¯ÅAÇPÅFóLå¯Åj */
 #define USE_COLOR_MENU_X_BUTTON 1
-
 
 #define NOW_DATE   " "__DATE__" "
 #define DEVELOPPER "- original by TMK & ÇoÇrÇoäJî≠ócítâÄ"
@@ -25,17 +20,9 @@
 // ----------------------------------------
 static SceCtrlData/*ctrl_data_t*/ ctl;
 // ----------------------------------------
-//static	unsigned long is_PAD;
-/* triggered based the pad input */
-//[is_#] now input key.
-//[rs_#] old key.(before key)
-//[ps_#] is pressed.(or pulled)[trigged key the edge.](for trigger check)
-//[cs_#] count holding key at time.(fps base counted)(for use auto repeat)
 
 static unsigned int is_PAD; // read pad raw data.
 
-//atic u8 is_E,rs_E,ps_E;//,cs_E;	// E: Select//disabled
-//atic u8 is_S,rs_S,ps_S;//,cs_S;	// S: Start
 static u8 is_U,rs_U,ps_U,cs_U;	// U: Up
 static u8 is_J,rs_J,ps_J,cs_J;	// J: Right (see your keyboard)
 static u8 is_D,rs_D,ps_D,cs_D;	// D: Down
@@ -46,21 +33,16 @@ static u8 is_A,rs_A,ps_A;//,cs_A;	// A: triangle
 static u8 is_O,rs_O,ps_O;//,cs_O;	// O: Circle
 static u8 is_X,rs_X,ps_X;//,cs_X;	// X: Cross
 static u8 is_Q,rs_Q,ps_Q;//,cs_Q;	// Q: Square
-// ----------------------------------------
+
 static void pad_read(void)
 {
 static u8 ccc; //counter
 u8 ttt; // work
 	ccc++; //count up
 	ccc&=1; // masked on/off
-	//key = Read_Key();
-//	sceCtrlReadBufferPositive(&ctl,1);
 	sceCtrlPeekBufferPositive(&ctl,1);
 UINT32 buttons;
 	buttons=ctl.Buttons;
-
-// 0123456789abcdef
-// Uuuu--------dddD
 
 	/* pached the analog stick to digitily sense. */
 	ttt=ctl.Ly;//analog[CTRL_ANALOG_Y];
@@ -133,9 +115,6 @@ UINT32 buttons;
 	if(is_J) cs_J++;	if(ps_J) cs_J=0;
 //	if(is_E) cs_E++;	if(ps_E) cs_E=0;//disabled
 }
-//unsigned long Read_Key(void);
-//u32 new_pad;
-
 
 /////////////////Filer
 #define PATHLIST_H 20
@@ -146,26 +125,6 @@ int dlist_curpos;
 
 extern SETTING setting;
 extern UINT32 end_size;
-
-//#define REPEAT_TIME 0x40000
-//static unsigned long control_bef_paddata	= 0;
-//static unsigned long control_bef_tick = 0;
-
-//unsigned long Read_Key(void) {
-//	/*ctrl_data_t*/SceCtrlData paddata;
-//
-//	//sceCtrlReadBufferPositive(&paddata,1);
-//	sceCtrlPeekBufferPositive(&paddata,1);
-//	if (buttons == control_bef_paddata) {
-//		if ((paddata.TimeStamp - control_bef_tick) > REPEAT_TIME) {
-//			return control_bef_paddata;
-//		}
-//		return 0;
-//	}
-//	control_bef_paddata  = buttons;
-//	control_bef_tick = paddata.TimeStamp;
-//	return control_bef_paddata;
-//}
 
 void Get_DriverList(int mode) {
 	int i;
@@ -215,26 +174,21 @@ struct stat st;
 	return idx;
 }
 
-
-/////
 static void BitBlt(int x, int y, int w, int h, /*int mag,*/ const u16 *d)
 {
 	u16 *vptr, *src;
 	int xx, yy;//, mx, my;
 	const u16 *dst;
 
-//	vptr = pgGetVramAddr(x,y);
 	vptr = psp_frame_addr(draw_frame, x, y);
 
 	for (yy = 0; yy < h; yy++)
 	{
-	//	for (my = 0; my < mag; my++)
 		{
 			src = vptr;
 			dst = d;
 			for (xx = 0; xx < w; xx++)
 			{
-			//	for (mx = 0; mx < mag; mx++)
 				{
 					*src++ = *dst;
 				}
@@ -246,8 +200,6 @@ static void BitBlt(int x, int y, int w, int h, /*int mag,*/ const u16 *d)
 	}
 }
 
-
-/////
 int bBitmap;
 u16 bgBitmap[480*272];
 static void psp_frame(const char *msg0, const char *msg1)
@@ -256,7 +208,6 @@ static void psp_frame(const char *msg0, const char *msg1)
 	{	BitBlt(0, 0, 480, 272, /*1,*/ bgBitmap);}
 	else/* ï«éÜÇ»Çµ */
 	{	psp_fill_frame(draw_frame, CNVCOL15TO32(setting.color[0]));}
-//	{	pgFillvram(setting.color[0/*2*/]);}
 	psp_print(0, 0, setting.color[3], APP_TITLE);
 	// ÉÅÉbÉZÅ[ÉWÇ»Ç«
 	if (msg0) psp_print(17, 14, setting.color[2], msg0);
@@ -318,20 +269,14 @@ void Draw_All(void)
 		i++;
 	}
 	v_sync();
-//	pgScreenFlip();
 	psp_flip_screen(/*1*/);
 }
 
 
 int Confirm_Control(void)
 {
-//	unsigned long key;
-//	int pressed;
-
-//	pressed = 0;
 	while (psp_loop /*&& !pressed*/)
 	{
-		//pressed = 1;
 		v_sync();
 		pad_read();//key = Read_Key();
 
@@ -343,11 +288,9 @@ int Confirm_Control(void)
 		{
 			return 0;
 		}
-		//pressed = 0;
 	}
 	return 0;
 }
-
 
 int Control(void)
 {
@@ -358,10 +301,6 @@ int Control(void)
 		pressed = 1;
 		v_sync();
 		pad_read();//key = Read_Key();
-	//	if (is_PAD != 0) break;
-
-	//#define REPEAT_TIME_W 6
-	//	if ( ((ps_U ||(REPEAT_TIME_W<cs_U)) && is_U) ){
 		if ((is_U)&&((6<cs_U)&&(0==(cs_U&7))||(ps_U)))
 		{
 			if (dlist_curpos > 0) { dlist_curpos--; 	}
@@ -390,7 +329,6 @@ int Control(void)
 			psp_frame(""," Å~: cancel   Åõ: quit" );
 			psp_print(40,120, setting.color[3], " Press Åõ to quit");
 			v_sync();
-		//	pgScreenFlip();
 			psp_flip_screen(/*1*/);
 			if (Confirm_Control()) psp_loop = 0;
 		}
@@ -410,8 +348,6 @@ int Control(void)
 	return 0;
 }
 
-
-
 /* REPEAT_TIME_W: ÉIÅ[ÉgÉäÉsÅ[ÉgÇ™Ç©Ç©ÇÈÇ‹Ç≈ÇÃéûä‘ */
 #define REPEAT_TIME_W 6
 
@@ -428,16 +364,11 @@ void Draw_Confirm(void)
 	psp_print(MENU2C_X_OFFS, ( 9*10), setting.color[3], drivers[(int)drv_idx[dlist_curpos]]->description);
 	psp_print(MENU2B_X_OFFS, (12*10), setting.color[3], "Press Åõ to run game");//"Çé¿çsÇµÇ‹Ç∑ÅB"
 	v_sync();
-//	pgScreenFlip();
 	psp_flip_screen(/*1*/);
 }
 
-
 //////////////////
 
-
-
-//char *getCurDir(void);
 SETTING setting;
 
 void save_config(void)
@@ -457,7 +388,6 @@ void save_config(void)
 	}
 }
 
-/*	*/
 #define SET_ON	(1)
 #define SET_OFF (0)
 
@@ -475,7 +405,6 @@ void save_config(void)
 #define PSP266MHz (1)
 #define PSP300MHz (2)
 #define PSP333MHz (3)
-
 
 /* set default to fskip00 */
 #ifndef SET_DEFAULT_FSKIPS
@@ -497,18 +426,12 @@ void save_config(void)
 	#define SET_DEFAULT_PSP_CLOCK PSP333MHz
 #endif // SET_DEFAULT_PSP_CLOCK
 
-
 #define SET_DEFAULT_SCREEN SCR_X1
-//#define SET_DEFAULT_SCREEN SCR_STRETCH
 
 void load_config(void)
 {
-//	int i;
 	char CfgPath[MAX_PATH];
 	char *p;
-
-//	sprintf(CfgPath, "%sPSPMAME.CFG", getCurDir());
-//	remove(CfgPath);
 
 	memset(&setting, 0, sizeof(setting));
 
@@ -523,13 +446,9 @@ void load_config(void)
 		sceIoRead(fd, &setting, sizeof(setting));
 		sceIoClose(fd);
 		/* check if ignore value, forced in range. */
-//		#if (0!=LINK_ROT)
-		if(/*setting.screensize<0 ||*/ setting.screensize > (SCR_MAX-1)) setting.screensize = SET_DEFAULT_SCREEN;
-//		#endif //(0!=LINK_ROT)
+		if(setting.screensize > (SCR_MAX-1)) setting.screensize = SET_DEFAULT_SCREEN;
 		if(setting.frameskip > /*9*/60) 						setting.frameskip=/*0*/60;
-		//if(setting.sound_rate<0 || setting.sound_rate>2)		setting.sound_rate = /*0*/2;
 		if (setting.sound_rate > (SND_MAX-1))					setting.sound_rate = (SND_MAX-1);
-	//	setting.sound_rate &=7;
 		setting.cpu_clock  &=3;
 		if(setting.bgbright<0 || setting.bgbright>100)			setting.bgbright=100;
 		if(!strcmp(setting.vercnf, CONFIG_VER))
@@ -537,14 +456,11 @@ void load_config(void)
 	}
 
 	strcpy(setting.vercnf, CONFIG_VER);
-//	#if (0!=LINK_ROT)
 	setting.screensize		= SET_DEFAULT_SCREEN;
-//	#endif //(0!=LINK_ROT)
 	setting.frameskip		= SET_DEFAULT_FSKIPS;
 	setting.vsync_ON_OFF	= SET_DEFAULT_VSYNC_ON_OFF;
 	setting.limit_ON_OFF	= SET_DEFAULT_LIMIT_ON_OFF;
 	setting.show_fps_ON_OFF = SET_OFF;
-//	setting.sound_ON_OFF	= SET_ON;
 	setting.sound_rate		= SET_DEFAULT_SOUND_FREQ;/*default sound rate 44100 */
 	setting.rom_filter  	= SET_OFF;
 
@@ -597,13 +513,9 @@ void load_config(void)
 	}
 }
 
-
-
 // îºìßñæèàóù
 static u16 rgbTransp(u16 fgRGB, u16 bgRGB, int alpha)
 {
-//	unsigned int R, G, B;
-
 	alpha *= 256;
 	alpha /= 100;
 
@@ -613,11 +525,6 @@ return(MAKECOL15(
 /*B =*/,(((GETB15(fgRGB) * (alpha)) + (GETB15(bgRGB) * (256 - alpha))) >> 9)/*;*/
 ));
 
-//	R = coltbl[fgR][bgR][alpha/10];
-//	G = coltbl[fgG][bgG][alpha/10];
-//	B = coltbl[fgB][bgB][alpha/10];
-
-//	return MAKECOL15(R, G, B);
 }
 
 /*static*/ void bgbright_change(void)
@@ -625,7 +532,6 @@ return(MAKECOL15(
 	u16 *vptr,rgb;
 	int i;
 
-//	load_menu_bg();
 	vptr=bgBitmap;
 	for(i=0; i<272*480; i++)
 	{
@@ -634,7 +540,6 @@ return(MAKECOL15(
 		vptr++;
 	}
 }
-
 
 void psp_colorconfig(void)
 {
@@ -697,13 +602,11 @@ void psp_colorconfig(void)
 		{
 			sel--;
 			if (sel < 0) sel = (MENU2_MAX-1);
-			//sel_count = 0;
 		}
 		else if ( ((ps_D ||(REPEAT_TIME_W<cs_D)) && is_D) )
 		{
 			sel++;
 			if (sel > (MENU2_MAX-1)) sel = 0;
-			//sel_count = 0;
 		}
 		#if (1==USE_COLOR_MENU_X_BUTTON)
 		else if( ps_X && is_X )
@@ -820,12 +723,9 @@ void psp_colorconfig(void)
 			psp_print(MENU2C_X_OFFS,y*(MENU2_Y_SPACER),setting.color[3],">");
 		}
 		v_sync();
-	//	pgScreenFlip();
 		psp_flip_screen(/*1*/);
 	}
 }
-
-
 
 #define STR_DEFAULT " ""[default]"
 
@@ -847,7 +747,6 @@ const char *cpu_clocks[] = {
 	STR_DEFAULT
 	#endif
 };
-
 
 #define MENU1_Y_OFFS (5-1-1)
 
@@ -880,9 +779,6 @@ void psp_menu(void)
 	static u8 sel=0;
 	u8 y;
 	u8 sel_count=0;
-//	int ret;
-	//int bSave, fd, romsize, ramsize;
-	//char *p;
 
 	while (psp_loop)
 	{
@@ -892,7 +788,6 @@ void psp_menu(void)
 		{
 			switch (sel)
 			{
-		//	case ITEM_SOUND:		setting.sound_ON_OFF	= SET_OFF; break;
 			case ITEM_SOUND_RATE:	if (setting.sound_rate < (SND_MAX-1)) setting.sound_rate++; break;
 			case ITEM_FRAME_SKIP:	if (setting.frameskip  > 0) setting.frameskip--;	break;
 			case ITEM_SCREEN_SIZE:	if (setting.screensize > 0) setting.screensize--; break;
@@ -908,7 +803,6 @@ void psp_menu(void)
 		{
 			switch (sel)
 			{
-		//	case ITEM_SOUND:		setting.sound_ON_OFF	= SET_ON; break;
 			case ITEM_SOUND_RATE:	if (setting.sound_rate >  0) setting.sound_rate--; break;
 			case ITEM_FRAME_SKIP:	if (setting.frameskip  < (60+1)) setting.frameskip++;  break;
 			case ITEM_SCREEN_SIZE:	if (setting.screensize < (SCR_MAX-1)) setting.screensize++; break;
@@ -923,13 +817,11 @@ void psp_menu(void)
 		{
 			sel--;
 			if (sel > ITEM_MENU1_MAX) sel=(ITEM_MENU1_MAX-1);
-			//sel_count = 0;
 		}
 		else if ( ((ps_D ||(REPEAT_TIME_W<cs_D)) && is_D) )
 		{
 			sel++;
 			if (sel > (ITEM_MENU1_MAX-1)) sel = 0;
-			//sel_count = 0;
 		}
 		else if( ps_O && is_O )
 		{
@@ -974,29 +866,12 @@ void psp_menu(void)
 				psp_frame(NULL/*tmp*/, "ÅõÅ~ÇkÅFback to game selection"); //"ÅõÅ~ÇkÅFÉQÅ[ÉÄëIëâÊñ Ç…ñﬂÇÈ"
 		}
 #define MENU1_Y_SPACER 11
-	//	if(setting.sound_ON_OFF)
-	//		{	psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_SOUND)*(MENU1_Y_SPACER)), setting.color[3],"SOUND:        ON " STR_DEFAULT);}
-	//	else{	psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_SOUND)*(MENU1_Y_SPACER)), setting.color[3],"SOUND:        OFF");}
-
-	//	switch(setting.sound_rate)
-	//	{
-	//	case 0: psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_SOUND_RATE)*(MENU1_Y_SPACER)), setting.color[3],"SOUND 44100[Hz]" STR_DEFAULT );	break;
-	//	case 1: psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_SOUND_RATE)*(MENU1_Y_SPACER)), setting.color[3],"SOUND 22050[Hz]"); break;
-	//	case 2: psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_SOUND_RATE)*(MENU1_Y_SPACER)), setting.color[3],"SOUND 14700[Hz]"); break;
-	//	case 3: psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_SOUND_RATE)*(MENU1_Y_SPACER)), setting.color[3],"SOUND 11025[Hz]"); break;
-	//	case 4: psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_SOUND_RATE)*(MENU1_Y_SPACER)), setting.color[3],"SOUND  8820[Hz]"); break;
-	//	case 5: psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_SOUND_RATE)*(MENU1_Y_SPACER)), setting.color[3],"SOUND  7350[Hz]"); break;
-	//	case 6: psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_SOUND_RATE)*(MENU1_Y_SPACER)), setting.color[3],"SOUND  6300[Hz]"); break;
-	//	case 7: psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_SOUND_RATE)*(MENU1_Y_SPACER)), setting.color[3],"SOUND  5512[Hz]"); break;
-	//	}
 		mame_set_to_options_samplerate();
 		if(SND_OFF==setting.sound_rate)
 			{	sprintf(tmp, "SOUND:  OFF    ");}
 		else {sprintf(tmp,"SOUND:   %5d[Hz]", options.samplerate);}
-	//	else {sprintf(tmp,"SOUND:   %5d[Hz]",(44100/(setting.sound_rate/*+1*/)));}
 		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_SOUND_RATE)*(MENU1_Y_SPACER)), setting.color[3],tmp);
-		//2
-//#if (0!=LINK_ROT)
+
 {
 static const char *scr_names[] = {
 	"x1-normal",
@@ -1004,13 +879,7 @@ static const char *scr_names[] = {
 };
 		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_SCREEN_SIZE+(1))*(MENU1_Y_SPACER)), setting.color[3], "SCREEN MODE:  %s", scr_names[setting.screensize]);
 }
-//#endif// (0!=LINK_ROT)
 
-	//	strcpy(tmp,"FRAME SKIP:  ");
-	//	if (0 ==setting.frameskip)
-	//	{	strcat(&tmp[strlen(tmp)-1], "Auto");}
-	//	else
-	//	{	tmp[strlen(tmp)-1] = setting.frameskip+'0'-1-1;}
 		if (0 ==setting.frameskip)
 		{	sprintf(tmp, "FRAME SKIP:   Auto"
 		#if (SET_DEFAULT_FSKIPS==SET_FSKIP_AUTO)
@@ -1025,8 +894,6 @@ static const char *scr_names[] = {
 		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_FRAME_SKIP+(1))*(MENU1_Y_SPACER)), setting.color[3],tmp);
 
 
-//		sprintf(tmp, "VSYNC: %s", (setting.vsync)?"ON":"OFF" STR_DEFAULT);
-//		psp_print(x,y,setting.color[3],tmp);
 		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_VSYNC+(1))*(MENU1_Y_SPACER)), 			setting.color[3], setting.vsync_ON_OFF
 			 ? "VSYNC:        " "ON"
 			#if (SET_ON==SET_DEFAULT_VSYNC_ON_OFF)
@@ -1059,10 +926,7 @@ static const char *scr_names[] = {
 			psp_print(MENU2C_X_OFFS,y*(MENU1_Y_SPACER),setting.color[3], ">");
 		}
 		v_sync();
-	//	pgScreenFlip();
 		psp_flip_screen(/*1*/);
 	}
 
-//	psp_clear_screen();
-//	v_syncn(10);
 }
