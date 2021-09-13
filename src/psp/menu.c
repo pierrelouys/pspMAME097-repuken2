@@ -6,16 +6,16 @@
 #define USE_COLOR_MENU_X_BUTTON 1
 
 #define NOW_DATE   " "__DATE__" "
-#define DEVELOPPER "- original by TMK & ÇoÇrÇoäJî≠ócítâÄ"
+#define DEVELOPPER "TMK & ÇoÇrÇoäJî≠ócítâÄ"
 //Å‰ÅÂÅÊÅÁÅËäJî≠ócítâÄ
 
 #ifndef MENU_STR1
 	#define MENU_STR1 "pspMAME 0.97" //äJ
 #endif
 #ifndef MENU_STR2
-	#define MENU_STR2 ""//"Ç‡Ç¡Ç∆ë¨Ç≠Ç»Ç¢Ç∆óVÇ◊ÇÒÅI"
+	#define MENU_STR2 " "//"Ç‡Ç¡Ç∆ë¨Ç≠Ç»Ç¢Ç∆óVÇ◊ÇÒÅI"
 #endif
-#define APP_TITLE MENU_STR1 NOW_DATE MENU_STR2 DEVELOPPER
+#define APP_TITLE MENU_STR1 MENU_STR2 BUILD_NAME
 
 // ----------------------------------------
 static SceCtrlData/*ctrl_data_t*/ ctl;
@@ -242,7 +242,6 @@ void Draw_All(void)
 		drivers[(int)drv_idx[dlist_curpos]]->manufacturer, 
 		drivers[(int)drv_idx[dlist_curpos]]->year);
     }
-
 	psp_frame(game_info, "Å¸: run game L: settings Å¢: exit");
 
 #if (1==DEBUG_MAME_MEMORY_CHECK)
@@ -750,31 +749,69 @@ const char *cpu_clocks[] = {
 
 #define MENU1_Y_OFFS (5-1-1)
 
+void psp_credits(void)
+{
+	char tmp[64];
+
+	while (psp_loop)
+	{
+		v_sync();
+		pad_read();//new_pad =Read_Key();
+		if( ps_X && is_X )
+		{
+			break;/*ñﬂÇÈ*/
+		}
+		else if( ps_O && is_O )
+	    { 
+            break; 
+        }
+
+		psp_frame(NULL, "Åõ"
+		#if (1==USE_COLOR_MENU_X_BUTTON)
+			"Å~"
+		#endif //(1==USE_COLOR_MENU_X_BUTTON)
+			": back to main menu" //"ÅFÉÅÉCÉìÉÅÉjÉÖÅ[Ç…ñﬂÇÈ"
+		);
+		psp_print(MENU2_X_OFFS, ((MENU2_Y_OFFS+1)*(MENU2_Y_SPACER)), setting.color[3], "CREDITS");
+
+		sprintf(tmp, "%s version %s", MENU_STR1, CONFIG_VER);
+		psp_print(MENU2_X_OFFS, ((MENU2_Y_OFFS+5)*(MENU2_Y_SPACER)), setting.color[3],tmp);
+
+		sprintf(tmp, "Compiled on %s", NOW_DATE);
+		psp_print(MENU2_X_OFFS, ((MENU2_Y_OFFS+7)*(MENU2_Y_SPACER)), setting.color[3],tmp);
+
+		sprintf(tmp, "Original port by %s", DEVELOPPER);
+		psp_print(MENU2_X_OFFS, ((MENU2_Y_OFFS+9)*(MENU2_Y_SPACER)), setting.color[3],tmp);
+
+		v_sync();
+		psp_flip_screen(/*1*/);
+	}
+}
+
 extern void mame_set_to_options_samplerate(void);/* src/psp/config.c */
 void psp_menu(void)
 {
 	enum
 	{
-//		ITEM_SOUND=0,
-		ITEM_SOUND_RATE,
+		ITEM_SOUND_RATE, //0
 //---space---
-/*#if (0!=LINK_ROT)
-		ITEM_SCREEN_SIZE,
-#endif //(0!=LINK_ROT)*/
-        ITEM_SCREEN_SIZE,
+        ITEM_SCREEN_SIZE, //1
 		ITEM_FRAME_SKIP,
 		ITEM_VSYNC,
 		ITEM_LIMIT_SPEED,
 		ITEM_SHOW_FPS,
         ITEM_ROM_FILTER,
 //---space---
-		ITEM_CPU_CLOCK,
+		ITEM_CPU_CLOCK, //7
 		ITEM_COLOR_CONFIG,
 //---space---
-		ITEM_CONTINUE,
+		ITEM_CREDITS, //9
+//---space---
+		ITEM_CONTINUE, //10
 //---end---
 		ITEM_MENU1_MAX
 	};
+
 	char tmp[64];
 	static u8 sel=0;
 	u8 y;
@@ -833,6 +870,11 @@ void psp_menu(void)
 			case ITEM_COLOR_CONFIG:
 				psp_colorconfig();
 				break;
+
+			case ITEM_CREDITS:
+				psp_credits();
+				break;
+
 			case ITEM_CONTINUE: return;
 			}
 		}
@@ -860,8 +902,8 @@ void psp_menu(void)
 #endif
 			if (sel < ITEM_COLOR_CONFIG)
 				psp_frame(NULL/*tmp*/, "Å©Å®ÅFchange value  Å~ÇkÅFback to game selection"); //"Å©Å®ÅFílÇÃïœçX  Å~ÇkÅFÉQÅ[ÉÄëIëâÊñ Ç…ñﬂÇÈ"
-			else if (sel == ITEM_COLOR_CONFIG)
-				psp_frame(NULL/*tmp*/, "ÅõÅFopen color settings  Å~ÇkÅFback to game selection"); //"ÅõÅFÉJÉâÅ[ê›íËÉÅÉjÉÖÅ[Ç…à⁄ìÆ  Å~ÇkÅFÉQÅ[ÉÄëIëâÊñ Ç…ñﬂÇÈ"
+			else if ( (sel == ITEM_COLOR_CONFIG) || (sel == ITEM_CREDITS) )
+				psp_frame(NULL/*tmp*/, "ÅõÅFopen  Å~ÇkÅFback to game selection"); //"ÅõÅFÉJÉâÅ[ê›íËÉÅÉjÉÖÅ[Ç…à⁄ìÆ  Å~ÇkÅFÉQÅ[ÉÄëIëâÊñ Ç…ñﬂÇÈ"
 			else
 				psp_frame(NULL/*tmp*/, "ÅõÅ~ÇkÅFback to game selection"); //"ÅõÅ~ÇkÅFÉQÅ[ÉÄëIëâÊñ Ç…ñﬂÇÈ"
 		}
@@ -907,12 +949,14 @@ static const char *scr_names[] = {
 
 		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_LIMIT_SPEED +(1)	)*(MENU1_Y_SPACER)),	setting.color[3], setting.limit_ON_OFF		? "LIMIT SPEED:  " "ON" : "LIMIT SPEED:  " "OFF" STR_DEFAULT			);
 		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_SHOW_FPS	+(1)	)*(MENU1_Y_SPACER)),	setting.color[3], setting.show_fps_ON_OFF	? "SHOW FPS:     " "ON" 			: "SHOW FPS:     " "OFF" STR_DEFAULT);
-		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_ROM_FILTER	+(1+1)	)*(MENU1_Y_SPACER)),	setting.color[3], setting.rom_filter	? "ROM FILTER:   " "ON" 			: "ROM FILTER:   " "OFF" STR_DEFAULT);
+		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_ROM_FILTER	+(2)	)*(MENU1_Y_SPACER)),	setting.color[3], setting.rom_filter	? "ROM FILTER:   " "ON" 			: "ROM FILTER:   " "OFF" STR_DEFAULT);
 		//7
-		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_CPU_CLOCK	+(1+1)	)*(MENU1_Y_SPACER)),	setting.color[3],"CPU CLOCK:    " "%s",cpu_clocks[setting.cpu_clock]);
-		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_COLOR_CONFIG+(1+1)	)*(MENU1_Y_SPACER)),	setting.color[3],"COLOR CONFIG");
+		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_CPU_CLOCK	+(2)	)*(MENU1_Y_SPACER)),	setting.color[3],"CPU CLOCK:    " "%s",cpu_clocks[setting.cpu_clock]);
+		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_COLOR_CONFIG+(2)	)*(MENU1_Y_SPACER)),	setting.color[3],"COLOR CONFIG");
 		//10
-		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_CONTINUE	+(1+1+1))*(MENU1_Y_SPACER)),	setting.color[3],"Go back to roms list");
+		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_CREDITS	    +(3)    )*(MENU1_Y_SPACER)),	setting.color[3],"CREDITS");
+        //12
+		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_CONTINUE	+(4)    )*(MENU1_Y_SPACER)),	setting.color[3],"Go back to roms list");
 
 		sel_count++;
 		sel_count &=15;
@@ -922,6 +966,7 @@ static const char *scr_names[] = {
 			if(sel > ITEM_SOUND_RATE)	{y++;}
 			if(sel > ITEM_SHOW_FPS) 	{y++;}
 			if(sel > ITEM_COLOR_CONFIG) {y++;}
+			if(sel > ITEM_CREDITS) {y++;}
 
 			psp_print(MENU2C_X_OFFS,y*(MENU1_Y_SPACER),setting.color[3], ">");
 		}

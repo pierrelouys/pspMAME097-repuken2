@@ -6,7 +6,8 @@ TARGET = mame
 endif
 
 # customize option
-OPT_DEFS  = -D$(TARGET)=1
+OPT_DEFS  = -DBUILD_NAME=\"$(TARGET)\"
+OPT_DEFS  += -D$(TARGET)=1
 
 # MAME終了時にメモリーがきちんと開放されたかチェックする(1==ON, 0==OFF) 
 OPT_DEFS += -DDEBUG_MAME_MEMORY_CHECK=0
@@ -183,7 +184,7 @@ PSP_EBOOT_TITLE = PSPMAME 0.97 $(TARGET)
 endif
 
 ## 配布ソース(zip size)が大きくなりすぎるので、暫定的にアイコン共通
-PSP_EBOOT_ICON = ICON0.PNG
+PSP_EBOOT_ICON = NULL #ICON0.PNG
 
 EXTRA_TARGETS = maked_directry EBOOT.PBP # copy_bak_pbp
 EXTRA_CLEAN = pspclean
