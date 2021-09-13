@@ -281,11 +281,15 @@ static void psp_frame(const char *msg0, const char *msg1)
 void Draw_All(void)
 {                                                         //○：実行 Ｌ：設定メニュー △：エミュレータの終了
     // display title, year, manufacturer of game in title bar    
-    char game_info[80];
-    sprintf(game_info, "%s (%s, %s)", 
-    drivers[(int)drv_idx[dlist_curpos]]->name, 
-    drivers[(int)drv_idx[dlist_curpos]]->manufacturer, 
-    drivers[(int)drv_idx[dlist_curpos]]->year);
+    if (dlist_num < 1) 
+    {
+		sprintf(game_info, "No supported ROMs found");
+    } else {    
+		sprintf(game_info, "%s (%s, %s)", 
+		drivers[(int)drv_idx[dlist_curpos]]->name, 
+		drivers[(int)drv_idx[dlist_curpos]]->manufacturer, 
+		drivers[(int)drv_idx[dlist_curpos]]->year);
+    }
 
 	psp_frame(game_info, "◯: run game L: settings △: exit");
 

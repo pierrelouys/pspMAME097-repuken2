@@ -10,28 +10,28 @@ current = 1;
 
 makerListPage01 = {
    "CAPCOM", --1
-   "DECO", --2
-   "IREM", --3
-   "KONAMI", --4
-   "NAMCO", --5
-   "NICHIBUTSU", --6
-   "NINTENDO", --7
-   "SEGA", --8
-   "SNK", --9
-   "TECHNOS", --10
-   "UNIVERSAL", --11
-   "UPL", --12
+   "CPS1", --2
+   "DECO", --3
+   "DYNAX", --4
+   "IREM", --5
+   "KONAMI", --6
+   "KONAMI2", --7
+   "NAMCO", --8
+   "NAMCO2", --9
+   "NICHIBUTSU", --10
+   "NINTENDO", --11
+   "SEGA", --12
 }
 
 makerListPage02 = {
-   "TAITO", --1
-   "PLACEHOLDER", --2
-   "PLACEHOLDER", --3
-   "PLACEHOLDER", --4
-   "PLACEHOLDER", --5
-   "PLACEHOLDER", --6
-   "PLACEHOLDER", --7
-   "PLACEHOLDER", --8
+   "SEGA2", --1
+   "SEGA3", --2
+   "SNK", --3
+   "TAITO", --4
+   "TAITO2", --5
+   "TECHNOS", --6
+   "UNIVERSAL", --7
+   "UPL", --8
    "PLACEHOLDER", --9
    "PLACEHOLDER", --10
    "PLACEHOLDER", --11
