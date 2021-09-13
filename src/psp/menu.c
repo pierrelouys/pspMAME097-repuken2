@@ -281,6 +281,7 @@ static void psp_frame(const char *msg0, const char *msg1)
 void Draw_All(void)
 {                                                         //○：実行 Ｌ：設定メニュー △：エミュレータの終了
     // display title, year, manufacturer of game in title bar    
+	char game_info[80];
     if (dlist_num < 1) 
     {
 		sprintf(game_info, "No supported ROMs found");
