@@ -593,7 +593,13 @@ int load_driver_history (const struct GameDriver *drv, char *buffer, int bufsize
 
 
         if(!history_filename)
-                history_filename = "history.dat";
+            {
+				// use individual history file for each build
+                // history_filename = "history.dat";					
+                char tmp[64];
+                sprintf(tmp, "hist/%s-history.dat", BUILD_NAME);
+                history_filename = tmp;
+            }
 
         /* try to open history datafile */
         if (ParseOpen (history_filename))
@@ -601,8 +607,8 @@ int load_driver_history (const struct GameDriver *drv, char *buffer, int bufsize
                 /* create index if necessary */
                 if (hist_idx)
                         history = 1;
-                // else
-                        // history = (index_datafile (&hist_idx) != 0);
+                else
+                        history = (index_datafile (&hist_idx) != 0);
 
                 /* load history text */
                 if (hist_idx)
