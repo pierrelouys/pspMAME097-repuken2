@@ -1,0 +1,1235 @@
+
+/* "Pacman hardware" games */
+driver_puckman, driver_puckmana, driver_puckmanf, driver_puckmanh, driver_pacman, driver_pacmanf, driver_puckmod, driver_pacmod, driver_newpuc2, driver_newpuc2b, driver_newpuckx, driver_pacheart, driver_hangly, driver_hangly2, driver_hangly3, driver_piranhah, driver_crush, driver_crush2, driver_crush3, driver_maketrax, driver_maketrxb, driver_korosuke, driver_mbrush, driver_paintrlr, driver_pacplus, driver_joyman, driver_ctrpllrp, driver_eyes, driver_eyes2, driver_mrtnt, driver_gorkans, driver_eggor, driver_jumpshot, driver_jumpshtp, driver_shootbul, driver_piranha, driver_piranhao, driver_nmouse, driver_nmouseb, driver_mspacman, /* made by Gencomp */
+driver_mspacmnf, driver_mspacmat, driver_woodpek, driver_woodpeka, driver_mspacmab, driver_pacgal, driver_mspacpls, driver_ponpoko, driver_ponpokov, driver_lizwiz, driver_alibaba, driver_dremshpr, driver_vanvan, driver_vanvank, driver_vanvanb, driver_bwcasino, driver_acitya, driver_theglobp, driver_sprglobp, driver_beastf, driver_rocktrv2, driver_bigbucks, driver_mschamp,
+
+/* S2650 Pacman Kits */
+driver_drivfrcp, driver_8bpm, driver_porky,
+
+driver_pengo, driver_pengo2, driver_pengo2u, driver_pengo3u, driver_pengo4, driver_pengob, driver_penta, driver_jrpacmbl,
+
+driver_jrpacman,
+
+/* Epos games */
+driver_megadon, driver_catapult, driver_suprglob, driver_theglob, driver_theglob2, driver_theglob3, driver_igmo, driver_dealer, driver_revenger,
+
+/* "Galaxian hardware" games */
+driver_galaxian, driver_galaxiaj, driver_galmidw, driver_galmidwo, driver_superg, driver_galapx, driver_moonaln, driver_galap1, driver_galap4, driver_galturbo, driver_swarm, driver_zerotime, driver_tst_galx, driver_gmgalax, driver_pisces, driver_piscesb, driver_uniwars, driver_gteikoku, driver_gteikokb, driver_gteikob2, driver_spacbatt, driver_skyraidr, driver_batman2, driver_warofbug, driver_redufo, driver_exodus, driver_streakng, driver_pacmanbl, driver_devilfsg, driver_zigzag, driver_zigzag2, driver_jumpbug, driver_jumpbugb, driver_levers, driver_azurian, driver_orbitron, driver_mooncrgx, driver_mooncrst, driver_mooncrsu, driver_mooncrsa, driver_mooncrsg, driver_smooncrs, driver_mooncrsb, driver_mooncrs2, driver_fantazia, driver_moonqsr, driver_mshuttle, driver_mshuttlj,
+driver_mshutlj2, driver_moonal2, driver_moonal2b, driver_supergx, driver_eagle, driver_eagle2, driver_eagle3, driver_spctbird, driver_skybase, driver_checkman, driver_checkmaj, driver_dingo, driver_dingoe, driver_blkhole, driver_kingball, driver_kingbalj, driver_scorpnmc, driver_frogg, driver_4in1, driver_bagmanmc, driver_dkongjrm, driver_ozon1, driver_ladybugg, driver_vpool, driver_drivfrcg, driver_drivfrcb, driver_bongo, driver_hunchbkg, driver_harem, driver_tazzmang, driver_racknrol, driver_hexpool, driver_trvchlng,
+
+/* Has some similarities with Moon Cresta but Board is very different */
+driver_rockclim,
+
+/* "Scramble hardware" (and variations) games */
+driver_scramble, driver_scrambls, driver_scramblb, driver_explorer, driver_strfbomb, driver_atlantis, driver_atlants2, driver_theend, driver_theends, driver_omega, driver_ckongs, driver_froggers, driver_amidars, driver_triplep,	/* made by Sanritsu? */
+driver_knockout, driver_mariner, driver_800fath, driver_mars, driver_devilfsh, driver_newsin7, driver_mrkougar, driver_mrkougr2, driver_mrkougb, driver_hotshock, driver_conquer, driver_hunchbks, driver_hncholms, driver_cavelon, driver_sfx, driver_skelagon, driver_mimonscr, driver_mimonkey, driver_mimonsco, driver_scobra, driver_scobras, driver_scobrase, driver_scobrab, driver_stratgyx, driver_stratgys, driver_armorcar, driver_armorca2, driver_moonwar, driver_moonwara, driver_spdcoin, driver_darkplnt, driver_tazmania, driver_tazmani2, driver_calipso, driver_anteater, driver_anteatg, driver_anteatgb, driver_rescue, driver_aponow, driver_minefld, driver_losttomb, driver_losttmbh, driver_superbon, driver_hustler, driver_billiard, driver_hustlerb, driver_frogger, driver_frogseg1, driver_frogseg2, driver_froggrmc, driver_amidar, driver_amidaru, driver_amidaro, driver_amigo, driver_turtles, driver_turpin, driver_600, driver_flyboy, driver_flyboyb, driver_fastfred, driver_jumpcoas, driver_jumpcoat, driver_boggy84, driver_redrobin, driver_imago, driver_scorpion, driver_scrpiona, driver_ad2083,
+
+/* "Crazy Climber hardware" games */
+driver_cclimber, driver_cclimbrj, driver_ccboot, driver_ccboot2, driver_ckong, driver_ckonga, driver_ckongjeu, driver_ckongo, driver_ckongalc, driver_bigkong, driver_monkeyd, driver_rpatrolb, driver_silvland, driver_yamato, driver_yamato2, driver_swimmer, driver_swimmera, driver_swimmerb, driver_guzzler, driver_cannonb, driver_ckongb,
+
+/* Nichibutsu games */
+driver_gomoku, driver_wiping, driver_rugrats, driver_dacholer, driver_kickboy, driver_friskyt, driver_friskyta, driver_radrad, driver_seicross, driver_sectrzon, driver_firebatl, driver_clshroad, driver_clshrdst, driver_tubep, driver_rjammer, driver_magmax, driver_cop01, driver_cop01a, driver_mightguy, driver_terracre, driver_terracrb, driver_terracra, driver_amazon, driver_amatelas, driver_horekid, driver_horekidb, driver_galivan, driver_galivan2, driver_dangar, driver_dangar2, driver_dangarb, driver_ninjemak, driver_youma, driver_legion, driver_legiono, driver_terraf, driver_terrafu, driver_kodure, driver_armedf, driver_cclimbr2, driver_cclmbr2a, driver_bigfghtr,
+
+/* Nichibutsu Mahjong games */
+driver_hyhoo, driver_hyhoo2,
+
+driver_pastelg,
+
+driver_crystalg, driver_crystal2, driver_nightlov, driver_citylove, driver_mcitylov, driver_apparel, driver_secolove, driver_housemnq, driver_housemn2, driver_livegal, driver_seiha, driver_seiham, driver_bijokkoy, driver_iemoto, driver_iemotom, driver_ryuuha, driver_ojousan, driver_ojousanm, driver_bijokkog, driver_orangec, driver_orangeci, driver_vipclub, driver_korinai, driver_korinaim, driver_kaguya, driver_kaguya2, driver_kaguya2f, driver_otonano, driver_kanatuen, driver_kyuhito, driver_mjsikaku, driver_mjsikakb, driver_mjsikakc, driver_mjsikakd, driver_mmsikaku, driver_mjcamera, driver_mmcamera,
+
+driver_msjiken, driver_hanamomo, driver_telmahjn, driver_taiwanmb, driver_gionbana, driver_idhimitu, driver_mgion, driver_mjcamerb, driver_omotesnd, driver_abunai, driver_mjfocus, driver_mjfocusm, driver_peepshow, driver_scandal, driver_scandalm, driver_mgmen89, driver_mjnanpas, driver_mjnanpaa, driver_mjnanpau, driver_pairsnb, driver_pairsten, driver_bananadr, driver_mladyhtr, driver_chinmoku, driver_maiko, driver_mmaiko, driver_club90s, driver_club90sa, driver_lovehous, driver_hanaoji,
+
+driver_pstadium, driver_triplew1, driver_triplew2, driver_ntopstar, driver_mjlstory, driver_vanilla, driver_finalbny, driver_qmhayaku, driver_mjgottub, driver_galkoku, driver_hyouban, driver_galkaika, driver_tokyogal, driver_tokimbsj, driver_mcontest, driver_uchuuai, driver_av2mj1bb, driver_av2mj2rg,
+
+driver_mjuraden, driver_koinomp, driver_patimono, driver_janbari, driver_mjanbari, driver_ultramhm, driver_gal10ren, driver_renaiclb, driver_mjlaman, driver_mkeibaou, driver_pachiten, driver_sailorws, driver_sailorwa, driver_sailorwr, driver_wcatcher, driver_jituroku, driver_yosimoto, driver_psailor1, driver_psailor2, driver_otatidai, driver_ngpgal, driver_mjgottsu, driver_bakuhatu, driver_cmehyou, driver_mmehyou, driver_mjkoiura, driver_mkoiuraa, driver_imekura, driver_mscoutm, driver_mjegolf,
+
+driver_mhhonban, driver_4psimasy, driver_musobana, driver_niyanpai,
+
+/* "Phoenix hardware" (and variations) games */
+driver_safarir, driver_phoenix, driver_phoenixa, driver_phoenixt, driver_phoenix3, driver_phoenixc, driver_condor, driver_falcon, driver_vautour, driver_griffon, driver_pleiads, driver_pleiadbl, driver_pleiadce, driver_capitol, driver_survival, driver_naughtyb, driver_naughtya, driver_naughtyc, driver_popflame, driver_popflama, driver_popflamb, driver_trvmstr, driver_trvgns,
+
+
+
+/* Namco games (plus some intruders on similar hardware) */
+driver_geebee, driver_geebeeg, driver_bombbee, driver_cutieq, driver_navarone, driver_kaitei, driver_kaiteik, driver_sos, driver_tankbatt, driver_warpwarp, driver_warpwarr, driver_warpwar2, driver_rallyx, driver_rallyxm, driver_nrallyx, driver_jungler, driver_junglers, driver_tactcian, driver_tactcan2, driver_locomotn, driver_gutangtn, driver_cottong, driver_commsega,
+/* the following ones all have a custom I/O chip */
+driver_bosco, driver_boscoo, driver_boscoo2, driver_boscomd, driver_boscomdo, driver_galaga, driver_galagao, driver_galagamw, driver_galagamk, driver_gallag, driver_gatsbee, driver_digdug, driver_digdugb, driver_digdugat, driver_digduga1, driver_dzigzag, driver_xevious, driver_xeviousa, driver_xeviousb, driver_xeviousc, driver_xevios, driver_battles, driver_sxevious, driver_superpac, driver_superpcm, driver_pacnpal, driver_pacnpal2, driver_pacnchmp, driver_phozon, driver_mappy, driver_mappyj, driver_digdug2, driver_digdug2o, driver_todruaga, driver_todruago, driver_motos, driver_grobda, driver_grobda2, driver_grobda3, driver_gaplus, driver_gaplusa, driver_gapluso, driver_galaga3, driver_galaga3m, driver_galaga3a,
+/* Libble Rabble board (first Japanese game using a 68000) */
+driver_liblrabl, driver_toypop,
+/* Z8000 games */
+driver_polepos, driver_poleposa, driver_polepos1, driver_topracer, driver_topracra, driver_topracrb, driver_polepos2, driver_poleps2a, driver_poleps2b,
+/* no custom I/O in the following, HD63701 (or compatible) microcontroller instead */
+driver_pacland, driver_pacland2, driver_pacland3, driver_paclandm, driver_drgnbstr, driver_skykid, driver_skykido, driver_skykidd, driver_baraduke, driver_baraduka, driver_metrocrs, driver_metrocra,
+
+/* Namco System 86 games */
+driver_hopmappy, driver_skykiddx, driver_skykiddo, driver_roishtar, driver_genpeitd, driver_rthunder, driver_rthundro, driver_wndrmomo,
+
+/* Thunder Ceptor HW */
+driver_tceptor, driver_tceptor2,
+
+/* Namco System 1 games */
+driver_shadowld, driver_youkaidk, driver_yokaidko, driver_dspirit, driver_dspirito, driver_blazer, driver_quester, driver_pacmania, driver_pacmanij, driver_galaga88, driver_galag88j, driver_ws, driver_berabohm, driver_beraboho,
+/* 1988 Alice in Wonderland (English version of Marchen maze) */
+driver_mmaze, driver_bakutotu, driver_wldcourt, driver_splatter, driver_faceoff, driver_rompers, driver_romperso, driver_blastoff, driver_ws89, driver_dangseed, driver_ws90, driver_pistoldm, driver_boxyboy, driver_soukobdx, driver_puzlclub, driver_tankfrce, driver_tankfrcj,
+
+/* Namco System 2 games */
+driver_finallap, driver_finalapd, driver_finalapc, driver_finlapjc, driver_finlapjb, driver_assault, driver_assaultj, driver_assaultp, driver_metlhawk, driver_metlhwkj, driver_ordyne, driver_ordynej, driver_mirninja, driver_phelios, driver_dirtfoxj, driver_fourtrax, driver_valkyrie, driver_finehour, driver_burnforc, driver_marvland, driver_marvlanj, driver_kyukaidk, driver_kyukaido, driver_dsaber, driver_dsaberj, driver_finalap2, driver_finalp2j, driver_gollygho, driver_rthun2, driver_rthun2j, driver_sgunner, driver_sgunnerj,
+/* 91.9  Super World Stadium */
+driver_sgunner2, driver_sgunnr2j, driver_cosmogng, driver_cosmognj, driver_finalap3, driver_finalp3a, driver_luckywld, driver_lckywldj, driver_suzuka8h, driver_suzuk8hj,
+/* 92.8  Bubble Trouble */
+driver_sws, driver_sws92, driver_sws92g, driver_suzuk8h2, driver_sws93,
+/* 93.6  Super World Stadium '93 */
+
+/* Namco FL games */
+driver_speedrcr, driver_finalapr,
+
+/* Namco NA-1 / NA-2 System games */
+driver_bkrtmaq, driver_cgangpzl, driver_cgangpzj, driver_exvania, driver_fghtatck, driver_fa, driver_knckhead, driver_knckhedj, driver_swcourt, driver_emeralda, driver_emerldaa, driver_numanath, driver_numanatj, driver_quiztou, driver_tinklpit, driver_xday2,
+
+/* Namco NB-1 / NB-2 System games */
+driver_nebulray, driver_nebulryj, driver_ptblank, driver_gunbulet, driver_gslugrsj, driver_gslgr94u, driver_sws95, driver_sws96, driver_sws97, driver_vshoot, driver_outfxies, driver_outfxesj, driver_machbrkr,
+
+/* Namco ND-1 games */
+driver_ncv1, driver_ncv1j, driver_ncv1j2, driver_ncv2, driver_ncv2j,
+
+/* Namco System 21 games */
+/* 1988, Winning Run */
+/* 1989, Winning Run Suzuka Grand Prix */
+driver_winrun91, driver_solvalou, driver_starblad,
+/* 199?, Driver's Eyes */
+/* 1992, ShimDrive */
+driver_aircombj, driver_aircombu, driver_cybsled,
+
+/* Namco System 22 games */
+driver_alpinerd, driver_alpinerc, driver_raveracw, driver_raveracj, driver_ridgerac, driver_ridgeraj, driver_ridgera2, driver_ridger2a, driver_ridger2b, driver_acedrvrw, driver_victlapw, driver_cybrcomm, driver_airco22b, driver_cybrcycc, driver_timecris, driver_timecrsa, driver_propcycl,
+
+/* Namco System 23 */
+driver_timecrs2, driver_gp500,
+
+
+/* Universal games */
+driver_cosmicg, driver_cosmica, driver_cosmica2, driver_panic, driver_panic2, driver_panic3, driver_panich, driver_panicger, driver_zerohour, driver_redclash, driver_redclask, driver_magspot, driver_magspot2, driver_devzone, driver_devzone2, driver_nomnlnd, driver_nomnlndg, driver_cheekyms, driver_ladybug, driver_ladybugb, driver_snapjack, driver_sraider, driver_cavenger, driver_dorodon, driver_dorodon2, driver_mrdo, driver_mrdoy, driver_mrdot, driver_mrdofix, driver_mrlo, driver_mrdu, driver_yankeedo, driver_docastle, driver_docastl2, driver_docastlo, driver_douni, driver_dorunrun, driver_dorunru2, driver_dorunruc, driver_spiero, driver_dowild, driver_jjack, driver_kickridr, driver_idsoccer,
+
+/* Nintendo games */
+driver_spacefev, driver_spacefva, driver_highsplt, driver_highspla, driver_spacelnc, driver_sheriff, driver_bandido, driver_helifire, driver_helifira, driver_radarscp, driver_dkong, driver_dkongo, driver_dkongjp, driver_dkongjo, driver_dkongjo1, driver_dkongjr, driver_dkongjrj, driver_dkngjnrj, driver_dkongjrb, driver_dkngjnrb, driver_dkong3, driver_dkong3j, driver_dkong3b, driver_mario, driver_mariojp, driver_masao, driver_pestplce, driver_spclforc, driver_spcfrcii, driver_8ballact, driver_8ballat2, driver_shootgal, driver_drakton, driver_strtheat, driver_hunchbkd, driver_sbdk, driver_herbiedk, driver_herodk, driver_herodku, driver_skyskipr, driver_popeye, driver_popeyeu, driver_popeyef, driver_popeyebl, driver_punchout, driver_spnchout, driver_spnchotj, driver_armwrest,
+
+/* Nintendo Playchoice 10 games */
+driver_pc_tenis, driver_pc_mario, driver_pc_bball, driver_pc_bfght, driver_pc_ebike, driver_pc_golf, driver_pc_kngfu, driver_pc_1942, driver_pc_smb, driver_pc_vball, driver_pc_duckh, driver_pc_hgaly, driver_pc_wgnmn, driver_pc_grdus, driver_pc_grdue, driver_pc_tkfld, driver_pc_pwrst, driver_pc_trjan, driver_pc_cvnia, driver_pc_dbldr, driver_pc_rnatk, driver_pc_rygar, driver_pc_cntra, driver_pc_goons, driver_pc_mtoid, driver_pc_radrc, driver_pc_miket, driver_pc_rcpam, driver_pc_ngaid, driver_pc_tmnt, driver_pc_ftqst, driver_pc_bstar, driver_pc_tbowl, driver_pc_drmro, driver_pc_ynoid, driver_pc_rrngr, driver_pc_ddrgn, driver_pc_gntlt, driver_pc_smb2, driver_pc_smb3, driver_pc_mman3, driver_pc_radr2, driver_pc_suprc, driver_pc_tmnt2, driver_pc_wcup, driver_pc_ngai2, driver_pc_ngai3, driver_pc_pwbld, driver_pc_rkats, driver_pc_pinbt, driver_pc_cshwk, driver_pc_sjetm, driver_pc_moglf,
+
+/* Nintendo VS games */
+driver_btlecity, driver_starlstr, driver_cstlevna, driver_cluclu, driver_drmario, driver_duckhunt, driver_excitebk, driver_excitbkj, driver_goonies, driver_hogalley, driver_iceclimb, driver_iceclmbj, driver_ladygolf, driver_machridr, driver_machridj, driver_rbibb, driver_rbibba, driver_suprmrio, driver_vsskykid, driver_tkoboxng, driver_smgolf, driver_smgolfj, driver_vspinbal, driver_vspinblj, driver_vsslalom, driver_vssoccer, driver_vsgradus, driver_platoon, driver_vstetris, driver_mightybj, driver_jajamaru, driver_topgun, driver_bnglngby, driver_vstennis, driver_vstennij, driver_wrecking, driver_balonfgt, driver_vsmahjng, driver_vsbball, driver_vsbballj, driver_vsbbalja, driver_iceclmrj, driver_vsgshoe, driver_supxevs, driver_vsfdf, driver_smgolfb, driver_vsbbaljb,
+
+/* Nintendo Super System Games */
+driver_nss_ssoc, driver_nss_actr, driver_nss_con3, driver_nss_adam, driver_nss_aten, driver_nss_rob3, driver_nss_ncaa, driver_nss_skin, driver_nss_lwep, driver_nss_smw, driver_nss_fzer, driver_nss_sten,
+
+/* Midway 8080 b/w games */
+driver_seawolf, driver_gunfight,
+/* 603 - Top Gun [1976] */
+driver_tornbase, driver_280zzzap, driver_maze, driver_boothill, driver_checkmat, driver_desertgu, driver_dplay, driver_lagunar, driver_gmissile, driver_m4, driver_clowns, driver_clowns1,
+/* 640 - Space Walk [1978] */
+driver_einnings, driver_shuffle, driver_dogpatch, driver_spcenctr, driver_phantom2, driver_bowler, driver_invaders, driver_blueshrk, driver_invad2ct, driver_invadpt2, driver_invaddlx, driver_moonbase,
+/* 870 - Space Invaders Deluxe cocktail */
+driver_searthin, driver_searthia, driver_invadrmr, driver_spaceatt, driver_spaceat2, driver_sinvzen, driver_superinv, driver_invasion, driver_sstrangr, driver_sstrngr2, driver_sinvemag, driver_jspecter, driver_jspectr2, driver_invrvnge, driver_invrvnga, driver_galxwars, driver_galxwar2, driver_galxwart, driver_starw, driver_lrescue, driver_grescue, driver_desterth, driver_cosmicmo, driver_cosmicm2, driver_rollingc, driver_ozmawars, driver_ozmawar2, driver_solfight, driver_spaceph, driver_schaser, driver_schasrcv, driver_lupin3, driver_spclaser, driver_laser, driver_spcewarl, driver_polaris, driver_polarisa, driver_ballbomb, driver_m79amb, driver_alieninv, driver_tst_invd, driver_sitv, driver_sicv, driver_sisv, driver_sisv2, driver_spacewr3, driver_invaderl, driver_invader4, driver_yosakdon, driver_yosakdoa, driver_spceking, driver_spcewars, driver_cosmo,
+
+driver_sspeedr,
+
+/* Similar but with a M6800 instead of an 8080 */
+driver_sflush,
+
+/* Meadows S2650 games */
+driver_lazercmd, driver_bbonk, driver_deadeye, driver_gypsyjug, driver_minferno, driver_medlanes,
+
+/* CVS games */
+driver_cosmos, driver_darkwar, driver_spacefrt, driver_8ball, driver_8ball1, driver_logger, driver_dazzler, driver_diggerc, driver_wallst, driver_radarzon, driver_radarzn1, driver_radarznt, driver_outline, driver_goldbug, driver_heartatk, driver_hunchbak, driver_superbik, driver_raiders, driver_hero, driver_huncholy,
+
+/* Zaccaria Hardware (similar to CVS) */
+driver_quasar, driver_quasara,
+
+/* Midway "Astrocade" games */
+driver_seawolf2, driver_spacezap, driver_ebases, driver_wow, driver_gorf, driver_gorfpgm1, driver_robby, driver_demndrgn, driver_profpac,
+
+/* Bally Midway MCR games */
+/* MCR1 */
+driver_solarfox, driver_kick, driver_kicka,
+/* MCR2 */
+driver_shollow, driver_shollow2, driver_tron, driver_tron2, driver_tron3, driver_tron4, driver_kroozr, driver_domino, driver_wacko, driver_twotiger, driver_twotigra,
+/* MCR2 + MCR3 sprites */
+driver_journey,
+/* MCR3 */
+driver_tapper, driver_tappera, driver_sutapper, driver_rbtapper, driver_timber, driver_dotron, driver_dotrona, driver_dotrone, driver_demoderb, driver_demoderm, driver_sarge, driver_rampage, driver_rampage2, driver_powerdrv, driver_stargrds, driver_maxrpm, driver_spyhunt, driver_turbotag, driver_crater,
+/* MCR 68000 */
+driver_zwackery, driver_xenophob, driver_spyhunt2, driver_spyhnt2a, driver_blasted, driver_archrivl, driver_archriv2, driver_trisport, driver_pigskin,
+
+/* Bally / Sente games */
+driver_sentetst, driver_cshift, driver_gghost, driver_hattrick, driver_otwalls, driver_snakepit, driver_snakjack, driver_stocker, driver_triviag1, driver_triviag2, driver_triviasp, driver_triviayp, driver_triviabb, driver_gimeabrk, driver_minigolf, driver_minigol2, driver_toggle, driver_nametune, driver_nstocker, driver_sfootbal, driver_spiker, driver_stompin, driver_rescraid, driver_rescrdsa, driver_grudge, driver_shrike, driver_gridlee,
+
+/* Irem games */
+/* trivia: IREM means "International Rental Electronics Machines" */
+driver_andromed, driver_ipminvad, driver_skychut, driver_spacbeam, driver_greenber, driver_headoni,
+
+driver_redalert, driver_demoneye, driver_olibochu, driver_mpatrol, driver_mpatrolw, driver_troangel, driver_yard, driver_vsyard, driver_vsyard2, driver_travrusa, driver_motorace, driver_shtrider, driver_shtridra, driver_wilytowr, driver_atomboy, driver_fghtbskt,
+/* M62 */
+driver_kungfum, driver_kungfud, driver_spartanx, driver_kungfub, driver_kungfub2, driver_battroad, driver_ldrun, driver_ldruna, driver_ldrun2, driver_ldrun3, driver_ldrun3jp, driver_ldrun4, driver_lotlot, driver_kidniki, driver_yanchamr, driver_lithero, driver_spelunkr, driver_spelnkrj, driver_spelunk2, driver_horizon, driver_youjyudn,
+
+driver_vigilant, driver_vigilntu, driver_vigilntj, driver_kikcubic, driver_kikcubib, driver_buccanrs, driver_buccanra,
+/* M72 (and derivatives) */
+driver_rtype, driver_rtypepj, driver_rtypeu, driver_bchopper, driver_mrheli, driver_nspirit, driver_nspiritj, driver_imgfight, driver_loht, driver_xmultipl, driver_dbreed, driver_rtype2, driver_rtype2j, driver_majtitle, driver_hharry, driver_hharryu, driver_dkgensan, driver_dkgenm72, driver_poundfor, driver_poundfou, driver_airduel, driver_cosmccop, driver_gallop, driver_kengo,
+/* not M72, but same sound hardware */
+driver_sichuan2, driver_sichuana, driver_shisen, driver_matchit,
+/* M90 */
+driver_hasamu, driver_dynablst, driver_dynablsb, driver_bombrman, driver_atompunk,
+/* M97 */
+driver_bbmanw, driver_bbmanwj, driver_bomblord, driver_newapunk, driver_quizf1, driver_riskchal, driver_gussun, driver_shisen2,
+/* M92 */
+driver_gunforce, driver_gunforcu, driver_gunforcj, driver_bmaster, driver_lethalth, driver_thndblst, driver_uccops, driver_uccopsj, driver_mysticri, driver_gunhohki, driver_majtitl2, driver_skingame, driver_skingam2, driver_hook, driver_hooku, driver_hookj, driver_rtypeleo, driver_rtypelej, driver_inthunt, driver_inthuntu, driver_kaiteids, driver_nbbatman, driver_leaguemn, driver_ssoldier, driver_psoldier, driver_dsccr94j, driver_gunforc2, driver_geostorm,
+/* M107 */
+driver_firebarr, driver_dsoccr94, driver_wpksoc,
+
+/* Gottlieb/Mylstar games (Gottlieb became Mylstar in 1983) */
+driver_reactor, driver_mplanets, driver_mplanuk, driver_qbert, driver_qberta, driver_qbertjp, driver_myqbert, driver_qberttst, driver_qbtrktst, driver_insector, driver_tylz, driver_argusg, driver_krull, driver_kngtmare, driver_sqbert, driver_mach3, driver_usvsthem, driver_3stooges, driver_qbertqub, driver_screwloo, driver_curvebal, driver_vidvince, driver_wizwarz,
+
+/* Taito "Qix hardware" games */
+driver_qix, driver_qixa, driver_qixb, driver_qix2, driver_sdungeon, driver_elecyoyo, driver_elecyoy2, driver_kram, driver_kram2, driver_kram3, driver_zookeep, driver_zookeep2, driver_zookeep3, driver_slither, driver_slithera, driver_complexx,
+
+/* Taito SJ System games */
+driver_spaceskr, driver_spacecr, driver_junglek, driver_junglkj2, driver_jungleh, driver_junglhbr, driver_piratpet, driver_alpine, driver_alpinea, driver_timetunl, driver_wwestern, driver_wwester1, driver_frontlin, driver_elevator, driver_elevatob, driver_tinstar, driver_waterski, driver_bioatack, driver_hwrace, driver_sfposeid, driver_kikstart,
+
+/* other Taito games */
+driver_fgoal, driver_fgoala, driver_crbaloon, driver_crbalon2, driver_sbowling, driver_grchamp, driver_marinedt, driver_changela, driver_bking, driver_bking2, driver_bking3, driver_chaknpop, driver_josvolly, driver_gsword, driver_gsword2, driver_pitnrun, driver_pitnruna, driver_lkage, driver_lkageb, driver_lkageb2, driver_lkageb3, driver_msisaac, driver_retofinv, driver_retofin1, driver_retofin2, driver_fightrol, driver_rollace, driver_rollace2, driver_vsgongf, driver_ringfgt, driver_ringfgt2, driver_fieldday, driver_undoukai, driver_40love, driver_tsamurai, driver_tsamura2, driver_nunchaku, driver_yamagchi, driver_m660, driver_m660j, driver_m660b, driver_alphaxz, driver_buggychl, driver_buggycht, driver_ssrj, driver_bigevglf, driver_flstory, driver_flstoryj, driver_onna34ro, driver_onna34ra, driver_victnine, driver_gladiatr, driver_ogonsiro, driver_greatgur, driver_ppking, driver_nycaptor, driver_cyclshtg, driver_bronx, driver_colt, driver_ksayakyu, driver_benberob, driver_halleys, driver_halleysc, driver_halleycj, driver_lsasquad, driver_storming, driver_tokio, driver_tokiob, driver_bublbobl, driver_bublbob1, driver_bublbobr, driver_bubbobr1, driver_boblbobl, driver_sboblbob, driver_missb2, driver_kikikai, driver_kicknrun, driver_mexico86, driver_darius, driver_dariusj, driver_dariuso, driver_dariuse, driver_rastan, driver_rastanu, driver_rastanu2, driver_rastsaga, driver_topspeed, driver_topspedu, driver_fullthrl, driver_opwolf, driver_opwolfu, driver_opwolfb, driver_othunder, driver_othundu, driver_othunduo, driver_othundrj, driver_rainbow, driver_rainbowo, driver_rainbowe, driver_jumping, driver_arkanoid, driver_arknoidu, driver_arknoiuo, driver_arknoidj, driver_arkbl2, driver_arkbl3, driver_paddle2, driver_arkatayt, driver_arkblock, driver_arkbloc2, driver_arkangc, driver_arkatour, driver_sqix, driver_sqixa, driver_sqixbl, driver_perestro, driver_perestrf, driver_pbillian, driver_hotsmash, driver_exzisus, driver_minivadr, driver_volfied, driver_volfiedu, driver_volfiedj, driver_bonzeadv, driver_bonzeadu, driver_jigkmgri, driver_asuka, driver_mofflott, driver_cadash, driver_cadashj, driver_cadashu, driver_cadashi, driver_cadashf, driver_galmedes, driver_earthjkr, driver_eto, driver_wgp, driver_wgpj, driver_wgpjoy, driver_wgpjoya, driver_wgp2, driver_slapshot, driver_opwolf3, driver_opwolf3u, driver_ashnojoe,
+
+/* Taito multi-screen games */
+driver_ninjaw, driver_ninjawj, driver_darius2, driver_darius2d, driver_drius2do, driver_warriorb,
+
+/* Taito "X"-system games */
+driver_superman, driver_suprmanj, driver_twinhawk, driver_twinhwku, driver_daisenpu, driver_gigandes, driver_kyustrkr, driver_ballbros,
+
+/* Taito "tnzs" (Seta) hardware */
+driver_plumppop, driver_extrmatn, driver_arknoid2, driver_arknid2u, driver_arknid2j, driver_drtoppel, driver_drtopplu, driver_drtopplj, driver_kageki, driver_kagekij, driver_chukatai, driver_chukatau, driver_chukataj, driver_kabukiz, driver_kabukizj, driver_tnzs, driver_tnzsj, driver_tnzso, driver_insectx, driver_champbwl,
+
+/* Taito L-System games */
+driver_raimais, driver_kurikint, driver_kurikinu, driver_kurikinj, driver_kurikina, driver_evilston, driver_fhawk, driver_fhawkj, driver_plotting, driver_plottina, driver_champwr, driver_champwru, driver_champwrj, driver_puzznic, driver_horshoes, driver_palamed, driver_cachat, driver_tubeit, driver_cubybop, driver_plgirls, driver_plgirls2,
+
+/* Taito H-System games */
+driver_syvalion, driver_recordbr, driver_dleague,
+
+/* Taito B-System games */
+driver_masterw, driver_nastar, driver_nastarw, driver_rastsag2, driver_rambo3, driver_rambo3ae, driver_rambo3a, driver_crimec, driver_crimecu, driver_crimecj, driver_tetrist, driver_tetrista, driver_viofight, driver_viofighu, driver_ashura, driver_ashurau, driver_hitice, driver_sbm, driver_selfeena, driver_silentd, driver_silentdj, driver_ryujin, driver_qzshowby, driver_pbobble, driver_spacedx, driver_spacedxj, driver_spacedxo,
+
+/* Taito Z-System games */
+driver_contcirc, driver_contcrcu, driver_contcrua, driver_chasehq, driver_chasehqj, driver_enforce, driver_nightstr, driver_sci, driver_scia, driver_sciu, driver_bshark, driver_bsharkj, driver_aquajack, driver_aquajckj, driver_spacegun, driver_dblaxle, driver_pwheelsj, driver_racingb,
+
+/* Taito Air System games */
+driver_topland, driver_ainferno,
+
+/* enhanced Z-System hardware games */
+driver_gunbustr, driver_superchs, driver_groundfx, driver_undrfire, driver_undrfiru, driver_undrfirj,
+
+/* Taito F2 games */
+driver_finalb, driver_finalbj, driver_finalbu, driver_dondokod, driver_dondokdu, driver_dondokdj, driver_megab, driver_megabj, driver_thundfox, driver_thndfoxu, driver_thndfoxj, driver_cameltry, driver_camltrua, driver_cameltrj, driver_qtorimon, driver_liquidk, driver_liquidku, driver_mizubaku, driver_quizhq, driver_ssi, driver_majest12, driver_gunfront, driver_gunfronj, driver_growl, driver_growlu, driver_runark, driver_mjnquest, driver_mjnquesb, driver_footchmp, driver_hthero, driver_euroch92, driver_koshien, driver_yuyugogo, driver_ninjak, driver_ninjakj, driver_solfigtr, driver_qzquest, driver_pulirula, driver_pulirulj, driver_metalb, driver_metalbj, driver_qzchikyu, driver_yesnoj, driver_deadconx, driver_deadconj, driver_dinorex, driver_dinorexj, driver_dinorexu, driver_qjinsei, driver_qcrayon, driver_qcrayon2, driver_driftout, driver_driveout,
+
+/* Taito F3 games */
+driver_ringrage, driver_ringragj, driver_ringragu, driver_arabianm, driver_arabiamj, driver_arabiamu, driver_ridingf, driver_ridefgtj, driver_ridefgtu, driver_gseeker, driver_gseekerj, driver_gseekeru, driver_hthero93, driver_cupfinal, driver_trstar, driver_trstarj, driver_prmtmfgt, driver_trstaro, driver_trstaroj, driver_prmtmfgo, driver_gunlock, driver_rayforcj, driver_rayforce, driver_scfinals, driver_intcup94, driver_hthero94, driver_dungeonm, driver_lightbr, driver_dungenmu, driver_kaiserkn, driver_kaiserkj, driver_gblchmp, driver_dankuga, driver_dariusg, driver_dariusgj, driver_dariusgu, driver_dariusgx, driver_bublbob2, driver_bubsympe, driver_bubsympu, driver_bubsymph, driver_spcinvdj, driver_pwrgoal, driver_hthero95, driver_hthro95u, driver_qtheater, driver_elvactr, driver_elvactrj, driver_elvact2u, driver_spcinv95, driver_spcnv95u, driver_akkanvdr, driver_twinqix, driver_quizhuhu, driver_pbobble2, driver_pbobbl2j, driver_pbobbl2u, driver_pbobbl2x, driver_gekirido, driver_tcobra2, driver_tcobra2u, driver_ktiger2, driver_bubblem, driver_bubblemj, driver_cleopatr, driver_pbobble3, driver_pbobbl3u, driver_pbobbl3j, driver_arkretrn, driver_kirameki, driver_puchicar, driver_puchicrj, driver_pbobble4, driver_pbobbl4j, driver_pbobbl4u, driver_popnpop, driver_popnpopj, driver_popnpopu, driver_landmakr, driver_landmkrp, driver_recalh, driver_commandw,
+
+/* Taito JC System */
+driver_landgear, driver_dendeg, driver_dendegx, driver_dendeg2, driver_dendeg2x, driver_sidebs, driver_sidebs2,
+
+
+/* Toaplan games */
+driver_perfrman, driver_perfrmau, driver_tigerh, driver_tigerh2, driver_tigerhj, driver_tigerhb1, driver_tigerhb2, driver_slapfigh, driver_slapbtjp, driver_slapbtuk, driver_alcon, driver_getstar, driver_getstarj, driver_getstarb, driver_mjsister,
+
+driver_fshark, driver_skyshark, driver_hishouza, driver_fsharkbt, driver_wardner, driver_pyros, driver_wardnerj, driver_twincobr, driver_twincobu, driver_ktiger, driver_gulfwar2,
+
+driver_rallybik, driver_truxton, driver_hellfire, driver_hellfir1, driver_zerowing, driver_demonwld, driver_demonwl1, driver_fireshrk, driver_samesame, driver_samesam2, driver_outzone, driver_outzonea, driver_vimana, driver_vimana1, driver_vimanan, driver_snowbros, driver_snowbroa, driver_snowbrob, driver_snowbroc, driver_snowbroj, driver_wintbob,
+/* SemiCom games on snowbros like hardware */
+driver_hyperpac, driver_hyperpcb, driver_twinkle, driver_cookbib2, driver_3in1semi, driver_moremore, driver_moremorp, driver_4in1boot, driver_snowbro3,
+
+/* More Toaplan Games */
+driver_tekipaki, driver_ghox, driver_dogyuun, driver_kbash, driver_truxton2, driver_pipibibs, driver_whoopee, driver_pipibibi, driver_fixeight, driver_fixeighb, driver_vfive, driver_grindstm, driver_grindsta, driver_batsugun, driver_batugnsp, driver_snowbro2,
+/* see http://www.vsa-ag.ch/r8zing/ for a list of Raizing/8ing games */
+driver_sstriker, driver_sstrikra, driver_mahoudai, driver_shippumd, driver_kingdmgp, driver_battleg, driver_battlega, driver_battlegb, driver_battlegc, driver_batrider, driver_batridra, driver_batridrk, driver_bbakraid, driver_bbakradu,
+
+/* Cave games */
+/* Cave was formed in 1994 from the ruins of Toaplan, like Raizing was. */
+driver_pwrinst2, driver_mazinger, driver_donpachi, driver_donpachj, driver_donpachk, driver_metmqstr, driver_nmaster, driver_sailormn, driver_sailormo, driver_agallet, driver_hotdogst, driver_ddonpach, driver_ddonpchj, driver_dfeveron, driver_feversos, driver_esprade, driver_espradej, driver_espradeo, driver_uopoko, driver_guwange, driver_gaia,
+
+/* Kyugo games */
+/* Kyugo only made four games: Repulse, Flash Gal, SRD Mission and Air Wolf. */
+/* Gyrodine was made by Crux. Crux was antecedent of Toa Plan, and spin-off from Orca. */
+driver_gyrodine, driver_gyrodinc, driver_sonofphx, driver_repulse, driver_99lstwar, driver_99lstwra, driver_99lstwrk, driver_flashgal, driver_flashgla, driver_srdmissn, driver_fx, driver_legend, driver_airwolf, driver_skywolf, driver_skywolf2,
+
+/* Williams games */
+driver_defender, driver_defendg, driver_defendw, driver_defndjeu, driver_tornado1, driver_tornado2, driver_zero, driver_defcmnd, driver_defence, driver_startrkd, driver_mayday, driver_maydaya, driver_maydayb, driver_colony7, driver_colony7a, driver_stargate, driver_robotron, driver_robotryo, driver_joust, driver_joustr, driver_joustwr, driver_bubbles, driver_bubblesr, driver_bubblesp, driver_splat, driver_sinistar, driver_sinista1, driver_sinista2, driver_playball, driver_blaster, driver_blast30, driver_blastkit, driver_spdball, driver_mysticm, driver_tshoot, driver_inferno, driver_joust2, driver_lottofun,
+
+/* Capcom games */
+/* The following is a COMPLETE list of the Capcom games up to 1997, as shown on */
+/* their web site. The list is sorted by production date.                       */
+/* A comprehensive list of Capcom games with board info can be found here:      */
+/* http://www.arcadeflyers.com/strider/capcom_list.html                         */
+driver_vulgus, driver_vulgus2, driver_vulgusj, driver_sonson, driver_sonsonj, driver_higemaru, driver_1942, driver_1942a, driver_1942b, driver_exedexes, driver_savgbees, driver_commando, driver_commandu, driver_commandj, driver_sinvasn, driver_sinvasnb, driver_gng, driver_gnga, driver_gngt, driver_makaimur, driver_makaimuc, driver_makaimug, driver_diamond, driver_gunsmoke, driver_gunsmoku, driver_gunsmoka, driver_gunsmokj, driver_sectionz, driver_sctionza, driver_trojan, driver_trojanr, driver_trojanj, driver_srumbler, driver_srumblr2, driver_rushcrsh, driver_lwings, driver_lwings2, driver_lwingsjp, driver_sidearms, driver_sidearmr, driver_sidearjp, driver_turtship, driver_dyger, driver_dygera, driver_twinfalc, driver_whizz, driver_avengers, driver_avenger2, driver_buraiken, driver_bionicc, driver_bionicc2, driver_topsecrt, driver_1943, driver_1943j, driver_blktiger, driver_bktigerb, driver_blkdrgon, driver_blkdrgnb, driver_sf, driver_sfus, driver_sfjp, driver_sfp, driver_tigeroad, driver_toramich, driver_tigerodb, driver_f1dream, driver_f1dreamb, driver_1943kai, driver_lastduel, driver_lstduela, driver_lstduelb, driver_madgear, driver_madgearj, driver_ledstorm,
+/*  3/1989 Dokaben (baseball) - see below among "Mitchell" games */
+/*  8/1989 Dokaben 2 (baseball) - see below among "Mitchell" games */
+/* 10/1989 Capcom Baseball - see below among "Mitchell" games */
+/* 11/1989 Capcom World - see below among "Mitchell" games */
+/*  3/1990 Adventure Quiz 2 Hatena no Dai-Bouken - see below among "Mitchell" games */
+/*  1/1991 Quiz Tonosama no Yabou - see below among "Mitchell" games */
+/*  4/1991 Ashita Tenki ni Naare (golf) - see below among "Mitchell" games */
+/*  5/1991 Ataxx - see below among "Leland" games */
+/*  6/1991 Quiz Sangokushi - see below among "Mitchell" games */
+/* 10/1991 Block Block - see below among "Mitchell" games */
+/*  6/1995 Street Fighter - the Movie - see below among "Incredible Technologies" games */
+
+
+/* Capcom CPS1 games */
+driver_forgottn, driver_lostwrld, driver_ghouls, driver_ghoulsu, driver_daimakai, driver_strider, driver_stridrua, driver_striderj, driver_stridrja, driver_dynwar, driver_dynwarj, driver_willow, driver_willowj, driver_willowje, driver_unsquad, driver_area88, driver_ffight, driver_ffightu, driver_ffightj, driver_ffightj1, driver_1941, driver_1941j, driver_mercs, driver_mercsu, driver_mercsua, driver_mercsj, driver_mtwins, driver_chikij, driver_msword, driver_mswordr1, driver_mswordu, driver_mswordj, driver_cawing, driver_cawingu, driver_cawingj, driver_nemo, driver_nemoj, driver_sf2, driver_sf2eb, driver_sf2ua, driver_sf2ub, driver_sf2ud, driver_sf2ue, driver_sf2uf, driver_sf2ui, driver_sf2uk, driver_sf2j, driver_sf2ja, driver_sf2jc, driver_3wonders, driver_3wonderu, driver_wonder3, driver_kod, driver_kodu, driver_kodj, driver_kodb, driver_captcomm, driver_captcomu, driver_captcomj, driver_knights, driver_knightsu, driver_knightsj, driver_sf2ce, driver_sf2ceua, driver_sf2ceub, driver_sf2ceuc, driver_sf2cej, driver_sf2rb, driver_sf2rb2, driver_sf2red, driver_sf2v004, driver_sf2accp2, driver_sf2m1, driver_sf2m2, driver_sf2m3, driver_sf2m4, driver_sf2m5, driver_sf2m6, driver_sf2m7, driver_sf2yyc, driver_sf2koryu, driver_varth, driver_varthu, driver_varthj, driver_cworld2j, driver_wof, driver_wofa, driver_wofu, driver_wofj, driver_sf2hf, driver_sf2t, driver_sf2tj, driver_dino, driver_dinou, driver_dinoj, driver_punisher, driver_punishru, driver_punishrj, driver_slammast, driver_slammasu, driver_mbomberj, driver_mbombrd, driver_mbombrdj, driver_pnickj, driver_qad, driver_qadj, driver_qtono2, driver_pang3, driver_pang3j, driver_megaman, driver_rockmanj,
+
+/* Capcom CPS2 games */
+/* list completed by CPS2Shock */
+/* http://cps2shock.retrogames.com */
+driver_ssf2, driver_ssf2u, driver_ssf2a, driver_ssf2ar1, driver_ssf2j, driver_ssf2jr1, driver_ssf2jr2, driver_ssf2tb, driver_ssf2tbj, driver_ecofghtr, driver_ecofghta, driver_uecology, driver_ddtod, driver_ddtodr1, driver_ddtodu, driver_ddtodur1, driver_ddtodj, driver_ddtodjr1, driver_ddtoda, driver_ddtodh, driver_ssf2t, driver_ssf2tu, driver_ssf2tur1, driver_ssf2ta, driver_ssf2xj, driver_avsp, driver_avspu, driver_avspj, driver_avspa, driver_avsph,
+					/*    06/1994? Galum Pa! (not listed on Capcom's site) */
+driver_dstlk, driver_dstlku, driver_dstlkur1, driver_dstlka, driver_vampj, driver_vampja, driver_vampjr1, driver_ringdest, driver_smbomb, driver_smbombr1, driver_armwar, driver_armwarr1, driver_armwaru, driver_pgear, driver_pgearr1, driver_armwara, driver_xmcota, driver_xmcotau, driver_xmcotah, driver_xmcotaj, driver_xmcotaj1, driver_xmcotaa, driver_xmcotajr, driver_nwarr, driver_nwarrh, driver_nwarrb, driver_vhuntj, driver_vhuntjr1, driver_vhuntjr2, driver_cybots, driver_cybotsu, driver_cybotsj, driver_sfa, driver_sfar1, driver_sfar2, driver_sfar3, driver_sfau, driver_sfzj, driver_sfzjr1, driver_sfzjr2, driver_sfzh, driver_sfzb, driver_sfzbr1, driver_rckmanj, driver_msh, driver_mshu, driver_mshj, driver_mshjr1, driver_msha, driver_mshh, driver_mshb, driver_19xx, driver_19xxj, driver_19xxjr1, driver_19xxa, driver_19xxh, driver_ddsom, driver_ddsomr1, driver_ddsomu, driver_ddsomur1, driver_ddsomjr1, driver_ddsomj, driver_ddsoma, driver_sfa2, driver_sfz2j, driver_sfz2a, driver_sfz2b, driver_sfz2br1, driver_sfz2h, driver_sfz2n, driver_spf2t, driver_spf2xj, driver_spf2ta, driver_qndream, driver_megaman2, driver_megamn2a, driver_rckman2j, driver_sfz2aj, driver_sfz2ah, driver_sfz2ab, driver_sfz2aa, driver_xmvsf, driver_xmvsfu, driver_xmvsfur1, driver_xmvsfj, driver_xmvsfjr1, driver_xmvsfjr2, driver_xmvsfa, driver_xmvsfar1, driver_xmvsfh, driver_xmvsfb, driver_batcir, driver_batcirj, driver_batcira, driver_vsav, driver_vsavu, driver_vsavj, driver_vsava, driver_vsavh, driver_mshvsf, driver_mshvsfu1, driver_mshvsfj, driver_mshvsfj1, driver_mshvsfj2, driver_mshvsfh, driver_mshvsfa, driver_mshvsfa1, driver_mshvsfb, driver_mshvsfb1, driver_csclub, driver_csclubj, driver_cscluba, driver_csclubh, driver_sgemf, driver_pfghtj, driver_sgemfa, driver_sgemfh, driver_vhunt2r1, driver_vhunt2, driver_vsav2, driver_mvsc, driver_mvscj, driver_mvscjr1, driver_mvsca, driver_mvscar1, driver_mvsch, driver_mvscb, driver_sfa3, driver_sfa3r1, driver_sfa3b, driver_sfz3j, driver_sfz3jr1, driver_sfz3jr2, driver_sfz3a, driver_sfz3ar1, driver_gigawing, driver_gwingj, driver_gwinga,
+					/* 27/05/1999 Jyangokushi: Haoh no Saihai (Japan) */
+driver_dimahoo, driver_gmahou, driver_mmatrix, driver_mmatrixj, driver_1944, driver_1944j, driver_mpangj, driver_progear, driver_progearj, driver_progeara, driver_pzloop2j, driver_choko,
+					/* 22/12/2003 Hyper Street Fighter 2 (Capcom, Japan) */
+					/* 02/02/2004 Hyper Street Fighter 2 (Capcom, Asia) */
+
+/* Capcom CPS3 games */
+driver_warzard, driver_sfiii, driver_jojo, driver_jojoba, driver_jojobaa, driver_sfiii2, driver_sfiii3,
+
+/* Capcom ZN1 */
+driver_ts2, driver_ts2j, driver_starglad, driver_sfex, driver_sfexa, driver_sfexj, driver_glpracr, driver_sfexp, driver_sfexpu1, driver_sfexpj,
+
+/* Capcom ZN2 */
+driver_rvschool, driver_rvschola, driver_jgakuen, driver_sfex2, driver_sfex2j, driver_plsmaswd, driver_stargld2, driver_tgmj, driver_techromn, driver_kikaioh, driver_sfex2p, driver_sfex2pa, driver_sfex2pj, driver_strider2, driver_shiryu2,
+					/* Rival Schools 2 */
+
+/* Tecmo ZN1 */
+driver_glpracr2, driver_glprac2j, driver_glprac2l, driver_doapp, driver_cbaj, driver_shngmtkb, driver_tondemo, driver_glpracr3, driver_tecmowcm, driver_mfjump,
+
+/* Atlus ZN1 */
+driver_hvnsgate,
+
+/* PS Arcade 95 */
+driver_beastrzr, driver_beastrzb, driver_bldyror2, driver_brvblade,
+
+/* Atari PSX */
+driver_primrag2,
+
+/* Acclaim PSX */
+driver_nbajamex, driver_jdredd, driver_jdreddb,
+
+/* Video System ZN1 */
+driver_sncwgltd,
+
+/* Taito FX1a */
+driver_sfchamp, driver_sfchampj, driver_psyforce, driver_psyforcj, driver_psyfrcex, driver_mgcldate, driver_mgcldtex,
+
+/* Taito FX1b */
+driver_raystorm, driver_raystorj, driver_ftimpcta, driver_gdarius, driver_gdariusb, driver_gdarius2,
+
+/* Taito GNET */
+driver_taitogn,
+
+/* Namco System 11 */
+driver_tekken, driver_tekkena, driver_tekkenb, driver_tekkenc, driver_tekken2, driver_tekken2a, driver_tekken2b, driver_souledge, driver_souledga, driver_souledgb, driver_souledgc, driver_dunkmnia, driver_dunkmnic, driver_xevi3dg, driver_primglex, driver_danceyes, driver_starswep, driver_myangel3, driver_ptblank2,
+
+/* Namco System 12 */
+driver_tekken3, driver_tekken3a, driver_lbgrande, driver_soulclbr, driver_soulclba, driver_ehrgeiz, driver_ehrgeiza, driver_mdhorse, driver_fgtlayer, driver_pacapp, driver_sws99, driver_tekkentt, driver_mrdrillr, driver_aquarush, driver_golgo13,
+
+/* Namco System 10 */
+driver_mrdrilr2,
+
+/* Konami GQ */
+driver_cryptklr,
+
+/* Konami GV */
+driver_kdeadeye, driver_pbball96, driver_hyperath, driver_susume, driver_btchamp, driver_weddingr, driver_nagano98, driver_simpbowl,
+
+/* Mitchell games */
+driver_mgakuen, driver_7toitsu, driver_mgakuen2, driver_pkladies, driver_pkladiel, driver_pkladila, driver_dokaben,
+/*  8/1989 Dokaben 2 (baseball) */
+driver_pang, driver_pangb, driver_bbros, driver_pompingw, driver_cbasebal, driver_cworld, driver_hatena, driver_spang, driver_spangj, driver_sbbros, driver_marukin, driver_qtono1,
+/*  4/1991 Ashita Tenki ni Naare (golf) */
+driver_qsangoku, driver_block, driver_blocka, driver_blockj, driver_blockbl,
+
+/* Incredible Technologies games */
+/* http://www.itsgames.com */
+driver_capbowl, driver_capbowl2, driver_capbowl3, driver_capbowl4, driver_clbowl, driver_bowlrama, driver_wfortune, driver_wfortuna, driver_stratab, driver_stratab1, driver_sstrike, driver_gtg, driver_gtgt, driver_hstennis, driver_hstenn10, driver_slikshot, driver_sliksh17, driver_sliksh16, driver_dynobop, driver_arlingtn, driver_peggle, driver_pegglet, driver_pokrdice, driver_rimrockn, driver_rimrck20, driver_rimrck16, driver_rimrck12, driver_ninclown, driver_gpgolf, driver_gtg2, driver_gtg2t, driver_gtg2j, driver_neckneck, driver_timekill, driver_timek131, driver_hardyard, driver_hardyd10, driver_bloodstm, driver_bloods22, driver_bloods21, driver_bloods11, driver_pairs, driver_pairsa, driver_hotmemry, driver_drivedge, driver_wcbowl, driver_wcbwl165, driver_wcbwl161, driver_wcbwl140, driver_wcbwl12, driver_sftm, driver_sftm110, driver_sftm111, driver_sftmj, driver_shufshot, driver_sshot137, driver_wcbowldx,
+
+driver_gt3d, driver_gt3dl192, driver_gt3dl191, driver_gt3ds192, driver_gt3dv18, driver_gt3dv17, driver_gt3dv16, driver_gt3dv15, driver_gt3dv14, driver_gt3dt231, driver_gt3dt211, driver_gt97, driver_gt97v122, driver_gt97v121, driver_gt97s121, driver_gt97v120, driver_gt97t240, driver_gt98, driver_gt98v100, driver_gt98s100, driver_gt98t303, driver_gt99, driver_gt99s100, driver_gt99t400, driver_gt2k, driver_gt2ks100, driver_gt2kt500, driver_gtclassc, driver_gtclassp, driver_gtcls100,
+
+/* Leland games */
+driver_cerberus, driver_mayhem, driver_powrplay, driver_wseries, driver_alleymas, driver_upyoural, driver_dangerz, driver_basebal2, driver_dblplay, driver_strkzone, driver_redlin2p, driver_quarterb, driver_quartrba, driver_viper, driver_teamqb, driver_teamqb2, driver_aafb, driver_aafbd2p, driver_aafbc, driver_aafbb, driver_offroad, driver_offroadt, driver_pigout, driver_pigouta, driver_ataxx, driver_ataxxa, driver_ataxxj, driver_wsf, driver_indyheat, driver_brutforc, driver_asylum,
+
+/* Gremlin 8080 games */
+/* the numbers listed are the range of ROM part numbers */
+driver_blockade, driver_comotion, driver_hustle, driver_blasto, driver_mineswpr, driver_minesw4p,
+
+/* Gremlin/Sega "VIC dual game board" games */
+/* the numbers listed are the range of ROM part numbers */
+driver_depthch, driver_depthv1, driver_subhunt, driver_safari, driver_frogs, driver_sspaceat, driver_sspacat2, driver_sspacat3, driver_sspacatc, driver_sspacaho, driver_headon, driver_headonb, driver_headon2,
+/* ???-??? Fortress */
+/* ???-??? Gee Bee */
+/* 255-270  Head On 2 / Deep Scan */
+driver_invho2, driver_nsub, driver_samurai, driver_invinco, driver_invds, driver_tranqgun,
+/* 450-465  Tranquilizer Gun (different version?) */
+/* ???-??? Car Hunt / Deep Scan */
+driver_spacetrk, driver_sptrekct, driver_carnival, driver_carnvckt, driver_brdrline, driver_brdrlinb, driver_digger, driver_pulsar, driver_heiankyo, driver_alphaho,
+
+/* Sega G-80 vector games */
+driver_spacfury, driver_spacfura, driver_zektor, driver_tacscan, driver_elim2, driver_elim2a, driver_elim4, driver_startrek,
+
+/* Sega G-80 raster games */
+driver_astrob, driver_astrob2, driver_astrob2a, driver_astrob1, driver_005, driver_monsterb, driver_monster2, driver_spaceod, driver_pignewt, driver_pignewta, driver_sindbadm,
+
+/* Sega "Zaxxon hardware" games */
+driver_zaxxon, driver_zaxxon2, driver_zaxxonb, driver_szaxxon, driver_futspy, driver_razmataz, driver_ixion, driver_congo, driver_tiptop,
+
+/* Sega SG1000 based games */
+driver_chboxing, driver_chwrestl,
+
+/* Sega System 1 / System 2 games */
+driver_starjack, driver_starjacs, driver_regulus, driver_reguluso, driver_regulusu, driver_upndown, driver_upndownu, driver_mrviking, driver_mrvikngj, driver_swat, driver_flicky, driver_flickyo, driver_wmatch, driver_bullfgt, driver_thetogyu, driver_spatter, driver_ssanchan, driver_pitfall2, driver_pitfallu, driver_seganinj, driver_seganinu, driver_ninja, driver_nprinces, driver_nprincso, driver_nprincsu, driver_nprincsb, driver_imsorry, driver_imsorryj, driver_teddybb, driver_teddybbo, driver_hvymetal, driver_myhero, driver_sscandal, driver_myherok, driver_shtngmst, driver_chplft, driver_chplftb, driver_chplftbl, driver_4dwarrio, driver_brain, driver_raflesia, driver_wboy, driver_wboyo, driver_wboy2, driver_wboy2u, driver_wboy3, driver_wboyu, driver_wbdeluxe, driver_gardia, driver_gardiab, driver_noboranb, driver_blockgal, driver_blckgalb, driver_tokisens, driver_wbml, driver_wbmljo, driver_wbmljb, driver_wbmlb, driver_dakkochn, driver_ufosensi, driver_ufosensb,
+/*
+other System 1 / System 2 games:
+
+WarBall
+Sanrin Sanchan
+DokiDoki Penguin Land *not confirmed
+*/
+
+/* Sega System E games (Master System hardware) */
+driver_hangonjr, driver_transfrm, driver_astrofl, driver_ridleofp, driver_fantzn2, driver_opaopa,
+
+/* other Sega 8-bit games */
+driver_turbo, driver_turboa, driver_turbob, driver_subroc3d, driver_buckrog, driver_buckrogn, driver_zoom909, driver_kopunch, driver_suprloco, driver_dotrikun, driver_dotriku2, driver_spcpostn, driver_angelkds, driver_calorie, driver_calorieb,
+
+/* Enduro Racer / Space Harrier / Hang On */
+driver_enduror, driver_endurob2, driver_endurobl, driver_hangon, driver_sharrier, driver_shangupb,
+
+
+/* Pre-16 */
+driver_aliensy1, driver_aliensy2, driver_bodyslam, driver_dumpmtmt, driver_mjleague, driver_quartet, driver_quartetj, driver_quartet2, driver_quartt2j,
+
+/* System16A */
+driver_afighter, driver_alexkidd, driver_alexkid1, driver_fantzone, driver_fantzon1, driver_sdi, driver_shinobi, driver_shinobi1, driver_sjryuko1, driver_tetris, driver_tetris3, driver_timesca1, driver_wb31,
+
+/* System 16B */
+driver_aceattac, driver_aliensyn, driver_aliensy3, driver_altbeast, driver_altbeasj, driver_altbeas5, driver_altbeas4, driver_altbeaj3, driver_altbeas2, driver_altbeaj1, driver_aurail, driver_aurail1, driver_aurailj, driver_bayroute, driver_bayroutj, driver_bayrout1, driver_bullet, driver_cotton, driver_cottonu, driver_cottonj, driver_ddux, driver_dunkshot, driver_eswat, driver_eswatu, driver_eswatj, driver_exctleag, driver_fpoint, driver_goldnaxe, driver_goldnaxu, driver_goldnaxj, driver_goldnax3, driver_goldnax2, driver_goldnax1, driver_hwchamp, driver_mvp, driver_mvpj, driver_passsht, driver_passshtj, driver_riotcity, driver_ryukyu, driver_sdib, driver_defense, driver_shinobi4, driver_shinobi3, driver_shinobi2, driver_sonicbom, driver_sjryuko, driver_suprleag, driver_tetris2, driver_tetris1, driver_timescan, driver_toryumon, driver_tturf, driver_tturfu, driver_wb3, driver_wb34, driver_wb33, driver_wb32, driver_wrestwar, driver_wrestwa2, driver_wrestwa1,
+
+/* Philko Boards */
+driver_atomicp, driver_snapper,
+
+
+/* S16 Bootlegs */
+driver_bayrtbl1, driver_bayrtbl2, driver_dduxbl, driver_eswatbl, driver_fpointbl, driver_fpointbj, driver_goldnabl, driver_passht4b, driver_passshtb, driver_shinobl, driver_tetrisbl, driver_tturfbl, driver_wb3bbl,
+
+/* System 18 */
+driver_astorm, driver_astorm3, driver_astormu, driver_astormj, driver_bloxeed, driver_shdancer, driver_shdancej, driver_shdance1, driver_ddcrew, driver_ddcrewu, driver_ddcrew2, driver_ddcrew1, driver_ddcrewj, driver_cltchitr, driver_cltchtrj, driver_desertbr, driver_mwalk, driver_mwalku, driver_mwalkj, driver_pontoon, driver_lghost, driver_lghostu, driver_wwallyj, driver_wwallyja,
+
+/* System18 Bootlegs */
+driver_astormbl, driver_shdancbl, driver_mwalkbl,
+
+
+/* Outrun Hardware */
+driver_outrun, driver_outrun2, driver_outrun1, driver_outrunb, driver_toutrun, driver_toutrun2, driver_toutrun1, driver_shangon, driver_shangon3, driver_shangon2, driver_shangon1, driver_shangnle,
+
+/* X Board */
+driver_aburner, driver_aburner2, driver_thndrbld, driver_thndrbdj, driver_loffire, driver_loffirej, driver_rachero, driver_abcop,
+
+driver_gprider, driver_gprider1, driver_smgp, driver_smgp6, driver_smgp5, driver_smgpu, driver_smgpu3, driver_smgpu2, driver_smgpj,
+
+/* Y-Board */
+driver_gforce2, driver_gforce2j, driver_gloc, driver_strkfgtr, driver_pdrift, driver_pdriftj, driver_rchase,
+
+/*
+Sega System 24 game list
+Apr.1988 Hot Rod
+Oct.1988 Scramble Spirits
+Nov.1988 Gain Ground
+Apr.1989 Crack Down
+Aug.1989 Jumbo Ozaki Super Masters
+Jun.1990 Bonanza Bros.
+Dec.1990 Rough Racer
+Feb.1991 Quiz Syukudai wo Wasuremashita
+Jul.1991 Dynamic C.C.
+Dec.1991 Quiz Rouka ni Tattenasai
+Dec.1992 Tokorosan no MahMahjan
+May.1993 Quiz Mekurumeku Story
+May.1994 Tokorosan no MahMahjan 2
+Sep.1994 Quiz Ghost Hunter
+*/
+/* playable */
+driver_hotrod, driver_hotroda, driver_hotrodj, driver_bnzabros, driver_dcclub, driver_dcclubfd, driver_mahmajn, driver_qgh, driver_quizmeku, driver_qrouka, driver_mahmajn2, driver_sspirits, driver_gground,
+
+/* not working */
+driver_sgmast, driver_sgmastc,
+
+driver_sspirtfc,
+
+driver_qsww, driver_roughrac, driver_crkdown,
+
+/* Sega System 32 games */
+driver_holo, driver_svf, driver_svs, driver_jleague, driver_brival, driver_brivalj, driver_radm, driver_radmu, driver_radr, driver_radru, driver_f1en, driver_alien3, driver_sonic, driver_sonicp, driver_jpark, driver_ga2, driver_ga2u, driver_ga2j, driver_spidey, driver_spideyu, driver_arabfgt, driver_arabfgtj, driver_arescue, driver_f1lap, driver_dbzvrvs, driver_darkedge, driver_darkedgj, driver_slipstrm,
+
+/* Sega Multi System 32 games */
+driver_orunners, driver_harddunk, driver_harddunj, driver_titlef, driver_titlefu, driver_scross,
+
+/* Model 1 Games */
+driver_vf, driver_vr, driver_vformula, driver_swa, driver_wingwar, driver_wingwara,
+
+/* Sega H1 games */
+driver_coolridr,
+
+/* Sega ST-V games */
+driver_astrass, driver_bakubaku, driver_colmns97, driver_cotton2, driver_cottonbm, driver_decathlt, driver_diehard, driver_dnmtdeka, driver_ejihon, driver_elandore, driver_ffreveng, driver_fhboxers, driver_findlove, driver_finlarch, driver_gaxeduel, driver_grdforce, driver_groovef, driver_hanagumi, driver_introdon, driver_kiwames, driver_maruchan, driver_myfairld, driver_othellos, driver_pblbeach, driver_prikura, driver_puyosun, driver_rsgun, driver_sandor, driver_thunt, driver_sassisu, driver_seabass, driver_shanhigw, driver_shienryu, driver_smleague, driver_sokyugrt, driver_sss, driver_suikoenb, driver_twcup98, driver_vfkids, driver_vfremix, driver_vmahjong, driver_winterht, driver_znpwfv,
+
+driver_danchih, driver_mausuke, driver_batmanfr,
+
+driver_sfish2, driver_sfish2j,
+
+/* Sega Model 2 Games */
+
+/* Model 2 (TGPs, Model 1 sound board) */
+driver_daytona, driver_daytonat, driver_daytonam, driver_desert, driver_vcop,
+
+/* Model 2A-CRX (TGPs, SCSP sound board) */
+driver_manxtt, driver_srallyc, driver_vf2, driver_vf2b, driver_vf2o, driver_vcop2, driver_dynamcop, driver_dyndeka2, driver_doaa, driver_zeroguna, driver_pltkidsa,
+
+/* Model 2B-CRX (SHARC, SCSP sound board) */
+driver_vstriker, driver_vstrikra, driver_fvipers, driver_gunblade, driver_indy500, driver_skytargt, driver_dynmcopb, driver_schamp, driver_lastbrnx, driver_lastbrnj, driver_doa, driver_sgt24h, driver_von, driver_vonusa, driver_dynabb, driver_zerogun, driver_zerogunj, driver_pltkids,
+
+/* Model 2C-CRX (TGPx4, SCSP sound board) */
+driver_stcc, driver_hotd, driver_topskatr, driver_bel,
+
+/* Sega Model 3 Games */
+
+/* Step 1.0 */
+driver_vf3, driver_vf3tb, driver_bass,
+
+/* Step 1.5 */
+driver_scud, driver_scuda, driver_lostwsga, driver_vs215, driver_vs29815,
+
+/* Step 2.0 */
+driver_vs2, driver_harley, driver_srally2, driver_von2, driver_von254g, driver_vs298, driver_vs2v991, driver_vs299,
+
+/* Step 2.1 */
+driver_daytona2, driver_dirtdvls, driver_swtrilgy,
+
+
+/* Deniam games */
+/* they run on Sega System 16 video hardware */
+driver_logicpro, driver_croquis, driver_karianx, driver_logicpr2,
+
+
+/*
+Deniam is a Korean company (http://deniam.co.kr).
+
+Game list:
+Title            System     Date
+---------------- ---------- ----------
+GO!GO!           deniam-16b 1995/10/11
+Logic Pro        deniam-16b 1996/10/20
+Karian Cross     deniam-16b 1997/04/17
+LOTTERY GAME     deniam-16c 1997/05/21
+Logic Pro 2      deniam-16c 1997/06/20
+Propose          deniam-16c 1997/06/21
+BOMULEUL CHAJARA SEGA ST-V  1997/04/11
+*/
+
+/* System C games */
+driver_bloxeedc, driver_bloxeedu, driver_columns, driver_columnsj, driver_columns2, driver_column2j,
+
+/* System C-2 games */
+driver_borench, driver_tfrceac, driver_tfrceacj, driver_tfrceacb, driver_twinsqua, driver_ribbit, driver_tantr, driver_tantrbl, driver_tantrbl2, driver_puyo, driver_puyoj, driver_puyoja, driver_puyobl, driver_ichidant, driver_ichidnte, driver_ichidntb, driver_stkclmns, driver_puyopuy2, driver_potopoto, driver_zunkyou,
+
+/* Atlus Print Club 'Games' C-2 board */
+driver_pclubj, driver_pclubjv2, driver_pclubjv4, driver_pclubjv5,
+
+/* Genie Hardware (uses Genesis VDP) also has 'Sun Mixing Co' put into tile ram */
+driver_puckpkmn,
+
+/* Sega MegaTech, the number shown is on the label of the instruction rom */
+driver_mt_beast, driver_mt_shar2, driver_mt_stbld, driver_mt_ggolf, driver_mt_gsocr,
+					/* 06 */
+driver_mt_asyn, driver_mt_shnbi,
+					/* 09 */
+driver_mt_aftrb, driver_mt_tfor2,
+					/* 12 */
+driver_mt_astro,
+					/* 14 */
+					/* 15 */
+					/* 16 */
+					/* 17 */
+					/* 18 */
+					/* 19 */
+driver_mt_lastb, driver_mt_wcsoc, driver_mt_tetri, driver_mt_gng, driver_mt_shang, driver_mt_gaxe,
+					/* 26 */
+driver_mt_mystd, driver_mt_revsh, driver_mt_parlg,
+					/* 30 */
+driver_mt_tgolf,
+					/* 32 */
+					/* 33 */
+					/* 34 */
+driver_mt_tlbba, driver_mt_cols,
+					/* 37 */
+driver_mt_eswat, driver_mt_smgp, driver_mt_mwalk, driver_mt_crack,
+					/* 42 */
+					/* 43 */
+driver_mt_arrow,
+					/* 45 */
+					/* 46 */
+driver_mt_astrm,
+					/* 48 */
+driver_mt_bbros,
+					/* 50 */
+					/* 51 */
+driver_mt_sonic, driver_mt_sonia, driver_mt_fshrk,
+					/* 54 */
+					/* 55 */
+					/* 56 */
+driver_mt_gaxe2, driver_mt_stf,
+					/* 59 */
+driver_mt_kcham,
+					/* 61 */
+driver_mt_soni2,
+
+/* Sega MegaPlay */
+driver_mp_sonic, driver_mp_gaxe2, driver_mp_gslam, driver_mp_twc, driver_mp_sor2, driver_mp_bio, driver_mp_soni2,
+					/* 08 */
+					/* 09 */
+					/* 10 */
+driver_mp_mazin,
+
+/* Data East "Burger Time hardware" games */
+driver_lnc, driver_zoar, driver_btime, driver_btime2, driver_btimem, driver_cookrace, driver_wtennis, driver_brubber, driver_bnj, driver_caractn, driver_disco, driver_discof, driver_sdtennis, driver_mmonkey,
+/* cassette system, parent is decocass */
+driver_ctsttape, driver_cterrani, driver_castfant, driver_csuperas, driver_clocknch, driver_cprogolf, driver_cluckypo, driver_ctisland, driver_ctislnd2, driver_ctislnd3, driver_cdiscon1, driver_csweetht, driver_ctornado, driver_cmissnx, driver_cptennis, driver_cexplore, driver_cbtime, driver_cburnrub, driver_cburnrb2, driver_cbnj, driver_cgraplop, driver_cgraplp2, driver_clapapa, driver_clapapa2, /* this one doesn't display lapapa anyehere */
+driver_cnightst, driver_cnights2, driver_cprosocc, driver_cprobowl, driver_cscrtry, driver_cscrtry2, driver_cppicf, driver_cppicf2, driver_cfghtice, driver_cbdash,
+/* the following don't work at all */
+driver_chwy, driver_cflyball, driver_czeroize,
+
+/* other Data East games */
+driver_madalien, driver_astrof, driver_astrof2, driver_astrof3, driver_abattle, driver_abattle2, driver_afire, driver_acombat, driver_tomahawk, driver_tomahaw5, driver_prosoccr, driver_prosport, driver_boomrang, driver_kamikcab, driver_yellowcb, driver_liberate, driver_dualaslt, driver_liberatb, driver_bwing, driver_bwings, driver_batwings, driver_zaviga, driver_zavigaj, driver_kchamp, driver_karatedo, driver_kchampvs, driver_karatevs, driver_compgolf, driver_compglfo, driver_cntsteer, driver_zerotrgt, driver_gekitsui, driver_tryout, driver_firetrap, driver_firetpbl, driver_metlclsh, driver_brkthru, driver_brkthruj, driver_forcebrk, driver_darwin, driver_shootout, driver_shootouj, driver_shootoub, driver_sidepckt, driver_sidepctj, driver_sidepctb, driver_exprraid, driver_exprrada, driver_wexpress, driver_wexpresb, driver_wexpresc, driver_pcktgal, driver_pcktgalb, driver_pcktgal2, driver_spool3, driver_spool3i, driver_battlera, driver_bldwolf, driver_actfancr, driver_actfanc1, driver_actfancj, driver_triothep, driver_triothej,
+
+/* Data East 8-bit games */
+driver_lastmisn, driver_lastmsno, driver_lastmsnj, driver_shackled, driver_breywood, driver_csilver, driver_ghostb, driver_ghostb3, driver_meikyuh, driver_srdarwin, driver_srdarwnj, driver_gondo, driver_makyosen, driver_garyoret, driver_cobracom, driver_cobracmj, driver_oscar, driver_oscarj, driver_oscarj1, driver_oscarj0,
+
+/* Data East 16-bit games */
+driver_karnov, driver_karnovj, driver_wndrplnt, driver_chelnov, driver_chelnovu, driver_chelnovj,
+/* the following ones all run on similar hardware */
+driver_hbarrel, driver_hbarrelw, driver_baddudes, driver_drgninja, driver_birdtry, driver_robocop, driver_robocopw, driver_robocopj, driver_robocopu, driver_robocpu0, driver_robocopb, driver_hippodrm, driver_ffantasy, driver_ffantasa, driver_slyspy, driver_slyspy2, driver_secretag, driver_secretab, driver_midres, driver_midresu, driver_midresj, driver_bouldash, driver_bouldshj,
+/* end of similar hardware */
+driver_stadhero, driver_madmotor,
+/* All these games have a unique code stamped on the mask roms */
+driver_vaportra, driver_vaportru, driver_kuhga, driver_cbuster, driver_cbusterw, driver_cbusterj, driver_twocrude, driver_darkseal, driver_darksea1, driver_darkseaj, driver_gatedoom, driver_gatedom1, driver_edrandy, driver_edrandy1, driver_edrandyj, driver_supbtime, driver_supbtimj, driver_mutantf, driver_mutantfa, driver_deathbrd, driver_cninja, driver_cninja0, driver_cninjau, driver_joemac, driver_stoneage, driver_robocop2, driver_robocp2u, driver_robocp2j, driver_thndzone, driver_dassault, driver_dassaul4, driver_chinatwn, driver_rohga, driver_rohgah, driver_rohgau, driver_schmeisr, driver_captaven, driver_captavna, driver_captavne, driver_captavnu, driver_captavuu, driver_captavnj,
+/* MAO ?? */
+driver_tumblep, driver_tumblepj, driver_tumblepb, driver_tumblep2, driver_jumpkids, driver_jumppop, driver_fncywld, driver_htchctch, driver_cookbib, driver_chokchok, driver_bcstry, driver_bcstrya, driver_suprtrio, driver_lemmings,
+/* MAQ ?? */
+driver_dragngun, driver_wizdfire, driver_darksel2, driver_funkyjet,
+/* MAU ?? */
+driver_nitrobal, driver_gunball,
+/* MAW ?? */
+/* MAX ?? */
+driver_dietgo, driver_dietgoe, driver_dietgou, driver_dietgoj, driver_pktgaldx, driver_pktgaldj, driver_pktgaldb,
+/* MBA ?? */
+/* MBB ?? */
+/* MBC ?? */
+driver_boogwing, driver_boogwina, driver_dblewing, driver_fghthist, driver_fghthstw, driver_fghthsta, driver_hvysmsh, driver_nslasher,
+/* MBI ?? */
+/* MBJ ?? */
+/* MBK ?? */
+/* MBL ?? */
+driver_lockload, driver_joemacr, driver_joemacra,
+/* MBO ?? */
+/* MBP ?? */
+/* MBQ ?? */
+driver_tattass, driver_tattassa, driver_charlien,
+/* MBS ?? */
+/* MBT ?? */
+/* MBU ?? */
+/* MBV ?? */
+/* MBW ?? */
+/* MBX ?? */
+/* MBY ?? */
+driver_backfire,
+/* MCA ?? */
+driver_prtytime, driver_gangonta, driver_chainrec,
+/* MCD ?? */
+/* Dunk Dream 95/Hoops MCE (c) 1995 */
+/* MCF ?? */
+driver_sotsugyo, driver_sshangha, driver_sshanghb,
+
+/* Other Data East games not yet identified */
+driver_wcvol95, driver_magdrop, driver_magdropp, driver_osman,
+
+/* Data East MLC Games */
+driver_avengrgs, driver_stadhr96, driver_stadh96a, driver_skullfng, driver_hoops96, driver_ddream95,
+
+/* Tehkan / Tecmo games (Tehkan became Tecmo in 1986) */
+driver_senjyo, driver_starforc, driver_starfore, driver_megaforc, driver_baluba, driver_bombjack, driver_bombjac2, driver_pbaction, driver_pbactio2, driver_pbactio3,
+/* 6009 Tank Busters */
+/* 6011 Pontoon (c) 1985 Tehkan is a gambling game - removed */
+/* ???? Lovely Poker (c)1985 Tehkan is also a gambling game */
+driver_lvcards, driver_tehkanwc, driver_gridiron, driver_teedoff, driver_solomon, driver_rygar, driver_rygar2, driver_rygarj, driver_gemini, driver_silkworm, driver_silkwrm2, driver_tbowl, driver_tbowlj, driver_shadoww, driver_shadowwa, driver_gaiden, driver_ryukendn, driver_wildfang, driver_tknight, driver_stratof, driver_raiga, driver_drgnbowl, driver_wc90, driver_wc90a, driver_wc90t, driver_wc90b, driver_spbactn, driver_spbactnj, driver_fstarfrc, driver_ginkun, driver_deroon, driver_tkdensho,
+
+/* Konami bitmap games */
+driver_tutankhm, driver_tutankst, driver_junofrst, driver_junofstg,
+
+/* Konami games */
+driver_pooyan, driver_pooyans, driver_pootan, driver_timeplt, driver_timepltc, driver_timeplta, driver_spaceplt, driver_psurge, driver_megazone, driver_megazona, driver_megazonb, driver_megazonc, driver_megaznik, driver_pandoras, driver_gyruss, driver_gyrussce, driver_venus, driver_trackfld, driver_trackflc, driver_hyprolym, driver_hyprolyb, driver_atlantol, driver_wizzquiz, driver_wizzquza, driver_mastkin, driver_rocnrope, driver_rocnropk, driver_circusc, driver_circusc2, driver_circuscc, driver_circusce, driver_tp84, driver_tp84a, driver_hyperspt, driver_hpolym84, driver_sbasketb, driver_sbasketo, driver_sbasketu, driver_mikie, driver_mikiej, driver_mikiehs, driver_roadf, driver_roadf2, driver_yiear, driver_yiear2, driver_kicker, driver_shaolins, driver_pingpong, driver_merlinmm, driver_gberet, driver_rushatck, driver_gberetb, driver_mrgoemon, driver_jailbrek, driver_manhatan, driver_scotrsht, driver_finalizr, driver_finalizb, driver_ironhors, driver_dairesya, driver_farwest, driver_jackal, driver_topgunr, driver_jackalj, driver_topgunbl, driver_ddribble, driver_contra, driver_contrab, driver_contraj, driver_contrajb, driver_gryzor, driver_combasc, driver_combasct, driver_combascj, driver_bootcamp, driver_combascb, driver_rockrage, driver_rockraga, driver_rockragj, driver_mx5000, driver_flkatck, driver_fastlane, driver_tricktrp, driver_labyrunr, driver_labyrunk, driver_thehustl, driver_thehustj, driver_rackemup, driver_battlnts, driver_battlntj, driver_bladestl, driver_bladstle, driver_hcastle, driver_hcastleo, driver_hcastlej, driver_hcastljo, driver_ajax, driver_typhoon, driver_ajaxj, driver_scontra, driver_scontraj, driver_thunderx, driver_thnderxa, driver_thnderxj, driver_mainevt, driver_mainevto, driver_mainev2p, driver_ringohja, driver_devstors, driver_devstor2, driver_devstor3, driver_garuka, driver_88games, driver_konami88, driver_hypsptsp, driver_gbusters, driver_crazycop, driver_crimfght, driver_crimfgt2, driver_crimfgtj, driver_spy, driver_spyu, driver_bottom9, driver_bottom9n, driver_mstadium, driver_blockhl, driver_quarth, driver_aliens, driver_aliens2, driver_aliens3, driver_aliensu, driver_aliensj, driver_aliensj2, driver_suratk, driver_suratkj, driver_parodius, driver_parodisj, driver_rollerg, driver_rollergj, driver_simpsons, driver_simps4pa, driver_simpsn2p, driver_simps2pa, driver_simps2pj, driver_esckids, driver_vendetta, driver_vendetao, driver_vendet2p, driver_vendetas, driver_vendtaso, driver_vendettj, driver_mogura, driver_wecleman, driver_hotchase, driver_chqflag, driver_chqflagj, driver_ultraman, driver_hexion, driver_lethalen, driver_lethalej,
+
+/* Konami "Nemesis hardware" games */
+driver_nemesis, driver_nemesuk, driver_konamigt, driver_salamand, driver_salamanj, driver_lifefrce, driver_lifefrcj, driver_blkpnthr, driver_citybomb, driver_citybmrj, driver_kittenk, driver_nyanpani, driver_hcrash, driver_hcrashc,
+
+/* GX400 BIOS based games */
+driver_rf2, driver_twinbee, driver_gradius, driver_gwarrior,
+
+/* Konami "Twin 16" games */
+driver_devilw, driver_darkadv, driver_majuu, driver_vulcan, driver_gradius2, driver_grdius2a, driver_grdius2b, driver_cuebrick, driver_fround, driver_froundl, driver_hpuncher, driver_miaj,
+
+/* (some) Konami 68000 games */
+driver_cuebrckj, driver_mia, driver_mia2, driver_tmnt, driver_tmntu, driver_tmntua, driver_tmht, driver_tmntj, driver_tmht2p, driver_tmnt2pj, driver_tmnt2po, driver_punkshot, driver_punksht2, driver_punkshtj, driver_lgtnfght, driver_lgtnfghu, driver_trigon, driver_blswhstl, driver_detatwin, driver_glfgreat, driver_glfgretj, driver_tmnt2, driver_tmnt22p, driver_tmnt2a, driver_ssriders, driver_ssrdrebd, driver_ssrdrebc, driver_ssrdruda, driver_ssrdruac, driver_ssrdrubc, driver_ssrdrabd, driver_ssrdradd, driver_ssrdrjbd, driver_sunsetbl, driver_xmen, driver_xmen2p, driver_xmen2pj, driver_xmen6p, driver_xexex, driver_xexexj, driver_asterix, driver_astrxeac, driver_astrxeaa, driver_gijoe, driver_gijoeu, driver_gijoej, driver_thndrx2, driver_thndrx2a, driver_prmrsocr, driver_prmrsocj, driver_qgakumon, driver_moo, driver_mooua, driver_moobl, driver_bucky, driver_buckyua, driver_gaiapols, driver_gaiapolj, driver_mystwarr, driver_mystwaru, driver_viostorm, driver_viostrmu, driver_viostrmj, driver_viostrma, driver_mmaulers, driver_dadandrn, driver_metamrph, driver_metamrpj, driver_mtlchamp, driver_mtlchmpu, driver_mtlchmpj, driver_mtlchmpa, driver_rungun, driver_runguna, driver_rungunu, driver_rungunua, driver_slmdunkj, driver_dbz, driver_dbz2, driver_bishi, driver_sbishi,
+
+/* Konami dual 68000 games */
+driver_overdriv, driver_gradius3, driver_grdius3a, driver_grdius3e,
+
+/* Konami 68020 games */
+driver_plygonet,
+
+/* Konami System GX games */
+
+/* GX Type 1 */
+driver_racinfrc, driver_opengolf, driver_opengol2, driver_ggreats2,
+
+/* GX Type 2 */
+driver_le2, driver_le2u, driver_le2j, driver_puzldama, driver_gokuparo, driver_fantjour, driver_dragoona, driver_dragoonj, driver_tbyahhoo, driver_tkmmpzdm, driver_salmndr2, driver_sexyparo, driver_daiskiss, driver_tokkae, driver_winspike, driver_winspikj,
+
+/* GX Type 3 */
+driver_soccerss, driver_soccersa,
+
+/* GX Type 4 */
+driver_vsnetscr, driver_vsnetscj, driver_rungun2, driver_slamdnk2, driver_rushhero,
+
+/* 68k + HD */
+driver_qdrmfgp, driver_qdrmfgp2,
+
+/* DJ Main */
+driver_bm1stmix, driver_bm2ndmix, driver_bm2ndmxa, driver_bmcompmx, driver_hmcompmx, driver_bm4thmix, driver_bm5thmix, driver_bmcorerm, driver_bmdct, driver_bmcompm2, driver_hmcompm2, driver_bm6thmix,
+
+/* PowerPC based Konami games */
+driver_gticlub, driver_gradius4, driver_sscope, driver_sscope2, driver_racingj, driver_racingj2, driver_thrilld, driver_midnrun, driver_windheat,
+
+/* Exidy games */
+driver_carpolo, driver_sidetrac, driver_targ, driver_targc, driver_spectar, driver_spectar1, driver_rallys, driver_phantoma, driver_venture, driver_venture2, driver_venture4, driver_mtrap, driver_mtrap3, driver_mtrap4, driver_pepper2, driver_hardhat, driver_fax, driver_faxa, driver_circus, driver_robotbwl, driver_crash, driver_ripcord, driver_starfire, driver_starfira, driver_fireone, driver_starfir2, driver_victory, driver_victorba,
+
+/* Exidy 440 games */
+driver_crossbow, driver_cheyenne, driver_combat, driver_catch22, driver_cracksht, driver_claypign, driver_chiller, driver_topsecex, driver_hitnmiss, driver_hitnmis2, driver_whodunit, driver_showdown,
+
+/* Exidy Max-A-Flex */
+driver_mf_achas, driver_mf_brist, driver_mf_flip, driver_mf_bdash,
+
+/* Atari b/w games */
+driver_tank8, driver_tank8a, driver_tank8b, driver_tank8c, driver_tank8d, driver_cball, driver_copsnrob, driver_flyball, driver_sprint2, driver_sprint2a, driver_sprint4, driver_sprint4a, driver_nitedrvr, driver_dominos, driver_triplhnt, driver_sprint8, driver_sprint8a, driver_dragrace, driver_poolshrk, driver_starshp1, driver_starshpp, driver_superbug, driver_canyon, driver_canyonp, driver_destroyr, driver_sprint1, driver_ultratnk, driver_skyraid, driver_tourtabl, driver_tourtab2, driver_avalnche, driver_cascade, driver_firetrk, driver_skydiver,
+/* Smokey Joe */	/* 030926           1978/07 [6502] */
+driver_sbrkout, driver_atarifb, driver_atarifb1, driver_orbit, driver_boxer, driver_wolfpack, driver_mgolf, driver_videopin, driver_atarifb4, driver_subs, driver_bsktball, driver_abaseb, driver_abaseb2, driver_montecar, driver_soccer,
+
+/* Atari "Missile Command hardware" games */
+driver_missile, driver_missile2, driver_suprmatk, driver_sprmatkd,
+
+/* Atari vector games */
+driver_llander, driver_llander1, driver_asteroid, driver_asteroi1, driver_asteroib, driver_asterock, driver_meteorts, driver_astdelux, driver_astdelu1, driver_bzone, driver_bzone2, driver_bzonec, driver_bradley, driver_redbaron, driver_tempest, driver_tempest1, driver_tempest2, driver_tempest3, driver_temptube, driver_spacduel, driver_gravitar, driver_gravitr2, driver_gravp, driver_lunarbat, driver_lunarba1, driver_quantum,	/* made by Gencomp */
+driver_quantum1,	/* made by Gencomp */
+driver_quantump,	/* made by Gencomp */
+driver_bwidow, driver_starwars, driver_starwar1, driver_mhavoc, driver_mhavoc2, driver_mhavocp, driver_mhavocrv, driver_alphaone, driver_alphaona, driver_esb,
+
+/* Atari "Centipede hardware" games */
+driver_warlords, driver_centiped, driver_centipd2, driver_centtime, driver_centipdb, driver_caterplr, driver_millpac, driver_magworm, driver_milliped, driver_qwak, driver_runaway, driver_bullsdrt,
+
+/* misc Atari games */
+driver_tunhunt, driver_tunhuntc, /* licensed to / distributed by Centuri */
+driver_liberatr, driver_liberat2, driver_foodf,	/* made by Gencomp */
+driver_foodf2,	/* made by Gencomp */
+driver_foodfc,	/* made by Gencomp */
+driver_ccastles, driver_ccastle3, driver_ccastle2, driver_cloak, driver_cloaksp, driver_cloakfr, driver_cloakgr, driver_cloud9, driver_jedi,
+
+/* Atari System 1 games */
+driver_peterpak,
+/* Marble Madness */
+driver_marble, driver_marble2, driver_marble3, driver_marble4,
+/* Indiana Jones and the Temple of Doom */
+driver_indytemp, driver_indytem2, driver_indytem3, driver_indytem4, driver_indytemd,
+/* Road Runner */
+driver_roadrunn, driver_roadrun2, driver_roadrun1,
+/* Road Blasters */
+driver_roadblst, driver_roadblsg, driver_roadbls3, driver_roadblg2, driver_roadbls2, driver_roadblg1, driver_roadbls1, driver_roadblsc, driver_roadblcg, driver_roadblc1,
+
+/* Atari System 2 games */
+/* Paperboy */
+driver_paperboy, driver_paperbr2, driver_paperbr1,
+/* Super Sprint */
+driver_ssprint, driver_ssprint3, driver_ssprint1, driver_ssprintg, driver_sspring1, driver_ssprintf, driver_ssprints,
+/* Championship Sprint */
+driver_csprint, driver_csprint2, driver_csprint1, driver_csprintg, driver_cspring1, driver_csprintf, driver_csprints, driver_csprins1,
+/* 720 Degrees */
+driver_720, driver_720r3, driver_720r2, driver_720r1, driver_720g, driver_720gr1,
+/* APB. */
+driver_apb, driver_apb6, driver_apb5, driver_apb4, driver_apb3, driver_apb2, driver_apb1, driver_apbg, driver_apbf,
+
+/* Atari polygon games */
+driver_irobot,
+/* Hard Drivin' */
+driver_harddriv, driver_harddrvb, driver_harddrvg, driver_harddrvj, driver_harddrb6, driver_harddrj6, driver_harddrb5, driver_harddrg4, driver_harddrv3, driver_harddrv2, driver_harddrv1,
+/* Hard Drivin' Compact */
+driver_harddrvc, driver_harddrcg, driver_harddrcb, driver_harddrc1,
+/* Stun Runner */
+driver_stunrun, driver_stunrunj, driver_stunrun5, driver_stunrune, driver_stunrun4, driver_stunrun3, driver_stunrn3e, driver_stunrun2, driver_stunrn2e, driver_stunrun0, driver_stunrunp,
+/* Race Drivin' */
+driver_racedriv, driver_racedrvb, driver_racedrvg, driver_racedrv4, driver_racedrb4, driver_racedrg4, driver_racedrv3, driver_racedrv2, driver_racedrv1, driver_racedrb1, driver_racedrg1,
+/* Race Drivin' Compact */
+driver_racedrvc, driver_racedrcb, driver_racedrcg, driver_racedrc4, driver_racedcb4, driver_racedcg4, driver_racedrc2, driver_racedrc1,
+					/* 136086 - BMX Heat (proto) */
+/* Steel Talons */
+driver_steeltal, driver_steeltag, driver_steelta1, driver_steeltap,
+					/* 136088 - Race Drivin' Panorama */
+/* Street Drivin' */
+driver_strtdriv,
+/* Hard Drivin' Airbourne */
+driver_hdrivair, driver_hdrivaip,
+
+/* later Atari games */
+
+/* Gauntlet Hardware */
+/* Gauntlet */
+driver_gauntlet, driver_gaunts, driver_gauntj, driver_gauntg, driver_gauntj12, driver_gauntr9, driver_gauntgr8, driver_gauntr7, driver_gauntgr6, driver_gauntr5, driver_gauntr4, driver_gauntgr3, driver_gauntr2, driver_gauntr1,
+/* Gauntlet - 2 Player */
+driver_gaunt2p, driver_gaunt2pj, driver_gaunt2pg, driver_gaun2pr3, driver_gaun2pj2, driver_gaun2pg1,
+/* Gauntlet 2 */
+driver_gaunt2, driver_gaunt2g,
+/* Gauntlet 2 - 2 Player */
+driver_gaunt22p, driver_gaun22p1, driver_gaun22pg,
+/* Vindicators Part II */
+driver_vindctr2, driver_vindc2r2, driver_vindc2r1,
+
+/* Other Hardware */
+
+/* Xybots */
+driver_xybots, driver_xybotsg, driver_xybotsf, driver_xybots1, driver_xybots0,
+/* Blasteroids */
+driver_blstroid, driver_blstroi3, driver_blstroi2, driver_blstroig, driver_blsthead,
+/* Vindicators */
+driver_vindictr, driver_vindicte, driver_vindictg, driver_vindice4, driver_vindict4, driver_vindice3, driver_vindict2, driver_vindict1,
+/* Toobin */
+driver_toobin, driver_toobine, driver_toobing, driver_toobin2, driver_toobin2e, driver_toobin1,
+/* Cyberball */
+driver_cyberbal, driver_cyberba2, driver_cyberbap,
+/* Atari Tetris */
+driver_atetcktl, driver_atetckt2, driver_atetris, driver_atetrisa, driver_atetrisb, driver_atetrsb2,
+/* Escape from the Planet of Robot Monsters */
+driver_eprom, driver_eprom2,
+/* Cyberball 2 Player */
+driver_cyberb2p, driver_cyberb23, driver_cyberb22, driver_cyberb21,
+/* Skull and Crossbones */
+driver_skullxbo, driver_skullxb4, driver_skullxb3, driver_skullxb2, driver_skullxb1,
+/* Cyberball Tournament */
+driver_cyberbt, driver_cyberbt1,
+
+driver_badlands, driver_klax, driver_klax2, driver_klax3, driver_klaxj, driver_klaxd, driver_klaxp1, driver_klaxp2, driver_thunderj,
+
+driver_hydra, driver_hydrap, driver_hydrap2, driver_pitfight, driver_pitfigh4, driver_pitfigh3, driver_pitfighj, driver_pitfighb, driver_rampart, driver_ramprt2p, driver_rampartj, driver_shuuz, driver_shuuz2,
+					/* 136084 - Marble Man (proto) */
+driver_batman, driver_roadriot, driver_offtwall, driver_offtwalc, driver_guardian, driver_relief, driver_relief2, driver_arcadecl, driver_sparkz, driver_motofren, driver_motofrmd, driver_motofrft, driver_motomdft, driver_spclords, driver_spclordb, driver_spclorda, driver_spclordg, driver_rrreveng, driver_rrrevenp, driver_beathead, driver_tmek, driver_tmekprot, driver_primrage, driver_primraga, driver_area51, driver_area51t, driver_area51a, driver_area51mx, driver_a51mxr3k, driver_maxforce, driver_maxf_102, driver_vcircle,
+
+/* SNK / Rock-ola games */
+driver_sasuke, driver_satansat, driver_zarzon, driver_vanguard, driver_vangrdce, driver_vanguarj, driver_fantasy, driver_fantasyu, driver_fantasyj, driver_pballoon, driver_nibbler, driver_nibblera, driver_nibblerb, driver_nibblero,
+
+/* later SNK games, each game can be identified by PCB code and ROM
+code, the ROM code is the same between versions, and usually based
+upon the Japanese title. */
+driver_lasso, driver_chameleo, driver_wwjgtin, driver_pinbo, driver_pinboa, driver_pinbos, driver_joyfulr, driver_mnchmobl, driver_marvins, driver_madcrash, driver_vangrd2, driver_jcross, driver_mainsnk, driver_sgladiat, driver_hal21, driver_hal21j, driver_aso, driver_alphamis, driver_tnk3, driver_tnk3j, driver_athena, driver_fitegolf, driver_fitegol2, driver_countryc, driver_ikari, driver_ikarijp, driver_ikarijpb, driver_victroad, driver_dogosoke, driver_dogosokj, driver_gwar, driver_gwarj, driver_gwara, driver_gwarb, driver_bermudat, driver_bermudao, driver_bermudaa, driver_worldwar, driver_psychos, driver_psychosj, driver_chopper, driver_choppera, driver_chopperb, driver_legofair, driver_ftsoccer, driver_tdfever, driver_tdfeverj, driver_tdfever2, driver_ikari3, driver_pow, driver_powj, driver_searchar, driver_sercharu, driver_streetsm, driver_streets1, driver_streetsw, driver_streetsj, driver_prehisle, driver_prehislu, driver_gensitou, driver_mechatt, driver_bbusters,
+
+/* Electrocoin on early SNK hardware - gambling game remove once it works */
+driver_dmndrby, driver_dmndrbya,
+
+/* Neo Geo games */
+/* the four digits number is the game ID stored at address 0x0108 of the program ROM */
+/* info on prototypes taken from http://www.members.tripod.com/fresa/proto/puzzle.htm */
+driver_nam1975, driver_bstars, driver_tpgolf, driver_mahretsu, driver_maglord, driver_maglordh, driver_ridhero, driver_ridheroh, driver_alpham2,
+/* 0008 Sunshine (prototype) 1990 SNK */
+driver_ncombat, driver_ncombata, driver_cyberlip, driver_superspy,
+/* 0012 */
+/* 0013 */
+driver_mutnat,
+/* 0015 */
+driver_kotm, driver_kotmh, driver_sengoku, driver_sengokh, driver_burningf, driver_burningh, driver_lbowling, driver_gpilots, driver_joyjoy, driver_bjourney, driver_quizdais, driver_lresort, driver_eightman,
+/* 0026 Fun Fun Brothers (prototype) 1991 Alpha */
+driver_minasan,
+/* 0028 Dunk Star (prototype) Sammy */
+driver_legendos, driver_2020bb, driver_2020bba, driver_2020bbh, driver_socbrawl, driver_roboarmy, driver_roboarma, driver_fatfury1, driver_fbfrenzy,
+/* 0035 Mystic Wand (prototype) 1991 Alpha */
+driver_bakatono, driver_crsword, driver_trally, driver_kotm2, driver_sengoku2, driver_bstars2, driver_quizdai2, driver_3countb, driver_aof, driver_samsho, driver_tophuntr, driver_tophunta, driver_fatfury2, driver_janshin, driver_androdun, driver_ncommand, driver_viewpoin, driver_ssideki, driver_wh1, driver_wh1h,
+/* 0054 Crossed Swords 2  (CD only? not confirmed, MVS might exist) */
+driver_kof94, driver_aof2, driver_aof2a, driver_wh2, driver_fatfursp, driver_fatfursa, driver_savagere, driver_fightfev, driver_fightfva, driver_ssideki2, driver_spinmast, driver_samsho2, driver_wh2j, driver_wjammers, driver_karnovr, driver_gururin, driver_pspikes2, driver_fatfury3, driver_zupapa,
+/* 0071 Bang Bang Busters (prototype) 1994 Visco */
+/* 0072 Last Odyssey Pinball Fantasia (prototype) 1995 Monolith */
+driver_panicbom, driver_aodk, driver_sonicwi2, driver_zedblade,
+/* 0077 The Warlocks of the Fates (prototype) 1995 Astec */
+driver_galaxyfg, driver_strhoop, driver_quizkof, driver_ssideki3, driver_doubledr, driver_pbobblen, driver_pbobblna, driver_kof95, driver_kof95a,
+/* 0085 Shinsetsu Samurai Spirits Bushidoretsuden / Samurai Shodown RPG (CD only) */
+driver_tws96, driver_samsho3, driver_samsho3a, driver_stakwin, driver_pulstar, driver_whp,
+/* 0091 */
+driver_kabukikl, driver_neobombe, driver_gowcaizr, driver_rbff1, driver_aof3, driver_sonicwi3,
+/* 0098 Idol Mahjong - final romance 2 (CD only? not confirmed, MVS might exist) */
+/* 0099 Neo Pool Masters */
+driver_turfmast, driver_mslug, driver_puzzledp, driver_mosyougi,
+/* 0204 QP (prototype) */
+/* 0205 Neo-Geo CD Special (CD only) */
+driver_marukodq, driver_neomrdo, driver_sdodgeb, driver_goalx3,
+/* 0210 Karate Ninja Sho (prototype) 1995 Yumekobo */
+/* 0211 Oshidashi Zintrick (CD only? not confirmed, MVS might exist) 1996 SNK/ADK */
+driver_zintrckb, driver_overtop, driver_neodrift, driver_kof96, driver_kof96h, driver_ssideki4, driver_kizuna, driver_ninjamas, driver_ragnagrd, driver_pgoal,
+/* 0220 Choutetsu Brikin'ger - iron clad (MVS existance seems to have been confirmed) */
+driver_magdrop2, driver_samsho4, driver_rbffspec, driver_twinspri, driver_wakuwak7,
+/* 0226 Pair Pair Wars (prototype) 1996 Sunsoft? */
+driver_stakwin2, driver_ghostlop,
+/* 0229 King of Fighters '96 CD Collection (CD only) */
+driver_breakers, driver_miexchng, driver_kof97, driver_kof97a, driver_kof97pls, driver_magdrop3, driver_lastblad, driver_lastblda, driver_puzzldpr, driver_irrmaze, driver_popbounc, driver_shocktro, driver_shocktra, driver_blazstar, driver_rbff2, driver_rbff2a, driver_mslug2, driver_kof98, driver_kof98k, driver_kof98n, driver_lastbld2, driver_neocup98, driver_breakrev, driver_shocktr2, driver_flipshot, driver_pbobbl2n, driver_ctomaday, driver_mslugx, driver_kof99, driver_kof99a, driver_kof99e, driver_kof99n, driver_kof99p, driver_ganryu, driver_garou, driver_garouo, driver_garoup, driver_s1945p, driver_preisle2, driver_mslug3, driver_mslug3n, driver_kof2000, driver_kof2000n,
+/* 0258 SNK vs. Capcom? (prototype) */
+driver_bangbead, driver_nitd, driver_sengoku3, driver_kof2001, driver_kof2001h, driver_mslug4, driver_ms4plus, driver_rotd, driver_kof2002, driver_matrim,
+
+/* The BreezaSoft games don't have proper ID codes */
+driver_jockeygp, driver_vliner, driver_vlinero,
+
+/* Hyper NeoGeo 64 uses a 3 digit rom code? */
+
+driver_roadedge,
+/* 002? Samurai Shodown 64 / Samurai Spirits 64 */
+/* 003? Xtreme Rally / Off Beat Racer! */
+/* 004? Beast Busters: Second Nightmare */
+driver_sams64_2, driver_fatfurwa, driver_buriki,
+
+/* Alpha Denshi games */
+driver_shougi, driver_shougi2, driver_champbas, driver_champbbj, driver_champbja, driver_champbb2, driver_champb2a, driver_exctsccr, driver_exctscca, driver_exctsccb, driver_exctscc2, driver_talbot, driver_equites, driver_equitess, driver_bullfgtr, driver_bullfgts, driver_kouyakyu, driver_splndrbt, driver_hvoltage,
+
+/* SNK / Alpha 68K games */
+driver_sstingry, driver_kyros, driver_kyrosj, driver_jongbou, driver_paddlema, driver_timesold, driver_timesol1, driver_btlfield, driver_skysoldr, driver_goldmedl, driver_goldmeda, driver_goldmedb, driver_skyadvnt, driver_skyadvnu, driver_skyadvnj, driver_gangwars, driver_gangwarb, driver_sbasebal, driver_tnexspce,
+
+driver_meijinsn,
+
+/* Technos games */
+driver_scregg, driver_eggs, driver_dommy, driver_bigprowr, driver_tagteam, driver_ssozumo, driver_mystston, driver_myststno, driver_dogfgt, driver_dogfgtj, driver_bogeyman, driver_matmania, driver_excthour, driver_maniach, driver_maniach2, driver_renegade, driver_kuniokun, driver_kuniokub, driver_xsleena, driver_xsleenab, driver_solarwar, driver_battlane, driver_battlan2, driver_battlan3, driver_ddragon, driver_ddragonu, driver_ddragonw, driver_ddragonb, driver_spdodgeb, driver_nkdodgeb, driver_chinagat, driver_saiyugou, driver_saiyugb1, driver_saiyugb2, driver_wwfsstar, driver_vball, driver_vball2pj, driver_ddragon2, driver_ddragn2u, driver_toffy, driver_stoffy, driver_ddungeon, driver_darktowr, driver_tstrike, driver_ctribe, driver_ctribeb, driver_blockout, driver_blckout2, driver_blckoutj, driver_agress, driver_ddragon3, driver_ddrago3b, driver_wwfwfest, driver_wwfwfsta, driver_wwfwfstb, driver_wwfwfstj, driver_shadfrce,
+
+/* Stern "Berzerk hardware" games */
+driver_berzerk, driver_berzerk1, driver_frenzy,
+
+/* Stern 'Mazer Blazer hardware' games */
+driver_mazerbla, driver_mzrblzra, driver_greatgun,
+
+/* Other Stern */
+driver_supdrapo,
+
+/* GamePlan games */
+driver_toratora, driver_megatack, driver_killcom, driver_challeng, driver_kaos,
+
+/* Zaccaria games */
+driver_sia2650, driver_tinv2650, driver_dodgem, driver_monymony, driver_jackrabt, driver_jackrab2, driver_jackrabs,
+
+/* UPL games */
+driver_mouser, driver_mouserc, driver_nova2001, driver_nov2001u, driver_ninjakun, driver_raiders5, driver_raidrs5t, driver_pkunwar, driver_pkunwarj, driver_xxmissio, driver_ninjakd2, driver_ninjak2a, driver_ninjak2b, driver_rdaction, driver_mnight, driver_arkarea, driver_robokid, driver_robokidj, driver_omegaf, driver_omegafs,
+
+/* UPL/NMK/Banpresto games */
+driver_urashima, driver_tharrier, driver_tharierj, driver_mustang, driver_mustangs, driver_mustangb, driver_bioship, driver_vandyke, driver_vandyjal, driver_blkheart, driver_blkhearj, driver_acrobatm, driver_strahl, driver_strahla, driver_bjtwin, driver_tdragon2, driver_bigbang, driver_tdragon, driver_tdragonb, driver_hachamf, driver_macross, driver_riot, driver_gunnail, driver_macross2, driver_sabotenb, driver_sabotnba, driver_nouryoku, driver_manybloc, driver_ssmissin, driver_raphero,
+
+/* Jaleco Mahjong Games, Similar Hardware to the NMK ones above? */
+driver_daireika, driver_mjzoomin, driver_kakumei, driver_kakumei2, driver_suchipi,
+
+/* Based on nmk16? */
+driver_quizpani, driver_acommand,
+
+/* don't know what hardare Banpresto used for these games */
+driver_macrossp, driver_quizmoon,
+
+/* Face/NMK games */
+driver_gakupara, driver_quizdna, driver_gekiretu,
+
+/* Williams/Midway games */
+driver_narc, driver_narc3, driver_trog, driver_trog3, driver_trogpa6, driver_trogp, driver_smashtv, driver_smashtv6, driver_smashtv5, driver_smashtv4, driver_hiimpact, driver_hiimpac3, driver_hiimpacp, driver_shimpact, driver_shimpacp, driver_strkforc, driver_mk, driver_mkr4, driver_mkprot9, driver_mkla1, driver_mkla2, driver_mkla3, driver_mkla4, driver_mkyawdim, driver_term2, driver_term2la2, driver_term2la1, driver_totcarn, driver_totcarnp, driver_mk2, driver_mk2r32, driver_mk2r21, driver_mk2r14, driver_mk2r42, driver_mk2r91, driver_mk2chal, driver_jdreddp, driver_nbajam, driver_nbajamr2, driver_nbajamte, driver_nbajamt1, driver_nbajamt2, driver_nbajamt3, driver_revx, driver_mk3, driver_mk3r20, driver_mk3r10, driver_umk3, driver_umk3r11, driver_umk3r10, driver_wwfmania, driver_openice, driver_nbahangt, driver_nbamht, driver_nbamht1, driver_rmpgwt, driver_rmpgwt11, driver_crusnusa, driver_crusnu40, driver_crusnu21, driver_crusnwld, driver_crusnw20, driver_crusnw13, driver_offroadc, driver_wargods, driver_mk4, driver_invasn, driver_crusnexo, driver_thegrid,
+
+/* Midway / Atari  Voodoo based Hardware (Seattle, Flagstaff) */
+driver_wg3dh, driver_mace, driver_sfrush, driver_sfrushrk, driver_calspeed, driver_vaportrx, driver_vaportrp, driver_carnevil, driver_biofreak, driver_blitz, driver_blitz99, driver_blitz2k, driver_hyprdriv,
+
+/* Midway / Atari  Voodoo 2 & 3 - based Hardware (Vegas, Denver, Durango) */
+driver_gauntleg, driver_gauntl12, driver_tenthdeg, driver_roadburn, driver_sfru2049, driver_warfa, driver_nbashowt, driver_nbanfl, driver_gauntdl, driver_cartfury,
+
+/* Cinematronics raster games */
+driver_embargo, driver_tripool, driver_tripoola, driver_joinem, driver_jack, driver_jack2, driver_jack3, driver_treahunt, driver_zzyzzyxx, driver_zzyzzyx2, driver_brix, driver_freeze, driver_sucasino,
+
+/* Cinematronics vector games */
+driver_spacewar, driver_barrier, driver_starcas, driver_starcas1, driver_starcasp, driver_starcase, driver_stellcas, driver_spaceftr, driver_tailg, driver_ripoff, driver_armora, driver_armorap, driver_armorar, driver_wotw, driver_wotwc, driver_warrior, driver_starhawk, driver_solarq, driver_boxingb, driver_speedfrk, driver_sundance, driver_demon, driver_qb3,
+/* this one uses 68000+Z80 instead of the Cinematronics CPU */
+driver_cchasm, driver_cchasm1,
+
+/* "The Pit hardware" games */
+driver_roundup, driver_fitter, driver_thepit, driver_dockman, driver_portman, driver_funnymou, driver_suprmous, driver_machomou, driver_intrepid, driver_intrepi2, driver_zaryavos, driver_timelimt, driver_progress,
+
+/* Valadon Automation games */
+driver_bagman, driver_bagnard, driver_bagnarda, driver_bagmans, driver_bagmans2, driver_sbagman, driver_sbagmans, driver_pickin, driver_botanic, driver_tankbust,
+
+/* Seibu Denshi / Seibu Kaihatsu games */
+driver_stinger, driver_stinger2, driver_scion, driver_scionc, driver_kungfut, driver_kungfuta, driver_wiz, driver_wizt, driver_kncljoe, driver_kncljoea, driver_bcrusher, driver_empcity, driver_empcityu, driver_empcityj, driver_stfight, driver_stfighta, driver_darkmist, driver_mustache, driver_cshooter, driver_cshootre, driver_airraid, driver_panicr, driver_deadang, driver_ghunter, driver_dynduke, driver_dbldyn, driver_raiden, driver_raidena, driver_raidenk, driver_raident, driver_sdgndmps, driver_dcon, driver_sengokmj,
+
+
+driver_raiden2, driver_raiden2a, driver_raiden2b, driver_raiden2c, driver_raiden2e, driver_raidndx, driver_raidndxa, driver_raidndxb, driver_raidndxj, driver_zeroteam, driver_zeroteaa, driver_zeroteab, driver_nzerotea,
+
+
+/* Seibu STI System games:
+
+Viper: Phase 1                  (c) 1995
+Viper: Phase 1 (New version)    (c) 1996
+Battle Balls                    (c) 1996
+Raiden Fighters                 (c) 1996
+Raiden Fighters 2               (c) 1997
+Senku                           (c) 1997
+
+*/
+driver_senkyu, driver_senkyua, driver_batlball, driver_batlbala,
+
+driver_viprp1, driver_viprp1s, driver_viprp1o, driver_viprp1ot,
+
+driver_ejanhs,
+
+driver_rdft, driver_rdftau, driver_rdftj, driver_rdft2, driver_rdft2a, driver_rdft2a2, driver_rdft2j, driver_rdft2us, driver_rdft22kc,
+
+driver_rfjet, driver_rfjetu, driver_rfjeta, driver_rfjetj, driver_rfjetus,
+
+/* Tad games (Tad games run on Seibu hardware) */
+driver_cabal, driver_cabal2, driver_cabalbl, driver_toki, driver_tokia, driver_tokij, driver_tokiu, driver_tokib, driver_bloodbro, driver_bloodbra, driver_weststry, driver_skysmash, driver_legionna, driver_legionnu, driver_heatbrl, driver_heatbrlo, driver_heatbrlu, driver_godzilla, driver_denjinmk, driver_sdgndmrb, driver_cupsoc, driver_cupsoc2, driver_olysoc92, driver_cupsocbl, driver_goal92,
+
+/* Jaleco games */
+driver_exerion, driver_exeriont, driver_exerionb, driver_fcombat, driver_pturn, driver_ddayjlc, driver_formatz, driver_aeroboto, driver_citycon, driver_citycona, driver_cruisin, driver_momoko, driver_argus, driver_valtric, driver_butasan, driver_psychic5, driver_ginganin, driver_gingania, driver_skyfox, driver_exerizrb, driver_homerun, driver_bigrun, driver_cischeat, driver_f1gpstar, driver_wildplt, driver_f1gpstr2, driver_scudhamm, driver_tetrisp2, driver_teplus2j, driver_rockn,
+
+/* Jaleco Mega System 1 games */
+driver_lomakai, driver_makaiden, driver_p47, driver_p47j, driver_kickoff, driver_tshingen, driver_tshingna, driver_iganinju, driver_astyanax, driver_lordofk, driver_hachoo, driver_jitsupro, driver_plusalph, driver_stdragon, driver_rodland, driver_rodlandj, driver_rodlndjb, driver_avspirit, driver_phantasm, driver_edf, driver_64street, driver_64streej, driver_soldamj, driver_bigstrik, driver_bigstrkb, driver_bestleag, driver_chimerab, driver_cybattlr, driver_peekaboo,
+
+/* Jaleco Mega System 1 games */
+driver_hayaosi1, driver_bbbxing, driver_47pie2, driver_47pie2o, driver_desertwr, driver_gametngk, driver_tetrisp, driver_p47aces, driver_akiss, driver_gratia, driver_gratiaa, driver_kirarast, driver_tp2m32, driver_f1superb,
+
+/* Video System Co. games */
+driver_rabiolep, driver_rpunch, driver_svolley, driver_svolleyk, driver_svolleyu, driver_tail2nos, driver_sformula, driver_ojankoc, driver_ojankoy, driver_ojanko2, driver_ccasino, driver_ojankohs, driver_nekkyoku, driver_idolmj, driver_mjnatsu, driver_natsuiro, driver_mfunclub, driver_daiyogen, driver_nmsengen, driver_fromance, driver_pipedrm, driver_pipedrmj, driver_hatris, driver_spinlbrk, driver_spinlbru, driver_spinlbrj, driver_pspikes, driver_pspikesk, driver_svolly91, driver_pspikesb, driver_karatblz, driver_karatblu, driver_karatblj, driver_turbofrc, driver_aerofgt, driver_aerofgtb, driver_aerofgtc, driver_sonicwi, driver_aerfboot, driver_wbbc97, driver_welltris, driver_welltrij, driver_quiz18k, driver_f1gp, driver_f1gp2, driver_crshrace, driver_crshrac2, driver_taotaido, driver_taotaida, driver_gstriker, driver_vgoalsoc, driver_vgoalsca, driver_twrldc94, driver_twrdc94a, driver_suprslam, driver_fromanc2, driver_fromancr, driver_fromanc4, driver_inufuku,
+
+/* Psikyo games */
+driver_samuraia, driver_sngkace, driver_gunbird, driver_gunbirdk, driver_gunbirdj, driver_btlkroad, driver_s1945, driver_s1945a, driver_s1945j, driver_s1945jn, driver_tengai, driver_s1945ii, driver_soldivid, driver_sbomberb, driver_daraku, driver_gunbird2, driver_s1945iii, driver_dragnblz, driver_gnbarich, driver_hotgmck, driver_hgkairak, driver_hotgmck3, driver_loderndf, driver_loderdfa, driver_hotdebut,
+
+/* Orca games */
+driver_marineb, driver_changes, driver_changesa, driver_looper, driver_springer, driver_hoccer, driver_hoccer2, driver_bcruzm12, driver_hopprobo, driver_wanted, driver_funkybee, driver_skylancr, driver_skylance, driver_zodiack, driver_dogfight, driver_moguchan, driver_percuss, driver_bounty, driver_espial, driver_espiale, driver_netwars,
+/* Vastar was made by Orca, but when it was finished, Orca had already bankrupted. */
+/* So they sold this game as "Made by Sesame Japan" because they couldn't use */
+/* the name "Orca" */
+driver_vastar, driver_vastar2,
+/*
+other Orca games:
+82 Battle Cross                         Kit 2P
+82 River Patrol Empire Mfg/Kerstens Ind Ded 2P        HC Action
+82 Slalom                               Kit 2P        HC Action
+83 Net Wars                                 2P
+83 Super Crush                          Kit 2P           Action
+*/
+
+/* Gaelco 2D games */
+/* Master Boy */	/* (c) 1987 - No Ref on the PCB */
+driver_xorworld, driver_bigkarnk,
+/* Master Boy 2 */	/* (c) 1991 - Ref ??? */
+driver_splash, driver_paintlad, driver_roldfrog, driver_roldfrga, driver_funystrp, driver_thoop, driver_squash, driver_wrally, driver_wrallya, driver_glass, driver_targeth, driver_thoop2, driver_aligator, driver_aligatun, driver_biomtoy, driver_touchgo, driver_wrally2, driver_maniacsp, driver_maniacsq, driver_snowboar, driver_snowbalt, driver_bang, driver_bangj,
+
+/* Gaelco 3D games */
+driver_speedup, driver_surfplnt, driver_radikalb,
+
+/*
+Remaining Gaelco Games:
+=======================
+1999: Rolling Extreme
+2000: Football Power
+2001: Smashing Drive
+2002: ATV Track
+*/
+
+/* Kaneko games */
+driver_airbustr, driver_airbustj, driver_djboy, driver_galpanic, driver_galpanib, driver_galpania, driver_galpani2, driver_gpan2qiz, driver_jchan, driver_jchan2, driver_galpani3,
+
+/* Kaneko "AX System" games */
+driver_berlwall, driver_berlwalt, driver_mgcrystl, driver_mgcrystj, driver_blazeon, driver_sandscrp, driver_explbrkr, driver_bakubrkr, driver_shogwarr, driver_fjbuster, driver_brapboys, driver_bloodwar, driver_bonkadv, driver_gtmr, driver_gtmre, driver_gtmrusa, driver_gtmr2, driver_gtmr2a, driver_gtmr2u,
+
+/* Kaneko "Super Nova System" games */
+driver_galpani4, driver_galpanis, driver_sengekis, driver_sengekij, driver_vblokbrk, driver_sarukani, driver_cyvern, driver_galpans2, driver_panicstr, driver_senknow, driver_gutsn, driver_puzzloop, driver_puzloopj, driver_puzloopu, driver_jjparads, driver_jjparad2, driver_ryouran, driver_teljan,
+
+/* Seta games */
+driver_hanaawas, driver_speedatk, driver_srmp2, driver_srmp3, driver_mjyuugi, driver_mjyuugia, driver_ponchin, driver_ponchina, driver_tndrcade, driver_tndrcadj, driver_twineagl, driver_downtown, driver_downtowp, driver_usclssic, driver_calibr50, driver_arbalest, driver_metafox, driver_drgnunit, driver_wits, driver_thunderl, driver_wiggie, driver_rezon, driver_rezont, driver_stg, driver_pairlove, driver_blandia, driver_blandiap, driver_blockcar, driver_qzkklogy, driver_neobattl, driver_umanclub, driver_zingzip, driver_atehate, driver_jjsquawk, driver_kamenrid, driver_madshark, driver_msgundam, driver_msgunda1, driver_daioh, driver_oisipuzl, driver_triplfun, driver_utoukond, driver_qzkklgy2, driver_wrofaero, driver_eightfrc, driver_kiwame, driver_krzybowl, driver_extdwnhl, driver_gundhara, driver_sokonuke, driver_zombraid,
+
+driver_gundamex, driver_grdians, driver_mj4simai, driver_myangel, driver_myangel2, driver_pzlbowl, driver_penbros,
+
+/* SSV System (Seta, Sammy, Visco) games */
+driver_srmp4, driver_srmp4o, driver_twineag2, driver_srmp7, driver_survarts, driver_survartu, driver_dynagear, driver_eaglshot, driver_eaglshta, driver_hypreact, driver_koikois2, driver_meosism, driver_hypreac2, driver_sxyreact, driver_sxyreac2, driver_cairblad, driver_keithlcy, driver_drifto94, driver_janjans1, driver_stmblade, driver_mslider, driver_ryorioh, driver_vasara, driver_vasara2, driver_vasara2a,
+
+driver_ultrax, driver_jsk, driver_gdfs,
+
+/* ST-0016 based games (ST-0016 is a z80 / gfx / sound all in one) */
+/* plain ST-0016 */
+driver_renju, driver_nratechu,
+/* R3000 + ST-0016 */
+driver_srmp5, driver_speglsht, driver_speglsha,
+/* V810 + ST-0016 */
+driver_mayjinsn, driver_mayjisn2,
+
+/* Seta System S12 */
+driver_srmp6,
+
+/* Seta Aleck64 and similar (N64 based) */
+driver_11beat, driver_mtetrisc,
+
+/* Atlus games */
+driver_powerins, driver_powerina, driver_ohmygod, driver_naname, driver_blmbycar, driver_blmbycau,
+
+/* Sun Electronics / SunSoft games */
+driver_speakres, driver_stratvox, driver_spacecho, driver_route16, driver_route16a, driver_route16b, driver_routex, driver_ttmahjng, driver_fnkyfish, driver_kangaroo, driver_kangaroa, driver_kangarob, driver_arabian, driver_arabiana, driver_markham, driver_strnskil, driver_guiness, driver_pettanp, driver_ikki, driver_farmer, driver_shanghai, driver_shangha2, driver_kothello, driver_shangha3, driver_heberpop, driver_blocken,
+/*
+Other Sun games
+1978 (GT)Block Perfect
+1978 (GT)Block Challenger
+1979 Galaxy Force
+1979 Run Away
+1979 Dai San Wakusei (The Third Planet)
+1979 Warp 1
+1980 Cosmo Police (Cosmopolis?)
+1985 Ikki
+1993 Saikyou Battler Retsuden
+1995 Shanghai Banri no Choujou (ST-V)
+1996 Karaoke Quiz Intro DonDon (ST-V)
+1998 Astra Super Stars (ST-V)
+1998 Shanghai Mateki Buyuu (TPS)
+*/
+
+/* Suna games */
+driver_goindol, driver_goindolu, driver_goindolj, driver_rranger, driver_sranger, driver_srangerb, driver_srangerw, driver_sparkman, driver_hardhead, driver_hardhedb, driver_pop_hh, driver_starfigh, driver_hardhea2, driver_brickzn, driver_brickzn3, driver_bssoccer, driver_uballoon,
+
+/* Dooyong games */
+driver_gundealr, driver_gundeala, driver_gundealt, driver_yamyam, driver_wiseguy, driver_lastday, driver_lastdaya, driver_gulfstrm, driver_gulfstr2, driver_pollux, driver_polluxa, driver_flytiger, driver_bluehawk, driver_bluehawn, driver_sadari, driver_gundl94, driver_primella, driver_superx, driver_superxm, driver_rshark, driver_popbingo,
+
+/* Tong Electronic games */
+driver_leprechn, driver_potogold, driver_leprechp, driver_piratetr, driver_beezer, driver_beezer1,
+
+/* Comad games */
+driver_pushman, driver_pushmana, driver_pushmans, driver_bballs, driver_zerozone, driver_lvgirl94, driver_hotpinbl, driver_galspnbl,
+/* the following ones run on modified Gals Panic hardware */
+driver_fantasia, driver_newfant, driver_fantsy95, driver_missw96, driver_missmw96, driver_fantsia2, driver_galhustl,
+
+/* Playmark games */
+driver_sslam, driver_sslama, driver_bigtwin, driver_wbeachvl, driver_excelsr, driver_hotmind, driver_drtomy,
+
+/* Pacific Novelty games */
+driver_sharkatt, driver_thief, driver_natodef, driver_natodefa, driver_mrflea,
+
+/* Tecfri games */
+driver_holeland, driver_crzrally, driver_crzrallg, driver_speedbal, driver_sauro, driver_trckydoc,
+
+/* Metro games */
+driver_karatour, driver_ladykill, driver_moegonta, driver_pangpoms, driver_pangpomm, driver_skyalert, driver_poitto, driver_dharma, driver_lastfort, driver_lastfero, driver_lastforg, driver_toride2g, driver_daitorid, driver_dokyusei, driver_dokyusp, driver_puzzli, driver_3kokushi, driver_pururun, driver_balcube, driver_mouja, driver_bangball, driver_gakusai, driver_gakusai2, driver_blzntrnd, driver_gstrik2, driver_hyprduel, driver_hyprdelj,
+
+/* Venture Line games */
+driver_spcforce, driver_spcforc2, driver_meteor, driver_looping, driver_loopinga, driver_skybump, driver_suprridr,
+
+/* Yun Sung games */
+driver_paradise, driver_tgtball, driver_tgtballa, driver_torus, driver_cannball, driver_magix, driver_magicbub, driver_shocking, driver_nmg5, driver_searchey, driver_pclubys, driver_pclubysa,
+
+/* Zilec games */
+driver_blueprnt, driver_blueprnj, driver_saturn,
+
+/* Fuuki FG-2 games */
+driver_gogomile, driver_gogomilj, driver_pbancho,
+
+/* Fuuki FG-3 games */
+driver_asurabld,
+
+/* Unico games */
+driver_drgnmst, driver_burglarx, driver_zeropnt, driver_zeropnta, driver_zeropnt2, driver_silkroad,
+
+/* Afega games */
+driver_stagger1, driver_redhawk, driver_redhawkb, driver_grdnstrm, driver_bubl2000, driver_hotbubl, driver_firehawk,
+
+/* ESD games */
+/* http://www.esdgame.co.kr/english/ */
+driver_multchmp, driver_mchampdx, driver_hedpanic,
+
+/* Dyna Electronics / Dynax / Nakanihon games */
+driver_royalmah, driver_suzume, driver_hnayayoi, driver_dondenmj, driver_hnfubuki, driver_mjdiplob, driver_untoucha, driver_tontonb, driver_hanamai, driver_majs101b, driver_hnkochou, driver_mjderngr, driver_hnoridur, driver_drgpunch, driver_mjfriday, driver_jantouki, driver_mjifb, driver_sprtmtch, driver_maya, driver_inca, driver_mcnpshnt, driver_7jigen, driver_neruton, driver_mjdialq2, driver_yarunara, driver_mjangels, driver_quiztvqq, driver_mmpanic, driver_quizchq, driver_quizchql, driver_quiz365, driver_quiz365t, driver_rongrong, driver_rongrngg, driver_nettoqc, driver_ddenlovr, driver_hanakanz,
+					/* "510" Hana Kagerou 1996 Nakanihon */
+driver_realbrk,
+					/* "526" Mahjong Reach Ippatsu 1998 Nihon System/Dynax */
+
+driver_pkgnsh, driver_pkgnshdx,
+
+driver_mjelctrn, driver_mjelct3, driver_mjelct3a,
+
+/* Sigma games */
+driver_nyny, driver_nynyg, driver_arcadia, driver_r2dtank, driver_spiders, driver_spiders2, driver_spinner,
+
+/* IGS games ( www.igs.com.tw ) */
+driver_iqblock, driver_grndtour, driver_cabaret, driver_chindrag, driver_chugokur, driver_grtwall, driver_lhb, driver_xymg, driver_lordgun, driver_vbowl, driver_chmplst2, driver_tarzan,
+
+/* IGS PGM System Games */
+driver_orlegend, driver_orlegnde, driver_orlegndc, driver_orld111c, driver_orld105k, driver_drgw2, driver_drgw2c, driver_drgw3, driver_drgw3k, driver_kov, driver_kovplus, driver_kovplusa, driver_kov115, driver_kovj, driver_kovsh, driver_photoy2k, driver_raf102j, driver_killbld, driver_puzlstar, driver_olds, driver_olds100, driver_olds100a, driver_ddp2, driver_puzzli2,
+
+/* RamTek games */
+driver_hitme, driver_mblkjack, driver_barricad, driver_brickyrd, driver_starcrus,
+
+/* Omori games */
+driver_battlex, driver_carjmbre, driver_popper,
+
+/* TCH games */
+driver_speedspn, driver_mstworld,
+
+driver_kickgoal, driver_holywact,
+
+/* U.S. Games games */
+driver_usg32, driver_usg82, driver_usg83, driver_usg83x, driver_usg185, driver_usg252,
+
+/* Sanritsu games */
+driver_mermaid,	/* made by Sanritsu */
+driver_yachtmn, driver_rougien, driver_drmicro, driver_appoooh,	/* made by Sanritsu */
+driver_robowres, driver_robowrb, driver_bankp,	/* made by Sanritsu */
+driver_mjkjidai, driver_mayumi,	/* made by Sanritsu */
+
+/* Rare games */
+driver_xtheball, driver_btoads, driver_kinst, driver_kinst14, driver_kinst13, driver_kinstp, driver_kinst2, driver_kinst2k, driver_kinst213, driver_kinst211, driver_kinst210,
+
+/* Nihon System games */
+driver_gigasb, driver_gigasm2b, driver_oigas, driver_pbillrd, driver_pbillrds, driver_freekick, driver_freekckb, driver_countrun, driver_countrnb, driver_countrb2,
+
+/* Alba games */
+driver_rmhaihai, driver_rmhaihib, driver_rmhaijin, driver_rmhaisei, driver_themj, driver_hanaroku, driver_yumefuda,
+
+/* Home Data games */
+driver_hourouki, driver_mhgaiden, driver_mjhokite, driver_mjclinic, driver_mrokumei, driver_reikaids, driver_mjkojink, driver_vitaminc, driver_mjyougo, driver_lemnangl, driver_mjkinjas, driver_battlcry, driver_jogakuen, driver_mjikaga,
+
+/* Art & Magic games */
+driver_ultennis, driver_cheesech, driver_stonebal, driver_stoneba2,
+
+/* Taiyo games */
+driver_dynamski, driver_chinhero, driver_chinher2, driver_shangkid, driver_hiryuken,
+
+/* Tatsumi Games */
+driver_lockon, driver_apache3, driver_roundup5, driver_cyclwarr,
+
+/* Electronic Devices */
+driver_mugsmash, driver_stlforce, driver_fantland, driver_fantlnda, driver_galaxygn, driver_borntofi, driver_diverboy, driver_twinbrat, driver_ppmast93, driver_twins, driver_mwarr,
+
+/* Arcadia System */
+driver_ar_airh, driver_ar_bowl, driver_ar_dart, driver_ar_fast, driver_ar_ldrb, driver_ar_ldrba, driver_ar_ninj, driver_ar_rdwr, driver_ar_sdwr, driver_ar_spot, driver_ar_sprg, driver_ar_xeon,
+
+/* Sente Super System */
+driver_mquake,
+
+/* Crystal System */
+driver_crysking, driver_evosocc,
+
+/* Other Games */
+driver_astinvad, driver_kamikaze, driver_spcking2, driver_spaceint, driver_spacefb, driver_spacefbg, driver_spacefbb, driver_spacebrd, driver_spacedem, driver_omegrace, driver_deltrace, driver_dday, driver_ddayc, driver_hexa, driver_stactics, driver_exterm, driver_kingofb, driver_ringking, driver_ringkin2, driver_ringkin3, driver_ringkinw, driver_ambush, driver_ambusht, driver_ambushv, driver_homo, driver_dlair, driver_aztarac, driver_mole, driver_thehand, driver_gotya, driver_mrjong, driver_crazyblk, driver_blkbustr, driver_polyplay, driver_amspdwy, driver_amspdwya, driver_othldrby, driver_mosaic, driver_mosaica, driver_gfire2, driver_tx1, driver_buggyboy, driver_buggyb1, driver_sprcros2, driver_sprcrs2a, driver_gcpinbal, driver_vmetal, driver_vmetaln, driver_aquarium, driver_policetr, driver_polict11, driver_plctr13b, driver_sshooter, driver_sshoot12, driver_pass, driver_news, driver_taxidrvr, driver_xyonix, driver_gt507uk, driver_gt103, driver_gt5, driver_gt103a, driver_gt103a1, driver_gt103a2, driver_gt103a3, driver_gt103asx, driver_gt103aa, driver_gt103ab, driver_findout, driver_gs4002, driver_gt102c, driver_gt102b, driver_gt102c1, driver_gt102c2, driver_gt102c3, driver_sextriv1, driver_sextriv2, driver_dribling, driver_driblino, driver_ace, driver_clayshoo, driver_pirates, driver_genix, driver_fitfight, driver_histryma, driver_bbprot, driver_flower, driver_flowerbl, driver_beaminv, driver_mcatadv, driver_mcatadvj, driver_catt, driver_nost, driver_nostj, driver_nostk, driver_4enraya, driver_oneshot, driver_maddonna, driver_maddonnb, driver_tugboat, driver_gotcha, driver_amerdart, driver_coolpool, driver_9ballsht, driver_9ballsh2, driver_9ballsh3, driver_gumbo, driver_mspuzzle, driver_msbingo, driver_dblpoint, driver_hangman, driver_trivquiz, driver_statriv2, driver_statriv4, driver_quaquiz2, driver_supertr2, driver_supertr3, driver_tickee, driver_ghoshunt, driver_tutstomb, driver_crgolf, driver_crgolfa, driver_crgolfb, driver_crgolfc, driver_truco, driver_thedeep, driver_rundeep, driver_wallc, driver_wallca, driver_skyarmy, driver_lethalj, driver_eggventr, driver_eggvent7, driver_eggvntdx, driver_rotaryf, driver_sbugger, driver_portrait, driver_portrata, driver_enigma2, driver_enigma2a, driver_ltcasino, driver_ltcasin2, driver_vamphalf, driver_luplup, driver_luplup29, driver_suplup, driver_hidnctch, driver_landbrk, driver_landbrka, driver_raccoon, driver_xfiles, driver_misncrft, driver_coolmini, driver_promutrv, driver_promutra, driver_strvmstr, driver_dorachan, driver_ladyfrog, driver_rabbit, driver_tmmjprd, driver_malzak, driver_supertnk, driver_crospang, driver_funybubl, driver_dcheese, driver_f15se, driver_botss, driver_stankatk, driver_dynadice, driver_ssingles, driver_tcl, driver_kisekaem, driver_kisekaeh, driver_cultname, driver_yuka, driver_yujan, driver_onetwo, driver_1945kiii, driver_pbchmp95, driver_bmcbowl, driver_phrcraze, driver_tictac, driver_pitboss, driver_trvwhiz, driver_trvwhzii, driver_suprgolf, driver_hotblock, driver_pntnpuzl, driver_trucocl, driver_ertictac, driver_ssfindo, driver_monzagp, driver_couple, driver_couplep, driver_dambust, driver_dambustr, driver_gunpey, driver_spaceg, driver_wldarrow, driver_laserbas, driver_laserbsa, driver_futflash, driver_turbosub, driver_pipeline, driver_penocup, driver_dreamwld, driver_cybertnk,
