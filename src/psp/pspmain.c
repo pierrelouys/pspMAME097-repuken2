@@ -186,8 +186,8 @@ int main(int argc, char *argv[])
 
     // create nonexisting dirs
     // bad file descriptor workaround
-    char needed_dirs[4][256] = { "roms", "cfg", "nvram", "sta", "hist" };
-    for (int i = 0; i < 4; i++) {
+    char needed_dirs[5][256] = { "roms", "cfg", "nvram", "sta", "hist" };
+    for (int i = 0; i < 5; i++) {
         if(sceIoDopen(needed_dirs[i]) < 0) {
             sceIoMkdir(needed_dirs[i], 0777);
         }
