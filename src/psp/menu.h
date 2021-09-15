@@ -54,7 +54,7 @@ enum{
 	SCR_MAX,                         //SCR_END,
 };
 
-#define CONFIG_VER	"0.0.2"
+#define CONFIG_VER	"0.0.3"
 
 #define DRVIDX_MAX	1000
 short drv_idx[DRVIDX_MAX];

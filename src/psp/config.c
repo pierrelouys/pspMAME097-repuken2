@@ -62,7 +62,13 @@ extern int usestereo;
 extern int sampleratedetect;
 extern int attenuation;
 
+/* from datafile.c */
+// const char *history_filename,*mameinfo_filename;
+const char *history_filename;
+
 char *rompath_extra;
+
+// #define HISTRY_NAME "HISTORY.DAT"
 
 /* from video.c for blit rotation */
 extern int video_flipx;
@@ -335,6 +341,7 @@ static void get_fileio_opts( void )
 		{ "nvram_directory", "nvram" },
 		{ "memcard_directory", "memcard" },
 		{ "state_directory", "sta" },
+		{ "history_file", NULL },
 		{ NULL, NULL }
 	};
 
@@ -491,6 +498,11 @@ struct rc_option config_opts[] =
 static void parse_cmdline( int argc, char **argv, int game_index )
 {
 	int orientation;
+
+    char tmp[64];
+    sprintf(tmp, "hist/%s-history.dat", BUILD_NAME);
+    history_filename = tmp;
+
 	struct InternalMachineDriver/*machine_config*/ drv;
 
 	game = game_index;
@@ -506,6 +518,9 @@ static void parse_cmdline( int argc, char **argv, int game_index )
 	usestereo					= get_bool( "config", "stereo", NULL, 1 );
 	attenuation 				= get_int( "config", "volume", "vol", 0 );
 	sampleratedetect			= get_bool( "config", "sampleratedetect", NULL, 1 );
+
+	/* misc configuration */
+	history_filename			= get_string( "config", "historyfile", "history_file", history_filename, "", NULL, NULL );
 
 	/* process language configuration */
 	options.pause_bright		= get_float( "config", "pause_brightness", NULL, 0.65, 0.5, 2.0 );
