@@ -65,6 +65,18 @@ MAME 0.97 supports 5,661 ROMs. Compile it with that many drivers, and it will cr
  1. `make all`
  2. move all the `.a` libraries from `obj/mame` to `obj/drivers`
  3. `make TARGET=Nichibutsu` - varies according to the name of the makefile in `/makes`.
+ 
+### Custom builds
+
+The builds included in the release feature only a small subset of all the games MAME 0.97 has to offer. If your favorite arcade game is not included in one of them, creating a custom build is an option.
+
+The [Arcade Database](http://adb.arcadeitalia.net/) website is a great starting point. 
+
+1. First - is the game included in MAME 0.97? Open the Arcade Database page for the game of your choice, and check the 'First release' section.
+1. Copy one of the makefiles under `makes`. Change `DTINY_NAME` and `DTINY_POINTER` to match the game's name under the [list of drivers](https://github.com/pierrelouys/pspMAME097-repuken2/blob/conservative/src/driver.c#L56).
+1. Change the list of `CPUs` and `SOUNDs` to match the game's hardware. The Arcade Database entry for the game (video and audio sections) can again be a useful reference.
+1. In the Terminal, type `make TARGET=foo`, where `foo` is the name of your makefile.
+1. You will most likely hit a few stray undefined references on the first attempt. Check in which files the missing functions are declared by searching the pspMAME repo, and include them in the makefile.
 
 ## Changes
 
