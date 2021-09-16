@@ -7,34 +7,49 @@ menu = Image.load("./img/menu.png")
 
 current = 1;
 
-makerListPage01 = {
-   "CAPCOM",
-   "CAVE",
-   "CPS1",
-   "DECO",
-   "DYNAX",
-   "IREM",
-   "KONAMI",
-   "KONAMI2",
-   "NAMCO",
-   "NAMCO2",
-   "NICHIBUTSU",
-   "NINTENDO",
-}
-
-makerListPage02 = {
-   "SEGA",
-   "SEGA2",
-   "SEGA3",
-   "SNK",
-   "TAITO",
-   "TAITO2",
-   "TECHNOS",
-   "UNIVERSAL",
-   "UPL",
-   "PLACEHOLDER",
-   "PLACEHOLDER",
-   "PLACEHOLDER",
+makerList = {
+	{ -- page 1
+	   "CAPCOM",
+	   "CAVE",
+	   "CPS1",
+	   "DECO",
+	   "DYNAX",
+	   "IREM",
+	   "JALECO",
+	   "KANEKO",
+	   "KONAMI",
+	   "KONAMI2",
+	   "NAMCO",
+	   "NAMCO2",
+	},
+	{ -- page 2
+	   "NICHIBUTSU",
+	   "NINTENDO",
+	   "SEGA",
+	   "SEGA2",
+	   "SEGA3",
+	   "SETA",
+	   "SNK",
+	   "TAITO",
+	   "TAITO2",
+	   "TECHNOS",
+	   "UNIVERSAL",
+	   "UPL",
+	},
+	{ -- page 3
+	   "PLACEHOLDER",
+	   "PLACEHOLDER",
+	   "PLACEHOLDER",
+	   "PLACEHOLDER",
+	   "PLACEHOLDER",
+	   "PLACEHOLDER",
+	   "PLACEHOLDER",
+	   "PLACEHOLDER",
+	   "PLACEHOLDER",
+	   "PLACEHOLDER",
+	   "PLACEHOLDER",
+	   "PLACEHOLDER",
+	}
 }
 
 fontColor = Color.new(255,255,0,0)
@@ -58,14 +73,15 @@ for i=1,12,3 do
 end
 
 -- assign content from page 1
-local makerList = makerListPage01
+currentPage = 1
+local makerListPage = makerList[currentPage]
 
 -- get vendor logo paths for page 1 or page 2
 function fetchVendorIcons()
 	vendor = {}
 	for i=1,12,1 do
 		-- must fit inside the selector (90x57)
-		vendor[i] = Image.load("./img/" .. makerList[i] .. ".png")
+		vendor[i] = Image.load("./img/" .. makerListPage[i] .. ".png")
 	end
 end
 
@@ -77,12 +93,12 @@ function screenRefresh()
 	screen:print(20, 260, "<- L trigger", fontColor)
 	screen:print(370, 260, "R trigger ->", fontColor)
 	screen:print(90, 230,
-	"Press O to launch the "  .. makerList[current] .. " build", fontColor)
+	"Press O to launch the "  .. makerListPage[current] .. " build", fontColor)
 	
 	-- draw each of the 12 vendor logos
 	-- offset is selector icon offset + 7
 	for i=1,12,1 do
-		screen:blit((selectorPosX[i] + 7), (selectorPosY[i] + 7), vendor[i])
+		screen:blit((selectorPosX[i] + 7), (selectorPosY[i] + 6), vendor[i])
 	end
 	
 	-- selector icon
@@ -106,7 +122,6 @@ end
 
 fetchVendorIcons()
 screenRefresh()
-
  --Bucle principal--
 while true do
 	pad = Controls.read()
@@ -137,17 +152,24 @@ while true do
 		System.sleep(200)		
 	end
 	
-	-- get page 2 / back to page 1
+	-- get next page
 	if pad:r() then
-		makerList = makerListPage02
+		if currentPage < 3 then
+			currentPage = currentPage + 1
+			makerListPage = makerList[currentPage]
+		end
 		current = 1
 		fetchVendorIcons()
 		screenRefresh()
 		System.sleep(200)		
 	end
 	
+	-- get prev page
 	if pad:l() then
-		makerList = makerListPage01
+		if currentPage > 1 then
+			currentPage = currentPage - 1
+			makerListPage = makerList[currentPage]
+		end
 		current = 1
 		fetchVendorIcons()
 		screenRefresh()
@@ -157,7 +179,7 @@ while true do
 	---Ejecutando las aplicaciones---		
 	if pad:circle() then
 		-- concatenate eboot path
-		local ebootPath = "ms0:/PSP/GAME/pspMAME/" .. makerList[current] .. ".PBP"
+		local ebootPath = "ms0:/PSP/GAME/pspMAME/" .. makerListPage[current] .. ".PBP"
 		print("running ", ebootPath)
 		System.runeboot(ebootPath)
 	end
