@@ -1,3 +1,7 @@
+## List of games
+
+[Full list of games](https://github.com/pierrelouys/pspMAME097-repuken2/tree/conservative/docs/psp-guide/list-games.md) included in each build.
+
 ## Setting up pspMAME
 
 pspMAME is a straight port of MAME 0.97 (released for PC in 2005). 
