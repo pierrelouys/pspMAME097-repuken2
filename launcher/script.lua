@@ -90,8 +90,8 @@ end
 function screenRefresh()
 	image.blit(menu, 3, 0)
 	
-	screen.print(20, 260, "<- L trigger", fontSize, fontColor)
-	screen.print(370, 260, "R trigger ->", fontSize, fontColor)
+	screen.print(20, 255, "<- L trigger", fontSize, fontColor)
+	screen.print(370, 255, "R trigger ->", fontSize, fontColor)
 	screen.print(90, 230,
 	"Press O to launch the "  .. makerListPage[current] .. " build", fontSize, fontColor)
 	
@@ -119,62 +119,112 @@ function getCurrent(current, change)
 	return current
 end
 
+-- get the list of games for the selected build
+function gameIndex(current, currentPage)
+	mainMenuLoop = false -- invalidate main manu controls
+	gameBuildIndex = current + (12 * (currentPage - 1)) -- handle page numbers > 12
+	local listofgames = require("gamelist")
+	GameList = listofgames.getGameList(gameBuildIndex)
+	highlightedGame = 1
+	gamesCount = #GameList
+	gamesleft = gamesCount
+	buttons.interval(10,10)
+	
+	while true do
+		buttons.read()
+		screen.print(5, (12), ">")
+		
+		for k=0, math.min(18,gamesleft), 1 do
+			screen.print(15, (12*(k+1)), GameList[highlightedGame+k])
+		end
+		
+		screen.print(15, 255, "O : start  X : back", fontSize, fontColor)
+		
+		-- submenu controls
+		if (buttons.down and gamesleft > 0) then
+			highlightedGame = highlightedGame + 1
+			gamesleft = gamesCount - highlightedGame
+		end
+		if (buttons.up and highlightedGame > 1) then
+			highlightedGame = highlightedGame - 1
+			gamesleft = gamesCount - highlightedGame
+		end
+		if buttons.cross then
+			mainMenuLoop = true
+			buttons.interval()
+			screenRefresh()
+			return 0
+		end
+		-- save choice to ms, to be picked up by pspMAME
+		if buttons.circle then
+			file = io.open("gameindex", "w")
+			io.output(file)
+			io.write(highlightedGame)
+			io.close(file)
+			buttons.interval()
+			return 1
+		end
+
+		screen.flip()
+	end
+end
+
 fetchVendorIcons()
 screenRefresh()
 
  --Bucle principal--
-while true do
+mainMenuLoop = true
+while mainMenuLoop == true do
 	buttons.read()
 	
-	---Moviendo el pad arriba y abajo---
-	if buttons.down then
-		current = getCurrent(current, 1)
-		screenRefresh()
-	end
-	 
-	if buttons.up then
-		current = getCurrent(current, -1)
-		screenRefresh()
-	end
-	 
-	 ---Moviendo el pad arriba y abajo---
-	 if buttons.right then
-		current = getCurrent(current, 3)
-		screenRefresh()
-	end
-	 
-	if buttons.left then
-		current = getCurrent(current, -3)
-		screenRefresh()
-	end
-	
-	-- get next page
-	if buttons.r then
-		if currentPage < 3 then
-			currentPage = currentPage + 1
-			makerListPage = makerList[currentPage]
+		if buttons.down then
+			current = getCurrent(current, 1)
+			screenRefresh()
 		end
-		current = 1
-		fetchVendorIcons()
-		screenRefresh()
-	end
-	
-	-- get prev page
-	if buttons.l then
-		if currentPage > 1 then
-			currentPage = currentPage - 1
-			makerListPage = makerList[currentPage]
+		if buttons.up then
+			current = getCurrent(current, -1)
+			screenRefresh()
 		end
-		current = 1
-		fetchVendorIcons()
-		screenRefresh()
-	end
+		if buttons.right then
+			current = getCurrent(current, 3)
+			screenRefresh()
+		end
+		if buttons.left then
+			current = getCurrent(current, -3)
+			screenRefresh()
+		end
+		
+		-- get next page
+		if buttons.r then
+			if currentPage < 3 then
+				currentPage = currentPage + 1
+				makerListPage = makerList[currentPage]
+			end
+			current = 1
+			fetchVendorIcons()
+			screenRefresh()
+		end
+		
+		-- get prev page
+		if buttons.l then
+			if currentPage > 1 then
+				currentPage = currentPage - 1
+				makerListPage = makerList[currentPage]
+			end
+			current = 1
+			fetchVendorIcons()
+			screenRefresh()
+		end
 
-	---Ejecutando las aplicaciones---		
-	if buttons.circle then
-		-- concatenate eboot path
-		local ebootPath = "ms0:/PSP/GAME/pspMAME/" .. makerListPage[current] .. ".PBP"
-		print("running ", ebootPath)
-		game.launch(ebootPath)
-	end
+		---Ejecutando las aplicaciones---		
+		if buttons.circle then
+			-- display submenu, save gameindex helper file
+			gameSelection = gameIndex(current, currentPage)
+			if (gameSelection == 1) then
+				-- concatenate eboot path
+				local ebootPath = "ms0:/PSP/GAME/pspMAME/" .. makerListPage[current] .. ".PBP"
+				print("running ", ebootPath)
+				game.launch(ebootPath)
+			end
+		end
 end

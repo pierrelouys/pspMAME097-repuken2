@@ -40,6 +40,8 @@ volatile int psp_loop;
 volatile int psp_sleep;
 volatile int psp_rajar;
 
+int game_index_int = 0;
+
 
 //============================================================
 //	PROTOTYPES
@@ -153,6 +155,33 @@ void setCurDir(const char *path)
 	curdir_length = strlen(curdir);
 }
 
+int gameindexfetch(void)
+{
+	char CfgPath[MAX_PATH];
+	char *p;
+	
+	int game_index;
+
+	memset(&game_index, 0, sizeof(game_index));
+
+	strcpy(CfgPath, getCurDir());
+	p = strrchr(CfgPath, '/')+1;
+	strcpy(p, "gameindex");
+	psp_printf_bbb("%s\n", p);
+	printf("%s\n", p);
+
+	int fd;
+	fd = sceIoOpen(CfgPath,PSP_O_RDONLY, 0777);
+	if (fd >= 0)
+	{
+		sceIoRead(fd, &game_index, sizeof(game_index));
+		sceIoClose(fd);
+		game_index_int = game_index - '0';
+		sceIoRemove(p);
+	}
+	return game_index_int;
+}
+
 //============================================================
 //	メイン
 //============================================================
@@ -194,6 +223,29 @@ int main(int argc, char *argv[])
     }
 
 	load_config();
+	
+	
+		if (gameindexfetch()) {
+				v_sync();
+				psp_flip_screen(/*1*/);
+				_argv[_argc] = (char *)drivers[(int)drv_idx[dlist_curpos]]->name;
+				switch (setting.cpu_clock)
+				{
+				case 0: scePowerSetClockFrequency(222, 222, 111); break;
+				case 1: scePowerSetClockFrequency(266, 266, 133); break;
+				case 2: scePowerSetClockFrequency(300, 300, 150); break;
+				default:
+				case 3: scePowerSetClockFrequency(333, 333, 166); break;
+				}
+				psp_loop = 2;
+
+				int h;
+
+				for(h=0;h<argc;h++)
+				/*res =*/ run_mame(_argc + 1, _argv);
+				scePowerSetClockFrequency(222, 222, 111);
+			}
+	
 	load_menu_bg();
 	bgbright_change();
 
@@ -226,9 +278,6 @@ int main(int argc, char *argv[])
 				int h;
 
 				for(h=0;h<argc;h++)
-				   printf("_argv[%d]=='%s'\n",h,_argv[h]);
-				/*printf("_argv[_argc]=='%s'\n",_argv[_argc]);
-				printf("_argv[_argc+1]=='%s'\n",_argv[_argc+1]);*/
 				/*res =*/ run_mame(_argc + 1, _argv);
 				scePowerSetClockFrequency(222, 222, 111);
 			}

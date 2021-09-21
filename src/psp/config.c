@@ -18,6 +18,8 @@ float get_config_float(const char *section, const char *name, float def);
 
 extern int blitMode;
 
+extern int game_index_int;
+
 //============================================================
 //	LOCAL VARIABLES
 //============================================================
@@ -630,6 +632,8 @@ void mame_set_to_options_samplerate(void)
 //	cli_frontend_init
 //============================================================
 
+
+
 int cli_frontend_init( int argc, char **argv )
 {
 	char *gamename = argv[1];
@@ -705,6 +709,10 @@ int cli_frontend_init( int argc, char **argv )
 
 	/* no sound is indicated by a 0 samplerate */
 	if (SND_OFF==setting.sound_rate) options.samplerate = 0;
+	
+	if (game_index_int) {
+		game_index = game_index_int;
+	}
 
 	return game_index;
 }
