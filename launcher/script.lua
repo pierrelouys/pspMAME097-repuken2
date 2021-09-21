@@ -145,8 +145,16 @@ function gameIndex(current, currentPage)
 			highlightedGame = highlightedGame + 1
 			gamesleft = gamesCount - highlightedGame
 		end
+		if (buttons.right and gamesleft > 18) then
+			highlightedGame = highlightedGame + 18
+			gamesleft = gamesCount - highlightedGame
+		end
 		if (buttons.up and highlightedGame > 1) then
 			highlightedGame = highlightedGame - 1
+			gamesleft = gamesCount - highlightedGame
+		end
+		if (buttons.left and highlightedGame > 18) then
+			highlightedGame = highlightedGame - 18
 			gamesleft = gamesCount - highlightedGame
 		end
 		if buttons.cross then
@@ -159,7 +167,7 @@ function gameIndex(current, currentPage)
 		if buttons.circle then
 			file = io.open("gameindex", "w")
 			io.output(file)
-			io.write(highlightedGame)
+			io.write(highlightedGame - 1)
 			io.close(file)
 			buttons.interval()
 			return 1
