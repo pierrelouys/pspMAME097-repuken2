@@ -40,8 +40,7 @@ volatile int psp_loop;
 volatile int psp_sleep;
 volatile int psp_rajar;
 
-int game_index_int = 0;
-
+int game_index_int;
 
 //============================================================
 //	PROTOTYPES
@@ -155,29 +154,36 @@ void setCurDir(const char *path)
 	curdir_length = strlen(curdir);
 }
 
+// get the index of the game to launch from the lua launcher
 int gameindexfetch(void)
 {
 	char CfgPath[MAX_PATH];
 	char *p;
-	
-	int game_index;
-
-	memset(&game_index, 0, sizeof(game_index));
+	char game_index_char[3];
 
 	strcpy(CfgPath, getCurDir());
 	p = strrchr(CfgPath, '/')+1;
 	strcpy(p, "gameindex");
-	psp_printf_bbb("%s\n", p);
-	printf("%s\n", p);
 
 	int fd;
 	fd = sceIoOpen(CfgPath,PSP_O_RDONLY, 0777);
 	if (fd >= 0)
 	{
-		sceIoRead(fd, &game_index, sizeof(game_index));
+		sceIoRead(fd, &game_index_char, sizeof(game_index_char));
 		sceIoClose(fd);
-		game_index_int = game_index - '0';
 		sceIoRemove(p);
+	}
+	
+	// 3 digits num
+	if ((game_index_char[2] - '0') > -1 ) {
+		game_index_int = ( (game_index_char[0] - '0') * 100) + ( (game_index_char[1] - '0') * 10) + ( game_index_char[2] - '0');
+	}
+	// 2 digits num
+	else if ((game_index_char[1] - '0') > -1 ) {
+		game_index_int = ( (game_index_char[0] - '0') * 10) + ( game_index_char[1] - '0');
+	}
+	else {
+		game_index_int = game_index_char[0] - '0';
 	}
 	return game_index_int;
 }
