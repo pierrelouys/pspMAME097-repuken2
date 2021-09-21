@@ -9,7 +9,7 @@ typedef struct
 	char vercnf[16];
 	u8/*u8*//*int*/ frameskip;
 	u8/*u8*//*int*/ screensize;
-	u8/*u8*//*int*/ vsync_ON_OFF;
+	// u8/*u8*//*int*/ vsync_ON_OFF;
 	u8/*u8*//*int*/ show_fps_ON_OFF;//	int showfps;
 
 	u8/*u8*//*int*/ sound_skip;
@@ -54,7 +54,7 @@ enum{
 	SCR_MAX,                         //SCR_END,
 };
 
-#define CONFIG_VER	"0.0.3"
+#define CONFIG_VER	"0.0.4"
 
 #define DRVIDX_MAX	1000
 short drv_idx[DRVIDX_MAX];

@@ -249,6 +249,7 @@ int main(int argc, char *argv[])
 
 				for(h=0;h<argc;h++)
 				/*res =*/ run_mame(_argc + 1, _argv);
+				game_index_int = -1; // avoid looping pre-selected game
 				scePowerSetClockFrequency(222, 222, 111);
 			}
 	

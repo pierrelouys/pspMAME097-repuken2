@@ -410,7 +410,7 @@ void save_config(void)
 	#define SET_DEFAULT_FSKIPS SET_FSKIP_00
 #endif // SET_DEFAULT_FSKIPS
 /* set default to off the video syncronization for draw. */
-#define SET_DEFAULT_VSYNC_ON_OFF SET_ON
+// #define SET_DEFAULT_VSYNC_ON_OFF SET_ON
 
 /* set default speed max limitage. */
 #define SET_DEFAULT_LIMIT_ON_OFF SET_OFF
@@ -457,7 +457,7 @@ void load_config(void)
 	strcpy(setting.vercnf, CONFIG_VER);
 	setting.screensize		= SET_DEFAULT_SCREEN;
 	setting.frameskip		= SET_DEFAULT_FSKIPS;
-	setting.vsync_ON_OFF	= SET_DEFAULT_VSYNC_ON_OFF;
+	// setting.vsync_ON_OFF	= SET_DEFAULT_VSYNC_ON_OFF;
 	setting.limit_ON_OFF	= SET_DEFAULT_LIMIT_ON_OFF;
 	setting.show_fps_ON_OFF = SET_OFF;
 	setting.sound_rate		= SET_DEFAULT_SOUND_FREQ;/*default sound rate 44100 */
@@ -797,7 +797,7 @@ void psp_menu(void)
 //---space---
         ITEM_SCREEN_SIZE, //1
 		ITEM_FRAME_SKIP,
-		ITEM_VSYNC,
+		// ITEM_VSYNC,
 		ITEM_LIMIT_SPEED,
 		ITEM_SHOW_FPS,
         ITEM_ROM_FILTER,
@@ -829,7 +829,7 @@ void psp_menu(void)
 			case ITEM_FRAME_SKIP:	if (setting.frameskip  > 0) setting.frameskip--;	break;
 			case ITEM_SCREEN_SIZE:	if (setting.screensize > 0) setting.screensize--; break;
 
-			case ITEM_VSYNC:		setting.vsync_ON_OFF	= SET_OFF; break;
+			// case ITEM_VSYNC:		setting.vsync_ON_OFF	= SET_OFF; break;
 			case ITEM_LIMIT_SPEED:	setting.limit_ON_OFF	= SET_OFF; break;
 			case ITEM_SHOW_FPS: 	setting.show_fps_ON_OFF = SET_OFF; break;
 			case ITEM_ROM_FILTER:	setting.rom_filter  	= SET_OFF; Get_DriverList(setting.rom_filter); break;
@@ -843,7 +843,7 @@ void psp_menu(void)
 			case ITEM_SOUND_RATE:	if (setting.sound_rate >  0) setting.sound_rate--; break;
 			case ITEM_FRAME_SKIP:	if (setting.frameskip  < (60+1)) setting.frameskip++;  break;
 			case ITEM_SCREEN_SIZE:	if (setting.screensize < (SCR_MAX-1)) setting.screensize++; break;
-			case ITEM_VSYNC:		setting.vsync_ON_OFF	= SET_ON; break;
+			// case ITEM_VSYNC:		setting.vsync_ON_OFF	= SET_ON; break;
 			case ITEM_LIMIT_SPEED:	setting.limit_ON_OFF	= SET_ON; break;
 			case ITEM_SHOW_FPS: 	setting.show_fps_ON_OFF = SET_ON; break;
 			case ITEM_ROM_FILTER:	setting.rom_filter  	= SET_ON; Get_DriverList(setting.rom_filter); break;
@@ -936,16 +936,16 @@ static const char *scr_names[] = {
 		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_FRAME_SKIP+(1))*(MENU1_Y_SPACER)), setting.color[3],tmp);
 
 
-		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_VSYNC+(1))*(MENU1_Y_SPACER)), 			setting.color[3], setting.vsync_ON_OFF
-			 ? "VSYNC:        " "ON"
-			#if (SET_ON==SET_DEFAULT_VSYNC_ON_OFF)
-			STR_DEFAULT
-			#endif
-			 : "VSYNC:        " "OFF"
-			#if (SET_OFF==SET_DEFAULT_VSYNC_ON_OFF)
-			STR_DEFAULT
-			#endif
-		);
+		// psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_VSYNC+(1))*(MENU1_Y_SPACER)), 			setting.color[3], setting.vsync_ON_OFF
+			 // ? "VSYNC:        " "ON"
+			// #if (SET_ON==SET_DEFAULT_VSYNC_ON_OFF)
+			// STR_DEFAULT
+			// #endif
+			 // : "VSYNC:        " "OFF"
+			// #if (SET_OFF==SET_DEFAULT_VSYNC_ON_OFF)
+			// STR_DEFAULT
+			// #endif
+		// );
 
 		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_LIMIT_SPEED +(1)	)*(MENU1_Y_SPACER)),	setting.color[3], setting.limit_ON_OFF		? "LIMIT SPEED:  " "ON" : "LIMIT SPEED:  " "OFF" STR_DEFAULT			);
 		psp_print(MENU2_X_OFFS, ((MENU1_Y_OFFS+ITEM_SHOW_FPS	+(1)	)*(MENU1_Y_SPACER)),	setting.color[3], setting.show_fps_ON_OFF	? "SHOW FPS:     " "ON" 			: "SHOW FPS:     " "OFF" STR_DEFAULT);

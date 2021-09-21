@@ -549,7 +549,7 @@ static void parse_cmdline( int argc, char **argv, int game_index )
 
     setBlitMode(setting.screensize);
 
-	wait_vsync      = setting.vsync_ON_OFF;
+	// wait_vsync      = setting.vsync_ON_OFF;
 	ui_show_fps_set(setting.show_fps_ON_OFF);
 	throttle = setting.limit_ON_OFF;
 
@@ -710,7 +710,7 @@ int cli_frontend_init( int argc, char **argv )
 	/* no sound is indicated by a 0 samplerate */
 	if (SND_OFF==setting.sound_rate) options.samplerate = 0;
 	
-	if (game_index_int) {
+	if (game_index_int > -1) {
 		game_index = game_index_int;
 	}
 
