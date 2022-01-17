@@ -36,20 +36,20 @@ makerList = {
 	   "UNIVERSAL",
 	   "UPL",
 	},
-	{ -- page 3
-	   "PLACEHOLDER",
-	   "PLACEHOLDER",
-	   "PLACEHOLDER",
-	   "PLACEHOLDER",
-	   "PLACEHOLDER",
-	   "PLACEHOLDER",
-	   "PLACEHOLDER",
-	   "PLACEHOLDER",
-	   "PLACEHOLDER",
-	   "PLACEHOLDER",
-	   "PLACEHOLDER",
-	   "PLACEHOLDER",
-	}
+	-- { -- page 3
+	   -- "PLACEHOLDER",
+	   -- "PLACEHOLDER",
+	   -- "PLACEHOLDER",
+	   -- "PLACEHOLDER",
+	   -- "PLACEHOLDER",
+	   -- "PLACEHOLDER",
+	   -- "PLACEHOLDER",
+	   -- "PLACEHOLDER",
+	   -- "PLACEHOLDER",
+	   -- "PLACEHOLDER",
+	   -- "PLACEHOLDER",
+	   -- "PLACEHOLDER",
+	-- }
 }
 
 fontColor = color.new(255,255,0)
@@ -127,7 +127,7 @@ function gameIndex(current, currentPage)
 	GameList = listofgames.getGameList(gameBuildIndex)
 	highlightedGame = 1
 	gamesCount = #GameList
-	gamesleft = gamesCount
+	gamesleft = gamesCount -1
 	buttons.interval(10,10)
 	
 	while true do
@@ -135,7 +135,11 @@ function gameIndex(current, currentPage)
 		screen.print(5, (12), ">")
 		
 		for k=0, math.min(18,gamesleft), 1 do
-			screen.print(15, (12*(k+1)), GameList[highlightedGame+k])
+			if GameList[highlightedGame+k]["title"] == nil then
+				screen.print(15, (12*(k+1)), "No games")
+			else
+				screen.print(15, (12*(k+1)), GameList[highlightedGame+k]["title"])
+			end
 		end
 		
 		screen.print(15, 255, "O : start  X : back", fontSize, fontColor)
@@ -167,7 +171,7 @@ function gameIndex(current, currentPage)
 		if buttons.circle then
 			file = io.open("gameindex", "w")
 			io.output(file)
-			io.write(highlightedGame - 1)
+			io.write(GameList[highlightedGame]["game_index"] - 1)
 			io.close(file)
 			buttons.interval()
 			return 1
@@ -204,7 +208,7 @@ while mainMenuLoop == true do
 		
 		-- get next page
 		if buttons.r then
-			if currentPage < 3 then
+			if currentPage < #makerList then
 				currentPage = currentPage + 1
 				makerListPage = makerList[currentPage]
 			end
