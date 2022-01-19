@@ -90,8 +90,6 @@ end
 function screenRefresh()
 	image.blit(menu, 3, 0)
 	
-	screen.print(20, 255, "<- L trigger", fontSize, fontColor)
-	screen.print(370, 255, "R trigger ->", fontSize, fontColor)
 	screen.print(90, 230,
 	"Press O to launch the "  .. makerListPage[current] .. " build", fontSize, fontColor)
 	
@@ -110,9 +108,25 @@ end
 -- make sure selector doesn't go out of range
 function getCurrent(current, change)
 	if (current + change) < 1 then
-		current = 12
+		if currentPage > 1 then
+			-- get prev page
+			currentPage = currentPage - 1
+			makerListPage = makerList[currentPage]
+			current = 12
+			fetchVendorIcons()
+		else
+			current = 1
+		end
 	elseif (current + change) > 12 then
-		current = 1
+		if currentPage < #makerList then
+			-- get next page
+			currentPage = currentPage + 1
+			makerListPage = makerList[currentPage]
+			current = 1
+			fetchVendorIcons()
+		else
+			current = 12
+		end
 	else
 		current = current + change
 	end
@@ -203,28 +217,6 @@ while mainMenuLoop == true do
 		end
 		if buttons.left then
 			current = getCurrent(current, -3)
-			screenRefresh()
-		end
-		
-		-- get next page
-		if buttons.r then
-			if currentPage < #makerList then
-				currentPage = currentPage + 1
-				makerListPage = makerList[currentPage]
-			end
-			current = 1
-			fetchVendorIcons()
-			screenRefresh()
-		end
-		
-		-- get prev page
-		if buttons.l then
-			if currentPage > 1 then
-				currentPage = currentPage - 1
-				makerListPage = makerList[currentPage]
-			end
-			current = 1
-			fetchVendorIcons()
 			screenRefresh()
 		end
 
