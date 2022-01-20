@@ -2640,16 +2640,46 @@ function getGameList(index)
 	}
 
 	filtered_table = {}
-
 	filtered_table[index] = {""}
-	local gamecount = 1
-	for game_index, game in pairs(table[index]) do
-		if files.exists("roms/"..game["rom"]..".zip") then
-			filtered_table[index][gamecount] = table[index][game_index]
-			filtered_table[index][gamecount]["game_index"] = game_index
-			gamecount += 1
+	local maker = makerList[1+math.floor((index-1)/12)][((index - 1) % 12)+1 ]
+	
+	if files.exists("available_roms.lua") then
+		saved_table = require("available_roms")
+		if saved_table[maker] != nil then
+			for i, game_index in pairs(saved_table[maker]) do
+				filtered_table[index][i] = table[index][game_index]
+				filtered_table[index][i]["game_index"] = game_index
+			end
+			return filtered_table[index]
 		end
 	end
+	
+	local gamecount = 0
+	
+	local temp_output = "avail_roms = {\n"
+	
+	for i=1, #table do	
+		filtered_table[i] = {""}
+		maker = makerList[1+math.floor((i-1)/12)][((i - 1) % 12)+1 ]
+		temp_output = temp_output .. maker .." = {"
+		for game_index, game in pairs(table[i]) do
+			screen.print(15, 50, maker .. ": " .. game["rom"])
+			screen.flip()
+			if files.exists("roms/"..game["rom"]..".zip") then
+				gamecount += 1
+				filtered_table[i][gamecount] = table[i][game_index]
+				filtered_table[i][gamecount]["game_index"] = game_index
+				temp_output = temp_output .. game_index..","
+			end
+		end
+		temp_output = temp_output .. "},\n"
+	end
+	temp_output = temp_output .. "}\nreturn avail_roms"
+	
+	local file = io.open("available_roms.lua", "w")
+	io.output(file)
+	io.write(temp_output)
+	io.close(file)	
 
 	return filtered_table[index]
 end

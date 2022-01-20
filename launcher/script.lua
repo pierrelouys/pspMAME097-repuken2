@@ -149,7 +149,7 @@ function gameIndex(current, currentPage)
 		screen.print(5, (12), ">")
 		
 		for k=0, math.min(18,gamesleft), 1 do
-			if GameList[highlightedGame+k]["title"] == nil then
+			if GameList[highlightedGame]["title"] == nil then
 				screen.print(15, (12*(k+1)), "No games")
 			else
 				screen.print(15, (12*(k+1)), GameList[highlightedGame+k]["title"])
