@@ -1,0 +1,38 @@
+name: pspMAME
+
+on:
+  push:
+    branches: [ conservative ]
+  pull_request:
+    branches: [ conservative ]
+
+env:
+  # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
+  BUILD_TYPE: Release
+
+jobs:
+
+  PSP:
+    runs-on: ubuntu-latest
+    container: pspdev/pspdev:latest
+
+    steps:
+      - name: Install dependencies
+        run: |
+          apk add bash cmake git gmp mpc1 mpfr4 make
+      
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: Build
+        run: |
+          git submodule update --init --recursive --remote 
+          make all
+          mv  -v obj/mame/* obj/drivers
+          make TARGET=Nichibutsu
+      - name: Publish artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: pspMAME
+          path: |
+            EBOOT.PBP
