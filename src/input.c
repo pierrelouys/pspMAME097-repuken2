@@ -9,7 +9,7 @@
 #include "driver.h"
 #include <time.h>
 #include <ctype.h>
-
+#include <string.h>
 
 
 /*************************************
@@ -841,13 +841,13 @@ input_code_t token_to_code(const char *token)
 	input_code_t code;
 
 	/* look for special cases */
-	if (!stricmp(token, "OR"))
+	if (!strcasecmp(token, "OR"))
 		return CODE_OR;
-	if (!stricmp(token, "NOT"))
+	if (!strcasecmp(token, "NOT"))
 		return CODE_NOT;
-	if (!stricmp(token, "NONE"))
+	if (!strcasecmp(token, "NONE"))
 		return CODE_NONE;
-	if (!stricmp(token, "DEFAULT"))
+	if (!strcasecmp(token, "DEFAULT"))
 		return CODE_DEFAULT;
 
 	/* look for a match against any of the codes in the table */

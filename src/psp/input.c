@@ -1,3 +1,5 @@
+#include <string.h>
+#include <stdio.h>
 #include "driver.h"
 #include "rc.h"
 //#include "syscall.h"	//tmk

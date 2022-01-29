@@ -5,9 +5,12 @@
  * Configuration routines.
  *
  */
+ 
+#define strnicmp strncasecmp
 
 #include "driver.h"
 #include <ctype.h>
+#include <string.h>
 
 #include "rc.h"
 
@@ -95,9 +98,9 @@ void set_config_id(const char *section, const char *name, int val) { }
 static int get_bool( const char *section, const char *option, const char *shortcut, int res/*def*/ )
 {
 	/* also take numerical values instead of "yes", "no" and "auto" */
-	if		(/*stricmp(yesnoauto, "no"  ) == 0*/(/*def*/res == 0)) res = 0;
-	else if (/*stricmp(yesnoauto, "yes" ) == 0*/(/*def*/res  > 0)) res = 1;
-	else /*if (stricmp(yesnoauto, "auto") == 0(// def // res < 0))*/ res = -1;
+	if		(/*strcasecmp(yesnoauto, "no"  ) == 0*/(/*def*/res == 0)) res = 0;
+	else if (/*strcasecmp(yesnoauto, "yes" ) == 0*/(/*def*/res  > 0)) res = 1;
+	else /*if (strcasecmp(yesnoauto, "auto") == 0(// def // res < 0))*/ res = -1;
 	/* check the commandline */
 	int i;
 	for (i = 1; i < mame_argc; i++)
@@ -105,22 +108,22 @@ static int get_bool( const char *section, const char *option, const char *shortc
 		if( mame_argv[ i ][ 0 ] == '-' )
 		{
 			/* look for "-option" / "-shortcut" */
-			if( stricmp( &mame_argv[ i ][ 1 ], option ) == 0 ||
-				( shortcut && stricmp( &mame_argv[ i ][ 1 ], shortcut ) == 0 ) )
+			if( strcasecmp( &mame_argv[ i ][ 1 ], option ) == 0 ||
+				( shortcut && strcasecmp( &mame_argv[ i ][ 1 ], shortcut ) == 0 ) )
 			{
 				if( i + 1 < mame_argc )
 				{
-					if( stricmp( mame_argv[ i + 1 ], "no" ) == 0 )
+					if( strcasecmp( mame_argv[ i + 1 ], "no" ) == 0 )
 					{
 						i++;
 						res = 0;
 					}
-					else if( stricmp( mame_argv[ i + 1 ], "yes" ) == 0 )
+					else if( strcasecmp( mame_argv[ i + 1 ], "yes" ) == 0 )
 					{
 						i++;
 						res = 1;
 					}
-					else if( stricmp( mame_argv[ i + 1 ], "auto" ) == 0 )
+					else if( strcasecmp( mame_argv[ i + 1 ], "auto" ) == 0 )
 					{
 						i++;
 						res = -1;
@@ -141,14 +144,14 @@ static int get_bool( const char *section, const char *option, const char *shortc
 				}
 			}
 			else if( strnicmp( &mame_argv[ i ][ 1 ], "no", 2 ) == 0 &&
-				( stricmp( &mame_argv[ i ][ 3 ], option ) == 0 ||
-				( shortcut && stricmp( &mame_argv[ i ][ 3 ], shortcut ) == 0 ) ) )
+				( strcasecmp( &mame_argv[ i ][ 3 ], option ) == 0 ||
+				( shortcut && strcasecmp( &mame_argv[ i ][ 3 ], shortcut ) == 0 ) ) )
 			{
 				res = 0;
 			}
 			else if( strnicmp( &mame_argv[ i ][ 1 ], "auto", 4 ) == 0 &&
-				( stricmp( &mame_argv[ i ][ 5 ], option ) == 0 ||
-				( shortcut && stricmp( &mame_argv[ i ][ 5 ], shortcut ) == 0 ) ) )
+				( strcasecmp( &mame_argv[ i ][ 5 ], option ) == 0 ||
+				( shortcut && strcasecmp( &mame_argv[ i ][ 5 ], shortcut ) == 0 ) ) )
 			{
 				res = -1;
 			}
@@ -192,8 +195,8 @@ static int get_int( const char *section, const char *option, const char *shortcu
 	{
 		if( mame_argv[ i ][ 0 ] == '-' )
 		{
-			if( stricmp( &mame_argv[ i ][ 1 ], option ) == 0 ||
-				( shortcut && stricmp( &mame_argv[ i ][ 1 ], shortcut ) == 0 ) )
+			if( strcasecmp( &mame_argv[ i ][ 1 ], option ) == 0 ||
+				( shortcut && strcasecmp( &mame_argv[ i ][ 1 ], shortcut ) == 0 ) )
 			{
 				if( i + 1 < mame_argc && isdigit( mame_argv[ i + 1 ][ 0 ] ) )
 				{
@@ -206,8 +209,8 @@ static int get_int( const char *section, const char *option, const char *shortcu
 				}
 			}
 			else if( strnicmp( &mame_argv[ i ][ 1 ], "no", 2 ) == 0 &&
-				( stricmp( &mame_argv[ i ][ 3 ], option ) == 0 ||
-				( shortcut && stricmp( &mame_argv[ i ][ 3 ], shortcut ) == 0 ) ) )
+				( strcasecmp( &mame_argv[ i ][ 3 ], option ) == 0 ||
+				( shortcut && strcasecmp( &mame_argv[ i ][ 3 ], shortcut ) == 0 ) ) )
 			{
 				res = 0;
 			}
@@ -247,8 +250,8 @@ static float get_float( const char *section, const char *option, const char *sho
 	{
 		if( mame_argv[ i ][ 0 ] == '-' )
 		{
-			if( stricmp( &mame_argv[ i ][ 1 ], option ) == 0 ||
-				( shortcut && stricmp( &mame_argv[ i ][ 1 ], shortcut ) == 0 ) )
+			if( strcasecmp( &mame_argv[ i ][ 1 ], option ) == 0 ||
+				( shortcut && strcasecmp( &mame_argv[ i ][ 1 ], shortcut ) == 0 ) )
 			{
 				if( i + 1 < mame_argc && isdigit( mame_argv[ i + 1 ][ 0 ] ) )
 				{
@@ -261,8 +264,8 @@ static float get_float( const char *section, const char *option, const char *sho
 				}
 			}
 			else if( strnicmp( &mame_argv[ i ][ 1 ], "no", 2 ) == 0 &&
-				( stricmp( &mame_argv[ i ][ 3 ], option ) == 0 || 
-				( shortcut && stricmp( &mame_argv[ i ][ 3 ], shortcut ) == 0 ) ) )
+				( strcasecmp( &mame_argv[ i ][ 3 ], option ) == 0 || 
+				( shortcut && strcasecmp( &mame_argv[ i ][ 3 ], shortcut ) == 0 ) ) )
 			{
 				res = lower;
 			}
@@ -292,28 +295,28 @@ static const char *get_string( const char *section, const char *option, const ch
 	{
 		if( mame_argv[ i ][ 0 ] == '-' )
 		{
-			if( stricmp( &mame_argv[ i ][ 1 ], option ) == 0 ||
-				( shortcut && stricmp( &mame_argv[ i ][ 1 ], shortcut ) == 0 ) )
+			if( strcasecmp( &mame_argv[ i ][ 1 ], option ) == 0 ||
+				( shortcut && strcasecmp( &mame_argv[ i ][ 1 ], shortcut ) == 0 ) )
 			{
 				i++;
 				if ( i < mame_argc && mame_argv[ i ][ 0 ] != '-' )
 				{
 					res = mame_argv[ i ];
 				}
-				else if( yes != NULL && no != NULL && stricmp( res, no ) == 0 )
+				else if( yes != NULL && no != NULL && strcasecmp( res, no ) == 0 )
 				{
 					res = yes;
 				}
 			}
 			else if( no != NULL && strnicmp( &mame_argv[ i ][ 1 ], "no", 2 ) == 0 &&
-				( stricmp( &mame_argv[ i ][ 3 ], option ) == 0 ||
-				( shortcut && stricmp( &mame_argv[ i ][ 3 ], shortcut ) == 0 ) ) )
+				( strcasecmp( &mame_argv[ i ][ 3 ], option ) == 0 ||
+				( shortcut && strcasecmp( &mame_argv[ i ][ 3 ], shortcut ) == 0 ) ) )
 			{
 				res = no;
 			}
 			else if( s_auto != NULL && strnicmp( &mame_argv[ i ][ 1 ], "auto", 4 ) == 0 &&
-				( stricmp( &mame_argv[ i ][ 5 ], option ) == 0 ||
-				( shortcut && stricmp( &mame_argv[ i ][ 5 ], shortcut ) == 0 ) ) )
+				( strcasecmp( &mame_argv[ i ][ 5 ], option ) == 0 ||
+				( shortcut && strcasecmp( &mame_argv[ i ][ 5 ], shortcut ) == 0 ) ) )
 			{
 				res = s_auto;
 			}
@@ -428,8 +431,8 @@ static void get_rc_opts( struct rc_option *p_rcopt )
 		{
 			if( mame_argv[ j ][ 0 ] == '-' )
 			{
-				if( stricmp( &mame_argv[ j ][ 1 ], p_rcopt[ i ].name ) == 0 ||
-					( p_rcopt[ i ].shortname != NULL && stricmp( &mame_argv[ j ][ 1 ], p_rcopt[ i ].shortname ) == 0 ) )
+				if( strcasecmp( &mame_argv[ j ][ 1 ], p_rcopt[ i ].name ) == 0 ||
+					( p_rcopt[ i ].shortname != NULL && strcasecmp( &mame_argv[ j ][ 1 ], p_rcopt[ i ].shortname ) == 0 ) )
 				{
 					if( p_rcopt[ i ].type == rc_set_int )
 					{
@@ -465,8 +468,8 @@ static void get_rc_opts( struct rc_option *p_rcopt )
 					}
 				}
 				else if( strnicmp( &mame_argv[ j ][ 1 ], "no", 2 ) == 0 &&
-					( stricmp( &mame_argv[ j ][ 3 ], p_rcopt[ i ].name ) == 0 ||
-					( p_rcopt[ i ].shortname != NULL && stricmp( &mame_argv[ j ][ 3 ], p_rcopt[ i ].shortname ) == 0 ) ) )
+					( strcasecmp( &mame_argv[ j ][ 3 ], p_rcopt[ i ].name ) == 0 ||
+					( p_rcopt[ i ].shortname != NULL && strcasecmp( &mame_argv[ j ][ 3 ], p_rcopt[ i ].shortname ) == 0 ) ) )
 				{
 					if( p_rcopt[ i ].type == rc_bool )
 					{
@@ -687,7 +690,7 @@ int cli_frontend_init( int argc, char **argv )
 		i = 0;
 		while( drivers[ i ] != NULL )
 		{
-			if( stricmp( gamename, drivers[i]->name ) == 0 )
+			if( strcasecmp( gamename, drivers[i]->name ) == 0 )
 			{
 				game_index = i;
 				break;

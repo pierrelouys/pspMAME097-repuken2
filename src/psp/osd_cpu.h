@@ -33,7 +33,7 @@
 //#ifdef _MSC_VER
 ////#undef INLINE
 ////#define INLINE static inline
-#define strcasecmp stricmp
+// #define strcasecmp stricmp
 //#endif
 
 #include <psptypes.h>

@@ -6,6 +6,8 @@
 
 ***************************************************************************/
 
+#include <stdio.h>
+#include <string.h>
 #include "driver.h"
 #include "config.h"
 #include "common.h"
@@ -376,20 +378,20 @@ static void config_element_start(void *data, const XML_Char *name, const XML_Cha
 	curfile.parse.datalen = 0;
 
 	/* look for top-level mameconfig tag */
-	if (!stricmp(curfile.parse.tag, "/mameconfig"))
+	if (!strcasecmp(curfile.parse.tag, "/mameconfig"))
 	{
 		for (attr = 0; attributes[attr]; attr += 2)
 		{
-			if (!stricmp(attributes[attr], "version"))
+			if (!strcasecmp(attributes[attr], "version"))
 				sscanf(attributes[attr + 1], "%d", &curfile.data.version);
 		}
 	}
 
 	/* look for second-level system tag */
-	if (!stricmp(curfile.parse.tag, "/mameconfig/system"))
+	if (!strcasecmp(curfile.parse.tag, "/mameconfig/system"))
 	{
 		for (attr = 0; attributes[attr]; attr += 2)
-			if (!stricmp(attributes[attr], "name"))
+			if (!strcasecmp(attributes[attr], "name"))
 			{
 				switch (curfile.filetype)
 				{
@@ -430,7 +432,7 @@ static void config_element_start(void *data, const XML_Char *name, const XML_Cha
 		return;
 
 	/* look for second-level port tag */
-	if (!stricmp(curfile.parse.tag, "/mameconfig/system/input/port"))
+	if (!strcasecmp(curfile.parse.tag, "/mameconfig/system/input/port"))
 	{
 		struct config_port *port = malloc(sizeof(*port));
 		curfile.parse.seq_index = -1;
@@ -443,23 +445,23 @@ static void config_element_start(void *data, const XML_Char *name, const XML_Cha
 			curfile.data.port = port;
 			for (attr = 0; attributes[attr]; attr += 2)
 			{
-				if (!stricmp(attributes[attr], "type"))
+				if (!strcasecmp(attributes[attr], "type"))
 					curfile.data.port->type = token_to_port_type(attributes[attr + 1], &curfile.data.port->player);
-				else if (!stricmp(attributes[attr], "mask"))
+				else if (!strcasecmp(attributes[attr], "mask"))
 					sscanf(attributes[attr + 1], "%d", &curfile.data.port->mask);
-				else if (!stricmp(attributes[attr], "defvalue"))
+				else if (!strcasecmp(attributes[attr], "defvalue"))
 					sscanf(attributes[attr + 1], "%d", &curfile.data.port->defvalue);
-				else if (!stricmp(attributes[attr], "value"))
+				else if (!strcasecmp(attributes[attr], "value"))
 					sscanf(attributes[attr + 1], "%d", &curfile.data.port->value);
-				else if (!stricmp(attributes[attr], "keydelta"))
+				else if (!strcasecmp(attributes[attr], "keydelta"))
 					sscanf(attributes[attr + 1], "%d", &curfile.data.port->keydelta);
-				else if (!stricmp(attributes[attr], "centerdelta"))
+				else if (!strcasecmp(attributes[attr], "centerdelta"))
 					sscanf(attributes[attr + 1], "%d", &curfile.data.port->centerdelta);
-				else if (!stricmp(attributes[attr], "sensitivity"))
+				else if (!strcasecmp(attributes[attr], "sensitivity"))
 					sscanf(attributes[attr + 1], "%d", &curfile.data.port->sensitivity);
-				else if (!stricmp(attributes[attr], "reverse"))
+				else if (!strcasecmp(attributes[attr], "reverse"))
 				{
-					if (!stricmp(attributes[attr + 1], "yes"))
+					if (!strcasecmp(attributes[attr + 1], "yes"))
 						curfile.data.port->reverse = 1;
 					else
 						curfile.data.port->reverse = 0;
@@ -475,14 +477,14 @@ static void config_element_start(void *data, const XML_Char *name, const XML_Cha
 	}
 
 	/* look for second-level remap tag (we never write it, so it's only value for controller files) */
-	if (curfile.filetype == FILE_TYPE_CONTROLLER && !stricmp(curfile.parse.tag, "/mameconfig/system/input/remap"))
+	if (curfile.filetype == FILE_TYPE_CONTROLLER && !strcasecmp(curfile.parse.tag, "/mameconfig/system/input/remap"))
 	{
 		input_code_t origcode = CODE_NONE, newcode = CODE_NONE;
 		for (attr = 0; attributes[attr]; attr += 2)
 		{
-			if (!stricmp(attributes[attr], "origcode"))
+			if (!strcasecmp(attributes[attr], "origcode"))
 				origcode = token_to_code(attributes[attr + 1]);
-			else if (!stricmp(attributes[attr], "newcode"))
+			else if (!strcasecmp(attributes[attr], "newcode"))
 				newcode = token_to_code(attributes[attr + 1]);
 		}
 		if (origcode != CODE_NONE && origcode < __code_max && newcode != CODE_NONE)
@@ -490,15 +492,15 @@ static void config_element_start(void *data, const XML_Char *name, const XML_Cha
 	}
 
 	/* look for third-level defseq or newseq tag */
-	if (!stricmp(curfile.parse.tag, "/mameconfig/system/input/port/defseq") || !stricmp(curfile.parse.tag, "/mameconfig/system/input/port/newseq"))
+	if (!strcasecmp(curfile.parse.tag, "/mameconfig/system/input/port/defseq") || !strcasecmp(curfile.parse.tag, "/mameconfig/system/input/port/newseq"))
 	{
 		curfile.parse.seq_index = -1;
 		for (attr = 0; attributes[attr]; attr += 2)
-			if (!stricmp(attributes[attr], "type"))
+			if (!strcasecmp(attributes[attr], "type"))
 			{
 				int typenum;
 				for (typenum = 0; typenum < 3; typenum++)
-					if (!stricmp(attributes[attr + 1], seqtypestrings[typenum]))
+					if (!strcasecmp(attributes[attr + 1], seqtypestrings[typenum]))
 					{
 						curfile.parse.seq_index = typenum;
 						break;
@@ -507,39 +509,39 @@ static void config_element_start(void *data, const XML_Char *name, const XML_Cha
 	}
 
 	/* look for second-level coins tag */
-	if (!stricmp(curfile.parse.tag, "/mameconfig/system/counters/coins"))
+	if (!strcasecmp(curfile.parse.tag, "/mameconfig/system/counters/coins"))
 	{
 		int indx = -1, count;
 		for (attr = 0; attributes[attr]; attr += 2)
 		{
-			if (!stricmp(attributes[attr], "index"))
+			if (!strcasecmp(attributes[attr], "index"))
 				sscanf(attributes[attr + 1], "%d", &indx);
-			else if (!stricmp(attributes[attr], "number") && indx >= 0 && indx < COIN_COUNTERS && sscanf(attributes[attr + 1], "%d", &count) == 1)
+			else if (!strcasecmp(attributes[attr], "number") && indx >= 0 && indx < COIN_COUNTERS && sscanf(attributes[attr + 1], "%d", &count) == 1)
 				curfile.data.counters.coins[indx] = count;
 		}
 	}
 
 	/* look for second-level tickets tag */
-	if (!stricmp(curfile.parse.tag, "/mameconfig/system/counters/tickets"))
+	if (!strcasecmp(curfile.parse.tag, "/mameconfig/system/counters/tickets"))
 	{
 		int count;
 		for (attr = 0; attributes[attr]; attr += 2)
-			if (!stricmp(attributes[attr], "number") && sscanf(attributes[attr + 1], "%d", &count) == 1)
+			if (!strcasecmp(attributes[attr], "number") && sscanf(attributes[attr + 1], "%d", &count) == 1)
 				curfile.data.counters.tickets = count;
 	}
 
 	/* look for second-level default tag */
-	if (!stricmp(curfile.parse.tag, "/mameconfig/system/mixer/channel"))
+	if (!strcasecmp(curfile.parse.tag, "/mameconfig/system/mixer/channel"))
 	{
 		int indx = -1;
 		float value;
 		for (attr = 0; attributes[attr]; attr += 2)
 		{
-			if (!stricmp(attributes[attr], "index"))
+			if (!strcasecmp(attributes[attr], "index"))
 				sscanf(attributes[attr + 1], "%d", &indx);
-			else if (!stricmp(attributes[attr], "defvol") && indx >= 0 && indx < MAX_MIXER_CHANNELS && sscanf(attributes[attr + 1], "%f", &value) == 1)
+			else if (!strcasecmp(attributes[attr], "defvol") && indx >= 0 && indx < MAX_MIXER_CHANNELS && sscanf(attributes[attr + 1], "%f", &value) == 1)
 				curfile.data.mixer.deflevel[indx] = value;
-			else if (!stricmp(attributes[attr], "newvol") && indx >= 0 && indx < MAX_MIXER_CHANNELS && sscanf(attributes[attr + 1], "%f", &value) == 1)
+			else if (!strcasecmp(attributes[attr], "newvol") && indx >= 0 && indx < MAX_MIXER_CHANNELS && sscanf(attributes[attr + 1], "%f", &value) == 1)
 				curfile.data.mixer.newlevel[indx] = value;
 		}
 	}
@@ -554,7 +556,7 @@ static void config_element_end(void *data, const XML_Char *name)
 	if (!curfile.data.ignore_game)
 	{
 		/* set the defseq sequence */
-		if (!stricmp(curfile.parse.tag, "/mameconfig/system/input/port/defseq") && curfile.parse.seq_index != -1)
+		if (!strcasecmp(curfile.parse.tag, "/mameconfig/system/input/port/defseq") && curfile.parse.seq_index != -1)
 		{
 			if (string_to_seq(curfile.parse.data, &curfile.data.port->defseq[curfile.parse.seq_index]) == 0)
 				seq_set_1(&curfile.data.port->defseq[curfile.parse.seq_index], get_default_code(curfile.data.port->type));
@@ -562,7 +564,7 @@ static void config_element_end(void *data, const XML_Char *name)
 		}
 
 		/* set the newseq sequence */
-		if (!stricmp(curfile.parse.tag, "/mameconfig/system/input/port/newseq") && curfile.parse.seq_index != -1)
+		if (!strcasecmp(curfile.parse.tag, "/mameconfig/system/input/port/newseq") && curfile.parse.seq_index != -1)
 			if (string_to_seq(curfile.parse.data, &curfile.data.port->newseq[curfile.parse.seq_index]) == 0)
 				seq_set_1(&curfile.data.port->newseq[curfile.parse.seq_index], get_default_code(curfile.data.port->type));
 	}

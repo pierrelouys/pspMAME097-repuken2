@@ -48,6 +48,7 @@ CDEFS = \
 #------------------------------------------------------------------------------
 
 CFLAGS = \
+	-fcommon \
 	-fomit-frame-pointer \
 	-fno-strict-aliasing \
 	-Wno-sign-compare \
