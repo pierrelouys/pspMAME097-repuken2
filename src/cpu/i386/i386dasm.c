@@ -1520,7 +1520,7 @@ static void decode_opcode(char *s, I386_OPCODE *op)
 		case GROUP:
 			handle_modrm( modrm_string );
 			for( i=0; i < (sizeof(group_op_table) / sizeof(GROUP_OP)); i++ ) {
-				if( stricmp(op->mnemonic, group_op_table[i].mnemonic) == 0 ) {
+				if( strcasecmp(op->mnemonic, group_op_table[i].mnemonic) == 0 ) {
 					decode_opcode( s, &group_op_table[i].opcode[MODRM_REG1] );
 					return;
 				}
