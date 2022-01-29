@@ -900,10 +900,10 @@ static void eeprom_handler(mame_file *file,int read_or_write)
 
 static NVRAM_HANDLER( model3 )
 {
-	if( stricmp(Machine->gamedrv->name, "lostwsga") == 0 ||
-		stricmp(Machine->gamedrv->name, "dirtdvls") == 0 ||
-		stricmp(Machine->gamedrv->name, "von2") == 0 ||
-		stricmp(Machine->gamedrv->name, "von254g") == 0)
+	if( strcasecmp(Machine->gamedrv->name, "lostwsga") == 0 ||
+		strcasecmp(Machine->gamedrv->name, "dirtdvls") == 0 ||
+		strcasecmp(Machine->gamedrv->name, "von2") == 0 ||
+		strcasecmp(Machine->gamedrv->name, "von254g") == 0)
 	{
 		eeprom_handler(file, read_or_write);
 	} else {
@@ -932,9 +932,9 @@ static void model3_init(int step)
 	model3_tap_reset();
 
 	if(step < 0x20) {
-		if( stricmp(Machine->gamedrv->name, "vs215") == 0 ||
-			stricmp(Machine->gamedrv->name, "vs29815") == 0 ||
-			stricmp(Machine->gamedrv->name, "bass") == 0)
+		if( strcasecmp(Machine->gamedrv->name, "vs215") == 0 ||
+			strcasecmp(Machine->gamedrv->name, "vs29815") == 0 ||
+			strcasecmp(Machine->gamedrv->name, "bass") == 0)
 		{
 			mpc106_init();
 		} else {
@@ -1282,8 +1282,8 @@ static READ64_HANDLER(model3_security_r)
 		case 0x00/8:	return 0;		/* status */
 		case 0x1c/8:					/* security board data read */
 		{
-			if (stricmp(Machine->gamedrv->name, "vs299") == 0 ||
-				stricmp(Machine->gamedrv->name, "vs2v991") == 0)
+			if (strcasecmp(Machine->gamedrv->name, "vs299") == 0 ||
+				strcasecmp(Machine->gamedrv->name, "vs2v991") == 0)
 			{
 				return (UINT64)vs299_prot_data[prot_data_ptr++] << 48;
 			}
