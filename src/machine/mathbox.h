@@ -6,7 +6,7 @@
  */
 
 typedef short s16;
-typedef int s32;
+// typedef int s32;
 
 WRITE8_HANDLER( mb_go_w );
 READ8_HANDLER( mb_status_r );

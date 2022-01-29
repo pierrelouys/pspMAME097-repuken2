@@ -33,10 +33,10 @@
 //#ifdef _MSC_VER
 ////#undef INLINE
 ////#define INLINE static inline
-//#define strcasecmp stricmp
+#define strcasecmp stricmp
 //#endif
 
-//#include <psptypes.h>
+#include <psptypes.h>
 //typedef signed short						s16;
 //typedef signed int							s32;
 
