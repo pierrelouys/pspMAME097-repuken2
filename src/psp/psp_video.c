@@ -255,7 +255,7 @@ void psp_clear_rect(void *frame, const rectangle *cliprect)
 //	psp_fill_frame
 //============================================================
 
-void psp_fill_frame(void *frame, UINT32 color32)
+void psp_fill_frame(void *frame, u32 color32)
 {
 	sceGuStart(GU_DIRECT, gulist);
 	sceGuDrawBufferList(GU_PSM_5551, frame, BUF_WIDTH);
