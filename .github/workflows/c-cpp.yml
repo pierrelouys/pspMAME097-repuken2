@@ -28,8 +28,9 @@ jobs:
         run: |
           git submodule update --init --recursive --remote 
           make all
-          mv  -v obj/mame/* obj/drivers
-          make TARGET=Nichibutsu
+          mkdir obj/drivers
+          mv -v obj/mame/*.a obj/drivers
+          make TARGET=armedf
       - name: Publish artifacts
         uses: actions/upload-artifact@v2
         with:
