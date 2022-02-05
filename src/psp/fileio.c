@@ -13,16 +13,17 @@
 #include <errno.h>
 #include <limits.h>
 #include <ctype.h>
-#include <sys/stat.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <fcntl.h>
 
 #if 0
-	/* ‚±‚Ì•”•ª‚ÍAPSPSDK ‚És‚¯‚Î—v‚ç‚È‚­‚È‚é‚ç‚µ‚¢(?) */
+	/* ã“ã®éƒ¨åˆ†ã¯ã€PSPSDK ã«è¡Œã‘ã°è¦ã‚‰ãªããªã‚‹ã‚‰ã—ã„(?) */
 	//#include <fcntl.h>
 	#include <unistd.h>
 	#include "syscall.h"
 #endif
-
-#include <stdio.h>
 
 #include "unzip.h"
 #include "rc.h"
