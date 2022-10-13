@@ -214,9 +214,9 @@ int main(int argc, char *argv[])
 	sceCtrlSetSamplingMode(PSP_CTRL_MODE_ANALOG/*1*/);//sceCtrlSetAnalogMode(1);
 	//psp_printf_init();
 	//pgcInit();
-// #ifndef KERNEL_MODE
-	// setCurDir(argv[0]);/* ユーザーモード時のみ使用 */
-// #endif //KERNEL_MODE
+#ifndef KERNEL_MODE
+	setCurDir(argv[0]);/* ユーザーモード時のみ使用 */
+#endif //KERNEL_MODE
 	_argv[_argc++] = getCurDir();
 	sceIoChdir(getCurDir());
 
