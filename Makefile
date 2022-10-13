@@ -167,19 +167,6 @@ COREOBJS += \
 # Utilities
 #------------------------------------------------------------------------------
 
-# compiler, linker and utilities
-LD = psp-ld
-CC       = psp-gcc
-CXX      = psp-g++
-AS       = psp-gcc
-LD       = psp-gcc
-AR       = psp-ar
-RANLIB   = psp-ranlib
-STRIP    = psp-strip
-MKSFO    = mksfo
-PACK_PBP = pack-pbp
-FIXUP    = psp-fixup-imports
-
 ifeq ($(PSPSDK),)
 MD = -mkdir
 RM = -rm
