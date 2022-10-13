@@ -218,7 +218,6 @@ int main(int argc, char *argv[])
 	setCurDir(argv[0]);/* ユーザーモード時のみ使用 */
 #endif //KERNEL_MODE
 	_argv[_argc++] = getCurDir();
-	sceIoChdir(getCurDir());
 
     // create nonexisting dirs
     // bad file descriptor workaround
